@@ -1,27 +1,8 @@
 +++
+bookFlatSection = true
 author = "andron13"
 date = 2020-07-05T19:41:02+02:00
-title = "У меня снова есть блог"
-linktitle = "Первый пост"
-
-menu = "main"
-parent = "tutorials"
-next = "/tutorials/github-pages-blog"
-prev = "/tutorials/automated-deployments"
-weight = 10  
-tags = [
-    "go",
-    "golang",
-    "hugo",
-    "development",
-]
-categories = [
-    "Development",
-    "golang",
-]  
-description = ""
-
-draft= false
+title = "Первый пост"
 +++
 
 ## Блогер это навсегда
@@ -30,3 +11,8 @@ draft= false
 
 ![шахматы](./hello.jpg)
 
+
+
+{{<youtube 2SBgL0mmHlQ>}}
+
+{{< figure src="hello.jpg" title="Берлин" >}}
