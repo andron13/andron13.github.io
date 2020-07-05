@@ -4,3 +4,13 @@ title =             "andron13"
 theme =             "book"
 disqusShortname =   ""
 paginate        =   6
+
+# Book configuration
+#disablePathToLower = true
+#enableGitInfo = true
+
+[params]
+  BookToC = true
+  BookLogo = 'logo.jpg'
+  BookSection = 'school'
+
