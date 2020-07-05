@@ -1,8 +1,6 @@
-baseURL = "https://andron13.de/"
-languageCode = "ru"
-title = "andron13"
-theme = "book"
-
-disqusShortname = ""
-paginate        = 6
-
+baseURL =           "https://andron13.de/"
+languageCode =      "ru"
+title =             "andron13"
+theme =             "book"
+disqusShortname =   ""
+paginate        =   6
