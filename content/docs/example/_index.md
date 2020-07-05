@@ -1,7 +1,7 @@
 ---
 weight: 1
 bookFlatSection: true
-title: "Первый язык программирования"
+title: "С чего начать"
 ---
 
 # Introduction
