@@ -13,4 +13,5 @@ paginate        =   6
   BookToC = true
   BookLogo = 'logo.jpg'
   BookSection = 'school'
+  BookMenuBundle = '/menu'
 
