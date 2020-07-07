@@ -6,9 +6,13 @@ headless: true
 - [Table of Contents]({{< relref "/school/table-of-contents" >}})
   - [With ToC]({{< relref "/school/table-of-contents/with-toc" >}})
   - [Without ToC]({{< relref "/school/table-of-contents/without-toc" >}})
+  
+- [Java]({{< relref "/school/Java" >}})
+
 - [Collapsed]({{< relref "/school/collapsed" >}})
   - [3rd]({{< relref "/school/collapsed/3rd-level" >}})
     - [4th]({{< relref "/school/collapsed/3rd-level/4th-level" >}})
+- [HTML]({{< relref "/school/html" >}})
 <br />
 
 - **Shorttttttcodes**

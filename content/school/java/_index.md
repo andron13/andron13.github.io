@@ -1,9 +1,9 @@
 ---
 bookCollapseSection: true
-weight: 8
+weight: 1
 ---
 
-# Collapsed Level of Menu
+# Java
 
 ## Cognita laeva illo fracta
 
