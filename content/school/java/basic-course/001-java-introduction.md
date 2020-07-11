@@ -16,10 +16,10 @@ weight: 1
 JDK — это программа, которая будет переводить написанный вами код в понятный для машин. На вашей машине может быть установлено несколько разных версий Java. Одной из них должна быть Java 8.x. Это та версия, на которой базируются все современные версии, и для изучения основ языка и ООП именно оно нам и "нада".
 
 Скачать JDK можно с AdoptOpenJDK:
-![Скачать AdoptOpenJDK](../resourcen/img/01/01-AdoptOpenJDK.png)
+{{< figure src="/img/res/java/01/01-AdoptOpenJDK.png" title="Скачать AdoptOpenJDK" alt="AdoptOpenJDK" >}}
 
 Скачать JDK можно с Oracle:
-![JDK download Oracle](../resourcen/img/jdk-01.png "JDK download Oracle")
+{{< figure src="/img/res/java/01/01-jdk.png" title="JDK download Oracle" alt="JDK download Oracle" >}}
 
 Уверен, вы справитесь с установкой этой программы самостоятельно или с помощью Google.
 
@@ -51,7 +51,7 @@ public class HelloWorld { // Начало нашего класса HelloWorld
 
 Компилируем и запускаем код:
 
-```Java
+```
 javac HelloWorld.java
 // или
 javac -encoding utf8 HelloWorld.java
@@ -61,8 +61,7 @@ java HelloWorld
 
 **Внимание** - параметр -encoding сработал не во всех версиях JDK на 2.07.2020. Версии от Oracle поддерживают код выше.
 
-
-![терминал](../resourcen/img/terminal-helloworld-01.png "терминалa")
+{{< figure src="/img/res/java/01/01-terminal-helloworld.png" title="терминал" alt="терминал" >}}
 
  С помощью **javac** мы создаём из нашей программы код, понятный машине. Не считаю нужным углубляться в детали этого процесса, но и ничто не мешает вам почитать о:
 
@@ -83,7 +82,8 @@ java HelloWorld
 
 В AdoptOpenJDK можно при инсталляции пакета указать на установку Java_Home.
 
-![Установка AdoptOpenJDK](../resourcen/img/01/01-adopt-home.png "Установка AdoptOpenJDK")
+Установка Adopt Open JDK:
+{{< figure src="/img/res/java/01/01-adopt-home.png" title="установка AdoptOpenJDK" alt="установка AdoptOpenJDK" >}}
 
 Если у вас всё получилось — поздравляю! Вы только что поняли, как именно работали первые Java-кодеры.
 
@@ -155,21 +155,24 @@ IntelliJ IDEA есть в двух версиях — в бесплатной **
 
 ## Домашнее задание
 
-+ Поиграйтесь с выводом строчек в своей среде разработки и попробуйте написать нормальное предложение.
-Пример выполненного домашнего задания:
-
-```Java
-public class HelloWorld { // Начало нашего класса HelloWorld
-    public static void main(String[] args)  { // Начинаем наш метод, главный метод (мэйн)
-        System.out.print("Привет ");
-        System.out.println("Мир! :-)");
-        System.out.println("\t Hello World!!!");
-        System.out.print("\t И ещё строчка :-)");
-        System.out.print("Это моя первая программа \n" );
-        System.out.print("\u0423\u0440\u0430 \n");
-        System.out.println("- Mein erstes Programm :-)"); //моя первая программа
-    } // Закрываем главный метод
-} // Закрываем класс
-```
-
-+ Удалите все комментарии из кода и запустите снова.
+1. Поиграйтесь с выводом строчек в своей среде разработки и попробуйте написать нормальное предложение.
+    - Пример выполненного домашнего задания:
+    ```Java
+    public class HelloWorld { // Начало нашего класса HelloWorld
+        public static void main(String[] args)  { // Начинаем наш метод, главный метод (мэйн)
+            System.out.print("Привет ");
+            System.out.println("Мир! :-)");
+            System.out.println("\t Hello World!!!");
+            System.out.print("\t И ещё строчка :-)");
+            System.out.print("Это моя первая программа \n" );
+            System.out.print("\u0423\u0440\u0430 \n");
+            System.out.println("- Mein erstes Programm :-)"); //моя первая программа
+        } // Закрываем главный метод
+    } // Закрываем класс
+    ```
+2. Удалите все комментарии из кода и запустите снова.
+3. Научитесь быстро находить и печатать следующие символы(они все нам понадобятся при изучении Java) - 
+    ```bash
+    "() {} [] ^^ || && %% __ -- ++ ** // \\ '' ~~ ;; :: ,, .. <> == !="
+    ```
+4. В строке выше 22 пары символов. У вас 22 секунды на написание этой строки самостоятельно.
