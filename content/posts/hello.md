@@ -5,20 +5,11 @@ title = "У меня снова есть блог"
 linktitle = "Первый пост"
 
 menu = "main"
-parent = "tutorials"
-next = "/tutorials/github-pages-blog"
-prev = "/tutorials/automated-deployments"
 weight = 10  
 tags = [
-    "go",
-    "golang",
-    "hugo",
-    "development",
+    "java",
 ]
-categories = [
-    "Development",
-    "golang",
-]  
+ 
 description = ""
 
 draft= false
@@ -28,5 +19,10 @@ draft= false
 
 Около 5 лет у меня не было блога. И вот у меня снова появилось желание, а мои возможности позволяют выбирать из большего, чем 10 лет назад.
 
-![шахматы](../school/test/hello.jpg)
+Надеюсь до конца лета я смогу выложить свой курс введения в веб-программирование с первым языком обучения Java. 
+
+Проверьте сами, вдруг получилось. На секундочку, [сам канал](https://www.youtube.com/channel/UCop5lg-NiMHEZJWq26C8znA/about?view_as=subscriber) сделал ещё 4 года назад - 17.10.2016. 
+
+{{< figure src="/img/blog/berlin-sw-01.jpg" title="ночной берлин" alt="ночной берлин" >}}
+
 

@@ -1,26 +1,14 @@
 ---
 headless: true
 ---
+- [Java]({{< relref "/school/java" >}})
+  - [Уроки online]({{< relref "/school/java/basic-course" >}})
+    - [Java setup]({{< relref "/school/java/basic-course/001-java-introduction" >}})
+  - [Задачник]({{< relref "/school/java/exercises" >}})
+    - [Логика-01]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
 
-- [**Example Site**]({{< relref "/school/java" >}})
-- [Table of Contents]({{< relref "/school/table-of-contents" >}})
-  - [With ToC]({{< relref "/school/table-of-contents/with-toc" >}})
-  - [Without ToC]({{< relref "/school/table-of-contents/without-toc" >}})
-  
-- [Java]({{< relref "/school/Java" >}})
-
-- [Collapsed]({{< relref "/school/collapsed" >}})
-  - [3rd]({{< relref "/school/collapsed/3rd-level" >}})
-    - [4th]({{< relref "/school/collapsed/3rd-level/4th-level" >}})
 - [HTML]({{< relref "/school/html" >}})
+  - [Введение]({{< relref "/school/html/01-html-intro.md" >}})
 <br />
-
-- **Shorttttttcodes**
-- [Buttons]({{< relref "/school/shortcodes/buttons" >}})
-- [Columns]({{< relref "/school/shortcodes/columns" >}})
-- [Expand]({{< relref "/school/shortcodes/expand" >}})
-- [Hints]({{< relref "/school/shortcodes/hints" >}})
-- [Katex]({{< relref "/school/shortcodes/katex" >}})
-- [Mermaid]({{< relref "/school/shortcodes/mermaid" >}})
-- [Tabs]({{< relref "/school/shortcodes/tabs" >}})
+- в разработке
 <br />

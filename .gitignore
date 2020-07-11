@@ -1,6 +1,7 @@
 .idea
 /hugo
 /public
+/draft
 vendor/*/
 resources
 hugo.exe
