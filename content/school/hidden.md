@@ -50,3 +50,6 @@ scelus! Nantemque in suas vobis quamvis, et labori!
     }
     var volumeHardeningAndroid = pixel + tftp + onProcessorUnmount;
     sector(memory(firewire + interlaced, wired));
+    
+    Тестовое вставка видео
+    {{<youtube 2SBgL0mmHlQ>}}
