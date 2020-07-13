@@ -17,4 +17,4 @@ weight: 1
 
   - [Уроки online]({{< relref "/school/java/basic-course" >}})
     - [Java setup]({{< relref "/school/java/basic-course/001-java-setup.md" >}})
-    - [Целочисленные типы данных]({{< relref "/school/java/basic-course/002-java-primitives.md" >}})
+    - [Целочисленные типы данных]({{< relref "/school/java/basic-course/002-java-integers.md" >}})
