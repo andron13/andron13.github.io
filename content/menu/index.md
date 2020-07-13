@@ -3,7 +3,9 @@ headless: true
 ---
 - [Java]({{< relref "/school/java" >}})
   - [Уроки online]({{< relref "/school/java/basic-course" >}})
-    - [Java setup]({{< relref "/school/java/basic-course/001-java-introduction" >}})
+    - [Java setup]({{< relref "/school/java/basic-course/001-java-setup.md" >}})
+    - [Целочисленные типы данных]({{< relref "/school/java/basic-course/002-java-primitives.md" >}})
+    - [Цикл for]({{< relref "/school/java/basic-course/011-java-for.md" >}})
   - [Задачник]({{< relref "/school/java/exercises" >}})
     - [Логика-01]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
 
