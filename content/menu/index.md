@@ -14,10 +14,15 @@ headless: true
     - [09 - Операторы]({{< relref "/school/java/basic-course/009-java-arithmetic-operators.md" >}})
     - [10 - Цикл for]({{< relref "/school/java/basic-course/010-java-for.md" >}})
     - [11 - Методы]({{< relref "/school/java/basic-course/011-java-methods-void-return.md" >}})
+    - [12 - Цикл while]({{< relref "/school/java/basic-course/012-java-while-dowhile.md" >}})
+    - [13 - Ввод данных Scanner]({{< relref "/school/java/basic-course/013-java-scanner.md" >}})
+    - [14 - Системы счисления]({{< relref "/school/java/basic-course/014-java-binary-and-decimal-issue.md" >}})
+  
   - [Задачник]({{< relref "/school/java/exercises" >}})
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
     - [02 - Примитивы]({{< relref "/school/java/exercises/02-exercises-java.md" >}})
     - [03 - Цикл for]({{< relref "/school/java/exercises/03-exercises-java.md" >}})
+    - [03 - Цикл for]({{< relref "/school/java/exercises/04-exercises-java.md" >}})
 - [HTML]({{< relref "/school/html" >}})
   - [Введение]({{< relref "/school/html/01-html-intro.md" >}})
 <br />
