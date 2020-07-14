@@ -12,12 +12,12 @@ headless: true
     - [07 - If - else]({{< relref "/school/java/basic-course/007-java-if-else.md" >}})
     - [08 - Modulo]({{< relref "/school/java/basic-course/008-java-modulo.md" >}})
     - [09 - Операторы]({{< relref "/school/java/basic-course/009-java-arithmetic-operators.md" >}})
-    - [10 - Методы]({{< relref "/school/java/basic-course/010-java-methods-void-return.md" >}})
-    - [11 - Цикл for]({{< relref "/school/java/basic-course/011-java-for.md" >}})
+    - [10 - Цикл for]({{< relref "/school/java/basic-course/010-java-for.md" >}})
+    - [11 - Методы]({{< relref "/school/java/basic-course/011-java-methods-void-return.md" >}})
   - [Задачник]({{< relref "/school/java/exercises" >}})
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
     - [02 - Примитивы]({{< relref "/school/java/exercises/02-exercises-java.md" >}})
-
+    - [03 - Цикл for]({{< relref "/school/java/exercises/03-exercises-java.md" >}})
 - [HTML]({{< relref "/school/html" >}})
   - [Введение]({{< relref "/school/html/01-html-intro.md" >}})
 <br />
