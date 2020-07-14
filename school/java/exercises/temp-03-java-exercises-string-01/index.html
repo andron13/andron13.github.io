@@ -1,0 +1,104 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Доброе утро, String - уно #   Given a string name, e.g. &ldquo;Bob&rdquo;, return a greeting of the form &ldquo;Hello Bob!&rdquo;. helloName(&#34;Bob&#34;) → &#34;Hello Bob!&#34; helloName(&#34;Alice&#34;) → &#34;Hello Alice!&#34; helloName(&#34;X&#34;) → &#34;Hello X!&#34;  Given an &ldquo;out&rdquo; string length 4, such as &ldquo;&#171;&#187;&rdquo;, and a word, return a new string where the word is in the middle of the out string, e.g. &ldquo;&#171;word&#187;&rdquo;. Note: use str.substring(i, j) to extract the String starting at index i and going up to but not including index j."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content="Доброе утро, String - уно #   Given a string name, e.g. &ldquo;Bob&rdquo;, return a greeting of the form &ldquo;Hello Bob!&rdquo;. helloName(&#34;Bob&#34;) → &#34;Hello Bob!&#34; helloName(&#34;Alice&#34;) → &#34;Hello Alice!&#34; helloName(&#34;X&#34;) → &#34;Hello X!&#34;  Given an &ldquo;out&rdquo; string length 4, such as &ldquo;&#171;&#187;&rdquo;, and a word, return a new string where the word is in the middle of the out string, e.g. &ldquo;&#171;word&#187;&rdquo;. Note: use str.substring(i, j) to extract the String starting at index i and going up to but not including index j."><meta property="og:type" content="article"><meta property="og:url" content="https://andron13.de/school/java/exercises/temp-03-java-exercises-string-01/"><title>Temp 03 Java Exercises String 01 | andron13</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.b3215d9d1d18d9051e7fbe8f256ff80e30f41d29073b86348e230d297b771002.css integrity="sha256-syFdnR0Y2QUef76PJW/4DjD0HSkHO4Y0jiMNKXt3EAI="><script defer src=/en.search.min.2400748ff1df4dc36f9a7e921d1f34ef470e60bf9bdedc158e665e21ae3310c6.js integrity="sha256-JAB0j/HfTcNvmn6SHR8070cOYL+b3twVjmZeIa4zEMY="></script><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-33668157-6','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body><input type=checkbox class=hidden id=menu-control><main class="container flex"><aside class=book-menu><nav><h2 class=book-brand><a href=/><img src=/logo.jpg alt=Logo><span>andron13</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/school/java/>Java</a><ul><li><p><a href=/school/java/basic-course/>Уроки online</a></p><ul><li><a href=/school/java/basic-course/001-java-setup/>01 - Java setup</a></li><li><a href=/school/java/basic-course/002-java-integers/>02 - Целые числа</a></li><li><a href=/school/java/basic-course/003-java-float-double/>03 - Десятичные дроби</a></li><li><a href=/school/java/basic-course/004-java-char-string/>04 - Символы и строки</a></li><li><a href=/school/java/basic-course/005-java-boolean/>05 - Булевые данные</a></li><li><a href=/school/java/basic-course/006-java-switch-case/>06 - Switch - case</a></li><li><a href=/school/java/basic-course/007-java-if-else/>07 - If - else</a></li><li><a href=/school/java/basic-course/008-java-modulo/>08 - Modulo</a></li><li><a href=/school/java/basic-course/009-java-arithmetic-operators/>09 - Операторы</a></li><li><a href=/school/java/basic-course/010-java-for/>10 - Цикл for</a></li><li><a href=/school/java/basic-course/011-java-methods-void-return/>11 - Методы</a></li><li><a href=/school/java/basic-course/012-java-while-dowhile/>12 - Цикл while</a></li><li><a href=/school/java/basic-course/013-java-scanner/>13 - Ввод данных Scanner</a></li><li><a href=/school/java/basic-course/014-java-binary-and-decimal-issue/>14 - Системы счисления</a></li></ul></li><li><p><a href=/school/java/exercises/>Задачник</a></p><ul><li><a href=/school/java/exercises/01-exercises-java/>01 - Логика</a></li><li><a href=/school/java/exercises/02-exercises-java/>02 - Примитивы</a></li><li><a href=/school/java/exercises/03-exercises-java/>03 - Цикл for</a></li><li><a href=/school/java/exercises/04-exercises-java/>04 - Первая дюжина тем</a></li></ul></li></ul></li><li><a href=/school/html/>HTML</a><ul><li><a href=/school/html/01-html-intro/>Введение</a></li></ul></li><li>в разработке</li></ul><ul><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>Temp 03 Java Exercises String 01</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><input type=checkbox class=hidden id=toc-control><aside class="hidden clearfix"><nav id=TableOfContents></nav></aside></header><article class=markdown><h1 id=доброе-утро-string---уно>Доброе утро, String - уно
+<a class=anchor href=#%d0%b4%d0%be%d0%b1%d1%80%d0%be%d0%b5-%d1%83%d1%82%d1%80%d0%be-string---%d1%83%d0%bd%d0%be>#</a></h1><ol><li>Given a string name, e.g. &ldquo;Bob&rdquo;, return a greeting of the form &ldquo;Hello Bob!&rdquo;.<pre><code>helloName(&quot;Bob&quot;) → &quot;Hello Bob!&quot;
+helloName(&quot;Alice&quot;) → &quot;Hello Alice!&quot;
+helloName(&quot;X&quot;) → &quot;Hello X!&quot;
+</code></pre></li><li>Given an &ldquo;out&rdquo; string length 4, such as &ldquo;&#171;&#187;&rdquo;, and a word, return a new string where the word is in the middle of the out string, e.g. &ldquo;&#171;word&#187;&rdquo;. Note: use str.substring(i, j) to extract the String starting at index i and going up to but not including index j.<pre><code>makeOutWord(&quot;&lt;&lt;&gt;&gt;&quot;, &quot;Yay&quot;) → &quot;&lt;&lt;Yay&gt;&gt;&quot;
+makeOutWord(&quot;&lt;&lt;&gt;&gt;&quot;, &quot;WooHoo&quot;) → &quot;&lt;&lt;WooHoo&gt;&gt;&quot;
+makeOutWord(&quot;[[]]&quot;, &quot;word&quot;) → &quot;[[word]]&quot;
+</code></pre></li><li>Given a string of even length, return the first half. So the string &ldquo;WooHoo&rdquo; yields &ldquo;Woo&rdquo;.<pre><code>firstHalf(&quot;WooHoo&quot;) → &quot;Woo&quot;
+firstHalf(&quot;HelloThere&quot;) → &quot;Hello&quot;
+firstHalf(&quot;abcdef&quot;) → &quot;abc&quot;
+</code></pre></li><li>Given 2 strings, return their concatenation, except omit the first char of each. The strings will be at least length 1.<pre><code>nonStart(&quot;Hello&quot;, &quot;There&quot;) → &quot;ellohere&quot;
+nonStart(&quot;java&quot;, &quot;code&quot;) → &quot;avaode&quot;
+nonStart(&quot;shotl&quot;, &quot;java&quot;) → &quot;hotlava&quot;
+</code></pre></li><li>Given a string, return a string length 1 from its front, unless front is false, in which case return a string length 1 from its back. The string will be non-empty.<pre><code>theEnd(&quot;Hello&quot;, true) → &quot;H&quot;
+theEnd(&quot;Hello&quot;, false) → &quot;o&quot;
+theEnd(&quot;oh&quot;, true) → &quot;o&quot;
+</code></pre></li><li>Given a string, return true if it ends in &ldquo;ly&rdquo;.<pre><code>endsLy(&quot;oddly&quot;) → true
+endsLy(&quot;y&quot;) → false
+endsLy(&quot;oddy&quot;) → false
+</code></pre></li><li>Given a string of odd length, return the string length 3 from its middle, so &ldquo;Candy&rdquo; yields &ldquo;and&rdquo;. The string length will be at least 3.<pre><code>middleThree(&quot;Candy&quot;) → &quot;and&quot;
+middleThree(&quot;and&quot;) → &quot;and&quot;
+middleThree(&quot;solving&quot;) → &quot;lvi&quot;
+</code></pre></li><li>Given 2 strings, a and b, return a new string made of the first char of a and the last char of b, so &ldquo;yo&rdquo; and &ldquo;java&rdquo; yields &ldquo;ya&rdquo;. If either string is length 0, use &lsquo;@&rsquo; for its missing char.<pre><code>lastChars(&quot;last&quot;, &quot;chars&quot;) → &quot;ls&quot;
+lastChars(&quot;yo&quot;, &quot;java&quot;) → &quot;ya&quot;
+lastChars(&quot;hi&quot;, &quot;&quot;) → &quot;h@&quot;
+</code></pre></li><li>Given a string, if the string begins with &ldquo;red&rdquo; or &ldquo;blue&rdquo; return that color string, otherwise return the empty string.<pre><code>seeColor(&quot;redxx&quot;) → &quot;red&quot;
+seeColor(&quot;xxred&quot;) → &quot;&quot;
+seeColor(&quot;blueTimes&quot;) → &quot;blue&quot;
+</code></pre></li><li>Given a string, return a new string made of 3 copies of the first 2 chars of the original string. The string may be any length. If there are fewer than 2 chars, use whatever is there.<pre><code>extraFront(&quot;Hello&quot;) → &quot;HeHeHe&quot;
+extraFront(&quot;ab&quot;) → &quot;ababab&quot;
+extraFront(&quot;H&quot;) → &quot;HHH&quot;
+</code></pre></li><li>Given a string and a second &ldquo;word&rdquo; string, we&rsquo;ll say that the word matches the string if it appears at the front of the string, except its first char does not need to match exactly. On a match, return the front of the string, or otherwise return the empty string. So, so with the string &ldquo;hippo&rdquo; the word &ldquo;hi&rdquo; returns &ldquo;hi&rdquo; and &ldquo;xip&rdquo; returns &ldquo;hip&rdquo;. The word will be at least length 1.<pre><code>startWord(&quot;hippo&quot;, &quot;hi&quot;) → &quot;hi&quot;
+startWord(&quot;hippo&quot;, &quot;xip&quot;) → &quot;hip&quot;
+startWord(&quot;hippo&quot;, &quot;i&quot;) → &quot;h&quot;
+</code></pre></li><li>Given two strings, a and b, return the result of putting them together in the order abba, e.g. &ldquo;Hi&rdquo; and &ldquo;Bye&rdquo; returns &ldquo;HiByeByeHi&rdquo;.<pre><code>makeAbba(&quot;Hi&quot;, &quot;Bye&quot;) → &quot;HiByeByeHi&quot;
+makeAbba(&quot;Yo&quot;, &quot;Alice&quot;) → &quot;YoAliceAliceYo&quot;
+makeAbba(&quot;What&quot;, &quot;Up&quot;) → &quot;WhatUpUpWhat&quot;
+</code></pre></li><li>Given a string, return a new string made of 3 copies of the last 2 chars of the original string. The string length will be at least 2.<pre><code>extraEnd(&quot;Hello&quot;) → &quot;lololo&quot;
+extraEnd(&quot;ab&quot;) → &quot;ababab&quot;
+extraEnd(&quot;Hi&quot;) → &quot;HiHiHi&quot;
+</code></pre></li><li>Given a string, return a version without the first and last char, so &ldquo;Hello&rdquo; yields &ldquo;ell&rdquo;. The string length will be at least 2.<pre><code>withoutEnd(&quot;Hello&quot;) → &quot;ell&quot;
+withoutEnd(&quot;java&quot;) → &quot;av&quot;
+withoutEnd(&quot;coding&quot;) → &quot;odin&quot;
+</code></pre></li><li>Given a string, return a &ldquo;rotated left 2&rdquo; version where the first 2 chars are moved to the end. The string length will be at least 2.<pre><code>left2(&quot;Hello&quot;) → &quot;lloHe&quot;
+left2(&quot;java&quot;) → &quot;vaja&quot;
+left2(&quot;Hi&quot;) → &quot;Hi&quot;
+</code></pre></li><li>Given a string, return a version without both the first and last char of the string. The string may be any length, including 0.<pre><code>withouEnd2(&quot;Hello&quot;) → &quot;ell&quot;
+withouEnd2(&quot;abc&quot;) → &quot;b&quot;
+withouEnd2(&quot;ab&quot;) → &quot;&quot;
+</code></pre></li><li>Given a string and an int n, return a string made of the first and last n chars from the string. The string length will be at least n.<pre><code>nTwice(&quot;Hello&quot;, 2) → &quot;Helo&quot;
+nTwice(&quot;Chocolate&quot;, 3) → &quot;Choate&quot;
+nTwice(&quot;Chocolate&quot;, 1) → &quot;Ce&quot;
+</code></pre></li><li>Given a string, return true if &ldquo;bad&rdquo; appears starting at index 0 or 1 in the string, such as with &ldquo;badxxx&rdquo; or &ldquo;xbadxx&rdquo; but not &ldquo;xxbadxx&rdquo;. The string may be any length, including 0. Note: use .equals() to compare 2 strings.<pre><code>hasBad(&quot;badxx&quot;) → true
+hasBad(&quot;xbadxx&quot;) → true
+hasBad(&quot;xxbadxx&quot;) → false
+</code></pre></li><li>Given two strings, append them together (known as &ldquo;concatenation&rdquo;) and return the result. However, if the concatenation creates a double-char, then omit one of the chars, so &ldquo;abc&rdquo; and &ldquo;cat&rdquo; yields &ldquo;abcat&rdquo;.<pre><code>conCat(&quot;abc&quot;, &quot;cat&quot;) → &quot;abcat&quot;
+conCat(&quot;dog&quot;, &quot;cat&quot;) → &quot;dogcat&quot;
+conCat(&quot;abc&quot;, &quot;&quot;) → &quot;abc&quot;
+</code></pre></li><li>Given a string, return true if the first 2 chars in the string also appear at the end of the string, such as with &ldquo;edited&rdquo;.<pre><code>frontAgain(&quot;edited&quot;) → true
+frontAgain(&quot;edit&quot;) → false
+frontAgain(&quot;ed&quot;) → true
+</code></pre></li><li>Given a string, if a length 2 substring appears at both its beginning and end, return a string without the substring at the beginning, so &ldquo;HelloHe&rdquo; yields &ldquo;lloHe&rdquo;. The substring may overlap with itself, so &ldquo;Hi&rdquo; yields &ldquo;&rdquo;. Otherwise, return the original string unchanged.<pre><code>without2(&quot;HelloHe&quot;) → &quot;lloHe&quot;
+without2(&quot;HelloHi&quot;) → &quot;HelloHi&quot;
+without2(&quot;Hi&quot;) → &quot;&quot;
+</code></pre></li><li>Given a string, if the first or last chars are &lsquo;x&rsquo;, return the string without those &lsquo;x&rsquo; chars, and otherwise return the string unchanged.<pre><code>withoutX(&quot;xHix&quot;) → &quot;Hi&quot;
+withoutX(&quot;xHi&quot;) → &quot;Hi&quot;
+withoutX(&quot;Hxix&quot;) → &quot;Hxi&quot;
+</code></pre></li><li>The web is built with HTML strings like &ldquo;Yay&rdquo; which draws Yay as italic text. In this example, the &ldquo;i&rdquo; tag makes and which surround the word &ldquo;Yay&rdquo;. Given tag and word strings, create the HTML string with tags around the word, e.g. &ldquo;Yay&rdquo;.<pre><code>makeTags(&quot;i&quot;, &quot;Yay&quot;) → &quot;&lt;i&gt;Yay&lt;/i&gt;&quot;
+makeTags(&quot;i&quot;, &quot;Hello&quot;) → &quot;&lt;i&gt;Hello&lt;/i&gt;&quot;
+makeTags(&quot;cite&quot;, &quot;Yay&quot;) → &quot;&lt;cite&gt;Yay&lt;/cite&gt;&quot;
+</code></pre></li><li>Given a string, return the string made of its first two chars, so the String &ldquo;Hello&rdquo; yields &ldquo;He&rdquo;. If the string is shorter than length 2, return whatever there is, so &ldquo;X&rdquo; yields &ldquo;X&rdquo;, and the empty string "&rdquo; yields the empty string &ldquo;&rdquo;. Note that str.length() returns the length of a string.<pre><code>firstTwo(&quot;Hello&quot;) → &quot;He&quot;
+firstTwo(&quot;abcdefg&quot;) → &quot;ab&quot;
+firstTwo(&quot;ab&quot;) → &quot;ab&quot;
+</code></pre></li><li>Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty (length 0).<pre><code>comboString(&quot;Hello&quot;, &quot;hi&quot;) → &quot;hiHellohi&quot;
+comboString(&quot;hi&quot;, &quot;Hello&quot;) → &quot;hiHellohi&quot;
+comboString(&quot;aaa&quot;, &quot;b&quot;) → &quot;baaab&quot;
+</code></pre></li><li>Given a string, return a &ldquo;rotated right 2&rdquo; version where the last 2 chars are moved to the start. The string length will be at least 2.<pre><code>right2(&quot;Hello&quot;) → &quot;loHel&quot;
+right2(&quot;java&quot;) → &quot;vaja&quot;
+right2(&quot;Hi&quot;) → &quot;Hi&quot;
+</code></pre></li><li>Given a string of even length, return a string made of the middle two chars, so the string &ldquo;string&rdquo; yields &ldquo;ri&rdquo;. The string length will be at
+least 2.<pre><code>middleTwo(&quot;string&quot;) → &quot;ri&quot;
+middleTwo(&quot;code&quot;) → &quot;od&quot;
+middleTwo(&quot;Practice&quot;) → &quot;ct&quot;
+</code></pre></li><li>Given a string and an index, return a string length 2 starting at the given index. If the index is too big or too small to define a string length 2, use the first 2 chars. The string length will be at least 2.<pre><code>twoChar(&quot;java&quot;, 0) → &quot;ja&quot;
+twoChar(&quot;java&quot;, 2) → &quot;va&quot;
+twoChar(&quot;java&quot;, 3) → &quot;ja&quot;
+</code></pre></li><li>Given a string, return a string length 2 made of its first 2 chars. If the string length is less than 2, use &lsquo;@&rsquo; for the missing chars.<pre><code>atFirst(&quot;hello&quot;) → &quot;he&quot;
+atFirst(&quot;hi&quot;) → &quot;hi&quot;
+atFirst(&quot;h&quot;) → &quot;h@&quot;
+</code></pre></li><li>Given a string of any length, return a new string where the last 2 chars, if present, are swapped, so &ldquo;coding&rdquo; yields &ldquo;codign&rdquo;.<pre><code>lastTwo(&quot;coding&quot;) → &quot;codign&quot;
+lastTwo(&quot;cat&quot;) → &quot;cta&quot;
+lastTwo(&quot;ab&quot;) → &quot;ba&quot;
+</code></pre></li><li>Given two strings, append them together (known as &ldquo;concatenation&rdquo;) and return the result. However, if the strings are different lengths, omit chars from the longer string so it is the same length as the shorter string. So &ldquo;Hello&rdquo; and &ldquo;Hi&rdquo; yield &ldquo;loHi&rdquo;. The strings may be any length.<pre><code>minCat(&quot;Hello&quot;, &quot;Hi&quot;) → &quot;loHi&quot;
+minCat(&quot;Hello&quot;, &quot;java&quot;) → &quot;ellojava&quot;
+minCat(&quot;java&quot;, &quot;Hello&quot;) → &quot;javaello&quot;
+</code></pre></li><li>Given a string, return a version without the first 2 chars. Except keep the first char if it is &lsquo;a&rsquo; and keep the second char if it is &lsquo;b&rsquo;. The string may be any length. Harder than it looks.<pre><code>deFront(&quot;Hello&quot;) → &quot;llo&quot;
+deFront(&quot;java&quot;) → &quot;va&quot;
+deFront(&quot;away&quot;) → &quot;aay&quot;
+</code></pre></li><li>Given a string, if one or both of the first 2 chars is &lsquo;x&rsquo;, return the string without those &lsquo;x&rsquo; chars, and otherwise return the string unchanged. This is a little harder than it looks.<pre><code>withoutX2(&quot;xHi&quot;) → &quot;Hi&quot;
+withoutX2(&quot;Hxi&quot;) → &quot;Hi&quot;
+withoutX2(&quot;Hi&quot;) → &quot;Hi&quot;
+</code></pre></li></ol></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><nav id=TableOfContents></nav></aside></main></body></html>
