@@ -1,0 +1,70 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Цикл While и Do While #  Это самая лёгкая глава. Потому что цикл while — родной брат цикла for.
+Пример:
+public class WhileWeAreYoung { public static void main(String[] args){ int i = 0; while(i < 10){ System.out.println(i); i++; } } } Изученный цикл for мы бы написали так:
+public static void main(String[] args) { for (int i = 0; i < 10 ; i++){ System.out.println(i); } } В цикле for стоит условие, и в while стоит условие."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content="Цикл While и Do While #  Это самая лёгкая глава. Потому что цикл while — родной брат цикла for.
+Пример:
+public class WhileWeAreYoung { public static void main(String[] args){ int i = 0; while(i < 10){ System.out.println(i); i++; } } } Изученный цикл for мы бы написали так:
+public static void main(String[] args) { for (int i = 0; i < 10 ; i++){ System.out.println(i); } } В цикле for стоит условие, и в while стоит условие."><meta property="og:type" content="article"><meta property="og:url" content="https://andron13.de/school/java/basic-course/012-java-while-dowhile/"><title>012 Java While Dowhile | andron13</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.b3215d9d1d18d9051e7fbe8f256ff80e30f41d29073b86348e230d297b771002.css integrity="sha256-syFdnR0Y2QUef76PJW/4DjD0HSkHO4Y0jiMNKXt3EAI="><script defer src=/en.search.min.6417a18716784c1de37380035876628a6dc9802d3b3cd05dcf4eaecaeadab461.js integrity="sha256-ZBehhxZ4TB3jc4ADWHZiim3JgC07PNBdz06uyuratGE="></script><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-33668157-6','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body><input type=checkbox class=hidden id=menu-control><main class="container flex"><aside class=book-menu><nav><h2 class=book-brand><a href=/><img src=/logo.jpg alt=Logo><span>andron13</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/school/java/>Java</a><ul><li><p><a href=/school/java/basic-course/>Уроки online</a></p><ul><li><a href=/school/java/basic-course/001-java-setup/>01 - Java setup</a></li><li><a href=/school/java/basic-course/002-java-integers/>02 - Целые числа</a></li><li><a href=/school/java/basic-course/003-java-float-double/>03 - Десятичные дроби</a></li><li><a href=/school/java/basic-course/004-java-char-string/>04 - Символы и строки</a></li><li><a href=/school/java/basic-course/005-java-boolean/>05 - Булевые данные</a></li><li><a href=/school/java/basic-course/006-java-switch-case/>06 - Switch - case</a></li><li><a href=/school/java/basic-course/007-java-if-else/>07 - If - else</a></li><li><a href=/school/java/basic-course/008-java-modulo/>08 - Modulo</a></li><li><a href=/school/java/basic-course/009-java-arithmetic-operators/>09 - Операторы</a></li><li><a href=/school/java/basic-course/010-java-for/>10 - Цикл for</a></li><li><a href=/school/java/basic-course/011-java-methods-void-return/>11 - Методы</a></li><li><a href=/school/java/basic-course/012-java-while-dowhile/ class=active>12 - Цикл while</a></li><li><a href=/school/java/basic-course/013-java-scanner/>13 - Ввод данных Scanner</a></li><li><a href=/school/java/basic-course/014-java-binary-and-decimal-issue/>14 - Системы счисления</a></li></ul></li><li><p><a href=/school/java/exercises/>Задачник</a></p><ul><li><a href=/school/java/exercises/01-exercises-java/>01 - Логика</a></li><li><a href=/school/java/exercises/02-exercises-java/>02 - Примитивы</a></li><li><a href=/school/java/exercises/03-exercises-java/>03 - Цикл for</a></li><li><a href=/school/java/exercises/04-exercises-java/>03 - Цикл for</a></li></ul></li></ul></li><li><a href=/school/html/>HTML</a><ul><li><a href=/school/html/01-html-intro/>Введение</a></li></ul></li><li>в разработке</li></ul><ul><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>012 Java While Dowhile</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><input type=checkbox class=hidden id=toc-control><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#цикл--определение>Цикл — определение</a></li><li><a href=#пример-использования-while>Пример использования while</a></li><li><a href=#дополнительные-материалы>Дополнительные материалы</a></li><li><a href=#домашнее-задание>Домашнее задание</a></li></ul></nav></aside></header><article class=markdown><h1 id=цикл-while-и-do-while>Цикл While и Do While
+<a class=anchor href=#%d1%86%d0%b8%d0%ba%d0%bb-while-%d0%b8-do-while>#</a></h1><p>Это самая лёгкая глава. Потому что цикл <strong>while</strong> — родной брат цикла <strong>for</strong>.</p><p>Пример:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>WhileWeAreYoung</span> <span style=color:#f92672>{</span>
+	<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span><span style=color:#f92672>(</span>String<span style=color:#f92672>[]</span> args<span style=color:#f92672>){</span>
+		<span style=color:#66d9ef>int</span> i <span style=color:#f92672>=</span> 0<span style=color:#f92672>;</span>
+		<span style=color:#66d9ef>while</span><span style=color:#f92672>(</span>i <span style=color:#f92672>&lt;</span> 10<span style=color:#f92672>){</span>
+			System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span>i<span style=color:#f92672>);</span>
+			i<span style=color:#f92672>++;</span>
+		<span style=color:#f92672>}</span>
+	<span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+</code></pre></div><p><a href=/school/java/basic-course/010-java-for/>Изученный</a> цикл <strong>for</strong> мы бы написали так:</p><pre><code class=language-code data-lang=code>public static void main(String[] args) {
+    for (int i = 0; i &lt; 10 ; i++){
+    System.out.println(i);
+    }
+}
+</code></pre><p>В цикле <strong>for</strong> стоит условие, и в <strong>while</strong> стоит условие. While цикл только проверяет правильность условия. В какой-то мере while может заменить связку for + if: &ldquo;пока дети младше 18 лет — алкоголь не продавать&rdquo;.</p><p>Иногда мы можем предполагать, что операция запустит бесконечный процесс или процесс, который невозможно выполнить современными средствами. Тогда нам помогает <strong>break</strong> — выход из цикла.</p><p>Например, такое возможно при подсчёте степени двойки (вспоминаем задачу про шахматную доску) или при подсчёте точного числа PI или при вычислении ряда Фибоначчи.</p><pre><code class=language-code data-lang=code>    while (true){
+    System.out.println(i);
+    i++;
+    if (i &gt; 20)
+        //код
+        break; // выход из цикла
+    }
+</code></pre><p>Если вам он кажется достаточно спорным, помните, что ситуации бывают разными.</p><p>У цикла while есть кузен <strong>do-while</strong>:</p><pre><code class=language-code data-lang=code>do
+{
+   Команда();
+}
+while(Булевое выражение)
+</code></pre><p>Например:</p><pre><code class=language-code data-lang=code>// Декларирование и инициализация переменной
+int i = 0;
+
+// Команда, которая будет выполнена минимум один раз
+do
+{
+    // Команда выполняется трижды
+    System.out.println(&quot;i равно &quot;+ i);
+    // Инкриментирование переменной
+    i+=10;
+}
+// Условие выхода из цикла
+while(i &lt;= 20);
+</code></pre><p>Цикл <strong>while</strong> называют циклом с предусловием.</p><p>Цикл <strong>do while</strong> — циклом с постусловием.</p><p>В первом случае (while) код будет выполнен, согласно данным входа, во втором случае (do while) код будет выполнен минимум один раз, и только потом будет проверка на выход из цикла.</p><h2 id=цикл--определение>Цикл — определение
+<a class=anchor href=#%d1%86%d0%b8%d0%ba%d0%bb--%d0%be%d0%bf%d1%80%d0%b5%d0%b4%d0%b5%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5>#</a></h2><p><strong>Циклы</strong> — это разновидность управляющих конструкций для организации многократного выполнения одного и того же участка кода.</p><p>Код внутри такой управляющей конструкции выполняется циклично. Каждое выполнение кода — это <strong>итерация</strong> цикла. Количество итераций регулируется условием цикла. Код, который выполняется внутри цикла, называют <strong>телом цикла</strong>.</p><h2 id=пример-использования-while>Пример использования while
+<a class=anchor href=#%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f-while>#</a></h2><p>78 из десятичной системы переводим в двоичные 1001110.</p><pre><code class=language-code data-lang=code>78 : 2 = 39 остаток: 0
+39 : 2 = 19 остаток: 1
+19 : 2 =  9 остаток: 1
+ 9 : 2 =  4 остаток: 1
+ 4 : 2 =  2 остаток: 0
+ 2 : 2 =  1 остаток: 0
+ 1 : 2 =  0 остаток: 1
+</code></pre><p>Решение с помощью while</p><pre><code class=language-code data-lang=code>public static String convertDecimalToBinary(int decimal) {
+    int remainder;
+    String output = &quot;&quot;;
+    while (decimal &gt; 0) {
+        remainder = (decimal % 2);
+        output = Integer.toString(remainder) + output; 
+        decimal = decimal / 2;
+    }
+    return output;
+}
+</code></pre><h2 id=дополнительные-материалы>Дополнительные материалы
+<a class=anchor href=#%d0%b4%d0%be%d0%bf%d0%be%d0%bb%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d0%bc%d0%b0%d1%82%d0%b5%d1%80%d0%b8%d0%b0%d0%bb%d1%8b>#</a></h2><p>While, Do While: <a href=https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html>https://docs.oracle.com/javase/tutorial/java/nutsandbolts/while.html</a></p><h2 id=домашнее-задание>Домашнее задание
+<a class=anchor href=#%d0%b4%d0%be%d0%bc%d0%b0%d1%88%d0%bd%d0%b5%d0%b5-%d0%b7%d0%b0%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5>#</a></h2><ol><li>Перепишите примеры из <a href=/school/java/basic-course/010-java-for/>урока 10</a> с использованием новых знаний.</li><li>Попробуйте написать вложенные циклы с помощью While и Do-While</li></ol></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><nav id=TableOfContents><ul><li><a href=#цикл--определение>Цикл — определение</a></li><li><a href=#пример-использования-while>Пример использования while</a></li><li><a href=#дополнительные-материалы>Дополнительные материалы</a></li><li><a href=#домашнее-задание>Домашнее задание</a></li></ul></nav></aside></main></body></html>
