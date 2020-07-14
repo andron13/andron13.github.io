@@ -1,0 +1,158 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Switch и Case: оператор выбора — введение в Java 006 #  В этом уроке мы рассмотрим на примерах оператор выбора Switch и опции выбора Case.
+Пример:
+ За пятёрку в четверти по математике папа обещал мне велосипед. За четвёрку в четверти по математике мама купит мне GoPro4. За тройку меня, наверное, не будут ругать. За двойку меня отругают. За единицу меня &ldquo;убьют&rdquo;.    Опять двойка   Типичный жизненный пример, который можно написать на Java:"><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content="Switch и Case: оператор выбора — введение в Java 006 #  В этом уроке мы рассмотрим на примерах оператор выбора Switch и опции выбора Case.
+Пример:
+ За пятёрку в четверти по математике папа обещал мне велосипед. За четвёрку в четверти по математике мама купит мне GoPro4. За тройку меня, наверное, не будут ругать. За двойку меня отругают. За единицу меня &ldquo;убьют&rdquo;.    Опять двойка   Типичный жизненный пример, который можно написать на Java:"><meta property="og:type" content="article"><meta property="og:url" content="https://andron13.de/school/java/basic-course/006-java-switch-case/"><title>006 Java Switch Case | andron13</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.b3215d9d1d18d9051e7fbe8f256ff80e30f41d29073b86348e230d297b771002.css integrity="sha256-syFdnR0Y2QUef76PJW/4DjD0HSkHO4Y0jiMNKXt3EAI="><script defer src=/en.search.min.6e6da2b3caf86e69cdaf87df85248fdfeb18bd20582b8bd4c408d5d428b27980.js integrity="sha256-bm2is8r4bmnNr4ffhSSP3+sYvSBYK4vUxAjV1CiyeYA="></script><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-33668157-6','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body><input type=checkbox class=hidden id=menu-control><main class="container flex"><aside class=book-menu><nav><h2 class=book-brand><a href=/><img src=/logo.jpg alt=Logo><span>andron13</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><p><a href=/school/java/>Java</a></p><ul><li><a href=/school/java/basic-course/>Уроки online</a><ul><li><a href=/school/java/basic-course/001-java-setup/>01 - Java setup</a></li><li><a href=/school/java/basic-course/002-java-integers/>02 - Целые числа</a></li><li><a href=/school/java/basic-course/003-java-float-double/>03 - Десятичные дроби</a></li><li><a href=/school/java/basic-course/004-java-char-string/>04 - Символы и строки</a></li><li><a href=/school/java/basic-course/005-java-boolean/>05 - Булевые данные</a></li><li><a href=/school/java/basic-course/006-java-switch-case/ class=active>06 - Switch - case</a></li><li><a href=/school/java/basic-course/007-java-if-else/>07 - If - else</a></li><li><a href=/school/java/basic-course/008-java-modulo/>08 - Modulo</a></li><li><a href=/school/java/basic-course/009-java-arithmetic-operators/>09 - Операторы</a></li><li><a href=/school/java/basic-course/010-java-methods-void-return/>10 - Методы</a></li><li><a href=/school/java/basic-course/011-java-for/>11 - Цикл for</a></li></ul></li><li><a href=/school/java/exercises/>Задачник</a><ul><li><a href=/school/java/exercises/01-exercises-java/>01 - Логика</a></li><li><a href=/school/java/exercises/02-exercises-java/>02 - Примитивы</a></li></ul></li></ul></li><li><p><a href=/school/html/>HTML</a></p><ul><li><a href=/school/html/01-html-intro/>Введение</a></li></ul></li><li><p>в разработке</p></li></ul><ul><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>006 Java Switch Case</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><input type=checkbox class=hidden id=toc-control><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#дополнительные-материалы>Дополнительные материалы</a></li><li><a href=#домашнее-задание>Домашнее задание</a></li></ul></nav></aside></header><article class=markdown><h1 id=switch-и-case-оператор-выбора--введение-в-java-006>Switch и Case: оператор выбора — введение в Java 006
+<a class=anchor href=#switch-%d0%b8-case-%d0%be%d0%bf%d0%b5%d1%80%d0%b0%d1%82%d0%be%d1%80-%d0%b2%d1%8b%d0%b1%d0%be%d1%80%d0%b0--%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2-java-006>#</a></h1><p>В этом уроке мы рассмотрим на примерах оператор выбора <strong>Switch</strong> и опции выбора <strong>Case</strong>.</p><p>Пример:</p><ul><li>За пятёрку в четверти по математике папа обещал мне велосипед.</li><li>За четвёрку в четверти по математике мама купит мне GoPro4.</li><li>За тройку меня, наверное, не будут ругать.</li><li>За двойку меня отругают.</li><li>За единицу меня &ldquo;убьют&rdquo;.</li></ul><figure><img src=/img/res/java/06/06-again-two.jpg alt="Опять двойка"><figcaption><h4>Опять двойка</h4></figcaption></figure><p>Типичный жизненный пример, который можно написать на Java:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SwitchOne</span> <span style=color:#f92672>{</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span><span style=color:#f92672>(</span>String<span style=color:#f92672>[]</span> args<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+
+        <span style=color:#66d9ef>int</span> оценкаВЧетверти <span style=color:#f92672>=</span> 1<span style=color:#f92672>;</span>
+        String награда<span style=color:#f92672>;</span>
+
+        <span style=color:#66d9ef>switch</span> <span style=color:#f92672>(</span>оценкаВЧетверти<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+            <span style=color:#66d9ef>case</span> 5<span style=color:#f92672>:</span>
+                награда <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Велосипед&#34;</span><span style=color:#f92672>;</span>
+                <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 4<span style=color:#f92672>:</span>
+                награда <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;GoPro4&#34;</span><span style=color:#f92672>;</span>
+                <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 3<span style=color:#f92672>:</span>
+                награда <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Награды не будет&#34;</span><span style=color:#f92672>;</span>
+                <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 2<span style=color:#f92672>:</span>
+                награда <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Потерянный час времени и плохое настроение&#34;</span><span style=color:#f92672>;</span>
+                <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 1<span style=color:#f92672>:</span>
+                награда <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Лучше не спрашивайте&#34;</span><span style=color:#f92672>;</span>
+                <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>default</span><span style=color:#f92672>:</span>
+                награда <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Такой оценки не существует&#34;</span><span style=color:#f92672>;</span>
+                <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+        <span style=color:#f92672>}</span>
+        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span>награда<span style=color:#f92672>);</span>
+    <span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+</code></pre></div><p>Мы видим, что каждая оценка заканчивается брейком: если брейк не ставить, то выбор селектирует следующую награду. Удобно, если у нас одинаковый результат на несколько переменных. Заканчивается ввод данных дефолтным выбором, который выдаётся при получении непредусмотренных данных или, лучше сказать, всех остальных неуказанных.</p><p>При наличии множественных выборов удобно использовать Switch и Case. Направо пойдёшь коня потеряешь, прямо&mldr;. Это именно тот случай, где уже можно использовать такой алгоритм действий.</p><p>Первый же пример из поиска приведёт нас к календарю. Это наиболее используемый пример в учебниках. 12 месяцев с уникальным названием и ID:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SwitchDemoCalendar</span> <span style=color:#f92672>{</span>
+    <span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span><span style=color:#f92672>(</span>String<span style=color:#f92672>[]</span> args<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+        <span style=color:#66d9ef>int</span> month <span style=color:#f92672>=</span> 8<span style=color:#f92672>;</span>
+        String monthString<span style=color:#f92672>;</span>
+        <span style=color:#66d9ef>switch</span> <span style=color:#f92672>(</span>month<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+            <span style=color:#66d9ef>case</span> 1<span style=color:#f92672>:</span>  monthString <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;January&#34;</span><span style=color:#f92672>;</span>
+                     <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 2<span style=color:#f92672>:</span>  monthString <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;February&#34;</span><span style=color:#f92672>;</span>
+                     <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 3<span style=color:#f92672>:</span>  monthString <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;March&#34;</span><span style=color:#f92672>;</span>
+                     <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 4<span style=color:#f92672>:</span>  monthString <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;April&#34;</span><span style=color:#f92672>;</span>
+                     <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 5<span style=color:#f92672>:</span>  monthString <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;May&#34;</span><span style=color:#f92672>;</span>
+                     <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 6<span style=color:#f92672>:</span>  monthString <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;June&#34;</span><span style=color:#f92672>;</span>
+                     <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 7<span style=color:#f92672>:</span>  monthString <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;July&#34;</span><span style=color:#f92672>;</span>
+                     <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 8<span style=color:#f92672>:</span>  monthString <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;August&#34;</span><span style=color:#f92672>;</span>
+                     <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 9<span style=color:#f92672>:</span>  monthString <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;September&#34;</span><span style=color:#f92672>;</span>
+                     <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 10<span style=color:#f92672>:</span> monthString <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;October&#34;</span><span style=color:#f92672>;</span>
+                     <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 11<span style=color:#f92672>:</span> monthString <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;November&#34;</span><span style=color:#f92672>;</span>
+                     <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>case</span> 12<span style=color:#f92672>:</span> monthString <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;December&#34;</span><span style=color:#f92672>;</span>
+                     <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+            <span style=color:#66d9ef>default</span><span style=color:#f92672>:</span> monthString <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Invalid month&#34;</span><span style=color:#f92672>;</span>
+                     <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+        <span style=color:#f92672>}</span>
+        System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span>monthString<span style=color:#f92672>);</span>
+    <span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+</code></pre></div><p>В результате работы данной конструкции мы получаем переменную с нужным значением. В последнем случае &ldquo;monthString&rdquo;, или в случае с оценкой, &ldquo;награда&rdquo;. Абсолютно простая конструкция, где самое сложное — синтаксис, который просто надо выучить. И, после написания 30 различных примеров без шпаргалок, он в крови.</p><p>Для закрепления рассмотрим ещё один пример:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-Java data-lang=Java><span style=color:#66d9ef>public</span> <span style=color:#66d9ef>class</span> <span style=color:#a6e22e>SwitchCoffee</span> <span style=color:#f92672>{</span>
+	<span style=color:#66d9ef>public</span> <span style=color:#66d9ef>static</span> <span style=color:#66d9ef>void</span> <span style=color:#a6e22e>main</span><span style=color:#f92672>(</span>String<span style=color:#f92672>[]</span> args<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+		<span style=color:#66d9ef>int</span> a <span style=color:#f92672>=</span> 1<span style=color:#f92672>;</span> <span style=color:#75715e>//номер кнопки в кофе-автомате
+</span><span style=color:#75715e></span>		<span style=color:#66d9ef>switch</span> <span style=color:#f92672>(</span>a<span style=color:#f92672>)</span> <span style=color:#f92672>{</span>
+			<span style=color:#66d9ef>case</span> 1<span style=color:#f92672>:</span>
+				System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Кофе американо готовится&#34;</span><span style=color:#f92672>);</span>
+				<span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+			<span style=color:#66d9ef>case</span> 2<span style=color:#f92672>:</span>
+				System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Кипяток сейчас будет&#34;</span><span style=color:#f92672>);</span>
+				<span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+			<span style=color:#66d9ef>case</span> 3<span style=color:#f92672>:</span>
+				System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Кофе эспрессо готовится&#34;</span><span style=color:#f92672>);</span>
+				<span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+			<span style=color:#66d9ef>case</span> 4<span style=color:#f92672>:</span>
+				System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Какао уже в пути&#34;</span><span style=color:#f92672>);</span>
+				<span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+			<span style=color:#66d9ef>case</span> 5<span style=color:#f92672>:</span>
+				System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Вода кипятится&#34;</span><span style=color:#f92672>);</span>
+				System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Кофе мелется&#34;</span><span style=color:#f92672>);</span>
+				System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Сливки добавляются&#34;</span><span style=color:#f92672>);</span>
+				<span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+			<span style=color:#66d9ef>default</span><span style=color:#f92672>:</span>
+				System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;повторите свой выбор, напиток под номером: &#34;</span>
+                 <span style=color:#f92672>+</span> a <span style=color:#f92672>+</span> <span style=color:#e6db74>&#34; Временно недоступен&#34;</span><span style=color:#f92672>);</span>
+                <span style=color:#66d9ef>break</span><span style=color:#f92672>;</span>
+		<span style=color:#f92672>}</span>
+		System<span style=color:#f92672>.</span><span style=color:#a6e22e>out</span><span style=color:#f92672>.</span><span style=color:#a6e22e>println</span><span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Программа отработана без ошибок&#34;</span><span style=color:#f92672>);</span>
+	<span style=color:#f92672>}</span>
+<span style=color:#f92672>}</span>
+</code></pre></div><p>Можно заметить, что в пятом кейсе последнего примера с кофе-автоматом запускается множество сообщений. Мы можем использовать один кейс для запуска нескольких директив. Но это не рекомендуется из-за плохой читаемости кода. Обычно Switch используется для изменения одной переменной. Но это не значит, что вы такого не встретите в чужом коде.</p><pre><code>public class CoffeeMashine {
+	public static void main(String[] args) {
+		int choose = 2;
+		myChoose(choose);
+	}
+	public static void myChoose(int choose) {
+		switch (choose) {
+			case 3:
+				latte();
+				break;
+			case 2:
+				americano();
+				break;
+			case 1:
+				cappucino();
+				break;
+			default:
+				americano();
+		}
+	}
+	public static void latte() {
+		System.out.println(&quot;---&quot;);
+		System.out.println(&quot;We are created latte for you master&quot;);
+		milk(40);
+		coffee(30);
+		water(70);
+		System.out.println(&quot;---&quot;);
+	}
+	public static void cappucino() {
+		System.out.println(&quot;---&quot;);
+		System.out.println(&quot;We are created cappucino for you master&quot;);
+		milk(30);
+		coffee(40);
+		water(20);
+		System.out.println(&quot;---&quot;);
+	}
+	public static void americano() {
+		System.out.println(&quot;---&quot;);
+		System.out.println(&quot;We are created americano for you master&quot;);
+		milk(0);
+		coffee(40);
+		water(10);
+		System.out.println(&quot;---&quot;);
+	}
+	public static void water(int ml) {
+		System.out.printf(&quot;Added %d ml of water \n&quot;, ml);
+	}
+	public static void milk(int ml) {
+		System.out.printf(&quot;Added %d ml of milk \n&quot;, ml);
+	}
+	public static void coffee(int ml) {
+		System.out.printf(&quot;Added %d ml of coffee \n&quot;, ml);
+	}
+}
+</code></pre><p>Перед домашним заданием хочется привести ещё один пример применения Switch/Case в жизни: обычный лифт в многоэтажном здании. В зависимости от номера нажимаемой кнопки, лифт едет (ожидаемо) на нужный этаж. Оператор выбора Switch используется вокруг вас везде.</p><figure><img src=/img/res/java/06/006-lift.jpg alt=Лифт><figcaption><h4>Лифт</h4></figcaption></figure><h2 id=дополнительные-материалы>Дополнительные материалы
+<a class=anchor href=#%d0%b4%d0%be%d0%bf%d0%be%d0%bb%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d0%bc%d0%b0%d1%82%d0%b5%d1%80%d0%b8%d0%b0%d0%bb%d1%8b>#</a></h2><p><a href=https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html>https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html</a></p><h2 id=домашнее-задание>Домашнее задание
+<a class=anchor href=#%d0%b4%d0%be%d0%bc%d0%b0%d1%88%d0%bd%d0%b5%d0%b5-%d0%b7%d0%b0%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5>#</a></h2><ol><li>Напишите программу действий кассира магазина, если у него пытаются купить алкоголь следующие 5 покупателей:
+10 лет, 17 лет, 18 лет, 20 лет и 30 лет.</li><li>Напишите программу, которая определяет сезон года. Месяца указаны int переменными.</li></ol></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><nav id=TableOfContents><ul><li><a href=#дополнительные-материалы>Дополнительные материалы</a></li><li><a href=#домашнее-задание>Домашнее задание</a></li></ul></nav></aside></main></body></html>
