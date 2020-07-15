@@ -13,11 +13,13 @@ headless: true
     - [08 - Modulo]({{< relref "/school/java/basic-course/008-java-modulo.md" >}})
     - [09 - Операторы]({{< relref "/school/java/basic-course/009-java-arithmetic-operators.md" >}})
     - [10 - Цикл for]({{< relref "/school/java/basic-course/010-java-for.md" >}})
-    - [11 - Методы]({{< relref "/school/java/basic-course/011-java-methods-void-return.md" >}})
-    - [12 - Цикл while]({{< relref "/school/java/basic-course/012-java-while-dowhile.md" >}})
-    - [13 - Ввод данных Scanner]({{< relref "/school/java/basic-course/013-java-scanner.md" >}})
-    - [14 - Системы счисления]({{< relref "/school/java/basic-course/014-java-binary-and-decimal-issue.md" >}})
-    - [15 - Тернарный оператор]({{< relref "/school/java/basic-course/015-java-ternary-operator.md" >}})
+    - [11 - Casting литералов]({{< relref "/school/java/basic-course/011-java-string-possibilities-and-more.md" >}})
+    - [12 - Методы]({{< relref "/school/java/basic-course/012-java-methods-void-return.md" >}})
+    - [13 - Цикл while]({{< relref "/school/java/basic-course/013-java-while-dowhile.md" >}})
+    - [14 - Ввод данных Scanner]({{< relref "/school/java/basic-course/014-java-scanner.md" >}})
+    - [15 - Системы счисления]({{< relref "/school/java/basic-course/015-java-binary-and-decimal-issue.md" >}})
+    - [16 - Тернарный оператор]({{< relref "/school/java/basic-course/016-java-ternary-operator.md" >}})
+
   
   - [Задачник]({{< relref "/school/java/exercises" >}})
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
