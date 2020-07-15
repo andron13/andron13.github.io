@@ -17,6 +17,7 @@ headless: true
     - [12 - Цикл while]({{< relref "/school/java/basic-course/012-java-while-dowhile.md" >}})
     - [13 - Ввод данных Scanner]({{< relref "/school/java/basic-course/013-java-scanner.md" >}})
     - [14 - Системы счисления]({{< relref "/school/java/basic-course/014-java-binary-and-decimal-issue.md" >}})
+    - [15 - Тернарный оператор]({{< relref "/school/java/basic-course/015-java-ternary-operator.md" >}})
   
   - [Задачник]({{< relref "/school/java/exercises" >}})
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
