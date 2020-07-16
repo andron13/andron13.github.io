@@ -48,9 +48,7 @@ String myPi = String.valueOf(pi);
 
 ## Магия строки: String to char
 
-### Что это за символ?
-
-#### charAt
+### charAt - Что это за символ?
 
 Мы можем взять из ~~стринга~~строкового литерала любой символ и записать его в переменную с типом данных **char**.
 ```code
@@ -108,3 +106,148 @@ char myChar = "Андрей".charAt(2);  // так тоже теоретичес
 |:----|----:|
 |charAt(int index)|Возвращает значение символа по указанному индексу.|
 |codePointAt(int index)|Возвращает символ (Unicode code point) в указанном индексе.|
+|codePointBefore(int index)	|Возвращает символ (точка Юникода) перед указанным индексом.|
+|codePointCount(int beginIndex, int endIndex)	|Возвращает количество символов Юникода в указанном текстовом диапазоне данной строки.|
+|compareTo(String anotherString)	|Сравнивает две строки лексикографически.|
+|compareToIgnoreCase(String str)	|Сравнивает две строки лексикографически, игнорируя case написания|
+|concat(String str)	|Конкатенирует эту строку на конец другой строки.|
+
+Лично мне перевод мало что сказал. Давайте посмотрим на примерах, что мы можем сделать.
+
+**charAt** мы уже разобрали выше в этой же статье.
+
+## codePointAt(int index) - пример использования
+
+```bash
+String testStr = "Группа студентов";
+int result = testStr.codePointAt(1);
+System.out.println("Результат проверки метода codePointAt = " + result);
+```
+
+На экране мы увидим:
+
+```code
+Результат проверки метода codePointAt = 1088
+```
+
+## codePointBefore(int index) - пример использования
+
+```bash
+String str = "I love Java";
+System.out.println("String = " + str);
+int result = str.codePointBefore(1);
+System.out.println("Character(unicode point) = " + result);	
+```
+
+На экране мы увидим:
+
+```code
+String = I love Java
+Character(unicode point) = 73
+```
+
+## codePointCount(int beginIndex, int endIndex) - пример использования
+
+```bash
+System.out.println();
+String str = "Мы учимся в школе Telran";
+System.out.println("Оригинальная строка : " + str);
+// codepoint from index 1 to index 10
+int ctc = str.codePointCount(3, 10);
+// prints character from index 1 to index 10
+System.out.println("Считаем символы = " + ctc);
+```
+
+На экране мы увидим:
+
+```code
+Оригинальная строка : Мы учимся в школе Telran
+Считаем символы = 7
+```
+
+## compareTo(String anotherString) - пример использования
+
+Значение 0, если аргумент является строкой, лексикографически равной этой строке; значение меньше 0, если аргумент является строкой, лексикографически большей, чем эта строка; и значение больше 0, если аргумент является строкой, лексикографически меньшей, чем эта строка.
+
+Лексикографический порядок — отношение линейного порядка на множестве слов над некоторым упорядоченным алфавитом Sigma. Своё название лексикографический порядок получил по аналогии с сортировкой по алфавиту в словаре.
+
+
+```bash
+        String str1 = "Строка для теста";
+        String str2 = "Строка для теста";
+        String str3 = "Другая строка для теста";
+
+        int result = str1.compareTo( str2 );
+        System.out.println(result);
+
+        result = str2.compareTo( str3 );
+        System.out.println(result);
+
+        result = str3.compareTo( str1 );
+        System.out.println(result);
+```
+
+Результат проверки compareTo(String anotherString):
+
+```code
+0
+13
+-13
+```
+
+## compareToIgnoreCase(String str) - пример использования
+
+```bash
+        String str1 = "Строка для теста";
+        String str2 = "сТрОкА дЛя тЕсТа";
+        String str3 = "Другая строка для теста";
+
+        int result = str1.compareToIgnoreCase(str2);
+        System.out.println(result);
+
+        result = str2.compareToIgnoreCase(str3);
+        System.out.println(result);
+
+        result = str3.compareToIgnoreCase(str1);
+        System.out.println(result);
+```
+
+Результат проверки compareToIgnoreCase(String str):
+
+```code
+0
+13
+-13
+```
+
+## concat(String str) - пример использования
+
+```bash
+String str = "Привет";
+str = str.concat(" Мир");
+System.out.println(str);
+```
+
+Результат проверки concat(String str):
+
+```code
+Привет Мир
+```
+
+К каждому типу данных существует множество стандартных методов. Важно уметь читать документацию и пользоваться поисковиками.
+
+## Домашнее задание
+
+Разобраться с методами:
+- contains(CharSequence s)
+- endsWith(String suffix)
+- equals(Object anObject)
+- equalsIgnoreCase(String anotherString)
+- isEmpty()
+- length()
+- replace(char oldChar, char newChar)
+- startsWith(String prefix)
+- substring(int beginIndex)
+- toLowerCase()
+- toUpperCase()
+- trim()
