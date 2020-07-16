@@ -1,6 +1,8 @@
 ---
 bookCollapseSection: true
 weight: 1
+title: Уроки Java Online
+description: Авторский курс Java для начинающих. Самоучитель для тех, кто хочет учиться online
 ---
 
 # Java
@@ -8,6 +10,7 @@ weight: 1
 К данному курсу ведётся:
 - Git-репозиторий с кодом
 - и видео уроки.
+Скоро будет ссылка.
 
 ## И конечно же задачник
   - [Задачник]({{< relref "/school/java/exercises" >}})
@@ -35,3 +38,5 @@ weight: 1
     - [Ввод данных Scanner]({{< relref "/school/java/basic-course/014-java-scanner.md" >}})
     - [Системы счисления]({{< relref "/school/java/basic-course/015-java-binary-and-decimal-issue.md" >}})
     - [Тернарный оператор]({{< relref "/school/java/basic-course/016-java-ternary-operator.md" >}})
+    
+{{< figure src="/img/res/java/558px-Java_logo.svg.png" title="Java" alt="уроки java online" >}}

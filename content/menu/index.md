@@ -19,7 +19,6 @@ headless: true
     - [14 - Ввод данных Scanner]({{< relref "/school/java/basic-course/014-java-scanner.md" >}})
     - [15 - Системы счисления]({{< relref "/school/java/basic-course/015-java-binary-and-decimal-issue.md" >}})
     - [16 - Тернарный оператор]({{< relref "/school/java/basic-course/016-java-ternary-operator.md" >}})
-
   
   - [Задачник]({{< relref "/school/java/exercises" >}})
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
