@@ -251,3 +251,7 @@ System.out.println(str);
 - toLowerCase()
 - toUpperCase()
 - trim()
+
+## Дополнительные ссылки
+
+1. [Oфициальная документация](https://docs.oracle.com/javase/8/docs/api/java/lang/String.html) к String
