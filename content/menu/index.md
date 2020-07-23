@@ -26,7 +26,9 @@ headless: true
     - [03 - Цикл for]({{< relref "/school/java/exercises/03-exercises-java.md" >}})
     - [04 - Первая дюжина тем]({{< relref "/school/java/exercises/04-exercises-java.md" >}})
 - [HTML]({{< relref "/school/html" >}})
-  - [Введение]({{< relref "/school/html/01-html-intro.md" >}})
+  - [1 - Введение]({{< relref "/school/html/01-html-intro.md" >}})
+  - [2 - Первая страница]({{< relref "/school/html/02-html-hello-world.md" >}})
+  - [3 - Путь к файлу]({{< relref "/school/html/03-html-path.md" >}})
 <br />
 - в разработке
 <br />
