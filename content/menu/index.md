@@ -20,15 +20,20 @@ headless: true
     - [15 - Системы счисления]({{< relref "/school/java/basic-course/015-java-binary-and-decimal-issue.md" >}})
     - [16 - Тернарный оператор]({{< relref "/school/java/basic-course/016-java-ternary-operator.md" >}})
   
-  - [Задачник]({{< relref "/school/java/exercises" >}})
+  - Задачник по Java
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
     - [02 - Примитивы]({{< relref "/school/java/exercises/02-exercises-java.md" >}})
     - [03 - Цикл for]({{< relref "/school/java/exercises/03-exercises-java.md" >}})
     - [04 - Первая дюжина тем]({{< relref "/school/java/exercises/04-exercises-java.md" >}})
-- [HTML]({{< relref "/school/html" >}})
+- HTML
   - [1 - Введение]({{< relref "/school/html/01-html-intro.md" >}})
   - [2 - Первая страница]({{< relref "/school/html/02-html-hello-world.md" >}})
   - [3 - Путь к файлу]({{< relref "/school/html/03-html-path.md" >}})
+- Полезная подборка
+  - [01 - Git-введение]({{< relref "/school/tools/01-git.md" >}})
+  - [02 - Git-методичка]({{< relref "/school/tools/02-github-basic.md" >}})
+  - [03 - Булева Алгебра]({{< relref "/school/tools/03-boolean-algebra.md" >}})
+  - [04 - О паролях]({{< relref "/school/tools/04-how-to-create-passwords.md" >}})
 <br />
 - в разработке
 <br />
