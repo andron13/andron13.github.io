@@ -1,6 +1,7 @@
 ---
 headless: true
 ---
+**Войти-в-АйТи**
 - [Java]({{< relref "/school/java" >}})
   - [Уроки online]({{< relref "/school/java/basic-course" >}})
     - [01 - Java setup]({{< relref "/school/java/basic-course/001-java-setup.md" >}})
