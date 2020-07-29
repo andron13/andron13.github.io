@@ -1,4 +1,4 @@
-# Двоичная, десятичная, восьмеричная и прочие системы в Java и преобразования между ними.
+# Двоичная, десятичная, восьмеричная и прочие системы в Java и преобразования между ними — введение в Java 015
 
 {{< figure src="/img/res/java/14/14-maya-svg.png" title="символы майя" alt="символы майя" >}}
 
@@ -36,7 +36,22 @@
 
 Если с приведёнными примерами всё понятно, то можно перейти дальше и записать оба примера в Java. 
 
-Переведём число из двоичной системы в десятичную, пока не забыли.
+Переведём число из десятичной системы в двоичную, пока не забыли.
+
+```code
+public static String convertDecimalToBinary(int decimal) {
+    int remainder;
+    String output = "";
+    while (decimal > 0) {
+        remainder = (decimal % 2);
+        output = Integer.toString(remainder) + output; 
+        decimal = decimal / 2;
+    }
+    return output;
+}
+```
+
+И обратно из двоичной в десятичную
 
 ```code
 public static int convertBinaryToDecimal(int binaryDigit) {
@@ -50,21 +65,6 @@ public static int convertBinaryToDecimal(int binaryDigit) {
         n++;
     }
     return decimal;
-}
-```
-
-Следом попробуем перевести из десятичных обратно в двоичные.
-
-```code
-public static String convertDecimalToBinary(int decimal) {
-    int remainder;
-    String output = "";
-    while (decimal > 0) {
-        remainder = (decimal % 2);
-        output = Integer.toString(remainder) + output; 
-        decimal = decimal / 2;
-    }
-    return output;
 }
 ```
 
@@ -106,7 +106,7 @@ public static String convertDecimalToAnything(int decimalDigit, int systemIndex)
 ## Домашнее задание
 
 1. Ознакомиться со всеми дополнительными ссылками.
-2. Написать метод, который "вычитывает из строковых литералов десятичные и двочиные числа. Используйте метод - " **Integer.parseInt()**;
+2. Написать метод, который "вычитывает из строковых литералов десятичные и двоичные числа. Используйте метод - " **Integer.parseInt()**;
 3. Написать свой собственный класс **ConvertDigits**
     - добавить интерактивность, общение программы с пользователем. 
     - не использовать цикл **while**.
