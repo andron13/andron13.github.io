@@ -23,6 +23,8 @@ headless: true
     - [17 - Рекурсия, введение]({{< relref "/school/java/basic-course/017-java-recursion-intro.md" >}})
     - [18 - Массивы знакомство]({{< relref "/school/java/basic-course/018-java-array.md" >}})
     - [19 - Цикл foreach]({{< relref "/school/java/basic-course/019-java-foreach.md" >}})
+    - [20 - Varargs]({{< relref "/school/java/basic-course/020-java-varargs.md" >}})
+    - [21 - Многомерные arrays]({{< relref "/school/java/basic-course/021-java-multi-dimensional-array.md" >}})
   
   - Задачник по Java
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})

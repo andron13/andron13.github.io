@@ -74,7 +74,6 @@ public static void germanCity() {
  1. Официальный сайт - https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html
  2. Русскоязычная адоптация - https://javarush.ru/groups/posts/massivy-java
  3. https://www.baeldung.com/java-arrays-guide
- 4. https://www.baeldung.com/java-varargs
 
 
 ## Домашнее задание

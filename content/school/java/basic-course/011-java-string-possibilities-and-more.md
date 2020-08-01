@@ -247,6 +247,7 @@ System.out.println(str);
 - length()
 - replace(char oldChar, char newChar)
 - startsWith(String prefix)
+- startsWith(String prefix, int toffset)
 - substring(int beginIndex)
 - toLowerCase()
 - toUpperCase()
