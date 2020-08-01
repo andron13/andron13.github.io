@@ -25,6 +25,10 @@ headless: true
     - [19 - Цикл foreach]({{< relref "/school/java/basic-course/019-java-foreach.md" >}})
     - [20 - Varargs]({{< relref "/school/java/basic-course/020-java-varargs.md" >}})
     - [21 - Многомерные arrays]({{< relref "/school/java/basic-course/021-java-multi-dimensional-array.md" >}})
+    - [22 - Таинственный main]({{< relref "/school/java/basic-course/022-java-public-static-void-main.md" >}})
+    - [23 - Операторы перехода]({{< relref "/school/java/basic-course/023-java-return-break-continue.md" >}})
+    - [24 - Обмен значений]({{< relref "/school/java/basic-course/024-java-swap-two-variables.md" >}})
+    - [25 - IDEA - настройка]({{< relref "/school/java/basic-course/025-java-idea-basics.md" >}})
   
   - Задачник по Java
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})

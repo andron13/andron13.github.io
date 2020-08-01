@@ -1,4 +1,4 @@
-# Многомерные массивы в Java - введение в Java 015
+# Многомерные массивы в Java - введение в Java 021
 
 {{< figure src="/img/res/java/21/20-month-calendar.png" title="многомерный массив на примере февраля" alt="многомерный массив на примере февраля" >}}
 
@@ -141,12 +141,5 @@ System.out.printf("Modified arr[] : %s", Arrays.toString(arr));
 
 ## Дополнительные материалы
 
-1. https://www.baeldung.com/java-jagged-arrays
-2. https://www.baeldung.com/java-multi-dimensional-arraylist
-3. https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B8
-4. https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%BF%D1%83%D0%B7%D1%8B%D1%80%D1%8C%D0%BA%D0%BE%D0%BC
-5. https://en.wikipedia.org/wiki/Cocktail_shaker_sort
-6. https://ru.wikipedia.org/wiki/%D0%91%D1%8B%D1%81%D1%82%D1%80%D0%B0%D1%8F_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0
-7. https://ru.wikipedia.org/wiki/%D0%91%D0%BB%D0%BE%D1%87%D0%BD%D0%B0%D1%8F_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0
-8. Это особенно важный материал, с ним надо ознакомиться сейчас. Что бы когда мы его будем изучать все термины уже были в подкорке. Очень важно. https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0
-9. https://javarush.ru/groups/posts/mnogomernye-massivy
+- [Multi-Dimensional Arrays In Java](https://www.baeldung.com/java-jagged-arrays)
+
