@@ -38,5 +38,14 @@ description: Авторский курс Java для начинающих. Са�
     - [Ввод данных Scanner]({{< relref "/school/java/basic-course/014-java-scanner.md" >}})
     - [Системы счисления]({{< relref "/school/java/basic-course/015-java-binary-and-decimal-issue.md" >}})
     - [Тернарный оператор]({{< relref "/school/java/basic-course/016-java-ternary-operator.md" >}})
+    - [Рекурсия, введение]({{< relref "/school/java/basic-course/017-java-recursion-intro.md" >}})
+    - [Массивы знакомство]({{< relref "/school/java/basic-course/018-java-array.md" >}})
+    - [Цикл foreach]({{< relref "/school/java/basic-course/019-java-foreach.md" >}})
+    - [Varargs]({{< relref "/school/java/basic-course/020-java-varargs.md" >}})
+    - [Многомерные массивы]({{< relref "/school/java/basic-course/021-java-multi-dimensional-array.md" >}})
+    - [Таинственный main]({{< relref "/school/java/basic-course/022-java-public-static-void-main.md" >}})
+    - [Операторы перехода]({{< relref "/school/java/basic-course/023-java-return-break-continue.md" >}})
+    - [Обмен значений между переменными]({{< relref "/school/java/basic-course/024-java-swap-two-variables.md" >}})
+    - [IDEA - настройка]({{< relref "/school/java/basic-course/025-java-idea-basics.md" >}})
     
 {{< figure src="/img/res/java/558px-Java_logo.svg.png" title="Java" alt="уроки java online" >}}
