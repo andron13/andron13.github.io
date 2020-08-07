@@ -32,9 +32,11 @@ headless: true
   
   - Задачник по Java
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
-    - [02 - Примитивы]({{< relref "/school/java/exercises/02-exercises-java.md" >}})
-    - [03 - Цикл for]({{< relref "/school/java/exercises/03-exercises-java.md" >}})
+    - [02 - Switch]({{< relref "/school/java/exercises/02-exercises-java.md" >}})
+    - [03 - Если, то]({{< relref "/school/java/exercises/03-exercises-java.md" >}})
     - [04 - Первая дюжина тем]({{< relref "/school/java/exercises/04-exercises-java.md" >}})
+    - [05 - Цикл for]({{< relref "/school/java/exercises/05-exercises-java.md" >}})
+
 - HTML
   - [1 - Введение]({{< relref "/school/html/01-html-intro.md" >}})
   - [2 - Первая страница]({{< relref "/school/html/02-html-hello-world.md" >}})
