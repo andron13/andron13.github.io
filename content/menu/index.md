@@ -3,7 +3,7 @@ headless: true
 ---
 **Войти-в-АйТи**
 - [Java]({{< relref "/school/java" >}})
-  - [Уроки online]({{< relref "/school/java/basic-course" >}})
+  - [Басовый курс]({{< relref "/school/java/basic-course" >}})
     - [01 - Java setup]({{< relref "/school/java/basic-course/001-java-setup.md" >}})
     - [02 - Целые числа]({{< relref "/school/java/basic-course/002-java-integers.md" >}})
     - [03 - Десятичные дроби]({{< relref "/school/java/basic-course/003-java-float-double.md" >}})
@@ -29,13 +29,20 @@ headless: true
     - [23 - Операторы перехода]({{< relref "/school/java/basic-course/023-java-return-break-continue.md" >}})
     - [24 - Обмен значений]({{< relref "/school/java/basic-course/024-java-swap-two-variables.md" >}})
     - [25 - IDEA - настройка]({{< relref "/school/java/basic-course/025-java-idea-basics.md" >}})
+    - [26 - StringBuffer]({{< relref "/school/java/basic-course/026-java-string-stringbuffer-stringbuilder.md" >}})
+    - [27 - Сортировки, Bubble Sort]({{< relref "/school/java/basic-course/027-java-sorting-algorithms-01-bubblesort.md" >}})
   
   - Задачник по Java
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
     - [02 - Switch]({{< relref "/school/java/exercises/02-exercises-java.md" >}})
     - [03 - Если, то]({{< relref "/school/java/exercises/03-exercises-java.md" >}})
-    - [04 - Первая дюжина тем]({{< relref "/school/java/exercises/04-exercises-java.md" >}})
+    - [04 - Повторение основ]({{< relref "/school/java/exercises/04-exercises-java.md" >}})
     - [05 - Цикл for]({{< relref "/school/java/exercises/05-exercises-java.md" >}})
+    - [06 - Nested Loops]({{< relref "/school/java/exercises/06-exercises-java.md" >}})
+    - [07 - Modulo]({{< relref "/school/java/exercises/07-exercises-java.md" >}})
+    - [08 - Массивы]({{< relref "/school/java/exercises/08-exercises-java.md" >}})
+    - [09 - Массивы - 2]({{< relref "/school/java/exercises/09-exercises-java.md" >}})
+    - [10 - Все основы]({{< relref "/school/java/exercises/10-exercises-java.md" >}})
 
 - HTML
   - [1 - Введение]({{< relref "/school/html/01-html-intro.md" >}})

@@ -155,6 +155,24 @@ public class MyClass {
 }
 ```
 
+Повышение типа на примере
+
+```Java
+public class Main {
+    public static void main(String[] args) {
+        byte b = 42;
+        char c = 'a';
+        short s = 1024;
+        int i = 50_000;
+        float f = 5.67f;
+        double d = .1234;
+        double result = (f * b) + (i / c) - (d * s);
+        System.out.println((f * b) + " + " + (i / c) + " - " + (d * s));
+        System.out.println("result = " + result);
+    }
+}
+```
+
 Допустим, у нас имеется старая база данных, где все данные записаны в строковом виде. Например просто текстовый файл столбиком. Java даёт нам возможность "спарсить" целочисленные данные из строк.
 
 ```code
