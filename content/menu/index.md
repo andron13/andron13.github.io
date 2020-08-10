@@ -30,7 +30,6 @@ headless: true
     - [24 - Обмен значений]({{< relref "/school/java/basic-course/024-java-swap-two-variables.md" >}})
     - [25 - IDEA - настройка]({{< relref "/school/java/basic-course/025-java-idea-basics.md" >}})
     - [26 - StringBuffer]({{< relref "/school/java/basic-course/026-java-string-stringbuffer-stringbuilder.md" >}})
-    - [27 - Сортировки, Bubble Sort]({{< relref "/school/java/basic-course/027-java-sorting-algorithms-01-bubblesort.md" >}})
   
   - Задачник по Java
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})

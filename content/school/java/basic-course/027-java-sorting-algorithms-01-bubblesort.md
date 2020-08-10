@@ -1,6 +1,6 @@
 # Алгоритмы сортировок, Bubble Sort — введение в Java 027
 
-{{< figure src="/img/res/java/26/26-01-bubble-sort.png" title="массив требующий сортировки" alt="массив требующий сортировки" >}}
+{{< figure src="/img/res/java/27/27-01-bubble-sort.png" title="массив требующий сортировки" alt="массив требующий сортировки" >}}
 
 Представьте себе ситуацию, что вы просите свой компьютер отсортировать фотографии по размеру или занимаемому месту, товары на странице магазина по цене и новости на сайте по дате написания.
 
@@ -12,7 +12,7 @@
 
 Названа сортировка так потому, что цифры "всплывают" меняясь местами.
  
- {{< figure src="/img/res/java/26/26-01-bubble-sort.png" title="Пузырьковая сортировка или Bubble sort" alt="Пузырьковая сортировка или Bubble sort" >}}
+ {{< figure src="/img/res/java/27/27-02-soap-bubbles.jpg" title="Пузырьковая сортировка или Bubble sort" alt="Пузырьковая сортировка или Bubble sort" >}}
 
 ### Bubble Sort и рекурсия
 
@@ -114,3 +114,6 @@ https://en.wikipedia.org/wiki/Cocktail_shaker_sort
 7. https://ru.wikipedia.org/wiki/%D0%91%D0%BB%D0%BE%D1%87%D0%BD%D0%B0%D1%8F_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0
 8. Это особенно важный материал, с ним надо ознакомиться сейчас. Что бы когда мы его будем изучать все термины уже были в подкорке. Очень важно. https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0
 9. https://javarush.ru/groups/posts/mnogomernye-massivy
+
+
+- [27 - Сортировки, Bubble Sort]({{< relref "/school/java/basic-course/027-java-sorting-algorithms-01-bubblesort.md" >}})
