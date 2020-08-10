@@ -29,7 +29,7 @@ headless: true
     - [23 - Операторы перехода]({{< relref "/school/java/basic-course/023-java-return-break-continue.md" >}})
     - [24 - Обмен значений]({{< relref "/school/java/basic-course/024-java-swap-two-variables.md" >}})
     - [25 - IDEA - настройка]({{< relref "/school/java/basic-course/025-java-idea-basics.md" >}})
-    - [26 - StringBuffer]({{< relref "/school/java/basic-course/026-java-string-stringbuffer-stringbuilder.md" >}})
+
   
   - Задачник по Java
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})

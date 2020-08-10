@@ -48,3 +48,5 @@ StringBuffer и StringBuilder абсолютно идентичные класс
 
 https://javarush.ru/groups/posts/2351-znakomstvo-so-string-stringbuffer-i-stringbuilder-v-java
 https://metanit.com/java/tutorial/7.3.php
+
+    - [26 - StringBuffer]({{< relref "/school/java/basic-course/026-java-string-stringbuffer-stringbuilder.md" >}})
