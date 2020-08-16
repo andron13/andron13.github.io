@@ -54,3 +54,5 @@
     evenlySpaced(4, 6, 2) → true
     evenlySpaced(4, 6, 3) → false
      ```
+
+© - codingbat.com

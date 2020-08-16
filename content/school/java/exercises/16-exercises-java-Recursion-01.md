@@ -188,3 +188,5 @@
     array6([1, 4], 0) → false
     array6([6], 0) → true
     ```
+
+© - codingbat.com

@@ -199,3 +199,5 @@
     withoutX2("Hxi") → "Hi"
     withoutX2("Hi") → "Hi"
     ```
+
+© - codingbat.com

@@ -218,3 +218,5 @@
     evenOdd([3, 3, 2]) → [2, 3, 3]
     evenOdd([2, 2, 2]) → [2, 2, 2]
     ```
+
+© - codingbat.com

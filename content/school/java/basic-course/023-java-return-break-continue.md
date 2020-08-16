@@ -104,7 +104,7 @@ Return мы знаем из [урока номер 12]({{< relref "/school/java/
 
 ```Java
 // Демонстрирует return.
-public class Return {
+public class MyReturn {
 	static void quarantine(Boolean quarantine) {
 		quarantineZone:
 		{

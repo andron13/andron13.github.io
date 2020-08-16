@@ -181,3 +181,5 @@
     sumLimit(8, 3) → 8
     sumLimit(8, 1) → 9
     ```
+
+© - codingbat.com

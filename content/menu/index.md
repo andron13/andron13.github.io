@@ -3,7 +3,7 @@ headless: true
 ---
 **Войти-в-АйТи**
 - [Java]({{< relref "/school/java" >}})
-  - [Басовый курс]({{< relref "/school/java/basic-course" >}})
+  - [**Басовый курс**]({{< relref "/school/java/basic-course" >}})
     - [01 - Java setup]({{< relref "/school/java/basic-course/001-java-setup.md" >}})
     - [02 - Целые числа]({{< relref "/school/java/basic-course/002-java-integers.md" >}})
     - [03 - Десятичные дроби]({{< relref "/school/java/basic-course/003-java-float-double.md" >}})
@@ -29,6 +29,14 @@ headless: true
     - [23 - Операторы перехода]({{< relref "/school/java/basic-course/023-java-return-break-continue.md" >}})
     - [24 - Обмен значений]({{< relref "/school/java/basic-course/024-java-swap-two-variables.md" >}})
     - [25 - IDEA - настройка]({{< relref "/school/java/basic-course/025-java-idea-basics.md" >}})
+    - [26 - StringBuffer]({{< relref "/school/java/basic-course/026-java-string-stringbuffer-stringbuilder.md" >}})
+    - [27 - Bubble sort]({{< relref "/school/java/basic-course/027-java-sorting-algorithms-01-bubblesort.md">}})
+    ...
+    - [34 - Try Catch]({{< relref "/school/java/basic-course/034-Java-try-catch-finally.md">}})
+    - [34 - Создание Jar]({{< relref "/school/java/basic-course/035-Java-creating-a-JAR-file .md">}})
+    - [36 - Ресурсы]({{< relref "/school/java/basic-course/036-Java-ressourcen.md">}})
+  - **Курс-ООП**
+    - [01 - Введение в ООП]({{< relref "/school/java/oop-course/001-Java-object-introduction-chapter-1.md">}})
 
   
   - Задачник по Java
@@ -41,7 +49,17 @@ headless: true
     - [07 - Modulo]({{< relref "/school/java/exercises/07-exercises-java.md" >}})
     - [08 - Массивы]({{< relref "/school/java/exercises/08-exercises-java.md" >}})
     - [09 - Массивы - 2]({{< relref "/school/java/exercises/09-exercises-java.md" >}})
-    - [10 - Все основы]({{< relref "/school/java/exercises/10-exercises-java.md" >}})
+    - [10 - Разминка]({{< relref "/school/java/exercises/10-exercises-java.md" >}})
+    - [11 - Logic-01]({{< relref "/school/java/exercises/11-exercises-java-logic-01.md" >}})
+    - [12 - Logic-02]({{< relref "/school/java/exercises/12-exercises-java-logic-02.md" >}})
+    - [13 - String-01]({{< relref "/school/java/exercises/13-exercises-java-String-01.md" >}})
+    - [14 - String-02]({{< relref "/school/java/exercises/14-exercises-java-String-02.md" >}})
+    - [15 - String-03]({{< relref "/school/java/exercises/15-exercises-java-String-03.md" >}})
+    - [16 - Recursion-01]({{< relref "/school/java/exercises/16-exercises-java-Recursion-01.md" >}})
+    - [17 - Recursion-02]({{< relref "/school/java/exercises/17-exercises-java-Recursion-02.md" >}})
+    - [18 - Arrays-01]({{< relref "/school/java/exercises/18-exercises-java-Arrays-01.md" >}})
+    - [19 - Arrays-02]({{< relref "/school/java/exercises/19-exercises-java-Arrays-02.md" >}})
+    - [20 - Arrays-03]({{< relref "/school/java/exercises/20-exercises-java-Arrays-03.md" >}})
 
 - HTML
   - [1 - Введение]({{< relref "/school/html/01-html-intro.md" >}})

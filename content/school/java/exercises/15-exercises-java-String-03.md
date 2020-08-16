@@ -67,3 +67,5 @@
     maxBlock("abbCCCddBBBxx") → 3
     maxBlock("") → 0
     ```
+
+© - codingbat.com

@@ -48,3 +48,5 @@
     splitArray([2, 3]) → false
     splitArray([5, 2, 3]) → true
     ```
+
+© - codingbat.com
