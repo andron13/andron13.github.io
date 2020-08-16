@@ -1,4 +1,4 @@
-# Условный оператор if, if-else — 6введение в Java 007
+# Условный оператор if, if-else — введение в Java 007
 
 {{< figure src="/img/res/java/07/07_if_else.jpg" title="если, то" alt="если, то" >}}
 

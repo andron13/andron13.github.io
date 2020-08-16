@@ -7,6 +7,8 @@ description: StringBuffer, StringBuilder и String — в чём отличие?
 
 #String, StringBuffer и StringBuilder — введение в Java 026
 
+(В разработке) 
+
 Нас уже не должны пугать ключевые слова с большой буквы. Нам известны как минимум два из них String и Scanner. StringBuffer и StringBuilder родные братья уже давно изученного типа данных String. 
 
 ## Чем был плох String?
@@ -42,11 +44,7 @@ StringBuffer и StringBuilder абсолютно идентичные класс
 
 Представьте, что вы пишите приложение для продажи ЖД-билетов. И вы не можете дважды продать одно место. **Синхронизация** блокирует метод, если один из потоков его запустил. То есть в многопоточном приложении доступ к продаже ведётся поочерёдно. В однопоточном приложении доступ разрешается всем сразу. Совсем коротко, синхронизация более дорогая в ресурсах, но по другому проблему доступа решить не всегда возможно. 
 
+## Дополнительные материалы
+- https://javarush.ru/groups/posts/2351-znakomstvo-so-string-stringbuffer-i-stringbuilder-v-java
+- https://metanit.com/java/tutorial/7.3.php
 
-
-
-
-https://javarush.ru/groups/posts/2351-znakomstvo-so-string-stringbuffer-i-stringbuilder-v-java
-https://metanit.com/java/tutorial/7.3.php
-
-    - [26 - StringBuffer]({{< relref "/school/java/basic-course/026-java-string-stringbuffer-stringbuilder.md" >}})

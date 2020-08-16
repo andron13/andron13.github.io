@@ -59,5 +59,7 @@ type: book
     - [Операторы перехода]({{< relref "/school/java/basic-course/023-java-return-break-continue.md" >}})
     - [Обмен значений между переменными]({{< relref "/school/java/basic-course/024-java-swap-two-variables.md" >}})
     - [IDEA - настройка]({{< relref "/school/java/basic-course/025-java-idea-basics.md" >}})
+    - [26 - StringBuffer]({{< relref "/school/java/basic-course/026-java-string-stringbuffer-stringbuilder.md" >}})
+    - [Пузырьковая сортировка]({{< relref "/school/java/basic-course/027-java-sorting-algorithms-01-bubblesort.md" >}})
     
 {{< figure src="/img/res/java/558px-Java_logo.svg.png" title="Java" alt="уроки java online" >}}

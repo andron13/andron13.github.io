@@ -150,4 +150,5 @@ System.out.printf("Modified arr[] : %s", Arrays.toString(arr));
 ## Дополнительные материалы
 
 - [Multi-Dimensional Arrays In Java](https://www.baeldung.com/java-jagged-arrays)
-
+- [Многомерные массивы](https://javarush.ru/groups/posts/mnogomernye-massivy)
+ 

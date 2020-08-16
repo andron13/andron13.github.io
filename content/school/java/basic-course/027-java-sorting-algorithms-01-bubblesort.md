@@ -1,4 +1,15 @@
+---
+bookCollapseSection: true
+weight: 1
+title: Пузырьковая сортировка — Bubble Sort. Алгоритмы сортировок.
+description: Введение в сортировки. Пузырьковая сортировка. Описание самой простой сортировки.
+---
+
+
 # Алгоритмы сортировок, Bubble Sort — введение в Java 027
+
+(В разработке) 
+
 
 {{< figure src="/img/res/java/27/27-01-bubble-sort.png" title="массив требующий сортировки" alt="массив требующий сортировки" >}}
 
@@ -92,28 +103,32 @@ public class Main {
 }
 ```
 
-## Дополнительные материалы
+## Рекурсия
 
-1. https://ru.wikipedia.org/wiki/%D0%A0%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D1%8F
-2. https://ru.wikipedia.org/wiki/%D0%A4%D0%B8%D0%B1%D0%BE%D0%BD%D0%B0%D1%87%D1%87%D0%B8
-2. https://habr.com/ru/post/275813/ эта ссылка и домашнее задание по рекурсиям
-3. https://habr.com/ru/post/337030/
-4. Просто для ознакомления https://medium.com/nuances-of-programming/%D1%80%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-74c03b764d38
-5. https://www.baeldung.com/java-recursion
+Некоторые алгоритмы можно описать очень просто - выполняй, пока соблюдается условие. Порой вместо цикла уместнее использовать рекурсию.
 
-## Дополнительные материалы 
+**Рекурсия** - определение метода через саму себя. 
 
-1. https://habr.com/ru/post/204600/
-2. [Алгоритм сортировки](https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B8)
-3. [Сортировка пузырьком](https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_
-%D0%BF%D1%83%D0%B7%D1%8B%D1%80%D1%8C%D0%BA%D0%BE%D0%BC)
-https://en.wikipedia.org/wiki/Cocktail_shaker_sort
+Рекурсия в алгоритмах сортировки будет использоваться достаточно часто и охотно. Стоит потратить время на укрепление материала. 
+
+1. [Рекурсия, 17-yj урок]({{< relref "/school/java/basic-course/017-java-recursion-intro.md" >}})
+2. Домашнее задание и закрепление материала - [рекурсия. Занимательные задачки](https://habr.com/ru/post/275813/)
+3. Как работает рекурсия – [объяснение в блок-схемах и видео](https://habr.com/ru/post/337030/)
+4. Просто для ознакомления - [рекурсивное программирование](https://medium.com/nuances-of-programming/%D1%80%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-74c03b764d38)
+
+## Дополнительные материалы к пузырьковой сортировке
+
+1. Пузырьковая сортировка и [все-все-все](https://habr.com/ru/post/204600/)
+2. Очень важный материал для самостоятельного изучения - [двоичное дерево поиска](https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0)
+3. [Сортировка пузырьком](https://ru.wikipedia.org/wiki/%D0%A1%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0_%D0%BF%D1%83%D0%B7%D1%8B%D1%80%D1%8C%D0%BA%D0%BE%D0%BC)
+4. [Сортировка перемешиванием](https://en.wikipedia.org/wiki/Cocktail_shaker_sort)
+
+### Дополнительные материалы для ознакомления и расширения кругозора
+
+1. [Алгоритм сортировки](https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B8)
+
+2. [Быстрая сортировка](https://ru.wikipedia.org/wiki/%D0%91%D1%8B%D1%81%D1%82%D1%80%D0%B0%D1%8F_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0)
+3. [Блочная сортировка](https://ru.wikipedia.org/wiki/%D0%91%D0%BB%D0%BE%D1%87%D0%BD%D0%B0%D1%8F_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0)
 
 
-6. https://ru.wikipedia.org/wiki/%D0%91%D1%8B%D1%81%D1%82%D1%80%D0%B0%D1%8F_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0
-7. https://ru.wikipedia.org/wiki/%D0%91%D0%BB%D0%BE%D1%87%D0%BD%D0%B0%D1%8F_%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BA%D0%B0
-8. Это особенно важный материал, с ним надо ознакомиться сейчас. Что бы когда мы его будем изучать все термины уже были в подкорке. Очень важно. https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0
-9. https://javarush.ru/groups/posts/mnogomernye-massivy
 
-
-- [27 - Сортировки, Bubble Sort]({{< relref "/school/java/basic-course/027-java-sorting-algorithms-01-bubblesort.md" >}})
