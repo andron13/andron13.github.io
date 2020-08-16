@@ -1,0 +1,121 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Закрепление массивов, Java-Basic #   Return the number of even ints in the given array. Note: the % &ldquo;mod&rdquo; operator computes the remainder, e.g. 5 % 2 is 1. countEvens([2, 1, 2, 3, 4]) → 3 countEvens([2, 2, 0]) → 3 countEvens([1, 3, 5]) → 0  Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 13 is very unlucky, so it does not count and numbers that come immediately after a 13 also do not count."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content="Закрепление массивов, Java-Basic #   Return the number of even ints in the given array. Note: the % &ldquo;mod&rdquo; operator computes the remainder, e.g. 5 % 2 is 1. countEvens([2, 1, 2, 3, 4]) → 3 countEvens([2, 2, 0]) → 3 countEvens([1, 3, 5]) → 0  Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 13 is very unlucky, so it does not count and numbers that come immediately after a 13 also do not count."><meta property="og:type" content="article"><meta property="og:url" content="https://andron13.de/school/java/exercises/19-exercises-java-arrays-02/"><title>19 Exercises Java Arrays 02 | andron13</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.b3215d9d1d18d9051e7fbe8f256ff80e30f41d29073b86348e230d297b771002.css integrity="sha256-syFdnR0Y2QUef76PJW/4DjD0HSkHO4Y0jiMNKXt3EAI="><script defer src=/en.search.min.ce2ac22d32b12147269187df729c355cfcfdd11c22898325cf9995d51426576f.js integrity="sha256-zirCLTKxIUcmkYffcpw1XPz90RwiiYMlz5mV1RQmV28="></script><script type=application/javascript>var doNotTrack=false;if(!doNotTrack){window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;ga('create','UA-33668157-6','auto');ga('send','pageview');}</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body><input type=checkbox class=hidden id=menu-control><main class="container flex"><aside class=book-menu><nav><h2 class=book-brand><a href=/><img src=/logo.jpg alt=Logo><span>andron13</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><p><strong>Войти-в-АйТи</strong></p><ul><li><p><a href=/school/java/>Java</a></p><ul><li><p><a href=/school/java/basic-course/><strong>Басовый курс</strong></a></p><ul><li><a href=/school/java/basic-course/001-java-setup/>01 - Java setup</a></li><li><a href=/school/java/basic-course/002-java-integers/>02 - Целые числа</a></li><li><a href=/school/java/basic-course/003-java-float-double/>03 - Десятичные дроби</a></li><li><a href=/school/java/basic-course/004-java-char-string/>04 - Символы и строки</a></li><li><a href=/school/java/basic-course/005-java-boolean/>05 - Булевые данные</a></li><li><a href=/school/java/basic-course/006-java-switch-case/>06 - Switch - case</a></li><li><a href=/school/java/basic-course/007-java-if-else/>07 - If - else</a></li><li><a href=/school/java/basic-course/008-java-modulo/>08 - Modulo</a></li><li><a href=/school/java/basic-course/009-java-arithmetic-operators/>09 - Операторы</a></li><li><a href=/school/java/basic-course/010-java-for/>10 - Цикл for</a></li><li><a href=/school/java/basic-course/011-java-string-possibilities-and-more/>11 - Casting литералов</a></li><li><a href=/school/java/basic-course/012-java-methods-void-return/>12 - Методы</a></li><li><a href=/school/java/basic-course/013-java-while-dowhile/>13 - Цикл while</a></li><li><a href=/school/java/basic-course/014-java-scanner/>14 - Ввод данных Scanner</a></li><li><a href=/school/java/basic-course/015-java-binary-and-decimal-issue/>15 - Системы счисления</a></li><li><a href=/school/java/basic-course/016-java-ternary-operator/>16 - Тернарный оператор</a></li><li><a href=/school/java/basic-course/017-java-recursion-intro/>17 - Рекурсия, введение</a></li><li><a href=/school/java/basic-course/018-java-array/>18 - Массивы знакомство</a></li><li><a href=/school/java/basic-course/019-java-foreach/>19 - Цикл foreach</a></li><li><a href=/school/java/basic-course/020-java-varargs/>20 - Varargs</a></li><li><a href=/school/java/basic-course/021-java-multi-dimensional-array/>21 - Многомерные arrays</a></li><li><a href=/school/java/basic-course/022-java-public-static-void-main/>22 - Таинственный main</a></li><li><a href=/school/java/basic-course/023-java-return-break-continue/>23 - Операторы перехода</a></li><li><a href=/school/java/basic-course/024-java-swap-two-variables/>24 - Обмен значений</a></li><li><a href=/school/java/basic-course/025-java-idea-basics/>25 - IDEA - настройка</a></li><li><a href=/school/java/basic-course/026-java-string-stringbuffer-stringbuilder/>26 - StringBuffer</a></li><li><a href=/school/java/basic-course/027-java-sorting-algorithms-01-bubblesort/>27 - Bubble sort</a>
+&mldr;</li><li><a href=/school/java/basic-course/034-java-try-catch-finally/>34 - Try Catch</a></li><li><a href=/school/java/basic-course/035-java-creating-a-jar-file-/>34 - Создание Jar</a></li><li><a href=/school/java/basic-course/036-java-ressourcen/>36 - Ресурсы</a></li></ul></li><li><p><strong>Курс-ООП</strong></p><ul><li><a href=/school/java/oop-course/001-java-object-introduction-chapter-1/>01 - Введение в ООП</a></li></ul></li><li><p>Задачник по Java</p><ul><li><a href=/school/java/exercises/01-exercises-java/>01 - Логика</a></li><li><a href=/school/java/exercises/02-exercises-java/>02 - Switch</a></li><li><a href=/school/java/exercises/03-exercises-java/>03 - Если, то</a></li><li><a href=/school/java/exercises/04-exercises-java/>04 - Повторение основ</a></li><li><a href=/school/java/exercises/05-exercises-java/>05 - Цикл for</a></li><li><a href=/school/java/exercises/06-exercises-java/>06 - Nested Loops</a></li><li><a href=/school/java/exercises/07-exercises-java/>07 - Modulo</a></li><li><a href=/school/java/exercises/08-exercises-java/>08 - Массивы</a></li><li><a href=/school/java/exercises/09-exercises-java/>09 - Массивы - 2</a></li><li><a href=/school/java/exercises/10-exercises-java/>10 - Разминка</a></li><li><a href=/school/java/exercises/11-exercises-java-logic-01/>11 - Logic-01</a></li><li><a href=/school/java/exercises/12-exercises-java-logic-02/>12 - Logic-02</a></li><li><a href=/school/java/exercises/13-exercises-java-string-01/>13 - String-01</a></li><li><a href=/school/java/exercises/14-exercises-java-string-02/>14 - String-02</a></li><li><a href=/school/java/exercises/15-exercises-java-string-03/>15 - String-03</a></li><li><a href=/school/java/exercises/16-exercises-java-recursion-01/>16 - Recursion-01</a></li><li><a href=/school/java/exercises/17-exercises-java-recursion-02/>17 - Recursion-02</a></li><li><a href=/school/java/exercises/18-exercises-java-arrays-01/>18 - Arrays-01</a></li><li><a href=/school/java/exercises/19-exercises-java-arrays-02/ class=active>19 - Arrays-02</a></li><li><a href=/school/java/exercises/20-exercises-java-arrays-03/>20 - Arrays-03</a></li></ul></li></ul></li><li><p>HTML</p><ul><li><a href=/school/html/01-html-intro/>1 - Введение</a></li><li><a href=/school/html/02-html-hello-world/>2 - Первая страница</a></li><li><a href=/school/html/03-html-path/>3 - Путь к файлу</a></li></ul></li><li><p>Полезная подборка</p><ul><li><a href=/school/tools/01-git/>01 - Git-введение</a></li><li><a href=/school/tools/02-github-basic/>02 - Git-методичка</a></li><li><a href=/school/tools/03-boolean-algebra/>03 - Булева Алгебра</a></li><li><a href=/school/tools/04-how-to-create-passwords/>04 - О паролях</a></li></ul></li><li><p>в разработке</p></li></ul><ul><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>19 Exercises Java Arrays 02</strong>
+<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><input type=checkbox class=hidden id=toc-control><aside class="hidden clearfix"><nav id=TableOfContents></nav></aside></header><article class=markdown><h1 id=закрепление-массивов-java-basic>Закрепление массивов, Java-Basic
+<a class=anchor href=#%d0%b7%d0%b0%d0%ba%d1%80%d0%b5%d0%bf%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d0%be%d0%b2-java-basic>#</a></h1><ol><li>Return the number of even ints in the given array. Note: the % &ldquo;mod&rdquo; operator computes the remainder, e.g. 5 % 2 is 1.<pre><code>countEvens([2, 1, 2, 3, 4]) → 3
+countEvens([2, 2, 0]) → 3
+countEvens([1, 3, 5]) → 0
+</code></pre></li><li>Return the sum of the numbers in the array, returning 0 for an empty array. Except the number 13 is very unlucky, so it does not count and
+numbers that come immediately after a 13 also do not count.<pre><code>sum13([1, 2, 2, 1]) → 6
+sum13([1, 1]) → 2
+sum13([1, 2, 2, 1, 13]) → 6
+</code></pre></li><li>Given an array of ints, return true if the array contains no 1&rsquo;s and no 3&rsquo;s.<pre><code>lucky13([0, 2, 4]) → true
+lucky13([1, 2, 3]) → false
+lucky13([1, 2, 4]) → false
+</code></pre></li><li>Given a number n, create and return a new int array of length n, containing the numbers 0, 1, 2, &mldr; n-1. The given n may be 0, in which case
+just return a length 0 array. You do not need a separate if-statement for the length-0 case; the for-loop should naturally execute 0 times in that case, so it just works. The syntax to make a new int array is: new int[desired_length] (See also: FizzBuzz Code)<pre><code>fizzArray(4) → [0, 1, 2, 3]
+fizzArray(1) → [0]
+fizzArray(10) → [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+</code></pre></li><li>Given an array of ints, return true if it contains no 1&rsquo;s or it contains no 4&rsquo;s.<pre><code>no14([1, 2, 3]) → true
+no14([1, 2, 3, 4]) → false
+no14([2, 3, 4]) → true
+</code></pre></li><li>Given arrays nums1 and nums2 of the same length, for every element in nums1, consider the corresponding element in nums2 (at the same index). Return the count of the number of times that the two elements differ by 2 or less, but are not equal.<pre><code>matchUp([1, 2, 3], [2, 3, 10]) → 2
+matchUp([1, 2, 3], [2, 3, 5]) → 3
+matchUp([1, 2, 3], [2, 3, 3]) → 2
+</code></pre></li><li>Given an array of ints, return true if the array contains either 3 even or 3 odd values all next to each other.<pre><code>modThree([2, 1, 3, 5]) → true
+modThree([2, 1, 2, 5]) → false
+modThree([2, 4, 2, 5]) → true
+</code></pre></li><li>Return true if the group of N numbers at the start and end of the array are the same. For example, with {5, 6, 45, 99, 13, 5, 6}, the ends are
+the same for n=0 and n=2, and false for n=1 and n=3. You may assume that n is in the range 0..nums.length inclusive.<pre><code>sameEnds([5, 6, 45, 99, 13, 5, 6], 1) → false
+sameEnds([5, 6, 45, 99, 13, 5, 6], 2) → true
+sameEnds([5, 6, 45, 99, 13, 5, 6], 3) → false
+</code></pre></li><li>Return an array that is &ldquo;left shifted&rdquo; by one &ndash; so {6, 2, 5, 3} returns {2, 5, 3, 6}. You may modify and return the given array, or return a new array.<pre><code>shiftLeft([6, 2, 5, 3]) → [2, 5, 3, 6]
+shiftLeft([1, 2]) → [2, 1]
+shiftLeft([1]) → [1]
+</code></pre></li><li>Given a non-empty array of ints, return a new array containing the elements from the original array that come after the last 4 in the original array. The original array will contain at least one 4. Note that it is valid in java to create an array of length 0.<pre><code>post4([2, 4, 1, 2]) → [1, 2]
+post4([4, 1, 4, 2]) → [2]
+post4([4, 4, 1, 2, 3]) → [1, 2, 3]
+</code></pre></li><li>Return a version of the given array where all the 10&rsquo;s have been removed. The remaining elements should shift left towards the start of the
+array as needed, and the empty spaces a the end of the array should be 0. So {1, 10, 10, 2} yields {1, 2, 0, 0}. You may modify and return the given array or make a new array.<pre><code>withoutTen([1, 10, 10, 2]) → [1, 2, 0, 0]
+withoutTen([10, 2, 10]) → [2, 0, 0]
+withoutTen([1, 99, 10]) → [1, 99, 0]
+</code></pre></li><li>This is slightly more difficult version of the famous FizzBuzz problem which is sometimes given as a first problem for job interviews. (See also: FizzBuzz Code.) Consider the series of numbers beginning at start and running up to but not including end, so for example start=1 and end=5 gives the series 1, 2, 3, 4. Return a new String[] array containing the string form of these numbers, except for multiples of 3, use &ldquo;Fizz&rdquo; instead of the number, for multiples of 5 use &ldquo;Buzz&rdquo;, and for multiples of both 3 and 5 use &ldquo;FizzBuzz&rdquo;. In Java, String.valueOf(xxx) will make the String form of an int or other type. This version is a little more complicated than the usual version since you have to allocate and index into an array instead of just printing, and we vary the start/end instead of just always doing 1..100.
+//02-12&mdash;Это немного более сложная версия известной проблемы FizzBuzz,
+// которую иногда называют первой проблемой для собеседований. (См. Также: Код FizzBuzz.)
+// Рассмотрим последовательность чисел, начинающуюся с начала и продолжающуюся до,
+// но не включающую конец, поэтому, например, start = 1 и end = 5 дают серии 1, 2, 3, 4.
+// Возвращаем новую строку [] массив, содержащий строковую форму этих чисел,
+// за исключением кратных 3, используйте «Fizz» вместо числа, для кратных 5 используйте «Buzz»,
+// а для кратных 3 и 5 используйте «FizzBuzz». В Java String.valueOf (xxx)
+// сделает строковую форму типа int или другого типа. Эта версия немного сложнее, чем обычная версия,
+// так как вам нужно выделять и индексировать массив,
+// а не просто печатать, и мы меняем начало / конец вместо того, чтобы всегда делать 1..100.<pre><code>fizzBuzz(1, 6) → [&quot;1&quot;, &quot;2&quot;, &quot;Fizz&quot;, &quot;4&quot;, &quot;Buzz&quot;]
+fizzBuzz(1, 8) → [&quot;1&quot;, &quot;2&quot;, &quot;Fizz&quot;, &quot;4&quot;, &quot;Buzz&quot;, &quot;Fizz&quot;, &quot;7&quot;]
+fizzBuzz(1, 11) → [&quot;1&quot;, &quot;2&quot;, &quot;Fizz&quot;, &quot;4&quot;, &quot;Buzz&quot;, &quot;Fizz&quot;, &quot;7&quot;, &quot;8&quot;, &quot;Fizz&quot;, &quot;Buzz&quot;]
+</code></pre></li><li>Given an array length 1 or more of ints, return the difference between the largest and smallest values in the array. Note: the built-in Math.min(v1, v2) and Math.max(v1, v2) methods return the smaller or larger of two values.<pre><code>bigDiff([10, 3, 5, 6]) → 7
+bigDiff([7, 2, 10, 9]) → 8
+bigDiff([2, 10, 7, 2]) → 8
+</code></pre></li><li>Return the sum of the numbers in the array, except ignore sections of numbers starting with a 6 and extending to the next 7 (every 6 will be followed by at least one 7). Return 0 for no numbers.<pre><code>sum67([1, 2, 2]) → 5
+sum67([1, 2, 2, 6, 99, 99, 7]) → 5
+sum67([1, 1, 6, 7, 2]) → 4
+</code></pre></li><li>Given an array of ints, return true if the sum of all the 2&rsquo;s in the array is exactly 8.<pre><code>sum28([2, 3, 2, 2, 4, 2]) → true
+sum28([2, 3, 2, 2, 4, 2, 2]) → false
+sum28([1, 2, 3, 4]) → false
+</code></pre></li><li>Given an array of ints, return true if every element is a 1 or a 4.<pre><code>only14([1, 4, 1, 4]) → true
+only14([1, 4, 2, 4]) → false
+only14([1, 1]) → true
+</code></pre></li><li>We&rsquo;ll say that a value is &ldquo;everywhere&rdquo; in an array if for every pair of adjacent elements in the array, at least one of the pair is that value. Return true if the given value is everywhere in the array.<pre><code>isEverywhere([1, 2, 1, 3], 1) → true
+isEverywhere([1, 2, 1, 3], 2) → false
+isEverywhere([1, 2, 1, 3, 4], 1) → false
+</code></pre></li><li>Given an array of ints, return true if the array contains two 7&rsquo;s next to each other, or there are two 7&rsquo;s separated by one element, such as with {7, 1, 7}.<pre><code>has77([1, 7, 7]) → true
+has77([1, 7, 1, 7]) → true
+has77([1, 7, 1, 1, 7]) → false
+</code></pre></li><li>Given an array of ints, return true if the value 3 appears in the array exactly 3 times, and no 3&rsquo;s are next to each other.<pre><code>haveThree([3, 1, 3, 1, 3]) → true
+haveThree([3, 1, 3, 3]) → false
+haveThree([3, 4, 3, 3, 4]) → false
+</code></pre></li><li>Return true if the array contains, somewhere, three increasing adjacent numbers like &mldr;. 4, 5, 6, &mldr; or 23, 24, 25.<pre><code>tripleUp([1, 4, 5, 6, 2]) → true
+tripleUp([1, 2, 3]) → true
+tripleUp([1, 2, 4]) → false
+</code></pre></li><li>For each multiple of 10 in the given array, change all the values following it to be that multiple of 10, until encountering another multiple of 10. So {2, 10, 3, 4, 20, 5} yields {2, 10, 10, 10, 20, 20}.<pre><code>tenRun([2, 10, 3, 4, 20, 5]) → [2, 10, 10, 10, 20, 20]
+tenRun([10, 1, 20, 2]) → [10, 10, 20, 20]
+tenRun([10, 1, 9, 20]) → [10, 10, 10, 20] 
+</code></pre></li><li>We&rsquo;ll say that an element in an array is &ldquo;alone&rdquo; if there are values before and after it, and those values are different from it. Return a version of the given array where every instance of the given value which is alone is replaced by whichever value to its left or right is larger.<pre><code>notAlone([1, 2, 3], 2) → [1, 3, 3]
+notAlone([1, 2, 3, 2, 5, 2], 2) → [1, 3, 3, 5, 5, 2]
+notAlone([3, 4], 3) → [3, 4]
+</code></pre></li><li>Return a version of the given array where each zero value in the array is replaced by the largest odd value to the right of the zero in the array. If there is no odd value to the right of the zero, leave the zero as a zero.<pre><code>zeroMax([0, 5, 0, 3]) → [5, 5, 3, 3]
+zeroMax([0, 4, 0, 3]) → [3, 4, 3, 3]
+zeroMax([0, 1, 0]) → [1, 1, 0]
+</code></pre></li><li>Return the &ldquo;centered&rdquo; average of an array of ints, which we&rsquo;ll say is the mean average of the values, except ignoring the largest and smallest values in the array. If there are multiple copies of the smallest value, ignore just one copy, and likewise for the largest value. Use int division to produce the final average. You may assume that the array is length 3 or more.<pre><code>centeredAverage([1, 2, 3, 4, 100]) → 3
+centeredAverage([1, 1, 5, 5, 10, 8, 7]) → 5
+centeredAverage([-10, -4, -2, -4, -2, 0]) → -3
+</code></pre></li><li>Given an array of ints, return true if the array contains a 2 next to a 2 somewhere.<pre><code>has22([1, 2, 2]) → true
+has22([1, 2, 1, 2]) → false
+has22([2, 1, 2]) → false
+</code></pre></li><li>Given an array of ints, return true if the number of 1&rsquo;s is greater than the number of 4&rsquo;s<pre><code>more14([1, 4, 1]) → true
+more14([1, 4, 1, 4]) → false
+more14([1, 1]) → true
+</code></pre></li><li>Given a number n, create and return a new string array of length n, containing the strings &ldquo;0&rdquo;, &ldquo;1&rdquo; &ldquo;2&rdquo; .. through n-1. N may be 0, in which case just return a length 0 array. Note: String.valueOf(xxx) will make the String form of most types. The syntax to make a new string array is: new String[desired_length] (See also: FizzBuzz Code)<pre><code>fizzArray2(4) → [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;]
+fizzArray2(10) → [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;]
+fizzArray2(2) → [&quot;0&quot;, &quot;1&quot;]
+</code></pre></li><li>Given an array of ints, return true if the array contains a 2 next to a 2 or a 4 next to a 4, but not both.<pre><code>either24([1, 2, 2]) → true
+either24([4, 4, 1]) → true
+either24([4, 4, 1, 2, 2]) → false
+</code></pre></li><li>Given an array of ints, return true if there is a 1 in the array with a 2 somewhere later in the array.<pre><code>has12([1, 3, 2]) → true
+has12([3, 1, 2]) → true
+has12([3, 1, 4, 5, 2]) → true
+</code></pre></li><li>Given an array of ints, return true if every 2 that appears in the array is next to another 2.<pre><code>twoTwo([4, 2, 2, 3]) → true
+twoTwo([2, 2, 4]) → true
+twoTwo([2, 2, 4, 2]) → false
+</code></pre></li><li>Given start and end numbers, return a new array containing the sequence of integers from start up to but not including end, so start=5 and end=10 yields {5, 6, 7, 8, 9}. The end number will be greater or equal to the start number. Note that a length-0 array is valid. (See also: FizzBuzz Code)<pre><code>fizzArray3(5, 10) → [5, 6, 7, 8, 9]
+fizzArray3(11, 18) → [11, 12, 13, 14, 15, 16, 17]
+fizzArray3(1, 3) → [1, 2]
+</code></pre></li><li>Given a non-empty array of ints, return a new array containing the elements from the original array that come before the first 4 in the original array. The original array will contain at least one 4. Note that it is valid in java to create an array of length 0.<pre><code>pre4([1, 2, 4, 1]) → [1, 2]
+pre4([3, 1, 4]) → [3, 1]
+pre4([1, 4, 4]) → [1]
+</code></pre></li><li>Return an array that contains the exact same numbers as the given array, but rearranged so that all the zeros are grouped at the start of the array. The order of the non-zero numbers does not matter. So {1, 0, 0, 1} becomes {0 ,0, 1, 1}. You may modify and return the given array or make a new array.<pre><code>zeroFront([1, 0, 0, 1]) → [0, 0, 1, 1]
+zeroFront([0, 1, 1, 0, 1]) → [0, 0, 1, 1, 1]
+zeroFront([1, 0]) → [0, 1]
+</code></pre></li><li>Return an array that contains the exact same numbers as the given array, but rearranged so that all the even numbers come before all the odd numbers. Other than that, the numbers can be in any order. You may modify and return the given array, or make a new array.<pre><code>evenOdd([1, 0, 1, 0, 0, 1, 1]) → [0, 0, 0, 1, 1, 1, 1]
+evenOdd([3, 3, 2]) → [2, 3, 3]
+evenOdd([2, 2, 2]) → [2, 2, 2]
+</code></pre></li></ol><p>© - codingbat.com</p></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><nav id=TableOfContents></nav></aside></main></body></html>
