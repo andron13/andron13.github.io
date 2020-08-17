@@ -1,3 +1,10 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 
+description: 
+---
+
 # Условный оператор if, if-else — введение в Java 007
 
 {{< figure src="/img/res/java/07/07_if_else.jpg" title="если, то" alt="если, то" >}}

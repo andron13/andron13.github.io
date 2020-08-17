@@ -1,3 +1,11 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 01 - логика 
+description: 
+type: book 
+---
+
 ## Многомерные массивы, введение — 09
 
 1. Перепишите метод monthCalendar используя метод цикл фор ич.

@@ -1,3 +1,10 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 04
+description: 
+---
+
 # Типы данных char и String: примеры применения — введение в Java 004
 
 ## Char

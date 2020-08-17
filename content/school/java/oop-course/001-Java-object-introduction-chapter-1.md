@@ -1,4 +1,12 @@
-# Объекты в Java - введение в Java-OOP 001
+---
+bookCollapseSection: true
+weight: 2
+title: 01 - Первые объекты
+description: Введение в объектно-ориентированное программирование на Java. Курс разработан в 2020 году.
+type: book 
+---
+
+# Первые объекты в Java - введение в Java-OOP 001
 
 Введение в объектно-ориентированное программирование(Object-Oriented Programming) продолжает курс  - [Басовый курс Java]({{< relref "/school/java/basic-course" >}}). 
 

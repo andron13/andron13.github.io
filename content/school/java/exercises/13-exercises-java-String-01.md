@@ -1,3 +1,11 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 01 - логика 
+description: 
+type: book 
+---
+
 # Доброе утро, String - уно
 
 1. Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".

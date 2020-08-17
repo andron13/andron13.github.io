@@ -1,6 +1,6 @@
 ---
 bookCollapseSection: true
-weight: 1
+weight: 8
 ---
 
 # Задачи для курса введение в веб-программирование.

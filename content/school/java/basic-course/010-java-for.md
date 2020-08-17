@@ -1,3 +1,11 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 
+description: 
+type: book 
+---
+
 # Цикл FOR — введение в Java 010
 
 {{< figure src="/img/res/java/10/010-java-for-loop.png" title="петля" alt="петля" >}}

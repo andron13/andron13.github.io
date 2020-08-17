@@ -1,3 +1,11 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 01 - логика 
+description: 
+type: book 
+---
+
 # Задачи для закрепления конструкции If, if else введение - 03
 
 Требуется знание простых типов данных, String, if-else

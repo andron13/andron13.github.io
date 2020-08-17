@@ -1,3 +1,10 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 03
+description: 
+---
+
 # Типы данных с плавающей точкой: float и double — введение в Java 003
 
 ## Числа с плавающей точкой
@@ -165,7 +172,7 @@ public class IntToDouble {
 	public static void main(String[] args) {
 		int min = 30;
 		int max = 100;
-		int result = (int) (Math.random() * ((max - min) + 1)) + min;
+		int result = (int) (Math.random() * (max - min) + 1) + min;
 		System.out.println(result);
 	}
 ```

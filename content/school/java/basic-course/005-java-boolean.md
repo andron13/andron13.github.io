@@ -1,3 +1,10 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 05 -
+description: 
+---
+
 # Тип данных boolean и логические операторы — введение в Java 005
 
 {{< figure src="/img/res/java/05/05-boolean.png" title="Правда или ложь" alt="Правда или ложь" >}}

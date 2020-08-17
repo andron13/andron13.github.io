@@ -1,6 +1,9 @@
 ---
 bookCollapseSection: true
 weight: 1
+title: 01 - Установка JDK
+description: JDK — это программа, которая будет переводить написанный вами Java-код в понятный для машин.
+type: book 
 ---
 
 # HelloWorld.java — первая программа на Java — введение в Java 001

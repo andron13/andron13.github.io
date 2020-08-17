@@ -1,3 +1,11 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 01 - логика 
+description: 
+type: book 
+---
+
 # Вложенные циклы (Nested Loops) и работа с данными, введение — 06
 
 ## Прямоугольник

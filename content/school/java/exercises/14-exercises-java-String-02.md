@@ -1,3 +1,11 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 01 - логика 
+description: 
+type: book 
+---
+
 # Доброе день, String - дос
 
 1. Given a string, return a string where for every char in the original, there are two chars.

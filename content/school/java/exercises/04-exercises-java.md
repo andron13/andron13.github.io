@@ -1,3 +1,11 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 01 - логика 
+description: 
+type: book 
+---
+
 # Задачи для повторения и закрепления материала, введение — 04
 
 ## Первая партия задач

@@ -1,3 +1,11 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 01 - логика 
+description: 
+type: book 
+---
+
 # Задачи Java Boolean, введение — 01
 
 Задачи на усвоение булевых значений в Java. Достаточно знать тип данных boolean, желательно(рекомендуется) знать условный оператор if-else.

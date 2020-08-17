@@ -1,3 +1,10 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 
+description: 
+---
+
 # Switch и Case: оператор выбора — введение в Java 006
 
 В этом уроке мы рассмотрим на примерах оператор выбора **Switch** и опции выбора **Case**.

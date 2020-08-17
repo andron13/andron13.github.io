@@ -1,3 +1,11 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 01 - логика 
+description: 
+type: book 
+---
+
 # Задачи для закрепления цикла for, введение — 05
 
 Задачи на закрепление основ программирования.

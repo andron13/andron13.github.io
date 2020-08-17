@@ -1,3 +1,11 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 01 - логика 
+description: 
+type: book 
+---
+
 ## Двоичные системы счисления, Modulo, введение — 07
 
 1. В одном KByte(килобайт) - 1000 Byte(10^3). В одном KiB(кикибайт) - 1024 Byte(2^10).
