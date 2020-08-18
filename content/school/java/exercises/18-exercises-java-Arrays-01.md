@@ -1,7 +1,7 @@
 ---
 bookCollapseSection: true
 weight: 1
-title: 01 - логика 
+title: 18 - Array-1  
 description: 
 type: book 
 ---

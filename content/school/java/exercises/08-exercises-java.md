@@ -1,7 +1,7 @@
 ---
 bookCollapseSection: true
 weight: 1
-title: 01 - логика 
+title: 08 - Массивы 
 description: 
 type: book 
 ---

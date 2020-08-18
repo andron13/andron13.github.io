@@ -1,12 +1,12 @@
 ---
 bookCollapseSection: true
 weight: 1
-title: 01 - логика 
-description: 
+title: 03 - If, else 
+description: Java задачи на закрепление условного оператора. 
 type: book 
 ---
 
-# Задачи для закрепления конструкции If, if else введение - 03
+# Задачи. If, if else введение - 03
 
 Требуется знание простых типов данных, String, if-else
 

@@ -2,7 +2,7 @@
 bookCollapseSection: true
 weight: 1
 title: 01 - логика 
-description: 
+description: Задачи с логическими(булевыми) выражениями 
 type: book 
 ---
 

@@ -1,12 +1,12 @@
 ---
 bookCollapseSection: true
 weight: 1
-title: 01 - логика 
+title: 05 - цикл for 
 description: 
 type: book 
 ---
 
-# Задачи для закрепления цикла for, введение — 05
+# Задачи. Цикл for, введение — 05
 
 Задачи на закрепление основ программирования.
 Требуется знание простых типов данных, String, switch, if-else, for

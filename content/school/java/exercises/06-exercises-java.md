@@ -1,12 +1,12 @@
 ---
 bookCollapseSection: true
 weight: 1
-title: 01 - логика 
+title: 06 - Nested Loops 
 description: 
 type: book 
 ---
 
-# Вложенные циклы (Nested Loops) и работа с данными, введение — 06
+# Вложенные циклы (Nested Loops)  — 06
 
 ## Прямоугольник
 
