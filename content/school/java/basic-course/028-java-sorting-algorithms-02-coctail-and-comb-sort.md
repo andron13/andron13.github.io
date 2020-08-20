@@ -103,19 +103,15 @@ public class CombSort {
     }
 
     public static int[] comb(int[] array) {
-        double stepConstant = 1.24733095;
+        final double stepConstant = 1.24733095;
         int step = array.length;
         while (step > 1) {
-            boolean swapped = false;
             step = (int) (step / stepConstant);
+            System.out.println(step);
             for (int i = 0; step + i < array.length; i++) {
                 if (array[i] > array[i + step]) {
                     swap(array, i, i + step);
-                    swapped = true;
                 }
-            }
-            if (!swapped) {
-                break;
             }
         }
         return array;

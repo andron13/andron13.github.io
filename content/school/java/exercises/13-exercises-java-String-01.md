@@ -100,9 +100,9 @@ type: book
     ```
 16. Given a string, return a version without both the first and last char of the string. The string may be any length, including 0.
     ```
-    withouEnd2("Hello") → "ell"
-    withouEnd2("abc") → "b"
-    withouEnd2("ab") → ""
+    withoutEnd2("Hello") → "ell"
+    withoutEnd2("abc") → "b"
+    withoutEnd2("ab") → ""
     ```
 17. Given a string and an int n, return a string made of the first and last n chars from the string. The string length will be at least n.
     ```

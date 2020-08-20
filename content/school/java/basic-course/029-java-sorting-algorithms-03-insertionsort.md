@@ -4,6 +4,7 @@
 
 Сортировка вставками - делит условно массив на две части. В левой собирается отсортированная часть, а из правой части берутся элементы и по очереди ставятся на своё место. Пожалуй, это самый близкий метод сортировки к обычному человеческому мышлению. Берём по одному и ставим на своё место. 
 
+Псевдокод:
 ```code
 for j = 2 to A.length do 
     key = A[j]
@@ -16,10 +17,13 @@ for j = 2 to A.length do
 end for
 ```
 
-https://www.youtube.com/watch?time_continue=7&v=ROalU379l3U&feature=emb_logo
+Прекрасный танец:
 
-https://www.youtube.com/watch?time_continue=10&v=8oJS1BMKE64&feature=emb_logo
+{{< youtube ROalU379l3U >}}
 
+Визуализация работы
+
+{{< youtube 8oJS1BMKE64 >}}
 
 ```java
 public class InsertionSort {
@@ -48,3 +52,5 @@ public class InsertionSort {
 
 1. https://www.codeflow.site/ru/article/java-insertion-sort
 2. https://juja.com.ua/java/algorithms/sorting-optimizing/
+
+- [29 - Insertionsort]({{< relref "/school/java/basic-course/029-java-sorting-algorithms-03-insertionsort">}})
