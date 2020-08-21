@@ -36,11 +36,11 @@ headless: true
     - [34 - Try Catch]({{< relref "/school/java/basic-course/034-Java-try-catch-finally.md">}})
     - [34 - Создание Jar]({{< relref "/school/java/basic-course/035-Java-creating-a-JAR-file .md">}})
     - [36 - Ресурсы]({{< relref "/school/java/basic-course/036-Java-ressourcen.md">}})
+    
   - **Курс-ООП**
     - [01 - Введение в ООП]({{< relref "/school/java/oop-course/001-Java-object-introduction-chapter-1.md">}})
-
   
-  - Задачник по Java
+  - **Задачник по Java**
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
     - [02 - Switch]({{< relref "/school/java/exercises/02-exercises-java.md" >}})
     - [03 - Если, то]({{< relref "/school/java/exercises/03-exercises-java.md" >}})
@@ -62,11 +62,11 @@ headless: true
     - [19 - Arrays-02]({{< relref "/school/java/exercises/19-exercises-java-Arrays-02.md" >}})
     - [20 - Arrays-03]({{< relref "/school/java/exercises/20-exercises-java-Arrays-03.md" >}})
 
-- HTML
+- **HTML**
   - [1 - Введение]({{< relref "/school/html/01-html-intro.md" >}})
   - [2 - Первая страница]({{< relref "/school/html/02-html-hello-world.md" >}})
   - [3 - Путь к файлу]({{< relref "/school/html/03-html-path.md" >}})
-- Полезная подборка
+- **Полезная подборка**
   - [01 - Git-введение]({{< relref "/school/tools/01-git.md" >}})
   - [02 - Git-методичка]({{< relref "/school/tools/02-github-basic.md" >}})
   - [03 - Булева Алгебра]({{< relref "/school/tools/03-boolean-algebra.md" >}})
