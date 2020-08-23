@@ -1,7 +1,5 @@
 # Сортировка вставками - Insertion Sort — введение в Java 029
 
-(В разработке) 
-
 Сортировка вставками - делит условно массив на две части. В левой собирается отсортированная часть, а из правой части берутся элементы и по очереди ставятся на своё место. Пожалуй, это самый близкий метод сортировки к обычному человеческому мышлению. Берём по одному и ставим на своё место. 
 
 Псевдокод:
@@ -17,13 +15,29 @@ for j = 2 to A.length do
 end for
 ```
 
-Прекрасный танец:
+Часто возникает вопрос, как можно считать, что левая часть отсортирована? Давайте представим, что у нас есть полное собрание сочинений какого-нибудь политика или нет. Лучше опусть у нас дома будет полная энциклопедия Брокгауза и Ефрона.
+
+{{< figure src="/img/res/java/29/29-efron.jpg" title="энциклопедия Брокгауза и Ефрона" alt="энциклопедия Брокгауза и Ефрона" >}}
+
+86 полутомов. Пронумерованных. Прекрасный пример контейнера с информацией, массива. Одна беда. Представьте себе, что в библиотеке играли дети, и все книги оказались на полу. На полу они лежат в беспорядке и неотсортированные. 
+
+Мы берём первую книгу с пола и нам попадается том 27. Мы ставим эту книгу на книжную полку, и в этот момент массив становится отсортированным. Несмотря на то, что в массиве всего один элемент.
+
+Мы берём следующую книгу и подносим её к уже отсортированной, что бы посмотреть где её ставить справа или слева. И в итоге выставляем все книги по порядку.
+
+Именно так и работает **Insertion Sort**, или сортировка вставками.
+
+Давайте посмотрим сортировку в танце:
 
 {{< youtube ROalU379l3U >}}
 
-Визуализация работы
+И ещё раз более быстрая визуализация в работе. 
 
 {{< youtube 8oJS1BMKE64 >}}
+
+Несмотря на огромное предисловие сам код достаточно компактен и сортировка считается одной из __простых сортировок__.
+
+## Сортировка вставками, java-code:
 
 ```java
 public class InsertionSort {
@@ -48,9 +62,44 @@ public class InsertionSort {
 }
 ```
 
-# Дополнительные ссылки
+## Сортировка вставками. Рекурсия, java-code:
 
-1. https://www.codeflow.site/ru/article/java-insertion-sort
-2. https://juja.com.ua/java/algorithms/sorting-optimizing/
+```java
+public class InsertionSortRecursion {
+    public static void main(String[] args) {
+        int[] arr = {10, 6, 3, 9, 15, 27};
+        insertionSortRecursive(arr);
+        System.out.println(Arrays.toString(arr));
+    }
 
-- [29 - Insertionsort]({{< relref "/school/java/basic-course/029-java-sorting-algorithms-03-insertionsort">}})
+    public static void insertionSortRecursive(int[] input) {
+        insertionSortRecursive(input, input.length);
+    }
+
+    private static void insertionSortRecursive(int[] input, int i) {
+        if (i <= 1) {
+            return;
+        }
+        insertionSortRecursive(input, i - 1);
+        int key = input[i - 1];
+        int j = i - 2;
+        while (j >= 0 && input[j] > key) {
+            input[j + 1] = input[j];
+            j = j - 1;
+        }
+        input[j + 1] = key;
+    }
+}
+```
+
+Объяснение рекурсии в данной сортировке - https://www.baeldung.com/java-insertion-sort.
+
+## Дополнительные ссылки
+
+1. Очень интересная и полезная статья о сортировке - https://juja.com.ua/java/algorithms/sorting-optimizing/
+2. Немного болье, чем просто сортировка вставками  - https://habr.com/ru/post/422085/
+3. Сортировки вставками, ещё статья - https://habr.com/ru/post/415935/
+4. https://www.codeflow.site/ru/article/java-insertion-sort
+5. https://github.com/eugenp/tutorials/tree/master/algorithms-sorting
+
+

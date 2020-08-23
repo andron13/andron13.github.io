@@ -28,13 +28,14 @@ headless: true
     - [22 - Таинственный main]({{< relref "/school/java/basic-course/022-java-public-static-void-main.md" >}})
     - [23 - Операторы перехода]({{< relref "/school/java/basic-course/023-java-return-break-continue.md" >}})
     - [24 - Обмен значений]({{< relref "/school/java/basic-course/024-java-swap-two-variables.md" >}})
-    - [25 - IDEA - настройка]({{< relref "/school/java/basic-course/025-java-idea-basics.md" >}})
-    - [26 - StringBuffer]({{< relref "/school/java/basic-course/026-java-string-stringbuffer-stringbuilder.md" >}})
+    - [25! - IDEA - настройка]({{< relref "/school/java/basic-course/025-java-idea-basics.md" >}})
+    - [26! - StringBuffer]({{< relref "/school/java/basic-course/026-java-string-stringbuffer-stringbuilder.md" >}})
     - [27 - Bubble sort]({{< relref "/school/java/basic-course/027-java-sorting-algorithms-01-bubblesort.md">}})
     - [28 - Comb и cocktail]({{< relref "/school/java/basic-course/028-java-sorting-algorithms-02-coctail-and-comb-sort">}})
+
     ...
     - [34 - Try Catch]({{< relref "/school/java/basic-course/034-Java-try-catch-finally.md">}})
-    - [34 - Создание Jar]({{< relref "/school/java/basic-course/035-Java-creating-a-JAR-file .md">}})
+    - [34! - Создание Jar]({{< relref "/school/java/basic-course/035-Java-creating-a-JAR-file .md">}})
     - [36 - Ресурсы]({{< relref "/school/java/basic-course/036-Java-ressourcen.md">}})
     
   - **Курс-ООП**

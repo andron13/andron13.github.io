@@ -107,8 +107,10 @@ public class TestTryCatch {
 Подсказка:
 
 ```Java
-String str = "123";
-int num = Integer.parseInt(str);
+String str1 = "123";
+int num1 = Integer.parseInt(str);
+String str2 = "№123";
+int num2 = Integer.parseInt(str2);
 ```
 
 Проверьте возможно ли оператор catch использовать несколько раз:
