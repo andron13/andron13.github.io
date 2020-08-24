@@ -8,16 +8,22 @@
 
 Давайте просто попробуем в IDEA создать наш JAR-файл.
 
-Заходим в меню File -> Project Structure.
+Заходим в меню **File** -> **Project Structure**.
 
-Переходим в подменю Artifacts
+ {{<figure src="/img/res/java/34/instruction-01.png" title="Создание JAR, первый шаг" alt="Создание JAR, первый шаг" >}}
 
-Нажимаем на плюсик в следующей колонке.
+Переходим в подменю **Artifacts** и нажимаем на плюсик в следующей колонке.
 
-Выбираем создание JAR from modules with dependencies
+ {{<figure src="/img/res/java/34/instruction-02.png" title="Создание JAR, второй шаг" alt="Создание JAR, второй шаг" >}}
 
+Выбираем создание **JAR from modules with dependencies**
+
+ {{<figure src="/img/res/java/34/instruction-03.png" title="Создание JAR, третий шаг" alt="Создание JAR, третий шаг" >}}
+ 
 Выбираем директорию куда должен создаться файл и возможную точку входа в программу (Main-class).
 
+ {{<figure src="/img/res/java/34/instruction-04.png" title="Создание JAR, четвёртый шаг" alt="Создание JAR, четвёртый шаг" >}}
+ 
 В итоге у нас должно было получиться что-то вроде этого.
 
 После этого заходим в меню Build-> Build Artifacts

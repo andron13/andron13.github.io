@@ -50,7 +50,7 @@ public class InsertionSort {
     private static int[] insertionSortImperative(int[] input) {
         for (int i = 1; i < input.length; i++) {
             int newElement = input[i]; // временная переменная, которая хранит значение
-            int location = i - 1; // цикл начался не с нуля, а с единицы - location предыдущий элемент массива
+            int location = i - 1; // цикл начался не с нуля, а с единицы - location предыдущее МЕСТО от элемента массива
             while (location >= 0 && input[location] > newElement) { // пока значение от location больше значения элемента проверки
                 input[location + 1] = input[location]; // присвоить значению на котором был элемент проверки значение предыдущего
                 location = location - 1;  // Декремент  location
