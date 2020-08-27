@@ -19,7 +19,8 @@
 
 ## Полезные материалы
 
-- [Ссылка на методичку](https://andron13.de/pdf/github-basic.pdf)  в pdf формате
+1. [Ссылка на методичку](https://andron13.de/pdf/github-basic.pdf)  в pdf формате
+2. Ссылка на хороший мануал [от Atlassian](https://www.atlassian.com/ru/git/tutorials/what-is-version-control)
 
 ## Лайфхак.
 
