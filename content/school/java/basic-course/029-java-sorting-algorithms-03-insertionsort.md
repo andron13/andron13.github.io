@@ -42,7 +42,7 @@ end for
 ```java
 public class InsertionSort {
     public static void main(String[] args) {
-        System.out.println("тест");
+        System.out.println("Сортировка массива");
         int[] array = {22, 100, 55, 33, 88, 7};
         System.out.println(Arrays.toString(insertionSortImperative(array)));
     }
@@ -51,7 +51,15 @@ public class InsertionSort {
         for (int i = 1; i < input.length; i++) {
             int newElement = input[i]; // временная переменная, которая хранит значение
             int location = i - 1; // цикл начался не с нуля, а с единицы - location предыдущее МЕСТО от элемента массива
+            System.out.println("i или круг = " + i);
+            System.out.println(newElement);
+            System.out.println(input[location]);
+            System.out.println("**");
             while (location >= 0 && input[location] > newElement) { // пока значение от location больше значения элемента проверки
+                System.out.println("Находимся в цикл while при i = " + i);
+                System.out.println(newElement);
+                System.out.println(input[location]);
+                System.out.println("++");
                 input[location + 1] = input[location]; // присвоить значению на котором был элемент проверки значение предыдущего
                 location = location - 1;  // Декремент  location
             }

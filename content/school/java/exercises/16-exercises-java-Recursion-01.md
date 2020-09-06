@@ -43,73 +43,67 @@ type: book
     changePi("pipi") → "3.143.14"
     changePi("pip") → "3.14p"
     ```
-6. Given an array of ints, compute recursively the number of times that the value 11 appears in the array. We'll use the convention of considering only the part of the array that begins at the given index. In this way, a recursive call can pass index+1 to move down the array. The initial call will pass in index as 0.
-    ```
-    array11([1, 2, 11], 0) → 1
-    array11([11, 11], 0) → 2
-    array11([1, 2, 3, 4], 0) → 0  
-    ```
-7. Given a string, compute recursively a new string where identical chars that are adjacent in the original string are separated from each other by a "*".
+6. Given a string, compute recursively a new string where identical chars that are adjacent in the original string are separated from each other by a "*".
     ```
     pairStar("hello") → "hel*lo"
     pairStar("xxyy") → "x*xy*y"
     pairStar("aaaa") → "a*a*a*a"
     ```
-8. Count recursively the total number of "abc" and "aba" substrings that appear in the given string.
+7. Count recursively the total number of "abc" and "aba" substrings that appear in the given string.
     ```
     countAbc("abc") → 1
     countAbc("abcxxabc") → 2
     countAbc("abaxxaba") → 2 
     ``` 
-9. Given a string, compute recursively the number of times lowercase "hi" appears in the string, however do not count "hi" that have an 'x' immedately before them.
+8. Given a string, compute recursively the number of times lowercase "hi" appears in the string, however do not count "hi" that have an 'x' immedately before them.
     ```
     countHi2("ahixhi") → 1
     countHi2("ahibhi") → 2
     countHi2("xhixhi") → 0
     ```
-10. Given a string and a non-empty substring sub, compute recursively the number of times that sub appears in the string, without the sub strings overlapping.
+9. Given a string and a non-empty substring sub, compute recursively the number of times that sub appears in the string, without the sub strings overlapping.
     ```  
     strCount("catcowcat", "cat") → 2
     strCount("catcowcat", "cow") → 1
     strCount("catcowcat", "dog") → 0
     ```
-11. We have a number of bunnies and each bunny has two big floppy ears. We want to compute the total number of ears across all the bunnies recursively (without loops or multiplication).
+10. We have a number of bunnies and each bunny has two big floppy ears. We want to compute the total number of ears across all the bunnies recursively (without loops or multiplication).
     ```
     bunnyEars(0) → 0
     bunnyEars(1) → 2
     bunnyEars(2) → 4
     ```
-12. We have triangle made of blocks. The topmost row has 1 block, the next row down has 2 blocks, the next row has 3 blocks, and so on. Compute recursively (no loops or multiplication) the total number of blocks in such a triangle with the given number of rows.
+11. We have triangle made of blocks. The topmost row has 1 block, the next row down has 2 blocks, the next row has 3 blocks, and so on. Compute recursively (no loops or multiplication) the total number of blocks in such a triangle with the given number of rows.
     ```
     triangle(0) → 0
     triangle(1) → 1
     triangle(2) → 3
     ```
-13. Given a non-negative int n, compute recursively (no loops) the count of the occurrences of 8 as a digit, except that an 8 with another 8 immediately to its left counts double, so 8818 yields 4. Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
+12. Given a non-negative int n, compute recursively (no loops) the count of the occurrences of 8 as a digit, except that an 8 with another 8 immediately to its left counts double, so 8818 yields 4. Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
     ```
     count8(8) → 1
     count8(818) → 2
     count8(8818) → 4 
     ```
-14. Given a string, compute recursively (no loops) the number of times lowercase "hi" appears in the string.
+13. Given a string, compute recursively (no loops) the number of times lowercase "hi" appears in the string.
     ```
     countHi("xxhixx") → 1
     countHi("xhixhix") → 2
     countHi("hi") → 1  
     ```
-15. Given a string, compute recursively a new string where all the 'x' chars have been removed.
+14. Given a string, compute recursively a new string where all the 'x' chars have been removed.
     ```
     noX("xaxb") → "ab"
     noX("abc") → "abc"
     noX("xx") → ""
     ```
-16. Given a string, compute recursively a new string where all the lowercase 'x' chars have been moved to the end of the string.
+15. Given a string, compute recursively a new string where all the lowercase 'x' chars have been moved to the end of the string.
     ```
     endX("xxre") → "rexx"
     endX("xxhixx") → "hixxxx"
     endX("xhixhix") → "hihixxx"
     ```
-17. Given a string, compute recursively (no loops) the number of "11" substrings in the string. The "11" substrings should not overlap.
+16. Given a string, compute recursively (no loops) the number of "11" substrings in the string. The "11" substrings should not overlap.
     ```
     count11("11abc11") → 2
     count11("abc11x11x11") → 3
@@ -196,5 +190,11 @@ type: book
     array6([1, 4], 0) → false
     array6([6], 0) → true
     ```
-
+3. Given an array of ints, compute recursively the number of times that the value 11 appears in the array. We'll use the convention of considering only the part of the array that begins at the given index. In this way, a recursive call can pass index+1 to move down the array. The initial call will pass in index as 0.
+       ```
+       array11([1, 2, 11], 0) → 1
+       array11([11, 11], 0) → 2
+       array11([1, 2, 3, 4], 0) → 0  
+       ```
+       
 © - codingbat.com

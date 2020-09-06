@@ -157,3 +157,5 @@ Java позволяет хранить не только десятичные ч
 
 + https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
 + Легенда о [шахматах и зёрнах](https://ru.wikipedia.org/wiki/%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B0_%D0%BE_%D0%B7%D1%91%D1%80%D0%BD%D0%B0%D1%85_%D0%BD%D0%B0_%D1%88%D0%B0%D1%85%D0%BC%D0%B0%D1%82%D0%BD%D0%BE%D0%B9_%D0%B4%D0%BE%D1%81%D0%BA%D0%B5)
+
+Скачать статью в pdf-формате - [тут](/pdf/java-01/002-Java-primitives.pdf)
