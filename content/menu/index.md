@@ -62,6 +62,7 @@ headless: true
     - [18 - Arrays-01]({{< relref "/school/java/exercises/18-exercises-java-Arrays-01.md" >}})
     - [19 - Arrays-02]({{< relref "/school/java/exercises/19-exercises-java-Arrays-02.md" >}})
     - [20 - Arrays-03]({{< relref "/school/java/exercises/20-exercises-java-Arrays-03.md" >}})
+    - [21 - Факультатив]({{< relref "/school/java/exercises/21-exercises-java-additional-03.md" >}})
 
 - **HTML**
   - [1 - Введение]({{< relref "/school/html/01-html-intro.md" >}})
