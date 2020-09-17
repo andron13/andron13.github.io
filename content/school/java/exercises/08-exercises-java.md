@@ -1,10 +1,3 @@
----
-bookCollapseSection: true
-weight: 1
-title: 08 - Массивы 
-description: 
-type: book 
----
 
 ## Массивы, введение — 08
 

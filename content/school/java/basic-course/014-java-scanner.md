@@ -15,6 +15,7 @@ public class WhileScanner {
 			System.out.println("Ты можешь купить на вечер что-то более крепкое, чем чай");
 			break; // выход из цикла
 		}
+        input.close(); // сканер нужно закрывать.
 	}
 }
 ```

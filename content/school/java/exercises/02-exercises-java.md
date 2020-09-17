@@ -5,6 +5,7 @@ title: 02 - Switch
 description: Задачи для решения в Java
 type: book 
 ---
+
 # Закрепление материала, введение — 02
 
 - методы и классы в Java
