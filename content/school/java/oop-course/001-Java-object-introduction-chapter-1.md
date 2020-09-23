@@ -139,7 +139,6 @@ class ИмяКласса {
 ### Person и BMI в ООП
 
 ```Java
-
 public class Main {
     public static void main(String[] args) {
         System.out.println(bmiIndex(100, 175));
