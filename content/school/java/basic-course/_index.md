@@ -24,17 +24,29 @@ type: book
 Скоро будет ссылка.
 
 ## И конечно же задачник
-  - [Задачник]({{< relref "/school/java/exercises" >}})
-    - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
-    - [02 - Switch]({{< relref "/school/java/exercises/02-exercises-java.md" >}})
-    - [03 - Если, то]({{< relref "/school/java/exercises/03-exercises-java.md" >}})
-    - [04 - Повторение основ]({{< relref "/school/java/exercises/04-exercises-java.md" >}})
-    - [05 - Цикл for]({{< relref "/school/java/exercises/05-exercises-java.md" >}})
-    - [06 - Nested Loops]({{< relref "/school/java/exercises/06-exercises-java.md" >}})
-    - [07 - Modulo]({{< relref "/school/java/exercises/07-exercises-java.md" >}})
-    - [08 - Массивы]({{< relref "/school/java/exercises/08-exercises-java.md" >}})
-    - [09 - Массивы - 2]({{< relref "/school/java/exercises/09-exercises-java.md" >}})
-    - [10 - FizzBuzz]({{< relref "/school/java/exercises/10-exercises-java.md" >}})
+
+- [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
+- [02 - Switch]({{< relref "/school/java/exercises/02-exercises-java.md" >}})
+- [03 - Если, то]({{< relref "/school/java/exercises/03-exercises-java.md" >}})
+- [04 - Повторение основ]({{< relref "/school/java/exercises/04-exercises-java.md" >}})
+- [05 - Цикл for]({{< relref "/school/java/exercises/05-exercises-java.md" >}})
+- [06 - Nested Loops]({{< relref "/school/java/exercises/06-exercises-java.md" >}})
+- [07 - Modulo]({{< relref "/school/java/exercises/07-exercises-java.md" >}})
+- [08 - Массивы]({{< relref "/school/java/exercises/08-exercises-java.md" >}})
+- [09 - Массивы - 2]({{< relref "/school/java/exercises/09-exercises-java.md" >}})
+- [10 - Разминка]({{< relref "/school/java/exercises/10-exercises-java.md" >}})
+- [11 - Logic-01]({{< relref "/school/java/exercises/11-exercises-java-logic-01.md" >}})
+- [12 - Logic-02]({{< relref "/school/java/exercises/12-exercises-java-logic-02.md" >}})
+- [13 - String-01]({{< relref "/school/java/exercises/13-exercises-java-String-01.md" >}})
+- [14 - String-02]({{< relref "/school/java/exercises/14-exercises-java-String-02.md" >}})
+- [15 - String-03]({{< relref "/school/java/exercises/15-exercises-java-String-03.md" >}})
+- [16 - Recursion-01]({{< relref "/school/java/exercises/16-exercises-java-Recursion-01.md" >}})
+- [17 - Recursion-02]({{< relref "/school/java/exercises/17-exercises-java-Recursion-02.md" >}})
+- [18 - Arrays-01]({{< relref "/school/java/exercises/18-exercises-java-Arrays-01.md" >}})
+- [19 - Arrays-02]({{< relref "/school/java/exercises/19-exercises-java-Arrays-02.md" >}})
+- [20 - Arrays-03]({{< relref "/school/java/exercises/20-exercises-java-Arrays-03.md" >}})
+- [21 - Факультатив]({{< relref "/school/java/exercises/21-exercises-java-additional-01.md" >}})
+    
     
 ## Сами уроки
 
@@ -67,7 +79,12 @@ type: book
     - [25 - IDEA - настройка]({{< relref "/school/java/basic-course/025-java-idea-basics.md" >}})
     - [26 - StringBuffer]({{< relref "/school/java/basic-course/026-java-string-stringbuffer-stringbuilder.md" >}})
     - [27 - Bubble sort]({{< relref "/school/java/basic-course/027-java-sorting-algorithms-01-bubblesort.md">}})
-  
+    - [28 - Comb и cocktail]({{< relref "/school/java/basic-course/028-java-sorting-algorithms-02-coctail-and-comb-sort">}})
+    - [29 - Insertionsort]({{< relref "/school/java/basic-course/029-java-sorting-algorithms-03-insertionsort">}})
+    ...
+    - [34 - Try Catch]({{< relref "/school/java/basic-course/034-Java-try-catch-finally.md">}})
+    - [35! - Создание Jar]({{< relref "/school/java/basic-course/035-Java-creating-a-JAR-file .md">}})
+    - [36 - Ресурсы]({{< relref "/school/java/basic-course/036-Java-ressourcen.md">}})
 
     
 {{< figure src="/img/res/java/558px-Java_logo.svg.png" title="Java" alt="уроки java online" >}}

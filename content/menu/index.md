@@ -35,11 +35,12 @@ headless: true
     - [29 - Insertionsort]({{< relref "/school/java/basic-course/029-java-sorting-algorithms-03-insertionsort">}})
     ...
     - [34 - Try Catch]({{< relref "/school/java/basic-course/034-Java-try-catch-finally.md">}})
-    - [34! - Создание Jar]({{< relref "/school/java/basic-course/035-Java-creating-a-JAR-file .md">}})
+    - [35! - Создание Jar]({{< relref "/school/java/basic-course/035-Java-creating-a-JAR-file .md">}})
     - [36 - Ресурсы]({{< relref "/school/java/basic-course/036-Java-ressourcen.md">}})
     
   - **Курс-ООП**
-    - [01 - Введение в ООП]({{< relref "/school/java/oop-course/001-Java-object-introduction-chapter-1.md">}})
+    - [01 - Введение в ООП]({{< relref "/school/java/oop-course/001-Java-object-introduction-chapter-1.md">}})   
+    - [02 - Перегрузка методов]({{< relref "/school/java/oop-course/002-Java-oop-method-overloading-polymorphism.md">}})
   
   - **Задачник по Java**
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
@@ -62,7 +63,7 @@ headless: true
     - [18 - Arrays-01]({{< relref "/school/java/exercises/18-exercises-java-Arrays-01.md" >}})
     - [19 - Arrays-02]({{< relref "/school/java/exercises/19-exercises-java-Arrays-02.md" >}})
     - [20 - Arrays-03]({{< relref "/school/java/exercises/20-exercises-java-Arrays-03.md" >}})
-    - [21 - Факультатив]({{< relref "/school/java/exercises/21-exercises-java-additional-03.md" >}})
+
 
 - **HTML**
   - [1 - Введение]({{< relref "/school/html/01-html-intro.md" >}})
