@@ -1,10 +1,3 @@
----
-bookCollapseSection: true
-weight: 1
-title: 16 - Recursion-2  
-description: 
-type: book 
----
 
 # Задачи для курса Java-basic - рекурсия
 

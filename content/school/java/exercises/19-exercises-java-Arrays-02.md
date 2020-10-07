@@ -1,10 +1,3 @@
----
-bookCollapseSection: true
-weight: 1
-title: 19 - Array-2  
-description: 
-type: book 
----
 
 # Закрепление массивов, Java-Basic
 
