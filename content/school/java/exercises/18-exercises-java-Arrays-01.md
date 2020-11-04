@@ -1,4 +1,10 @@
-
+---
+bookCollapseSection: true
+weight: 1
+title: 18 - Array-1  
+description: 
+type: book 
+---
 # Закрепление массивов, Java-Basic
 
 1. Given an array of ints, return true if 6 appears as either the first or last element in the array. The array will be length 1 or more.
