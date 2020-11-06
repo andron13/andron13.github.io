@@ -10,7 +10,7 @@ linktitle: 03 - Перегрузка методов в Java Overloading
 ---
 # Конструктор в Java и ключевое слово this- введение в Java-OOP 003
 
-{{< figure src="/img/res/java-oop/002/constructor-java.jpg" title="Стройка" alt="Стройка" >}}
+{{< figure src="/img/res/java-oop/003/constructor-java.jpg" title="Стройка" alt="Стройка" >}}
 
 Создание объектов в Java часто сравнивает с обычной стройкой в жизни. И английский **constructor** и русский **конструктор** связаны со строительством напрямую. 
 
