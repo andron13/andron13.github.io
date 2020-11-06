@@ -13,7 +13,7 @@ linktitle: 02 - Инкапсуляция - encapsulation в Java
 
 В слове инкапсуляция корень капсула. Если мы спрячем в "капсулу" параметры объекта, то это и будет инкапсуляцией. 
 
-{{< figure src="/img/res/java-oop/004/capsula.png" title="Инкапсуляция - encapsulation" alt="Инкапсуляция - encapsulation" >}}
+{{< figure src="/img/res/java-oop/004/capsula.jpg" title="Инкапсуляция - encapsulation" alt="Инкапсуляция - encapsulation" >}}
 
 ## Зачем нужна инкапсуляция?
 
