@@ -6,7 +6,7 @@ description: В слове инкапсуляция корень капсула.
 type: book 
 author: andron13
 date: 2020-11-06
-linktitle: 02 - Инкапсуляция - encapsulation в Java
+linktitle: 04 - Инкапсуляция - encapsulation в Java
 ---
 
 # Инкапсуляция - encapsulation
