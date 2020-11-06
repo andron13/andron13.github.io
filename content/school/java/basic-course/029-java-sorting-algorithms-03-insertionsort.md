@@ -44,28 +44,33 @@ public class InsertionSort {
     public static void main(String[] args) {
         System.out.println("Сортировка массива");
         int[] array = {22, 100, 55, 33, 88, 7};
-        System.out.println(Arrays.toString(insertionSortImperative(array)));
+        insertionSortImperative(array);
+        System.out.println(Arrays.toString(array));
     }
 
-    private static int[] insertionSortImperative(int[] input) {
+    private static void insertionSortImperative(int[] input) {
         for (int i = 1; i < input.length; i++) {
-            int newElement = input[i]; // временная переменная, которая хранит значение
-            int location = i - 1; // цикл начался не с нуля, а с единицы - location предыдущее МЕСТО от элемента массива
+            // временная переменная, которая хранит значение
+            int newElement = input[i]; 
+            // цикл начался не с нуля, а с единицы - location предыдущее МЕСТО от элемента массива
+            int location = i - 1; 
             System.out.println("i или круг = " + i);
             System.out.println(newElement);
             System.out.println(input[location]);
             System.out.println("**");
-            while (location >= 0 && input[location] > newElement) { // пока значение от location больше значения элемента проверки
+
+            // пока значение от location больше значения элемента проверки
+            while (location >= 0 && input[location] > newElement) { 
                 System.out.println("Находимся в цикл while при i = " + i);
                 System.out.println(newElement);
                 System.out.println(input[location]);
                 System.out.println("++");
-                input[location + 1] = input[location]; // присвоить значению на котором был элемент проверки значение предыдущего
+                // присвоить значению на котором был элемент проверки значение предыдущего
+                input[location + 1] = input[location]; 
                 location = location - 1;  // Декремент  location
             }
             input[location + 1] = newElement;  // значению location+1 передаём значение из памяти
         }
-        return input;
     }
 }
 ```

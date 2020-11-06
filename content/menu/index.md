@@ -41,7 +41,8 @@ headless: true
   - **Курс-ООП**
     - [01 - Введение в ООП]({{< relref "/school/java/oop-course/001-Java-object-introduction-chapter-1.md">}})   
     - [02 - Перегрузка методов]({{< relref "/school/java/oop-course/002-Java-oop-method-overloading-polymorphism.md">}})
-  
+    - [03 - Constructor this]({{< relref "/school/java/oop-course/003-Java-oop-constructor-this.md">}})
+    
   - **Задачник по Java**
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
     - [02 - Switch]({{< relref "/school/java/exercises/02-exercises-java.md" >}})
