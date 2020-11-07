@@ -2,7 +2,7 @@
 bookCollapseSection: true
 weight: 2
 title: Java-OOP 05 - наследование - inheritance
-description: В слове инкапсуляция корень капсула. Если мы спрячем в "капсулу" параметры объекта, то это и будет инкапсуляцией... Введение в объектно-ориентированное программирование на Java. Курс разработан в 2020 году.
+description: Мы можем наследовать не только какие-то поля, мы можем наследовать методы. Давайте создадим в Person метод eats... Введение в объектно-ориентированное программирование на Java. Курс разработан в 2020 году.
 type: book 
 author: andron13
 date: 2020-11-06
@@ -30,7 +30,7 @@ public class Student {
 
 ```Java
 
-public class Student {
+public class Teacher {
     private String firstName;
     private String secondName;
     private String uniID;
@@ -101,7 +101,7 @@ public class Student extends Person {
         System.out.println("Ужин в 18:00");
     }
 ```
-В данный момент переопределённый метод использует родительский, как он есть и добаляет свою собственную строчку.  
+В данный момент переопределённый метод использует родительский, как он есть и добавляет свою собственную строчку.  
 
 ## Аннотация @Override 
 
@@ -200,17 +200,22 @@ public class Person {
 
 ## Запрет наследования
 
-```Java
 Мы можем запретить наследовать с помощью ключевого слова **final**. 
 Тогда наш класс может начинаться так:
 
+
+```Java
 public final class Human {
     final void eats(){
         System.out.println("Обед в 13:00");
     }
 }
+```
 
-class Alien {
+Класс Human не может иметь наследников. 
+
+```Java
+public class Alien {
     final void eats(){
         System.out.println("Обед в 13:00");
     }
@@ -221,6 +226,7 @@ class Alien {
 ## Создание объектов
 
 Давайте я создам трёх студентов тремя способами.
+
 ```Java
 import java.time.LocalDate;
 

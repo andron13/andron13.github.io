@@ -1,10 +1,12 @@
 .idea
+/out/
 /hugo
 /public
 /draft
 vendor/*/
 resources
 hugo.exe
+
 *.test
 *.prof
 nohup.out
