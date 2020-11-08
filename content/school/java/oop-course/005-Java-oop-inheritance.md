@@ -233,10 +233,10 @@ import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
-        Student st1 = new Student("Игорь", "Семёнов", "12345");
-        Person pers1 = new Student("Игорь", "Семёнов", "3425345");
-        Object ob1 = new Student("Игорь", "Семёнов", "3425345");
-        Student st2 = (Student) ob1;
+        Student pasha = new Student("Паша", "Алеексеев", "12345");
+        Person sasha = new Student("Саша", "Семёнов", "3425345");
+        Object dasha = new Student("Дарья", "Иванова", "3425345");
+        Student newStudent = (Student) dasha;
     }
 }
 ```
