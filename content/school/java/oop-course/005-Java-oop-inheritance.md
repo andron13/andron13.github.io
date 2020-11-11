@@ -229,8 +229,6 @@ public class Alien {
 Давайте я создам трёх студентов тремя способами.
 
 ```Java
-import java.time.LocalDate;
-
 public class Main {
     public static void main(String[] args) {
         Student pasha = new Student("Паша", "Алеексеев", "12345");

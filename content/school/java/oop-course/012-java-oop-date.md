@@ -1,4 +1,21 @@
+# Дата и время в Java 
 
+Прежде чем
+
+Java и время:
+Пре
+```Java
+Date today = new Date();
+System.out.println(today);
+Date dateStart = new Date(0);
+System.out.println("dateStart " + dateStart);
+Date anotherDay = new Date(1_451_665_447_567L);
+System.out.println("just anotherDay " + anotherDay);
+Date theEnd = new Date(Long.MAX_VALUE);
+System.out.println(theEnd);
+```
+
+В итоге у нас получился вот такой вот класс, в котором мы поработали с некоторыми вариантами даты в Java. 
 
 
 ```Java
@@ -135,9 +152,32 @@ public class HelloDate {
 }
 ```
 
+## Joda-Time
+
+Пока не вышла Java 8, программисты не мирились с недостатками языка и создавали свой функционал. Одной из самых популярных библиотек была библиотека Joda-Time.
+
+На сайте создателей формата времени дословно стоит следующее.
+
+>Joda-Time provides a quality replacement for the Java date and time classes.    
+>  
+>Joda-Time is the de facto standard date and time library for Java prior to Java SE 8. Users are now asked to migrate to java.time (JSR-310).
+
+Это значит, что нам эта библиотека может быть интересна только в историческом и учебном плане. 
+
 ## Дополнительные ссылки
 
-1. https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html
-2. https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html
-3. https://habr.com/ru/post/274811/
-4. https://habr.com/ru/post/274905/
+1. Docs.oracle - [SimpleDateFormat](https://docs.oracle.com/javase/8/docs/api/java/text/SimpleDateFormat.html)
+2. Docs.oracle [DateTimeFormatter](https://docs.oracle.com/javase/8/docs/api/java/time/format/DateTimeFormatter.html)
+3. Oracle - [Java SE 8 Date and Time](https://www.oracle.com/technical-resources/articles/java/jf14-date-time.html)
+4. Habr - Java и время: [часть первая](https://habr.com/ru/post/274811/), [часть вторая](https://habr.com/ru/post/274905/)
+5. Baeldung - [Introduction to the Java 8 Date/Time API](https://www.baeldung.com/java-8-date-time-intro)
+6. [Get the Current Date, Time and Timestamp in Java 8](https://www.baeldung.com/current-date-time-and-timestamp-in-java-8)
+7. [Migrating to the New Java 8 Date Time API](https://www.baeldung.com/migrating-to-java-8-date-time-api)
+8. [Joda-Time](https://www.joda.org/joda-time/) - _deprecated_
+9. [Unix time](https://ru.wikipedia.org/wiki/Unix-%D0%B2%D1%80%D0%B5%D0%BC%D1%8F), also known as Epoch time, POSIX time, seconds since the Epoch, or UNIX Epoch time.
+
+## Домашнее задание
+
+1. Создайте программу, которая находит сколько дней осталось до Нового Года.
+2. Создайте класс Human и гетер, который даёт точный возраст человека(в годах), если нам известна дата его рождения.
+3. Напишите калькулятор, который принимает от пользователя дату, и возвращает Unix time.

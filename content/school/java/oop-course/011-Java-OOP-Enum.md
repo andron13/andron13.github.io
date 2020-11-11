@@ -1,5 +1,5 @@
 
-
+```Java
 enum Level {
   LOW,
   MEDIUM,
@@ -30,13 +30,13 @@ public class MyClass {
     }
   }
 }
-
+```
 
 https://mkyong.com/java/java-enum-example/
 https://www.w3schools.com/java/java_enums.asp
 https://javarush.ru/groups/posts/1963-kak-ispoljhzovatjh-klass-enum
 
-
+```Java
 public enum Gender {
 	M(1),
 	W(2),
@@ -52,6 +52,7 @@ public enum Gender {
 		return gend;
 	}
 }
+```
 
 https://javarush.ru/groups/posts/1963-kak-ispoljhzovatjh-klass-enum
 
