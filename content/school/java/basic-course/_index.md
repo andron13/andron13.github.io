@@ -77,7 +77,7 @@ type: book
     - [23 - Операторы перехода]({{< relref "/school/java/basic-course/023-java-return-break-continue.md" >}})
     - [24 - Обмен значений]({{< relref "/school/java/basic-course/024-java-swap-two-variables.md" >}})
     - [25 - IDEA - настройка]({{< relref "/school/java/basic-course/025-java-idea-basics.md" >}})
-    - [26 - StringBuffer]({{< relref "/school/java/basic-course/026-java-string-stringbuffer-stringbuilder.md" >}})
+    - [26 - StringBuffer]
     - [27 - Bubble sort]({{< relref "/school/java/basic-course/027-java-sorting-algorithms-01-bubblesort.md">}})
     - [28 - Comb и cocktail]({{< relref "/school/java/basic-course/028-java-sorting-algorithms-02-coctail-and-comb-sort">}})
     - [29 - Insertionsort]({{< relref "/school/java/basic-course/029-java-sorting-algorithms-03-insertionsort">}})

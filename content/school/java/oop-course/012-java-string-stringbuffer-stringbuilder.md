@@ -5,7 +5,7 @@ title: StringBuffer, StringBuilder и String в чём отличие
 description: StringBuffer, StringBuilder и String — в чём отличие? Давайте разберёмся, что когда использовать.
 ---
 
-#String, StringBuffer и StringBuilder — введение в Java 026
+#String, StringBuffer и StringBuilder — Java OPP 12
 
 (В разработке) 
 

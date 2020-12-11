@@ -29,7 +29,7 @@ headless: true
     - [23 - Операторы перехода]({{< relref "/school/java/basic-course/023-java-return-break-continue.md" >}})
     - [24 - Обмен значений]({{< relref "/school/java/basic-course/024-java-swap-two-variables.md" >}})
     - [25! - IDEA - настройка]({{< relref "/school/java/basic-course/025-java-idea-basics.md" >}})
-    - [26! - StringBuffer]({{< relref "/school/java/basic-course/026-java-string-stringbuffer-stringbuilder.md" >}})
+    - [26! - Magic Color]
     - [27 - Bubble sort]({{< relref "/school/java/basic-course/027-java-sorting-algorithms-01-bubblesort.md">}})
     - [28 - Comb и cocktail]({{< relref "/school/java/basic-course/028-java-sorting-algorithms-02-coctail-and-comb-sort">}})
     - [29 - Insertionsort]({{< relref "/school/java/basic-course/029-java-sorting-algorithms-03-insertionsort">}})
@@ -43,6 +43,7 @@ headless: true
     - [02 - Перегрузка методов]({{< relref "/school/java/oop-course/002-Java-oop-method-overloading-polymorphism.md">}})
     - [03 - Constructor и this]({{< relref "/school/java/oop-course/003-Java-oop-constructor-this.md">}})
     - [04 - Инкапсуляция]({{< relref "/school/java/oop-course/004-Java-oop-encapsulation-get-set.md">}})
+    - [12! - StringBuffer]({{< relref "/school/java/oop-course/012-java-string-stringbuffer-stringbuilder.md" >}})
     
   - **Задачник по Java**
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})
@@ -68,9 +69,9 @@ headless: true
 
 
 - **HTML**
-  - [1 - Введение]({{< relref "/school/html/01-html-intro.md" >}})
-  - [2 - Первая страница]({{< relref "/school/html/02-html-hello-world.md" >}})
-  - [3 - Путь к файлу]({{< relref "/school/html/03-html-path.md" >}})
+  - [1 - Введение]({{< relref "/school/frontend/html/01-html-intro.md" >}})
+  - [2 - Первая страница]({{< relref "/school/frontend/html/02-html-hello-world.md" >}})
+  - [3 - Путь к файлу]({{< relref "/school/frontend/html/03-html-path.md" >}})
 - **Полезная подборка**
   - [01 - Git-введение]({{< relref "/school/tools/01-git.md" >}})
   - [02 - Git-методичка]({{< relref "/school/tools/02-github-basic.md" >}})

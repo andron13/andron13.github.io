@@ -7,4 +7,4 @@ weight: 3
 
 По мере написания будут появляться новые главы. Творческих успехов и вам.
 
-[Введение]({{< relref "/school/html/01-html-intro.md" >}})
+[Введение]({{< relref "/school/frontend/html/01-html-intro.md" >}})
