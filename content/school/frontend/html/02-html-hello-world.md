@@ -1,6 +1,8 @@
 ---
-bookCollapseSection: true weight: 1 title: Введение в HTML - HelloWorld description: Учимся создавать первый HTML файл и
-первые шаги в HTML и CSS draft: false
+bookCollapseSection: true 
+weight: 1 
+title:
+description:
 ---
 
 Теперь мы попробуем приветствовать мир.
