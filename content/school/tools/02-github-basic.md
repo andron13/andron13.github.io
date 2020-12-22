@@ -39,7 +39,7 @@ git init
 Добавление в репозиторий файла index.html:
 
 ```bash
-git add index.html
+git add index.htm
 ```
 
 Добавление в репозиторий всех файлов в папке:
