@@ -72,6 +72,9 @@ headless: true
   - [1 - Введение]({{< relref "/school/frontend/html/01-html-intro.md" >}})
   - [2 - Первая страница]({{< relref "/school/frontend/html/02-html-hello-world.md" >}})
   - [3 - Путь к файлу]({{< relref "/school/frontend/html/03-html-path.md" >}})
+  - [4 - HTML-теги]({{< relref "/school/frontend/html/04-html-tags.md" >}})
+  - [5 - Таблица в HTML]({{< relref "/school/frontend/html/05-html-table.md" >}})
+
 - **Полезная подборка**
   - [01 - Git-введение]({{< relref "/school/tools/01-git.md" >}})
   - [02 - Git-методичка]({{< relref "/school/tools/02-github-basic.md" >}})

@@ -1,9 +1,8 @@
 ---
 bookCollapseSection: true
 weight: 1
-title: Введение в HTML - HelloWorld
-description: Учимся создавать первый HTML файл и первые шаги в HTML и CSS
-draft: true
+title: test
+description: test
 ---
 
 # HTML теги
