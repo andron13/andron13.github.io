@@ -75,7 +75,8 @@ headless: true
     - [4 - HTML-теги]({{< relref "/school/frontend/html/04-html-tags.md" >}})
     - [5 - Таблица в HTML]({{< relref "/school/frontend/html/05-html-table.md" >}})
   - **Задачник по HTML**
-    - [01 - HTML4 & Table]({{< relref "/school/frontend/fe-exercises/01-exercises-html.md" >}})
+    - [01 - HTML]({{< relref "/school/frontend/fe-exercises/01-exercises-html.md" >}})
+    - [02 - HTML]({{< relref "/school/frontend/fe-exercises/02-exercises-html.md" >}})
 
 - **Полезная подборка**
   - [01 - Git-введение]({{< relref "/school/tools/01-git.md" >}})

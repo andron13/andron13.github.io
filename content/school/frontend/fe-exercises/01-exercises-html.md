@@ -6,9 +6,9 @@ description: Задачи на основы HTML
 type: book 
 ---
 
-# Задачи на HTML4, без css и js
+# Задача № 1
 
-## 1. Exegi monumentum
+##  Exegi monumentum
 
 Условие: создайте html-файл (кодировка utf-8) с заголовком "Задача 1", результат которого показан на рисунке.
 
