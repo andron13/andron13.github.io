@@ -66,14 +66,16 @@ headless: true
     - [18 - Arrays-01]({{< relref "/school/java/exercises/18-exercises-java-Arrays-01.md" >}})
     - [19 - Arrays-02]({{< relref "/school/java/exercises/19-exercises-java-Arrays-02.md" >}})
     - [20 - Arrays-03]({{< relref "/school/java/exercises/20-exercises-java-Arrays-03.md" >}})
-
-
-- **HTML**
-  - [1 - Введение]({{< relref "/school/frontend/html/01-html-intro.md" >}})
-  - [2 - Первая страница]({{< relref "/school/frontend/html/02-html-hello-world.md" >}})
-  - [3 - Путь к файлу]({{< relref "/school/frontend/html/03-html-path.md" >}})
-  - [4 - HTML-теги]({{< relref "/school/frontend/html/04-html-tags.md" >}})
-  - [5 - Таблица в HTML]({{< relref "/school/frontend/html/05-html-table.md" >}})
+  
+- **Frontend**
+  - **HTML**
+    - [1 - Введение]({{< relref "/school/frontend/html/01-html-intro.md" >}})
+    - [2 - Первая страница]({{< relref "/school/frontend/html/02-html-hello-world.md" >}})
+    - [3 - Путь к файлу]({{< relref "/school/frontend/html/03-html-path.md" >}})
+    - [4 - HTML-теги]({{< relref "/school/frontend/html/04-html-tags.md" >}})
+    - [5 - Таблица в HTML]({{< relref "/school/frontend/html/05-html-table.md" >}})
+  - **Задачник по HTML**
+    - [01 - HTML4 & Table]({{< relref "/school/frontend/fe-exercises/01-exercises-html.md" >}})
 
 - **Полезная подборка**
   - [01 - Git-введение]({{< relref "/school/tools/01-git.md" >}})
