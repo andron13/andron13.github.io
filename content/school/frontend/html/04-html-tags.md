@@ -25,35 +25,28 @@ description: test
 
 ## Блочные теги
 
+Блочные элементы — занимают всю ширину страницы, а по высоте определены его содержимым. К блочным HTML-тегам относятся: address, blockquote, div, fieldset, form, h1 - h6, hr, <ol>, p, pre, table, ul. 
+
+Из всего этого списка два тега являются наиболее часто употребляемы. Это p - параграф или абзац, и div - блок с содержимым, который описывается отдельно.
+
 ## Строчные теги
+
+Строчные элементы — это те теги, которые используются внутри блока, внутри строки. Это к примеру: img, span, a, q, code, b, strong, em, i. 
+
+Я привёл наиболее часто употребляемые теги. Без ссылок, фотографий и выделений текста интернет тяжело себе представить.
 
 ## Все остальные теги
 
-```HTML
-<article></article>
-<aside>
-<details>
-<figcaption>
-<figure>
-<footer>
-<header>
-<main>
-<mark>
-<nav>
-<section>
-<summary>
-<time>
-```
+Существует более сотни HTML-элементов: article, aside, details, figcaption, figure, footer, header, main, mark, nav, section, summary, time и прочие. 
 
-Существует более сотни HTML-элементов. Не уверен, что их все надо знать наизусть. Но один раз ознакомиться с каждым из них стоит. 
+Не уверен, что их все надо знать наизусть. Но один раз ознакомиться с каждым из них стоит. 
 
-Я собрал пару ссылок, где подробнее обсуждаются большинство из тегов.
-
-Постепенно, шаг за шагом, мы рассмотрим некоторые из них.
+Я собрал пару ссылок, где подробнее обсуждаются большинство из тегов. Постепенно, шаг за шагом, мы рассмотрим некоторые из них.
 
 ## Дополнительные ссылки
 
 1. [Категории контента](https://developer.mozilla.org/ru/docs/Web/Guide/HTML/Content_categories#%D0%9E%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D0%BE%D0%B9_%D0%BF%D0%BE%D1%82%D0%BE%D0%BA)
 2. [HTML Element Reference](https://www.w3schools.com/tags/default.asp)
-3. [Все элементы HTML](https://developer.mozilla.org/ru/docs/Web/HTML/Element)
-4. [HTML5 best practices; section/header/aside/article elements](https://stackoverflow.com/questions/4781077/html5-best-practices-section-header-aside-article-elements)
+3. [Все элементы HTML - developer.mozilla.org](https://developer.mozilla.org/ru/docs/Web/HTML/Element)
+4. [Все HTML элементы - w3.org](https://www.w3.org/wiki/Category:HTMLElement)
+5. [HTML5 best practices](https://stackoverflow.com/questions/4781077/html5-best-practices-section-header-aside-article-elements); section/header/aside/article elements - вопросы по размещению одних тегов в других. 
