@@ -13,7 +13,7 @@ type: book
 
 {{< figure src="/img/res/fe-exe/html/02/02-HTML-Opera.png" title="Задача 2" alt="Задача 2" >}}
 
-### Не позволяй душе лениться
+### Assets
 
 Не позволяй душе лениться!  
 Чтоб в ступе воду не толочь,  
