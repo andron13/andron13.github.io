@@ -75,8 +75,11 @@ headless: true
     - [4 - HTML-теги]({{< relref "/school/frontend/html/04-html-tags.md" >}})
     - [5 - Таблица в HTML]({{< relref "/school/frontend/html/05-html-table.md" >}})
   - **Задачник по HTML**
-    - [01 - HTML]({{< relref "/school/frontend/fe-exercises/01-exercises-html.md" >}})
-    - [02 - HTML]({{< relref "/school/frontend/fe-exercises/02-exercises-html.md" >}})
+    - [01 - Exegi monumentum]({{< relref "/school/frontend/fe-exercises/01-exercises-html.md" >}})
+    - [02 - Не позволяй душе]({{< relref "/school/frontend/fe-exercises/02-exercises-html.md" >}})
+    - [03 - Молчание золото]({{< relref "/school/frontend/fe-exercises/03-exercises-html.md" >}})
+    - [04 - Структура проекта]({{< relref "/school/frontend/fe-exercises/04-exercises-html.md" >}})
+    - [05 - Молчание золото]({{< relref "/school/frontend/fe-exercises/05-exercises-html.md" >}})
 
 - **Полезная подборка**
   - [01 - Git-введение]({{< relref "/school/tools/01-git.md" >}})
