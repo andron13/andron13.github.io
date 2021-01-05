@@ -79,7 +79,7 @@ headless: true
     - [02 - Не позволяй душе]({{< relref "/school/frontend/fe-exercises/02-exercises-html.md" >}})
     - [03 - Молчание золото]({{< relref "/school/frontend/fe-exercises/03-exercises-html.md" >}})
     - [04 - Структура проекта]({{< relref "/school/frontend/fe-exercises/04-exercises-html.md" >}})
-    - [05 - Молчание золото]({{< relref "/school/frontend/fe-exercises/05-exercises-html.md" >}})
+    - [05 - Полезные статьи]({{< relref "/school/frontend/fe-exercises/05-exercises-html.md" >}})
 
 - **Полезная подборка**
   - [01 - Git-введение]({{< relref "/school/tools/01-git.md" >}})
