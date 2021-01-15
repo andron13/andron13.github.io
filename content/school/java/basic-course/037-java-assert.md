@@ -5,7 +5,7 @@ title:
 description: 
 ---
 
-```code
+```java
 public class Test {
     public static void main(String[] args) {
         System.out.println(sum(1922222225, 1922222225));

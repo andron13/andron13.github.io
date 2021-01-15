@@ -31,7 +31,7 @@ import java.util.Scanner;
 class UserInputSum {
    public static void main(String[] args) {
 
-      Double number, sum = 0.0;
+      double number, sum = 0.0;
       Scanner input = new Scanner(System.in);
       
       while (true) {

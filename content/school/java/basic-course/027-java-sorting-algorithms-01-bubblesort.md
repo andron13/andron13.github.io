@@ -112,7 +112,7 @@ public class Main {
 
 Рекурсия в алгоритмах сортировки будет использоваться достаточно часто и охотно. Стоит потратить время на укрепление материала. 
 
-1. [Рекурсия, 17-yj урок]({{< relref "/school/java/basic-course/017-java-recursion-intro.md" >}})
+1. [Рекурсия, 17-ый урок]({{< relref "/school/java/basic-course/017-java-recursion-intro.md" >}})
 2. Домашнее задание и закрепление материала - [рекурсия. Занимательные задачки](https://habr.com/ru/post/275813/)
 3. Как работает рекурсия – [объяснение в блок-схемах и видео](https://habr.com/ru/post/337030/)
 4. Просто для ознакомления - [рекурсивное программирование](https://medium.com/nuances-of-programming/%D1%80%D0%B5%D0%BA%D1%83%D1%80%D1%81%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-74c03b764d38)
