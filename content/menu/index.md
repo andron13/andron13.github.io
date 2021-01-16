@@ -43,7 +43,7 @@ headless: true
     - [02 - Перегрузка методов]({{< relref "/school/java/oop-course/002-Java-oop-method-overloading-polymorphism.md">}})
     - [03 - Constructor и this]({{< relref "/school/java/oop-course/003-Java-oop-constructor-this.md">}})
     - [04 - Инкапсуляция]({{< relref "/school/java/oop-course/004-Java-oop-encapsulation-get-set.md">}})
-    - [12! - StringBuffer]({{< relref "/school/java/oop-course/012-java-string-stringbuffer-stringbuilder.md" >}})
+    - [12! - StringBuffer]({{< relref "/school/java/oop-course/013-java-string-stringbuffer-stringbuilder.md" >}})
     
   - **Задачник по Java**
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})

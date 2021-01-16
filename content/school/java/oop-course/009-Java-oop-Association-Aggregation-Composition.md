@@ -54,7 +54,7 @@
 
 ### Менеджер и карта, первый пример
 
-{{< figure src="/img/res/java-oop/008/relation1.jpg" alt="Association Java" >}}
+{{< figure src="/img/res/java-oop/009/relation1.jpg" alt="Association Java" >}}
 
 Это **ассоциация**. Объекты живут собственной жизнью. Объекты взаимодействуют друг с другом в одном из методов. 
 

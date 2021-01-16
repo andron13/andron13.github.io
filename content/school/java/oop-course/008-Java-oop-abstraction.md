@@ -63,7 +63,7 @@ class Test{
 ```bash
 java: Pet is abstract; cannot be instantiated
 ```
-{{< figure src="/img/res/java-oop/007/abstract-instance.png" title="abstract instance" alt="создание объекта абстрактного класса" >}}
+{{< figure src="/img/res/java-oop/008/abstract-instance.png" title="abstract instance" alt="создание объекта абстрактного класса" >}}
 
 IDEA тоже подозревала это заранее. 
 
