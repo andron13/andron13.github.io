@@ -1,0 +1,24 @@
+library {
+    color: white;
+    background-color: #1e3e5a;
+    width: 100%;
+}
+
+heading {
+    color: green;
+    font-size: 40px;
+    background-color: powderblue;
+}
+
+heading, title, author, publisher, edition, price {
+    display: block;
+}
+
+price {
+    background-color: #66bbff;
+}
+
+title {
+    font-size: 25px;
+    font-weight: bold;
+}
