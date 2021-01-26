@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet type="text/css" href="style.css"?>
+<library>
+    <heading>Библиотека Телрана</heading>
+    <book>
+        <title>Книга 1</title>
+        <author>Первый автор</author>
+        <description>Очень интересная книга</description>
+        <taxonomie>Java</taxonomie>
+        <edition>Второе издание</edition>
+        <price>10,00€</price>
+    </book>
+    <book>
+        <title>Книга 1</title>
+        <author>Первый автор</author>
+        <description>Очень интересная книга</description>
+        <taxonomie>Java</taxonomie>
+        <edition>Второе издание</edition>
+        <price>10,00€</price>
+    </book>
+</library>
