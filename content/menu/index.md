@@ -96,7 +96,9 @@ headless: true
     - [03 - Разноцветная таблица]({{< relref "/school/frontend/fe-exercises/02-table/03-exercises-html-table.md" >}})
     - [04 - Табличная вёрстка]({{< relref "/school/frontend/fe-exercises/02-table/04-exercises-html-table.md" >}})
     - **Основы - формуляры**
-    - [01 - forms]({{< relref "/school/frontend/fe-exercises/03-form/01-exercises-html-forms.md" >}})
+    - [01 - Пимпочка]({{< relref "/school/frontend/fe-exercises/03-form/01-exercises-html-forms.md" >}})
+    - [02 - Типичный формуляр]({{< relref "/school/frontend/fe-exercises/03-form/02-exercises-html-forms.md" >}})
+    - [03 - Много инпутов]({{< relref "/school/frontend/fe-exercises/03-form/03-exercises-html-forms.md" >}})
   - **Задачник по CSS и HTML**
 
 - **Полезная подборка**
