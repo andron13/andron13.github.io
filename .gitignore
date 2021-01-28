@@ -29,3 +29,4 @@ hugolib/hugo_stats.json
 resources/sunset.jpg
 
 vendor
+/content/school/frontend/fe-exercises/00-solution/

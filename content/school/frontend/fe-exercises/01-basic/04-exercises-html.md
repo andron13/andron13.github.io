@@ -12,4 +12,9 @@ type: book
 
 В конце страницы сделайте регион подвал. И добавьте туда ссылку на эту задачу.
 
-{{< figure src="/img/res/fe-exe/html/04/04-task-Opera.png" title="Задача 4" alt="Задача 4" >}}
+{{< figure src="/img/res/fe-exe/html/01-basic/01-04.png" title="Задача 4" alt="Структура проекта" >}}
+
+## Ответы
+
+Решите задачу и выложите ссылку на решение в комментариях.
+Воспользуйтесь сервисом git(preferred way) или сайтами cssdeck.com или jsfiddle.net.

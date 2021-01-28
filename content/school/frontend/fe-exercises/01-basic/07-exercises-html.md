@@ -11,8 +11,13 @@ type: book
 
 При вставке символа авторского права не используйте мнемоническую запись.
 
-{{< figure src="/img/res/fe-exe/html/01/07/01-07.png" title="Задача 6" alt="Задача 6" >}}
+{{< figure src="/img/res/fe-exe/html/01-basic/07/01-07.png" title="Задача 6" alt="Задача 6" >}}
 
 ### Assets
 
-Ссылка на [изображение](/img/res/fe-exe/html/01/07/time.jpg) 
+Ссылка на [изображение](/img/res/fe-exe/html/01-basic/07/time.jpg) 
+
+## Ответы
+
+Решите задачу и выложите ссылку на решение в комментариях.
+Воспользуйтесь сервисом git(preferred way) или сайтами cssdeck.com или jsfiddle.net.

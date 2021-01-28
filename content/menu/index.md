@@ -75,23 +75,28 @@ headless: true
     - [4 - HTML-теги]({{< relref "/school/frontend/html/04-html-tags.md" >}})
     - [5 - Таблица в HTML]({{< relref "/school/frontend/html/05-html-table.md" >}})
   - **Задачник по HTML без CSS**  
-    **Основы - теги**  
-    - [01 - Exegi monumentum]({{< relref "/school/frontend/fe-exercises/01-exercises-html.md" >}})
-    - [02 - Не позволяй душе лениться]({{< relref "/school/frontend/fe-exercises/02-exercises-html.md" >}})
-    - [03 - Молчание золото]({{< relref "/school/frontend/fe-exercises/03-exercises-html.md" >}})
-    - [04 - Структура проекта]({{< relref "/school/frontend/fe-exercises/04-exercises-html.md" >}})
-    - [05 - Полезные статьи]({{< relref "/school/frontend/fe-exercises/05-exercises-html.md" >}})
-    - [06 - Генераторы]({{< relref "/school/frontend/fe-exercises/06-exercises-html.md" >}})
-    - [07 - Сократ всегда прав]({{< relref "/school/frontend/fe-exercises/07-exercises-html.md" >}})
-    - [08 - Редактирование текста]({{< relref "/school/frontend/fe-exercises/08-exercises-html.md" >}})
-    - [09 - Шон Коннери]({{< relref "/school/frontend/fe-exercises/09-exercises-html.md" >}})
-    - [10 - Glossary of Terms]({{< relref "/school/frontend/fe-exercises/10-exercises-html.md" >}})
-    - [11 - Галион]({{< relref "/school/frontend/fe-exercises/11-exercises-html.md" >}})
-    - [12 - Поломанная таблица]({{< relref "/school/frontend/fe-exercises/12-exercises-html.md" >}})
-    - [13 - Многочлен]({{< relref "/school/frontend/fe-exercises/13-exercises-html.md" >}})
-    - [14 - Ключевые слова]({{< relref "/school/frontend/fe-exercises/14-exercises-html.md" >}})
-      **Основы - таблицы**
-      **Основы - формуляры**
+    - **Основы - теги**  
+    - [01 - Exegi monumentum]({{< relref "/school/frontend/fe-exercises/01-basic/01-exercises-html.md" >}})
+    - [02 - Не позволяй душе лениться]({{< relref "/school/frontend/fe-exercises/01-basic/02-exercises-html.md" >}})
+    - [03 - Молчание золото]({{< relref "/school/frontend/fe-exercises/01-basic/03-exercises-html.md" >}})
+    - [04 - Структура проекта]({{< relref "/school/frontend/fe-exercises/01-basic/04-exercises-html.md" >}})
+    - [05 - Полезные статьи]({{< relref "/school/frontend/fe-exercises/01-basic/05-exercises-html.md" >}})
+    - [06 - Генераторы]({{< relref "/school/frontend/fe-exercises/01-basic/06-exercises-html.md" >}})
+    - [07 - Сократ всегда прав]({{< relref "/school/frontend/fe-exercises/01-basic/07-exercises-html.md" >}})
+    - [08 - Редактирование текста]({{< relref "/school/frontend/fe-exercises/01-basic/08-exercises-html.md" >}})
+    - [09 - Шон Коннери]({{< relref "/school/frontend/fe-exercises/01-basic/09-exercises-html.md" >}})
+    - [10 - Glossary of Terms]({{< relref "/school/frontend/fe-exercises/01-basic/10-exercises-html.md" >}})
+    - [11 - Галион]({{< relref "/school/frontend/fe-exercises/01-basic/11-exercises-html.md" >}})
+    - [12 - Поломанная таблица]({{< relref "/school/frontend/fe-exercises/01-basic/12-exercises-html.md" >}})
+    - [13 - Многочлен]({{< relref "/school/frontend/fe-exercises/01-basic/13-exercises-html.md" >}})
+    - [14 - Ключевые слова]({{< relref "/school/frontend/fe-exercises/01-basic/14-exercises-html.md" >}})
+    - **Основы - таблицы**
+    - [01 - Таблица 15 на 15]({{< relref "/school/frontend/fe-exercises/02-table/01-exercises-html-table.md" >}})
+    - [02 - Типичная таблица]({{< relref "/school/frontend/fe-exercises/02-table/02-exercises-html-table.md" >}})
+    - [03 - Разноцветная таблица]({{< relref "/school/frontend/fe-exercises/02-table/03-exercises-html-table.md" >}})
+    - [04 - Табличная вёрстка]({{< relref "/school/frontend/fe-exercises/02-table/04-exercises-html-table.md" >}})
+    - **Основы - формуляры**
+    - [01 - forms]({{< relref "/school/frontend/fe-exercises/03-form/01-exercises-html-forms.md" >}})
   - **Задачник по CSS и HTML**
 
 - **Полезная подборка**

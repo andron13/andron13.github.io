@@ -11,9 +11,13 @@ type: book
 
 В конце страницы сделайте регион подвал. И добавьте туда ссылку на эту задачу и на сайт школы.
 
-{{< figure src="/img/res/fe-exe/html/05/05-task-Opera.png" title="Задача 5" alt="Задача 5" >}}
+{{< figure src="/img/res/fe-exe/html/01-basic/05/05-task-Opera.png" title="Задача 5" alt="Задача 5" >}}
 
 ### Assets
 
-Ссылка на [изображение](/img/res/fe-exe/html/05/05-image.jpg) 
+Ссылка на [изображение](/img/res/fe-exe/html/01-basic/05/05-image.png) 
 
+## Ответы
+
+Решите задачу и выложите ссылку на решение в комментариях.
+Воспользуйтесь сервисом git(preferred way) или сайтами cssdeck.com или jsfiddle.net.

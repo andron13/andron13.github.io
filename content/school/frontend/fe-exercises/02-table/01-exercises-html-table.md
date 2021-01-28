@@ -14,14 +14,8 @@ type: book
 
 Обрати внимание на вкладку браузера.
 
-{{< figure src="/img/res/fe-exe/html/02/01-table.png" title="таблица 15 x 15" alt="таблица 15 x 15" >}}
+{{< figure src="/img/res/fe-exe/html/02-table/01-table.png" title="таблица 15 x 15" alt="таблица 15 x 15" >}}
 
 Создайте таблицу с данными.
-
-{{< figure src="/img/res/fe-exe/html/02/04-itogo.png" title="таблица 15 x 15" alt="таблица 15 x 15" >}}
-
-{{< figure src="/img/res/fe-exe/html/02/02-multicolored-box.png" title="таблица 15 x 15" alt="таблица 15 x 15" >}}
-
-{{< figure src="/img/res/fe-exe/html/02/03-SimpleMaket-with-digits.png" title="таблица 15 x 15" alt="таблица 15 x 15" >}}
 
 

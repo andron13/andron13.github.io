@@ -13,7 +13,7 @@ type: book
 
 Используй подходящий тег заголовков (&lt;h1&gt; - &lt;h6&gt;), теги &lt;br&gt;, &lt;p&gt;, &lt;i&gt;, &lt;em&gt;, &lt;strong&gt;, &lt;b&gt; (необязательно все перечисленные). Выясните различие тегов &lt;b&gt; и &lt;strong&gt;, тегов &lt;i&gt; и &lt;em&gt;. В html-код добавьте комментарии: дату решения данной задачи и ФИО.
 
-{{< figure src="/img/res/fe-exe/html/01/01-Exegi-monumentum–Opera.png" title="Задача 1" alt="Задача 1" >}}
+{{< figure src="/img/res/fe-exe/html/01-basic/01-Exegi-monumentum–Opera.png" title="Задача 1" alt="Exegi monumentum" >}}
 
 ### Assets
 
@@ -42,3 +42,7 @@ type: book
 Хвалу и клевету приемли равнодушно  
 И не оспаривай глупца.
 
+## Ответы
+
+Решите задачу и выложите ссылку на решение в комментариях. 
+Воспользуйтесь сервисом git(preferred way) или сайтами cssdeck.com или jsfiddle.net.
