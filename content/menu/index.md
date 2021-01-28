@@ -99,6 +99,13 @@ headless: true
     - [01 - Пимпочка]({{< relref "/school/frontend/fe-exercises/03-form/01-exercises-html-forms.md" >}})
     - [02 - Типичный формуляр]({{< relref "/school/frontend/fe-exercises/03-form/02-exercises-html-forms.md" >}})
     - [03 - Много инпутов]({{< relref "/school/frontend/fe-exercises/03-form/03-exercises-html-forms.md" >}})
+    - [04 - Курсы программирования]({{< relref "/school/frontend/fe-exercises/03-form/04-exercises-html-forms.md" >}})
+    - **Основы - медиа**
+    - [01 - Берлин]({{< relref "/school/frontend/fe-exercises/04-media/01-exercises-html-media.md" >}})
+    - [02 - Берлин в кубе]({{< relref "/school/frontend/fe-exercises/04-media/02-exercises-html-media.md" >}})
+    - [03 - Карта сокровищ]({{< relref "/school/frontend/fe-exercises/04-media/03-exercises-html-media.md" >}})
+    - [04 - Видео на Youtube]({{< relref "/school/frontend/fe-exercises/04-media/04-exercises-html-media.md" >}})
+    - [05 - Собственное видео]({{< relref "/school/frontend/fe-exercises/04-media/05-exercises-html-media.md" >}})
   - **Задачник по CSS и HTML**
 
 - **Полезная подборка**
