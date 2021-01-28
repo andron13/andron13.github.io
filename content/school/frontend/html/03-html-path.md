@@ -21,7 +21,7 @@ draft: false
 
 4. "/my_styles/styles.css"
 
-5. "http://www.povar.eu/style.css"
+5. "<a href="https://www.povar.eu/">povar.eu</a>"
 
 6. <a href="#">Empty link</a><br>
 

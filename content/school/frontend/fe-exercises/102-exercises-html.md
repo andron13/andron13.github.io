@@ -1,0 +1,27 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 02 - html основы 
+description: Задачи на основы HTML4 и таблицы 
+type: book 
+---
+
+Сборник задач на закрепление HTML-тега **table** и на вёрстку таблицами, как было принято во времена HTML4.
+
+## Задача № 1 таблица 15 x 15
+
+Нарисуй таблицу 15 на 15, как показано на рисунке. Это задача на html4. 
+
+Обрати внимание на вкладку браузера.
+
+{{< figure src="/img/res/fe-exe/html/02/01-table.png" title="таблица 15 x 15" alt="таблица 15 x 15" >}}
+
+Создайте таблицу с данными.
+
+{{< figure src="/img/res/fe-exe/html/02/04-itogo.png" title="таблица 15 x 15" alt="таблица 15 x 15" >}}
+
+{{< figure src="/img/res/fe-exe/html/02/02-multicolored-box.png" title="таблица 15 x 15" alt="таблица 15 x 15" >}}
+
+{{< figure src="/img/res/fe-exe/html/02/03-SimpleMaket-with-digits.png" title="таблица 15 x 15" alt="таблица 15 x 15" >}}
+
+

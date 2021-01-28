@@ -74,12 +74,25 @@ headless: true
     - [3 - Путь к файлу]({{< relref "/school/frontend/html/03-html-path.md" >}})
     - [4 - HTML-теги]({{< relref "/school/frontend/html/04-html-tags.md" >}})
     - [5 - Таблица в HTML]({{< relref "/school/frontend/html/05-html-table.md" >}})
-  - **Задачник по HTML**
+  - **Задачник по HTML без CSS**  
+    **Основы - теги**  
     - [01 - Exegi monumentum]({{< relref "/school/frontend/fe-exercises/01-exercises-html.md" >}})
-    - [02 - Не позволяй душе]({{< relref "/school/frontend/fe-exercises/02-exercises-html.md" >}})
+    - [02 - Не позволяй душе лениться]({{< relref "/school/frontend/fe-exercises/02-exercises-html.md" >}})
     - [03 - Молчание золото]({{< relref "/school/frontend/fe-exercises/03-exercises-html.md" >}})
     - [04 - Структура проекта]({{< relref "/school/frontend/fe-exercises/04-exercises-html.md" >}})
     - [05 - Полезные статьи]({{< relref "/school/frontend/fe-exercises/05-exercises-html.md" >}})
+    - [06 - Генераторы]({{< relref "/school/frontend/fe-exercises/06-exercises-html.md" >}})
+    - [07 - Сократ всегда прав]({{< relref "/school/frontend/fe-exercises/07-exercises-html.md" >}})
+    - [08 - Редактирование текста]({{< relref "/school/frontend/fe-exercises/08-exercises-html.md" >}})
+    - [09 - Шон Коннери]({{< relref "/school/frontend/fe-exercises/09-exercises-html.md" >}})
+    - [10 - Glossary of Terms]({{< relref "/school/frontend/fe-exercises/10-exercises-html.md" >}})
+    - [11 - Галион]({{< relref "/school/frontend/fe-exercises/11-exercises-html.md" >}})
+    - [12 - Поломанная таблица]({{< relref "/school/frontend/fe-exercises/12-exercises-html.md" >}})
+    - [13 - Многочлен]({{< relref "/school/frontend/fe-exercises/13-exercises-html.md" >}})
+    - [14 - Ключевые слова]({{< relref "/school/frontend/fe-exercises/14-exercises-html.md" >}})
+      **Основы - таблицы**
+      **Основы - формуляры**
+  - **Задачник по CSS и HTML**
 
 - **Полезная подборка**
   - [01 - Git-введение]({{< relref "/school/tools/01-git.md" >}})

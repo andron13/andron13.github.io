@@ -81,4 +81,5 @@ draft= false
 
 Отнеситесь к этому серьёзно. 
 
-Ещё немного о паролях - [как правильно создавать пароли](https://andron13.de/school/tools/04-how-to-create-passwords/)
+Ещё немного о паролях - [как правильно создавать пароли]({{< relref "/school/tools/04-how-to-create-passwords.md" >}})
+

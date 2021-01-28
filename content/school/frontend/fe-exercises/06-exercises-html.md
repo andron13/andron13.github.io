@@ -5,9 +5,8 @@ title: 6 - html основы
 description: Задачи на основы HTML
 type: book
 ---
-# Задача № 6
+## Задача №6 Генераторы
 
-## Название задачи
+Реализуйте макет.
 
-
-### Assets
+{{< figure src="/img/res/fe-exe/html/01/01-06-generator.png" title="Задача 6" alt="Задача 6" >}}

@@ -5,16 +5,13 @@ title: 3 - html основы
 description: Задачи на основы HTML
 type: book
 ---
-# Задача № 3
+## Задача № 3 Молчание золото
 
-{{< figure src="/img/res/fe-exe/html/03/03-exercises-Opera.png" title="Задача 3" alt="Задача 3" >}}
+Дана фотография, короткий заголовок. Создайте файл, как на примере.
 
-## Молчание золото
-
-Дана фотография, короткий заголовок. Создайте файл, как на примере. 
+{{< figure src="/img/res/fe-exe/html/01/01-03.png" title="Задача 3" alt="Задача 3" >}}
 
 ### Assets
 
-#### Silence is golden
+Ссылка на [изображение](/img/res/fe-exe/html/03/Silence-is-golden.jpg)
 
-Ссылка на [изображение](/img/res/fe-exe/html/03/Silence-is-golden.jpg) 
