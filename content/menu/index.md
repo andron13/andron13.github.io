@@ -106,6 +106,8 @@ headless: true
     - [03 - Карта сокровищ]({{< relref "/school/frontend/fe-exercises/04-media/03-exercises-html-media.md" >}})
     - [04 - Видео на Youtube]({{< relref "/school/frontend/fe-exercises/04-media/04-exercises-html-media.md" >}})
     - [05 - Собственное видео]({{< relref "/school/frontend/fe-exercises/04-media/05-exercises-html-media.md" >}})
+    - [06 - Аудио]({{< relref "/school/frontend/fe-exercises/04-media/06-exercises-html-media.md" >}})
+    - [07 - Кофе и компьютер]({{< relref "/school/frontend/fe-exercises/04-media/07-exercises-html-media.md" >}})
   - **Задачник по CSS и HTML**
 
 - **Полезная подборка**
