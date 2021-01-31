@@ -5,7 +5,7 @@ title: 02 - html основы
 description: Задачи на основы HTML4 и таблицы 
 type: book 
 ---
-## multicolored box
+## Задача № 3  multicolored box
 
 Попробуй реализовать таблицу не используя стилей
 

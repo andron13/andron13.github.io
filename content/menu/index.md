@@ -90,6 +90,7 @@ headless: true
     - [12 - Поломанная таблица]({{< relref "/school/frontend/fe-exercises/01-basic/12-exercises-html.md" >}})
     - [13 - Многочлен]({{< relref "/school/frontend/fe-exercises/01-basic/13-exercises-html.md" >}})
     - [14 - Ключевые слова]({{< relref "/school/frontend/fe-exercises/01-basic/14-exercises-html.md" >}})
+    - [14 - Разные ссылки]({{< relref "/school/frontend/fe-exercises/01-basic/15-exercises-html.md" >}})
     - **Основы - таблицы**
     - [01 - Таблица 15 на 15]({{< relref "/school/frontend/fe-exercises/02-table/01-exercises-html-table.md" >}})
     - [02 - Типичная таблица]({{< relref "/school/frontend/fe-exercises/02-table/02-exercises-html-table.md" >}})
@@ -108,7 +109,11 @@ headless: true
     - [05 - Собственное видео]({{< relref "/school/frontend/fe-exercises/04-media/05-exercises-html-media.md" >}})
     - [06 - Аудио]({{< relref "/school/frontend/fe-exercises/04-media/06-exercises-html-media.md" >}})
     - [07 - Кофе и компьютер]({{< relref "/school/frontend/fe-exercises/04-media/07-exercises-html-media.md" >}})
+    - [08 - Котики]({{< relref "/school/frontend/fe-exercises/04-media/08-exercises-html-media.md" >}})
+    - [09 - Щенки]({{< relref "/school/frontend/fe-exercises/04-media/09-exercises-html-media.md" >}})
   - **Задачник по CSS и HTML**
+    - [09 - Формы логина]({{< relref "/school/frontend/fe-exercises/10-forms-with-css/01-exercises-html-css-user-login.md" >}})
+
 
 - **Полезная подборка**
   - [01 - Git-введение]({{< relref "/school/tools/01-git.md" >}})
