@@ -12,7 +12,7 @@ type: book
 
 Добавь две ссылки. Необычная ссылка должна открывать ссылку в новой вкладке. Обычная в том же окне. 
 
-{{< figure src="/img/res/fe-exe/html/01-basic/0115a.png" title="Ссылки" alt="Ссылки" >}}
+{{< figure src="/img/res/fe-exe/html/01-basic/01-15.png" title="Ссылки" alt="Ссылки" >}}
 
 ## Ответы
 
