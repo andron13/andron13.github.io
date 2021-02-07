@@ -8,10 +8,9 @@ type: book
 
 ## Формочки и формошлёпы
 
-Один мой друг, а именно Геннадий Колтун с ib.by называет фронтендщиков формошлёпами.
+Один мой друг, а именно Геннадий Колтун с ib.by, называет фронтендщиков формошлёпами.
 
-В чём то он определённо прав. Формы и формочки поджидают нас в интернете везде. Формы логина и регистрации на сайте,
-форма отправки емайлов, контактов, биллинга и всего чего только может быть.
+В чём то он определённо прав. Формы и формочки поджидают нас в интернете везде. Формы логина и регистрации на сайте, форма отправки емайлов, контактов, биллинга и всего чего только может быть.
 
 {{< figure src="/img/res/fe-exe/html/03-form/03-04.png" title="Пример формы" alt="Пример формы" >}}
 
@@ -21,7 +20,7 @@ type: book
 
 ## Form и input
 
-Тегом **&#60;form&#62;** мы объединяем поля в которые пользователь должен ввести данные.
+Тегом **&#60;form&#62;** мы объединяем поля для ввода данных.
 
 ```HTML
 
@@ -30,8 +29,7 @@ type: book
 </form>
 ```
 
-На самом деле у тега есть определённые полезные и достаточно обязательные атрибуты. Эти атрибуты указывают куда
-отправлять форму и каким способом. Соответственно они называются **action** и **method**. Это может выглядеть вот так
+На самом деле у тега есть определённые полезные и достаточно обязательные атрибуты. Эти атрибуты указывают куда отправлять форму и каким способом. Соответственно они называются **action** и **method**. Это может выглядеть вот так
 
 - ```<form action="" method="">```. Предлагаю сразу вписать туда значения, что бы мы привыкали к заполнению нужных
   атрибутов. В action мы поставим заглушку **#**, решётка часто используется заглушки ссылки. А в метод передачи данных
@@ -336,6 +334,19 @@ list, maxlength, minlength, pattern, placeholder, readonly, required, size, spel
 
 И с помощью этих строчек мы получили выпадающий список с выбором.
 
+Как вариант такой список может выглядеть и вот так.
+```HTML
+    <input list="browsers">
+
+    <datalist id="browsers">
+        <option value="Internet Explorer">
+        <option value="Firefox">
+        <option value="Google Chrome">
+        <option value="Opera">
+        <option value="Safari">
+    </datalist>
+```
+
 ### maxlength и minlength
 
 maxlength и minlength мы рассмотрели уже пару раз вверху, да и говорят они сами за себя.
@@ -375,15 +386,36 @@ maxlength и minlength мы рассмотрели уже пару раз вве
 </label>
 ```
 
+## select
+
+Список выбора можно настроить используя тег **select**. Возможности HTML расширяются не просто так. Правильно настроенные теги вызывают нативные интерфейсы на тех же мобильниках. И человек не путается при вводе данных. 
+
+```HTML
+<form action="#" method="post">
+    <p><label>Выберите язык <br>
+        <select size="7" multiple name="language[]">
+            <option disabled>список языков в нашей школе</option>
+            <option selected value="java">Java</option>
+            <option  value="PHP">PHP</option>
+            <option value="Python">Python</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Dart">Dart</option>
+            <option value="C-sharp">C#</option>
+            <option value="C">C</option>
+            <option value="ruby">Ruby</option>
+            <option value="pascal">Pascal</option>
+        </select>
+    </label></p>
+    <p><input type="submit" value="Отправить"></p>
+```
+
 ## Дополнительные ссылки
 
-1. [ib.by](https://ib.by/) - позже, после того как выучите front здесь можно попробовать устроится на работу
-   фронтендщика. Можете сослаться на эту страницу.
-2. Метод [Post](https://ru.wikipedia.org/wiki/POST_(HTTP))
-3. [Request_methods](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
-4. О [HTTP](https://ru.wikipedia.org/wiki/HTTP) на Википедии.
-5. О [HTTPS](https://ru.wikipedia.org/wiki/HTTPS)
-6. Простым языком о [HTTP](https://habr.com/ru/post/215117/)
+1. Метод [Post](https://ru.wikipedia.org/wiki/POST_(HTTP))
+2. Простым языком о [HTTP](https://habr.com/ru/post/215117/)
+3. О [HTTPS](https://ru.wikipedia.org/wiki/HTTPS)
+4. [Request_methods](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
+5. [ib.by](https://ib.by/) - позже, после того как выучите front здесь можно попробовать устроится на свою первую работу. Сошлитесь на эту страницу.
 
 ## Домашнее задание
 
