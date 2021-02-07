@@ -74,7 +74,6 @@ headless: true
     - [3 - Путь к файлу]({{< relref "/school/frontend/html/03-html-path.md" >}})
     - [4 - HTML-теги]({{< relref "/school/frontend/html/04-html-tags.md" >}})
     - [5 - Таблица в HTML]({{< relref "/school/frontend/html/05-html-table.md" >}})
-    - [6 - Формочки]({{< relref "/school/frontend/html/06-html-form.md" >}})
   - **Задачник по HTML без CSS**  
     - **Основы - теги**  
     - [01 - Exegi monumentum]({{< relref "/school/frontend/fe-exercises/01-basic/01-exercises-html.md" >}})
