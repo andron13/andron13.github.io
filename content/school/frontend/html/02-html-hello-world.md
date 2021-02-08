@@ -1,8 +1,8 @@
 ---
 bookCollapseSection: true 
 weight: 1 
-title:
-description:
+title: Введение в HTML - первая страница
+description: Создание первой страницы с нуля
 ---
 
 Теперь мы попробуем приветствовать мир.

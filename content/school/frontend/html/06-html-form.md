@@ -2,7 +2,7 @@
 bookCollapseSection: true 
 weight: 1 
 title: 06-html-form - основы 
-description: Формы HTML 
+description: Теги и атрибуты полей ввода в HTML5
 type: book
 ---
 
