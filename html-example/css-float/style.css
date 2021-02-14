@@ -1,0 +1,33 @@
+.img_l {
+    float: left;
+}
+
+.img_r {
+    float: right;
+}
+
+img {
+    width: 200px;
+}
+
+article {
+    width: 1000px;
+}
+
+.p_l {
+    float: left;
+    width: 400px;
+}
+
+.p_r {
+    float: right;
+    width: 400px;
+}
+
+.clear_p {
+    clear: both;
+}
+
+footer{
+    clear: both;
+}
