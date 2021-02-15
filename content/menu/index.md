@@ -80,6 +80,10 @@ headless: true
     - [7 - Image Map]({{< relref "/school/frontend/html/07-html-image-map.md" >}})
     - [8 - Гиперссылки]({{< relref "/school/frontend/html/08-html-url-tag-a.md" >}})
     - [9 - Перечисления]({{< relref "/school/frontend/html/09-html-u-o-list.md" >}})
+  - **CSS**    
+    - [02 - Шрифты]({{< relref "/school/frontend/CSS/02-css-fonts.md" >}})
+    - [03 - display none]({{< relref "/03-css-layout-display.md" >}})
+    - [04 - Box model]({{< relref "/04-css-box-model.md" >}})
   - **Задачник по HTML без CSS**  
     - **Основы - теги**  
     - [01 - Exegi monumentum]({{< relref "/school/frontend/fe-exercises/01-basic/01-exercises-html.md" >}})
@@ -118,7 +122,10 @@ headless: true
     - [08 - Котики]({{< relref "/school/frontend/fe-exercises/04-media/08-exercises-html-media.md" >}})
     - [09 - Щенки]({{< relref "/school/frontend/fe-exercises/04-media/09-exercises-html-media.md" >}})
   - **Задачник по CSS и HTML**
-    - [09 - Формы логина]({{< relref "/school/frontend/fe-exercises/10-forms-with-css/01-exercises-html-css-user-login.md" >}})
+    - [Формы логина]({{< relref "/school/frontend/fe-exercises/10-forms-with-css/01-exercises-html-css-user-login.md" >}})  
+    **Макеты сайтов**
+    - [Две колонки]({{< relref "school/frontend/fe-exercises/11-moqups/01-exercises-web-sites-moqups.md" >}})
+  
 
 
 - **Полезная подборка**
