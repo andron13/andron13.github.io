@@ -32,7 +32,7 @@ public class CocktailSort {
         System.out.println("Коктейльная сортировка " + Arrays.toString(cocktailSort(newArray)));
     }
 
-    private static int[] cocktailSort(int[] array) {
+    private static void cocktailSort(int[] array) {
         int start = 0;
         int end = array.length - 1;
         while (start <= end) {
@@ -59,10 +59,9 @@ public class CocktailSort {
                 break;
             }
         }
-        return array;
     }
 
-    private static int[] myNewCopyArray(int[] array) {
+    private static void myNewCopyArray(int[] array) {
         int[] copy = new int[array.length];
         for (int i = 0; i < array.length; i++) {
             copy[i] = array[i];
@@ -75,7 +74,6 @@ public class CocktailSort {
         for (int i = 0; i < length; i++) {
             myArray[i] = (int) (Math.random() * 100);
         }
-        return myArray;
     }
 }
 ```
@@ -102,7 +100,7 @@ public class CombSort {
         System.out.println(Arrays.toString(comb(array)));
     }
 
-    public static int[] comb(int[] array) {
+    public static void comb(int[] array) {
         final double stepConstant = 1.24733095;
         int step = array.length;
         while (step > 1) {
@@ -114,7 +112,6 @@ public class CombSort {
                 }
             }
         }
-        return array;
     }
 
     public static void swap(int[] array, int x, int y) {

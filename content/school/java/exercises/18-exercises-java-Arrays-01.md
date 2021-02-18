@@ -2,7 +2,7 @@
 bookCollapseSection: true
 weight: 1
 title: 18 - Array-1  
-description: 
+description: Задачи на закрепление темы с массивами. Часть первая. Java
 type: book 
 ---
 # Закрепление массивов, Java-Basic

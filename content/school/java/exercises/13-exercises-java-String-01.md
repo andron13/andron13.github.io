@@ -1,3 +1,11 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 13 - String-1
+description: Задачи на закрепление темы со строковыми значениями в Java. Часть первая
+type: book
+---
+
 # Доброе утро, String - уно
 
 1. Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".

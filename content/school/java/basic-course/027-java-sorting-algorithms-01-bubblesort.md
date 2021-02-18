@@ -86,7 +86,7 @@ public class Main {
         System.out.println(Arrays.toString(bubbleSort(array)));
     }
 
-    public static String[] bubbleSort(String[] array) {
+    public static void bubbleSort(String[] array) {
         int count = 0;
         for (int i = 0; i < array.length - 1; i++) {
             if (array[i + 1].toLowerCase().compareTo(array[i].toLowerCase()) < 0) {
@@ -99,7 +99,6 @@ public class Main {
         if (count > 0) {
             bubbleSort(array);
         }
-        return array;
     }
 }
 ```

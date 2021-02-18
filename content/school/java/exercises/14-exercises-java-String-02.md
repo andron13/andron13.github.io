@@ -1,12 +1,12 @@
 ---
 bookCollapseSection: true
 weight: 1
-title: 14 - String-2 
-description: 
-type: book 
+title: 14 - String-2
+description: Задачи на закрепление темы со строковыми значениями в Java. Часть вторая
+type: book
 ---
 
-# Доброе день, String - дос
+## Доброе день, String - дос
 
 1. Given a string, return a string where for every char in the original, there are two chars.
     ```

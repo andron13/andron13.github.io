@@ -2,7 +2,7 @@
 bookCollapseSection: true
 weight: 1
 title: 20 - Array-3  
-description: 
+description: Задачи на закрепление темы с массивами. Часть третья. Java
 type: book 
 ---
 # Закрепление массивов, Java-Basic, Array-3 

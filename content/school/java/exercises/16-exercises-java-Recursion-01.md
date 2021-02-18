@@ -1,3 +1,11 @@
+---
+bookCollapseSection: true
+weight: 1
+title: 16 - Рекурсия - 1
+description: Задачи на закрепление темы рекурсии. Часть первая. Java
+type: book
+---
+
 # Задачи для курса Java-basic - рекурсия
 
 1. Given n of 1 or more, return the factorial of n, which is n * (n-1) * (n-2) ... 1. Compute the result recursively (without loops).  

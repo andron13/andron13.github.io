@@ -2,7 +2,7 @@
 bookCollapseSection: true
 weight: 1
 title: 15 - String-3 
-description: 
+description: Задачи на закрепление темы со строковыми значениями в Java. Часть третья
 type: book 
 ---
 

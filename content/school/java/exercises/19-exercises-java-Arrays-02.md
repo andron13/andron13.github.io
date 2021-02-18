@@ -2,11 +2,10 @@
 bookCollapseSection: true
 weight: 1
 title: 19 - Array-2  
-description: 
+description: Задачи на закрепление темы с массивами. Часть вторая. Java
 type: book 
 ---
-# Закрепление массивов, Java-Basic, Array-3 
-# Закрепление массивов, Java-Basic
+## Закрепление массивов, Java-Basic, Array-2 
 
 1. Return the number of even ints in the given array. Note: the % "mod" operator computes the remainder, e.g. 5 % 2 is 1.
     ```
