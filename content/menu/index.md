@@ -133,6 +133,10 @@ headless: true
   - [02 - Git-методичка]({{< relref "/school/tools/02-github-basic.md" >}})
   - [03 - Булева Алгебра]({{< relref "/school/tools/03-boolean-algebra.md" >}})
   - [04 - О паролях]({{< relref "/school/tools/04-how-to-create-passwords.md" >}})
+  
+- **Маркетинг**
+  - [01 - Основы SEO]({{< relref "/school/marketing/seo/001-seo-intro.md" >}})
+
 <br />
 - в разработке
 <br />
