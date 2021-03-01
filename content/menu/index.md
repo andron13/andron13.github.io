@@ -123,6 +123,7 @@ headless: true
     - [09 - Щенки]({{< relref "/school/frontend/fe-exercises/04-media/09-exercises-html-media.md" >}})
   - **Задачник по CSS и HTML**
     - [Формы логина]({{< relref "/school/frontend/fe-exercises/10-forms-with-css/01-exercises-html-css-user-login.md" >}})  
+    - [Cards]({{< relref "/school/frontend/fe-exercises/12-cards/01-exercises-cards.md" >}})  
     **Макеты сайтов**
     - [Две колонки]({{< relref "school/frontend/fe-exercises/11-moqups/01-exercises-web-sites-moqups.md" >}})
   
