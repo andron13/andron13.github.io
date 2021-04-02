@@ -212,7 +212,7 @@ background-color: #333;
 border: 1px solid red;
 padding: 15px;
 color: #fff;
-flex-basis: 300px;
+flex-basis: 300px;  // непонятно
 }
 ```
 
