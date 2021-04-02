@@ -6,7 +6,9 @@ description: JDK — это программа, которая будет пер
 author: andron13
 date: 2020-09-06
 linktitle: 01 - Установка JDK
-type: book 
+type: book
+images:
+- /img/res/java/01/01-AdoptOpenJDK.png
 ---
 
 # HelloWorld.java — первая программа на Java — введение в Java 001
