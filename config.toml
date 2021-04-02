@@ -15,4 +15,5 @@ paginate        =   6
   BookLogo = 'logo.jpg'
   BookSection = 'school'
   BookMenuBundle = '/menu'
+  images = ["site-feature-image.jpg"]
 
