@@ -8,6 +8,7 @@ date: 2020-09-06
 linktitle: 01 - Установка JDK
 type: book
 images:
+- /img/res/java/01/01-adopt-home.png
 - /img/res/java/01/01-AdoptOpenJDK.png
 ---
 
