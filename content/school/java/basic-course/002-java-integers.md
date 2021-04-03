@@ -4,6 +4,8 @@ weight: 1
 title: 02
 description: 
 type: book 
+images:
+- /img/res/java/02/02-integer.png
 ---
 # Простые типы данных — byte, short, int, long, в примерах — введение в Java 002
 
