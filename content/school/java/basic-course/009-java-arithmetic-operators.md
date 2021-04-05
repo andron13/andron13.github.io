@@ -2,7 +2,8 @@
 bookCollapseSection: true
 weight: 1
 title: 
-description: 
+description:
+images: 
 ---
 
 # Операторы в Java — введение в Java 009

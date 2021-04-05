@@ -1,4 +1,12 @@
-# Рекурсивные методы в Java — введение в Java 017
+---
+bookCollapseSection: true
+weight: 1
+title:
+description:
+images:
+---
+
+## Рекурсивные методы в Java — введение в Java 017
 
 {{< figure src="/img/res/java/17/17-recursion-vlc.png" title="рекурсия экрана" alt="рекурсия экрана" >}}
 

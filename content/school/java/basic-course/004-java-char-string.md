@@ -1,8 +1,10 @@
 ---
 bookCollapseSection: true
 weight: 1
-title: 04
-description: 
+title: Типы данных char и String, примеры применения - 04
+description:
+images:
+- /img/res/java/04/04_symbol_table.png
 ---
 
 # Типы данных char и String: примеры применения — введение в Java 004

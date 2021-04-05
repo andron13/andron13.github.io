@@ -1,4 +1,13 @@
-# Цикл While и Do While — введение в Java 013
+---
+bookCollapseSection: true
+weight: 1
+title:
+description:
+images:
+
+---
+  
+## Цикл While и Do While — введение в Java 013
 
 Это самая лёгкая глава. Потому что цикл **while** — родной брат цикла **for**.
 

@@ -1,4 +1,12 @@
-# Тернарный оператор "?:" — введение в Java 016
+---
+bookCollapseSection: true
+weight: 1
+title:
+description:
+images:
+---
+
+## Тернарный оператор "?:" — введение в Java 016
 
 Выражение:
 

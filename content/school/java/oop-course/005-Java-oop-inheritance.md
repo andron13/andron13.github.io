@@ -287,3 +287,5 @@ Java не поддерживает множественное наследова
 
 1. Object - [docs.oracle.com](https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html) 
 2. Inheritance - [docs.oracle.com](https://docs.oracle.com/javase/tutorial/java/IandI/subclasses.html)
+
+

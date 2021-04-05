@@ -3,7 +3,9 @@ bookCollapseSection: true
 weight: 1
 title: 
 description: 
-type: book 
+type: book
+images:
+- /img/res/java/10/010-java-for-loop.png
 ---
 
 # Цикл FOR — введение в Java 010

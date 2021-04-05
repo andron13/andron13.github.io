@@ -1,8 +1,10 @@
 ---
 bookCollapseSection: true
 weight: 1
-title: 03
-description: 
+title: Типы данных с плавающей точкой - 03
+description:
+images:
+- /img/res/java/03/03-double-pi.jpg
 ---
 
 # Типы данных с плавающей точкой: float и double — введение в Java 003

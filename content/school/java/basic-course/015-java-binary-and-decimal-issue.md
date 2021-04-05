@@ -1,4 +1,13 @@
-# Двоичная, десятичная, восьмеричная и прочие системы в Java и преобразования между ними — введение в Java 015
+---
+bookCollapseSection: true
+weight: 1
+title:
+description:
+images:
+- /img/res/java/14/14-maya-svg.png
+---
+
+## Двоичная, десятичная, восьмеричная и прочие системы в Java и преобразования между ними — введение в Java 015
 
 {{< figure src="/img/res/java/14/14-maya-svg.png" title="символы майя" alt="символы майя" >}}
 

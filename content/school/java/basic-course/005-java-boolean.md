@@ -1,8 +1,10 @@
 ---
 bookCollapseSection: true
 weight: 1
-title: 05 -
-description: 
+title: Тип данных boolean и логические операторы — Java для начинающих
+description: **Boolean** в Java — это логический тип данных. Переменная типа boolean может принимать всего два значения — это правда или ложь — **true** & **false**.
+images:
+- /img/res/java/05/05-boolean.png
 ---
 
 # Тип данных boolean и логические операторы — введение в Java 005

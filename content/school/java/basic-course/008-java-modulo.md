@@ -2,7 +2,8 @@
 bookCollapseSection: true
 weight: 1
 title: 
-description: 
+description:
+images:
 ---
 
 ## Modulo — модуль деления, введение в Java 008
