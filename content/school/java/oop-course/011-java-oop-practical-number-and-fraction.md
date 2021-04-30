@@ -153,7 +153,6 @@ class Math {
 
 ## Дополнительные ссылки
 
-1. http://java-online.ru/java-lang-wrapper.xhtml
-2. https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html
-3. https://habr.com/ru/post/205106/
-4. https://www.baeldung.com/java-least-common-multiple
+1. https://docs.oracle.com/javase/8/docs/api/java/lang/Number.html
+2. https://habr.com/ru/post/205106/
+3. https://www.baeldung.com/java-least-common-multiple

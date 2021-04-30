@@ -1,3 +1,51 @@
+---
+bookCollapseSection: true
+weight: 1
+title: Бесплатные уроки SQL online
+description: SQL structured query language
+author: andron13
+date: 2021-04-04
+linktitle: 
+type: book
+images:
+- /img/res/*.jpg
+---
+
+## SQL для начинающих
+
+### Кому необходимо знать SQl?
+
+- Администраторы баз данных (DBA)
+- Бизнес аналитики
+- Программист
+- Тестировщик
+- Проект-менеджеры
+
+### Реализации SQL
+
+- Oracle SQL
+- MySQL
+- PostgreSQL
+- MariaDB
+- H2 Database Engine
+- SQL Lite
+- .......
+
+### PL SQL - Procedure Language
+
+
+Tools: SQL Developer, sqlplus.
+
+## Install SQL
+
+```SQl
+alter session set container = PDB1;
+alter user hr identified by hr account unlock;
+grant dba to hr;
+```
+
+
+
 https://ru.hexlet.io/challenges/rdb_basics_highest_salary
 https://ru.hexlet.io/courses/rdb-basics
 

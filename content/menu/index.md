@@ -44,8 +44,6 @@ headless: true
     - [03 - Constructor и this]({{< relref "/school/java/oop-course/003-Java-oop-constructor-this.md">}})
     - [04 - Инкапсуляция]({{< relref "/school/java/oop-course/004-Java-oop-encapsulation-get-set.md">}})
     - [11 - Дроби, НОД, НОК]({{< relref "/school/java/oop-course/011-java-oop-practical-number-and-fraction.md" >}})
-    - [12! - StringBuffer]({{< relref "/school/java/oop-course/013-java-string-stringbuffer-stringbuilder.md" >}})
-
     
   - **Задачник по Java**
     - [01 - Логика]({{< relref "/school/java/exercises/01-exercises-java.md" >}})

@@ -14,6 +14,10 @@ type: book
 
 {{< figure src="/img/res/fe-exe/html/01-basic/01-04.png" title="Задача 4" alt="Структура проекта" >}}
 
+## Помощь
+
+[Перечисления в HTML]({{< relref "/school/frontend/html/09-html-u-o-list.md" >}})
+
 ## Ответы
 
 Решите задачу и выложите ссылку на решение в комментариях.

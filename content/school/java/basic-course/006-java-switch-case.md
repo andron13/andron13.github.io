@@ -1,8 +1,8 @@
 ---
 bookCollapseSection: true
 weight: 1
-title: Switch и Case: оператор выбора — Java для начинающих
-description: В этом уроке мы рассмотрим на примерах оператор выбора **Switch** и опции выбора **Case**.
+title: Switch и Case оператор выбора — Java для начинающих
+description: В этом уроке мы рассмотрим на примерах оператор выбора Switch и опции выбора Case.
 images:
 - /img/res/java/06/06-again-two.jpg
 ---
