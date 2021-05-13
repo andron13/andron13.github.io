@@ -1,5 +1,6 @@
 googleAnalytics = "UA-33668157-6"
 baseURL =           "https://andron13.de/"
+defaultContentLanguage = "ru"
 languageCode =      "ru"
 title =             "andron13"
 theme =             "book"
@@ -16,4 +17,5 @@ paginate        =   6
   BookSection = 'school'
   BookMenuBundle = '/menu'
   images = ["site-feature-image.jpg"]
-
+  AuthorName = "andron13"
+  GitHubUser = "andron13"
