@@ -1,0 +1,1 @@
+https://www.heise.de/developer/artikel/Schrittweise-Versionsnummern-richtig-vergeben-1859566.html
