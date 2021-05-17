@@ -93,8 +93,12 @@ description: Как работать с таблицами в HTML5 и HTML4.
 
 В HTML5 все элементы, не только таблицу, рекомендуется раскрашивать в CSS.
 
+## Emmet code
+
+table>
+
 ## Дополнительные ссылки.
 
 1. Доступные в [HTML4 свойства таблицы](https://www.w3.org/TR/html4/struct/tables.html).
 2. Используемые в [HTML5 элементы таблицы](https://www.w3.org/TR/html52/tabular-data.html#tabular-data).
-3. Документация к эелемнтам таблицы на developer.mozilla.org - [элемент col](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col) и другие.
+3. Документация к элементам таблицы на developer.mozilla.org - [элемент col](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/col) и другие.
