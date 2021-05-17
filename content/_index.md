@@ -83,5 +83,5 @@ public class HelloWorld {
 * E-mail: <andron13@gmail.com>
 * Telegram: [http://t.me/andron13](http://t.me/andron13)
 
-{{< figure src="img/а_podlubnyj.jpg" title="andron13" alt="программист" >}}
+{{< figure src="img/a_podlubnyj.jpg" title="andron13" alt="программист" >}}
 
