@@ -1,0 +1,22 @@
+html{
+    font-size: 62.5%;
+}
+
+body {
+    background: beige;
+}
+
+.wrapper{
+    margin: 0 auto;
+    padding: 3rem;
+    font-size: 1.6rem;
+}
+
+img{
+    width: 35rem;
+    float:left;
+    margin-right: 2rem;
+    border: solid 0.2rem #2d9cdb;
+    padding: 0.5rem;
+}
+
