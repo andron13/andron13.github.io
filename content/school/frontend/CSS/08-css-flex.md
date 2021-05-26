@@ -1,5 +1,8 @@
 ---
-bookCollapseSection: true weight: 1 title: Flexible Box description:
+bookCollapseSection: true
+weight: 1
+title: Flexible Box 
+description:
 ---
 
 ## Флексбокс - flexbox
