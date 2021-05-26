@@ -8,7 +8,9 @@ description:
 https://medium.com/@stasonmars/%D0%B2%D0%B5%CC%88%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-flexbox-%D0%B2-css-%D0%BF%D0%BE%D0%BB%D0%BD%D1%8B%D0%B8%CC%86-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-e26662cf87e0
 https://tuhub.ru/posts/flexbox-complete-guide
 https://tproger.ru/translations/how-css-flexbox-works/
-
+1:40:00
+wrap 2:0:4
+https://youtu.be/_gMrjQ-CdeE
 
 ## Gridy
 
@@ -17,7 +19,7 @@ https://tproger.ru/translations/how-css-flexbox-works/
 3. Крутая статья https://medium.com/@stasonmars/%D0%B2%D0%B5%CC%88%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-grid-%D0%B2-css-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B5-%D1%80%D1%83%D0%BA%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%B8-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-220508316f8b
 4. https://webformyself.com/css-grid-vvedenie-s-primerami/
 5. https://tuhub.ru/posts/css-grid-complete-guide
-6. 
+6. https://css-live.ru/articles/vyorstka-realnyx-proektov-na-gridax-css-grid-layout-uzhe-sejchas.html
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Layout_using_Named_Grid_Lines
 https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows
