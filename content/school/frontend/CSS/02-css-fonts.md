@@ -97,5 +97,11 @@ p {
 10. https://www.fontshop.com/free-fonts
 11. https://www.fontfreak.com/
 
+## Иконки-шрифты
+
+1. https://www.flaticon.com/
+2. https://thenounproject.com/
+3. https://fontawesome.com/
+
 
 
