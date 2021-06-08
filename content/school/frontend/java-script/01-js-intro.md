@@ -1,234 +1,95 @@
 ## JavaScript
 
-1. Сценарий исполнения.
-2. Строгая типизация, динамическая, слабая типизация
-3. Контейнер с информацией
-4. Императивное программирование
-5. Функциональное
-7. ООП
-8. Декларативное
-9. процедурное
-10. https://logiclike.com/2.0/de/start
+Существуют реально сотни видео и уже наверное тысячи статей, которые называются "JavaScript - введение" или 
+'JavaScript - introduction'. Подошла и моя очередь помочь вам "ВОЙТИ В АЙТИ" через JS. Я сторонник американского метода ´Learning-by-doing´ и мы уже начали. Выше я использовал двойные кавычки, одинарные кавычки и кавычки которые кто как только не называет: обратные кавычки, backtick(англ), машинописный обратный апостроф, гравис, Invertierte Hochkommas bzw. rückwärts geneigte Hochkommas(нем), "ну вот эти кавычки как их".
 
+Человеческая речь, или как говорили на уроках русского языка — прямая речь в компьютерных языках берётся в скобки. В машинных, компьютерных языках прямая речь называется строкой, строковыми значениями или по-английски string. Стринг должен отделятся от остального кода кавычками. 
+И чтобы нам сразу стало страшно программисты JavaScript придумали их три разных типа. Единственная цель, что бы мы испугались и бросили сразу изучать язык. Так они пытаются сохранить свои высокие зарплаты и не дать нам вкусить жизнь элиты и патрициев.
 
-
-```
-<!DOCTYPE HTML>
-<html>
-
-<body>
-
-  <p>Перед скриптом...</p>
-
-  <script>
-    alert( 'Привет, мир!' );
-  </script>
-
-  <p>...После скрипта.</p>
-
-</body>
-
-</html>
+```md
+Двойные кавычки: "Прямая речь внутри кавычек".
+Одинарные кавычки: 'JavaScript приветствует тебя'.
+Обратные кавычки: `Третий способ передачи данных`.
 ```
 
+Первые два варианта, пока мы не дошли до объектов и JSON, идентичны и взаимозаменяемы. И эта заменяемость невероятна удобно, потому что мы можем описать прямую речь внутри прямой речь.
 
-```
-<script src="/path/to/script.js"></script>
-```
-```
-"() {} [] ^^ || && %% __ -- ++ ** // \\ '' ~~ ;; :: ,, .. <> == !=  ``"
-```
-```
-`строка текста`
-
-`строка текста 1
- строка текста 2`
-
-`строка текста ${выражение} строка текста`
-
-tag `строка текста ${выражение} строка текста`
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
+```md
+'"Кто там?" — спросил компьютер. — "Это я! Твой администратор!"'
 ```
 
-```
-let a = 10;
-let b = 20;
+Обратные кавычки появились недавно и разрешаю в прямую речь вставлять компьютерный код:
 
-console.log(a+b);
-alert("hello wrold")
-```
-
-```js
-const t = document.querySelector("p");
-console.log(t);
-t.style.color="red";
+```Js
+let adminName = "Андрей";
+// Вносим переменную в строковый литерал
+let greetingMsg = `Привет, ${adminName}!`; // Привет, Андрей!
 ```
 
-## Комментарии 
+Давайте по порядку:
 
-```js
-// Этот комментарий занимает всю строку
-alert('Привет');
+1. Скачиваем редактор или среду разработки для фронтенда. Я описывал их [здесь](https://andron13.de/school/frontend/html/01-html-intro/). Я рекомендую VSC или WebStorm
+2. Создаём папку с проектом и в нём файл "myFirstProgram.js"
+3. В файле пишем, то что у меня написано было выше
+  ```Js
+    let adminName = "Андрей";
+    // Вносим переменную в строковый литерал
+    let greetingMsg = `Привет, ${adminName}!`; // Привет, Андрей!
+  ```
 
-alert('Мир'); // Этот комментарий следует за инструкцией
+У нас есть два способа запустить Javascript программу. Мы можем запустить в браузере, что рекомендуется в 99% учебниках или в консоли. У обоих способов есть плюсы. И мы рассмотрим конечно же оба. 
 
-/* Пример с двумя сообщениями.
-Это - многострочный комментарий.
-*/
-alert('Привет');
-alert('Мир');
+### Работа JavaScript в браузере
+
+{{< figure src="/img/res/js/01/01-js-hello-world.png" title="Сообщение в консоли" alt="Модальное окно javascript" >}}
+
+Интегрируем наш код в html-файл.
+ ```html
+<script src="test.js"></script>
+```
+И дописываем в наш JS файл
+
+ ```Js
+alert(greetingMsg);
 ```
 
-"use strict";
+При вызове страницеы мы должны получить приветствие в модальном окне.
 
-очерёдность исполнения
-показать андифайнд
-let message:
-console.log(message)
-let message = 10;
+Давайте теперь вместо алерта напишем
 
-
-promt
-```js
-let age = prompt('Сколько тебе лет?', 100);
-
-alert(`Тебе ${age} лет!`); // Тебе 100 лет!
+ ```Js
+console.log(greetingMsg);
 ```
 
-let a = 10;
-let b = 20;
+После вызова браузера ничего не произойдёт. Эта надпись не видна пользователю, а видна только разработчикам в консоли. 
+Панель разработчика в Хроме вызывается нажатием F12.
 
-console.log(a+b);
-alert("hello world")
+{{< figure src="/img/res/js/01/03-js-hello-world-browser-console.png" title="Сообщение в консоли браузера" alt="Сообщение в консоли браузера" >}}
 
-    <script>
-        document.write("Добро пожаловать!")
-        let d = new Date();
-        document.querySelector(".welcome")
-        const t = document.querySelector("p");
-        console.log(t);
-        t.style.color="red";
-        t.innerHTML="Today's date is" + d;
-    </script>
+Javascript помимо браузера сегодня можно запустить на любом утюге. Но не все методы, которые доступны в браузре, будут доступны и на утюге. Alert(), как и многие другие функции находятся в так называемом Web-API.
 
+### Работа JavaScript в консоли
 
-console.log("head"); // This is console
-// alert("Hello world!");
-console.log(
-1
-+ 2
-);
+Вот так выглядит консоль в среде разработки WebStorm
+{{< figure src="/img/res/js/01/02-js-hello-world-console.png" title="Сообщение в консоли" alt="Сообщение в консоли" >}}
 
-    /*
-Hello
-lkdfljasdhfljhsadhsadfjh
-*/
+Одна из популярных разновидностей JavaScript называется Node.js. С помощью этой надстройки мы можем пользоваться практически всем базовым функционалом и без браузера. 
 
+## Основы
 
-// // // // // // // // // console.log(123);
+Давайте на секунду переведём дух. И посмотрим твит, который разместил летом 2020-го года Дэн Абрамов. Создатель Редакса и  даже соавтор самого Реакта. 
 
-// Variables
+{{< figure src="/img/res/js/01/04-dan-abramov.png" title="abramov" alt="abramov" >}}
 
-let message;
-console.log(message);
-message = 'Message!';
-console.log(message);
-message = 'Hello World!';
-console.log(message);
-message = 5;
-console.log(message);
+Нам не нужны, основы программирования, нам не нужны JavaScript знания. Мы можем просто переходить к Реакту. Сразу. 
 
-const PI = 3.14159;
-console.log(PI);
-// PI = 'число Pi'; //- ОШИБКА!!!
-// console.log(PI);
+Проблема таких советов в том, что советы новичкам раздают люди, которые далеко не новички. И для которых "не нужны основы" означает "я уже знаю 15 языков программирования и походу разберусь с 16". Базовые же знания не просто нужны, а жизненно необходимы. И именно с основных базовых азов и конструкций программирования в общем и в Javascript в частности мы и начнём.
 
-const COLOR_RED = "#F00";
-const COLOR_GREEN = "#0F0";
-const COLOR_BLUE = "#00F";
-const COLOR_ORANGE = "#FF7F00";
+Настоятельная рекомендация близко ознакомиться с основами HTML и CSS. Минимум уметь сверстать простой сайт.  В идеале знать основные типы вёрсток: float, flex и grid. А также понимать media queries. 
 
+JavaScript-разработчик манипулирует данными в вебе. А какими данными вы можете манипулировать, если вы не понимаете, как устроен web в общем и html + css в частности?
 
-let firstName = 'Ivan', lastName = 'Ivonov', age = 25;
-let firstname;
-let first_1_name;
-let i, j, k;
-let _;
-let _firstName;
-let $;
+## Дополнительные ссылки
 
-// BAD
-let имя;
-let imya;
-
-// let 314kdjf;
-
-// name != Name - разные переменные
-
-// let, const, class, function, return, .... - зарезервированные слова
-
-console.log(firstName);
-
-let importData;
-
-// Type of Data
-
-// Number, BigInt
-
-let n = 100;
-let m = 100.1;
-
-console.log( 1 / 0 );
-console.log( Infinity );
-
-console.log( 'hello' / 2 );
-console.log( NaN );
-
-// String
-
-let str1 = 'Hello';
-let str2 = "World";
-let str3 = `Hello`;
-
-let result1 = str1 + ' ' + str2;
-console.log( result1 );
-
-let _res = 'Выведем ' + str1 + ' ' + str2 + '. Ура!!!' + str3;
-
-let result2 = `Выведем ${str1} ${str2}. Ура!!! ${str3}`;
-console.log( result2 );
-
-console.log( "${str1} ${str2}" );
-console.log( `${str1} ${str2}` );
-
-console.log('Hello');
-console.log(`Hello ${str2}`);
-
-console.log( `${'hello'} world` );
-console.log( `result = ${2 + 2}` );
-
-// Boolean - логический
-let isTrue = true;
-let isFalse = false;
-
-let isLess = 2 < 5;
-
-console.log( isLess );
-
-// Null, undefined
-
-_res = null;
-console.log( _res );
-
-let newRes;
-console.log( newRes );
-
-// Object, Symbol
-
-// Type of
-
-console.log( typeof n );
-console.log( typeof str1 );
-console.log( typeof _res );
-console.log( typeof newRes );
-console.log( typeof isTrue );
+1. Сайт номер один при изучении JavaScript https://developer.mozilla.org/ru/docs/Web/JavaScript
+2. Прекрасный русскоязычный ресурс - https://learn.javascript.ru/

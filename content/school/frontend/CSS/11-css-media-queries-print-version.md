@@ -1,7 +1,7 @@
 ---
 bookCollapseSection: true
 weight: 1
-title: MediaQueries
+title: MediaQueries для различных экранов
 description:
 ---
 
@@ -209,3 +209,7 @@ a:link {
 ```
 
 Это основные мысли по поводу принт-версий страницы. 
+
+## Полезные материалы
+
+- https://developer.mozilla.org/ru/docs/Web/CSS/Media_Queries/Using_media_queries

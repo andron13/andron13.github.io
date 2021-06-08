@@ -65,6 +65,7 @@ description: Как работать с таблицами в HTML5 и HTML4.
 
 - tr
 - th
+- td
 - thead
 - tbody
 - tfoot

@@ -4,6 +4,8 @@ weight: 1
 title: Grid
 description:
 ---
+
+Вот мы и дошли до гридов. 
 ## Felksy
 https://medium.com/@stasonmars/%D0%B2%D0%B5%CC%88%D1%80%D1%81%D1%82%D0%BA%D0%B0-%D0%BD%D0%B0-flexbox-%D0%B2-css-%D0%BF%D0%BE%D0%BB%D0%BD%D1%8B%D0%B8%CC%86-%D1%81%D0%BF%D1%80%D0%B0%D0%B2%D0%BE%D1%87%D0%BD%D0%B8%D0%BA-e26662cf87e0
 https://tuhub.ru/posts/flexbox-complete-guide
@@ -11,6 +13,8 @@ https://tproger.ru/translations/how-css-flexbox-works/
 1:40:00
 wrap 2:0:4
 https://youtu.be/_gMrjQ-CdeE
+
+https://www.youtube.com/watch?v=jV8B24rSN5o
 
 ## Gridy
 
@@ -43,3 +47,29 @@ https://medium.com/@stasonmars/%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82
 
 
 ## Выравнивание по центру
+
+
+https://codepip.com/games/grid-garden/
+
+
+## реальные примеры
+
+https://www.microsoft.com/de-de/
+https://www.youtube.com/watch?v=uKgn-To1C4Q
+
+### bomba реальные примеры
+https://www.youtube.com/watch?v=-qOe8lBAChE
+
+### create account 
+
+https://www.youtube.com/watch?v=xoxJxifNWPE&list=PLillGF-Rfqba3xeEvDzIcUCxwMlGiewfV&index=2
+
+###
+
+https://codepen.io/bradtraversy/pen/gvMGyB
+https://www.youtube.com/watch?v=moBhzSC455o
+
+### muuri grid
+
+https://www.youtube.com/watch?v=PDG-GqmUZss
+https://muuri.dev/
