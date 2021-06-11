@@ -82,8 +82,8 @@ headless: true
     - [02 - Шрифты]({{< relref "/school/frontend/CSS/02-css-fonts.md" >}})
     - [03 - display none]({{< relref "/03-css-layout-display.md" >}})
     - [04 - Box model]({{< relref "/04-css-box-model.md" >}})
-    - [11 - Принтверсия сайтаl]({{< relref "/11-css-media-queries-print-version.md" >}})
-    - [12 - media queries]({{< relref "/12-css-media-queries-screens.md" >}})
+    - [11 - Принтверсия сайта]({{< relref "/11-css-media-queries-print-version.md" >}})
+    - [12 - Media queries]({{< relref "/12-css-media-queries-screens.md" >}})
   - **Задачник по HTML без CSS**  
     - **Основы - теги**  
     - [01 - Exegi monumentum]({{< relref "/school/frontend/fe-exercises/01-basic/01-exercises-html.md" >}})
