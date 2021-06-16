@@ -84,6 +84,13 @@ headless: true
     - [04 - Box model]({{< relref "/04-css-box-model.md" >}})
     - [11 - Принтверсия сайта]({{< relref "/11-css-media-queries-print-version.md" >}})
     - [12 - Media queries]({{< relref "/12-css-media-queries-screens.md" >}})
+  - **JavaScript**
+    - [01 - Введение в JS]({{< relref "/school/frontend/java-script/01-js-intro.md" >}})
+    - [03 - Функции, введение]({{< relref "/03-js-function-intro.md" >}})
+    - [05 - Логические типы данных]({{< relref "/05-js-boolean-logical-operators.md" >}})
+    - [06 - Функции важные основы]({{< relref "/06-js-function-basics.md" >}})
+    - [06 - Условный оператор]({{< relref "/07-js-if-else.md" >}})
+    - [11 - Массивы в JavaScript]({{< relref "/11-js-arrays.md" >}})
   - **Задачник по HTML без CSS**  
     - **Основы - теги**  
     - [01 - Exegi monumentum]({{< relref "/school/frontend/fe-exercises/01-basic/01-exercises-html.md" >}})
@@ -126,7 +133,7 @@ headless: true
     - [Cards]({{< relref "/school/frontend/fe-exercises/12-cards/01-exercises-cards.md" >}})  
     **Макеты сайтов**
     - [Две колонки]({{< relref "school/frontend/fe-exercises/11-moqups/01-exercises-web-sites-moqups.md" >}})
-  
+
 
 
 - **Полезная подборка**

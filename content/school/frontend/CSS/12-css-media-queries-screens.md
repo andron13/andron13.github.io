@@ -121,10 +121,12 @@ description: Раньше, во времена царя Гороха все са
 
 ## Дополнительные ссылки
 
-1. https://ain.ua/2014/11/14/9-otlichij-adaptivnogo-dizajna-ot-rezinovogo-v-gif-kartinkax/
-2. https://frontender.info/adaptive-vs-responsive-terminology/
-3. https://kulturbanause.de/blog/responsive-webdesign-und-mobile-first/
-4. https://www.mightyminnow.com/2013/11/what-is-mobile-first-css-and-why-does-it-rock/
-5. https://www.smashingmagazine.com/2018/12/generic-css-mobile-first/
-6. https://habr.com/ru/post/243247/
-7. https://itchief.ru/lessons/html-and-css/meta-viewport-how-it-works
+1. [Создание комплексных медиавыражений](https://developer.mozilla.org/ru/docs/Web/CSS/Media_Queries/Using_media_queries)
+2. [9 отличий адаптивного дизайна от «резинового» в GIF-картинках](https://ain.ua/2014/11/14/9-otlichij-adaptivnogo-dizajna-ot-rezinovogo-v-gif-kartinkax/)
+3. [Адаптивно-отзывчивый: разбираемся в терминологии](https://frontender.info/adaptive-vs-responsive-terminology/)
+4. https://kulturbanause.de/blog/responsive-webdesign-und-mobile-first/
+5. https://www.mightyminnow.com/2013/11/what-is-mobile-first-css-and-why-does-it-rock/
+6. https://www.smashingmagazine.com/2018/12/generic-css-mobile-first/
+7. https://habr.com/ru/post/243247/
+8. https://itchief.ru/lessons/html-and-css/meta-viewport-how-it-works
+9. [Viewport, Рекомендованный набор метатегов](https://developer.mozilla.org/ru/docs/Glossary/Viewport)
