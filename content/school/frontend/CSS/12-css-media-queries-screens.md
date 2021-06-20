@@ -39,7 +39,7 @@ description: Раньше, во времена царя Гороха все са
 
 По полученным макетам вебмастер верстает каждый вариант отдельно. В этом случае мы говорим про адаптивный дизайн и про медиа запросы.
 
-## Адоптивная резина, отзывчивый дизайн, responsive design
+## Адаптивная резина, отзывчивый дизайн, responsive design
 
 У бизнеса часто денег всего на три варианта: мобильники, планшеты, мониторы. И на помощь приходит резина. В рамках одного диапазона мы можем включить привычную резину. И я бы сказал, что это достаточно популярный способ современной вёрстки.
 
@@ -49,9 +49,40 @@ description: Раньше, во времена царя Гороха все са
 
 Медиазапросы помогают нам прописать дополнительные или собственные правила для различных приборов.
 
-Мы познакомились с медиазапросами
-в [статье про печать](https://andron13.de/school/frontend/css/11-css-media-queries-print-version/)
-. Давайте продолжим.
+Мы познакомились с медиазапросами в [статье про печать](https://andron13.de/school/frontend/css/11-css-media-queries-print-version/). Давайте продолжим. 
+
+### Брекпойнты - grid-breakpoints
+
+Все приборы можно условно поделить по ширине. Популярный фреймворк бутстрап использует следующие размеры:
+
+```css
+/*xs: 0,*/
+/*sm: 576px,*/
+/*md: 768px,*/
+/*lg: 992px,*/
+/*xl: 1200px,*/
+/*xxl: 1400px*/
+
+/* X-Small devices (portrait phones, less than 576px)*/
+/*No media query for `xs` since this is the default in Bootstrap*/
+
+ /*Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) { }
+
+/*Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) { }
+
+/*Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) { }
+
+ /*X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) { }
+
+ /*XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) { }
+```
+
+В CSS мы можем добавить их в наши медиазапросы.
 
 ```CSS
 @media screen and (min-width: 576px) {
@@ -86,6 +117,43 @@ description: Раньше, во времена царя Гороха все са
 ```
 
 Вот так поочерёдно мы можем обратиться к различным приборам с экранами с различной шириной. Надеюсь понятно, что если у вас между дизайном для смартфона и планшета разницы особой нет, то некоторые брекпойнты можно и пропустить.
+
+## Минимальные параметры 
+
+На мой взгляд мы должны minimum рассмотреть все мобильники с шириной до 768px. И для них медиазапросов писать не надо. Это должны быть стили по умолчанию. Но если вы будете дробить сильнее, то вот вам запрос для мобильников от 414px в портретном модусе:
+
+```CSS
+@media only screen
+and (min-device-width : 414px)
+and (max-device-width : 736px)
+and (orientation : portrait) { /* Ваш CSS код */ }
+```
+
+Отдельно мы должны позаботиться о планшетах. Пример ipad в формате - landscape:
+
+```CSS
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {/* Ваш CSS код */}
+```
+
+И добавить настольные и переносные компьютеры:
+
+```CSS
+@media (min-width: 1200px) {/* Ваш CSS код */}
+```
+
+Это не единственное мнение. Пример альтернативной точки зрения:
+
+```CSS
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
+@media (min-width:1281px) { /* hi-res laptops and desktops */ }
+```
 
 ## mobile first and mobile friendly
 

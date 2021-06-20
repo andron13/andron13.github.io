@@ -293,3 +293,14 @@ console.log( typeof str1 );
 console.log( typeof _res );
 console.log( typeof newRes );
 console.log( typeof isTrue );
+
+
+
+
+
+
+https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648189#overview
+
+https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648191#overview
+
+задачи https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648193#overview

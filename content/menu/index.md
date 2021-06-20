@@ -89,8 +89,8 @@ headless: true
     - [03 - Функции, введение]({{< relref "/03-js-function-intro.md" >}})
     - [05 - Логические типы данных]({{< relref "/05-js-boolean-logical-operators.md" >}})
     - [06 - Функции важные основы]({{< relref "/06-js-function-basics.md" >}})
-    - [06 - Условный оператор]({{< relref "/07-js-if-else.md" >}})
-    - [11 - Массивы в JavaScript]({{< relref "/11-js-arrays.md" >}})
+    - [07 - Условный оператор]({{< relref "/07-js-if-else.md" >}})
+    - [12 - Массивы в JavaScript]({{< relref "/12-js-arrays.md" >}})
   - **Задачник по HTML без CSS**  
     - **Основы - теги**  
     - [01 - Exegi monumentum]({{< relref "/school/frontend/fe-exercises/01-basic/01-exercises-html.md" >}})

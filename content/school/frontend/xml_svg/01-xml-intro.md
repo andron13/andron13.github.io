@@ -4,3 +4,7 @@ https://developer.mozilla.org/ru/docs/Learn/HTML/Multimedia_and_embedding/Adding
 
 https://webformyself.com/optimizaciya-svg-dlya-veb/
 
+https://codepen.io/team/css-tricks/pen/yebOYp
+https://codepen.io/kanishkkunal/pen/LEPJda
+https://superdevresources.com/color-inline-svg-css/
+https://developer.mozilla.org/ru/docs/Web/SVG/Tutorial/Fills_and_Strokes
