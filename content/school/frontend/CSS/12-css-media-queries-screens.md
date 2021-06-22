@@ -198,3 +198,4 @@ and (orientation : landscape) {/* Ваш CSS код */}
 7. https://habr.com/ru/post/243247/
 8. https://itchief.ru/lessons/html-and-css/meta-viewport-how-it-works
 9. [Viewport, Рекомендованный набор метатегов](https://developer.mozilla.org/ru/docs/Glossary/Viewport)
+10. https://css-tricks.com/how-to-develop-and-test-a-mobile-first-design-in-2021/
