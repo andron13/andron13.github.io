@@ -74,14 +74,14 @@ public class HelloWorld {
 
 1. Видеоканал (последнее обновление 2020) - [youtube](https://www.youtube.com/user/andron13)
 2. Аудиоподкаст (последнее обновление 2019) - [anchor](https://anchor.fm/vberline)
-3. Телеграм-канал (актуален) - [telegram](https://t.me/deutschmitandron13)
+3. Телеграм-канал (актуален) - [telegram](https://t.me/andron13)
 
 ## Обратная связь
 
 По коммерческим вопросам со мной можно связаться: 
 * Андрей
 * E-mail: <andron13@gmail.com>
-* Telegram: [http://t.me/andron13](http://t.me/andron13)
+* Telegram: [http://t.me/ptchom](http://t.me/ptchom)
 
 {{< figure src="img/a_podlubnyj.jpg" title="andron13" alt="программист" >}}
 
