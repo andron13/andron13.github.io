@@ -5,7 +5,7 @@ title: Grid
 description:
 ---
 
-Вот мы и дошли до мудольной сетки или как их называют в народе — гриды. Прежде чем написать эту статью я отсмотрел около 10 часов различных курсов и видеороликов на трёх языках от самых различных преподавателей на Youtube, Coursera и Udemy. Таких как Jonas Schmedtmann или Wes Bos. Эти двое, пожалуй, топ всех преподов онлайн. И я рекомендую посмотреть их материалы, мне они очень помогли. 
+Вот мы и дошли до модальной сетки или как их называют в народе — гриды. Прежде чем написать эту статью я отсмотрел около 10 часов различных курсов и видеороликов на трёх языках от самых различных преподавателей на Youtube, Coursera и Udemy. Таких как Jonas Schmedtmann или Wes Bos. Эти двое, пожалуй, топ всех преподов онлайн. И я рекомендую посмотреть их материалы, мне они очень помогли. 
 
 Возможно лучше сразу учиться у лучших :). Я постараюсь дать важные азы сетки в этой статье.
 
@@ -116,3 +116,9 @@ https://www.youtube.com/watch?v=moBhzSC455o
 
 https://www.youtube.com/watch?v=PDG-GqmUZss
 https://muuri.dev/
+
+
+
+https://css-live.ru/articles/css-grid-na-praktike-dobavlyaem-gridy-k-sushhestvuyushhemu-dizajnu.html
+https://developer.mozilla.org/ru/docs/Web/CSS/CSS_Grid_Layout/Relationship_of_Grid_Layout
+https://habr.com/ru/company/ruvds/blog/499120/
