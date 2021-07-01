@@ -228,3 +228,4 @@ console.log(calcAge(myFirstArray[myFirstArray.length - 1]));
 7. https://habr.com/ru/company/ruvds/blog/422091/
 8. https://learn.javascript.ru/array
 
+
