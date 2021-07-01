@@ -220,4 +220,11 @@ console.log(calcAge(myFirstArray[myFirstArray.length - 1]));
 ## Полезные материалы
 
 1. https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+2. https://habr.com/ru/company/plarium/blog/483958/
+3. https://habr.com/ru/company/ruvds/blog/430380/
+4. https://habr.com/ru/company/plarium/blog/446902/
+5. https://habr.com/ru/company/ruvds/blog/358306/
+6. https://habr.com/ru/company/ruvds/blog/413169/
+7. https://habr.com/ru/company/ruvds/blog/422091/
+8. https://learn.javascript.ru/array
 
