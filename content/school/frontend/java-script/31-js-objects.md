@@ -14,6 +14,11 @@ draft: true
 
 https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648263#overview
 https://learn.javascript.ru/object
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/new
+https://developer.mozilla.org/ru/docs/Learn/JavaScript/Objects/Basics
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Details_of_the_Object_Model
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Object_initializer
+https://developer.mozilla.org/ru/docs/Web/JavaScript/Guide/Working_with_Objects
 
 ````js
 let arr1 = [
