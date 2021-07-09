@@ -209,7 +209,7 @@ IntelliJ IDEA есть в двух версиях — в бесплатной **
 
 ## Дополнительные материалы
 
-List of Unicode characters - https://en.wikipedia.org/wiki/List_of_Unicode_characters
-
-Скачать статью в pdf-формате - [тут](/pdf/java-01/001-Java-introduction.pdf)
+1. List of Unicode characters - https://en.wikipedia.org/wiki/List_of_Unicode_characters
+2. Скачать статью в pdf-формате - [тут](/pdf/java-01/001-Java-introduction.pdf)
+3. [Google](https://www.google.com/)
 

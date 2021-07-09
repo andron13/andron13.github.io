@@ -2,6 +2,8 @@
 bookHidden: true
 ---
 
+https://www.codewars.com/?language=javascript
+
 # This page is hidden in menu
 
 # Quondam non pater est dignior ille Eurotas
