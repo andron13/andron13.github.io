@@ -1,62 +1,494 @@
-<!doctype html><html lang=ru dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Возможности различных типов данных, литералов в Java — введение в Java 011 #  В четвёртом уроке мы затронули преобразования одних типов данных в другие. Давайте для начала посмотрим, что именно мы тогда учили.
+<!doctype html><html lang=ru dir=ltr>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta name=description content="Возможности различных типов данных, литералов в Java — введение в Java 011 #  В четвёртом уроке мы затронули преобразования одних типов данных в другие. Давайте для начала посмотрим, что именно мы тогда учили.
 Явные и неявные преобразования #  Значения, передаваемые переменным, можно привести в тот тип данных, которые переменная может принять. Вручную или автоматически, или явно и неявно.
- преобразование типов данных   Расширение типа (widening Casting), которое можно проследить на схеме с помощью стрелок, происходит автоматически."><meta name=theme-color content="#FFFFFF"><meta property="og:title" content><meta property="og:description" content="Возможности различных типов данных, литералов в Java — введение в Java 011 #  В четвёртом уроке мы затронули преобразования одних типов данных в другие. Давайте для начала посмотрим, что именно мы тогда учили.
+ преобразование типов данных   Расширение типа (widening Casting), которое можно проследить на схеме с помощью стрелок, происходит автоматически.">
+<meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
+<meta property="og:description" content="Возможности различных типов данных, литералов в Java — введение в Java 011 #  В четвёртом уроке мы затронули преобразования одних типов данных в другие. Давайте для начала посмотрим, что именно мы тогда учили.
 Явные и неявные преобразования #  Значения, передаваемые переменным, можно привести в тот тип данных, которые переменная может принять. Вручную или автоматически, или явно и неявно.
- преобразование типов данных   Расширение типа (widening Casting), которое можно проследить на схеме с помощью стрелок, происходит автоматически."><meta property="og:type" content="article"><meta property="og:url" content="https://andron13.de/school/java/basic-course/011-java-string-possibilities-and-more/"><meta property="og:image" content="https://andron13.de/img/res/java/04/004-casting.png"><meta property="article:section" content="school"><title>011 Java String Possibilities and More | andron13</title><link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous><script defer src=/flexsearch.min.js></script><script defer src=/ru.search.min.bd55743ae7892a48867522ea9ab8dc8288144957ff597eb3ca3f308034b2cb7d.js integrity="sha256-vVV0OueJKkiGdSLqmrjcgogUSVf/WX6zyj8wgDSyy30=" crossorigin=anonymous></script><script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script><script async src=https://www.google-analytics.com/analytics.js></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/><img src=/logo.jpg alt=Logo><span>andron13</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Поиск aria-label=Поиск maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><p><strong>Войти-в-АйТи</strong></p><ul><li><p><a href=/school/java/>Java</a></p><ul><li><p><a href=/school/java/basic-course/><strong>Басовый курс</strong></a></p><ul><li><a href=/school/java/basic-course/001-java-setup/>01 - Java setup</a></li><li><a href=/school/java/basic-course/002-java-integers/>02 - Целые числа</a></li><li><a href=/school/java/basic-course/003-java-float-double/>03 - Десятичные дроби</a></li><li><a href=/school/java/basic-course/004-java-char-string/>04 - Символы и строки</a></li><li><a href=/school/java/basic-course/005-java-boolean/>05 - Булевые данные</a></li><li><a href=/school/java/basic-course/006-java-switch-case/>06 - Switch - case</a></li><li><a href=/school/java/basic-course/007-java-if-else/>07 - If - else</a></li><li><a href=/school/java/basic-course/008-java-modulo/>08 - Modulo</a></li><li><a href=/school/java/basic-course/009-java-arithmetic-operators/>09 - Операторы</a></li><li><a href=/school/java/basic-course/010-java-for/>10 - Цикл for</a></li><li><a href=/school/java/basic-course/011-java-string-possibilities-and-more/ class=active>11 - Casting литералов</a></li><li><a href=/school/java/basic-course/012-java-methods-void-return/>12 - Методы</a></li><li><a href=/school/java/basic-course/013-java-while-dowhile/>13 - Цикл while</a></li><li><a href=/school/java/basic-course/014-java-scanner/>14 - Ввод данных Scanner</a></li><li><a href=/school/java/basic-course/015-java-binary-and-decimal-issue/>15 - Системы счисления</a></li><li><a href=/school/java/basic-course/016-java-ternary-operator/>16 - Тернарный оператор</a></li><li><a href=/school/java/basic-course/017-java-recursion-intro/>17 - Рекурсия, введение</a></li><li><a href=/school/java/basic-course/018-java-array/>18 - Массивы знакомство</a></li><li><a href=/school/java/basic-course/019-java-foreach/>19 - Цикл foreach</a></li><li><a href=/school/java/basic-course/020-java-varargs/>20 - Varargs</a></li><li><a href=/school/java/basic-course/021-java-multi-dimensional-array/>21 - Многомерные arrays</a></li><li><a href=/school/java/basic-course/022-java-public-static-void-main/>22 - Таинственный main</a></li><li><a href=/school/java/basic-course/023-java-return-break-continue/>23 - Операторы перехода</a></li><li><a href=/school/java/basic-course/024-java-swap-two-variables/>24 - Обмен значений</a></li><li><a href=/school/java/basic-course/025-java-idea-basics/>25! - IDEA - настройка</a></li><li>[26! - Magic Color]</li><li><a href=/school/java/basic-course/027-java-sorting-algorithms-01-bubblesort/>27 - Bubble sort</a></li><li><a href=/school/java/basic-course/028-java-sorting-algorithms-02-coctail-and-comb-sort/>28 - Comb и cocktail</a></li><li><a href=/school/java/basic-course/029-java-sorting-algorithms-03-insertionsort/>29 - Insertionsort</a>
-&mldr;</li><li><a href=/school/java/basic-course/034-java-try-catch-finally/>34 - Try Catch</a></li><li><a href=/school/java/basic-course/035-java-creating-a-jar-file-/>35! - Создание Jar</a></li><li><a href=/school/java/basic-course/036-java-ressourcen/>36 - Ресурсы</a></li></ul></li><li><p><strong>Курс-ООП</strong></p><ul><li><a href=/school/java/oop-course/001-java-object-introduction-chapter-1/>01 - Введение в ООП</a></li><li><a href=/school/java/oop-course/002-java-oop-method-overloading-polymorphism/>02 - Перегрузка методов</a></li><li><a href=/school/java/oop-course/003-java-oop-constructor-this/>03 - Constructor и this</a></li><li><a href=/school/java/oop-course/004-java-oop-encapsulation-get-set/>04 - Инкапсуляция</a></li><li><a href=/school/java/oop-course/011-java-oop-practical-number-and-fraction/>11 - Дроби, НОД, НОК</a></li></ul></li><li><p><strong>Задачник по Java</strong></p><ul><li><a href=/school/java/exercises/01-exercises-java/>01 - Логика</a></li><li><a href=/school/java/exercises/02-exercises-java/>02 - Switch</a></li><li><a href=/school/java/exercises/03-exercises-java/>03 - Если, то</a></li><li><a href=/school/java/exercises/04-exercises-java/>04 - Повторение основ</a></li><li><a href=/school/java/exercises/05-exercises-java/>05 - Цикл for</a></li><li><a href=/school/java/exercises/06-exercises-java/>06 - Nested Loops</a></li><li><a href=/school/java/exercises/07-exercises-java/>07 - Modulo</a></li><li><a href=/school/java/exercises/08-exercises-java/>08 - Массивы</a></li><li><a href=/school/java/exercises/09-exercises-java/>09 - Массивы - 2</a></li><li><a href=/school/java/exercises/10-exercises-java/>10 - Разминка</a></li><li><a href=/school/java/exercises/11-exercises-java-logic-01/>11 - Logic-01</a></li><li><a href=/school/java/exercises/12-exercises-java-logic-02/>12 - Logic-02</a></li><li><a href=/school/java/exercises/13-exercises-java-string-01/>13 - String-01</a></li><li><a href=/school/java/exercises/14-exercises-java-string-02/>14 - String-02</a></li><li><a href=/school/java/exercises/15-exercises-java-string-03/>15 - String-03</a></li><li><a href=/school/java/exercises/16-exercises-java-recursion-01/>16 - Recursion-01</a></li><li><a href=/school/java/exercises/17-exercises-java-recursion-02/>17 - Recursion-02</a></li><li><a href=/school/java/exercises/18-exercises-java-arrays-01/>18 - Arrays-01</a></li><li><a href=/school/java/exercises/19-exercises-java-arrays-02/>19 - Arrays-02</a></li><li><a href=/school/java/exercises/20-exercises-java-arrays-03/>20 - Arrays-03</a></li></ul></li></ul></li><li><p><strong>Frontend</strong></p><ul><li><strong>HTML</strong><ul><li><a href=/school/frontend/html/01-html-intro/>1 - Введение</a></li><li><a href=/school/frontend/html/02-html-hello-world/>2 - Первая страница</a></li><li><a href=/school/frontend/html/03-html-path/>3 - Путь к файлу</a></li><li><a href=/school/frontend/html/04-html-tags/>4 - HTML-теги</a></li><li><a href=/school/frontend/html/05-html-table/>5 - Таблица в HTML</a></li><li><a href=/school/frontend/html/06-html-form/>6 - Формочки</a></li><li><a href=/school/frontend/html/07-html-image-map/>7 - Image Map</a></li><li><a href=/school/frontend/html/08-html-url-tag-a/>8 - Гиперссылки</a></li><li><a href=/school/frontend/html/09-html-u-o-list/>9 - Перечисления</a></li></ul></li><li><strong>CSS</strong><ul><li><a href=/school/frontend/css/02-css-fonts/>02 - Шрифты</a></li><li><a href=/school/frontend/css/03-css-layout-display/>03 - display none</a></li><li><a href=/school/frontend/css/04-css-box-model/>04 - Box model</a></li><li><a href=/school/frontend/css/11-css-media-queries-print-version/>11 - Принтверсия сайта</a></li><li><a href=/school/frontend/css/12-css-media-queries-screens/>12 - Media queries</a></li></ul></li><li><strong>JavaScript</strong><ul><li><a href=/school/frontend/java-script/01-js-intro/>01 - Введение в JS</a></li><li><a href=/school/frontend/java-script/03-js-function-intro/>03 - Функции, введение</a></li><li><a href=/school/frontend/java-script/05-js-boolean-logical-operators/>05 - Логические типы данных</a></li><li><a href=/school/frontend/java-script/06-js-function-basics/>06 - Функции важные основы</a></li><li><a href=/school/frontend/java-script/07-js-if-else/>07 - Условный оператор</a></li><li><a href=/school/frontend/java-script/12-js-arrays/>12 - Массивы в JavaScript</a></li></ul></li><li><strong>Задачник по HTML без CSS</strong><ul><li><strong>Основы - теги</strong></li><li><a href=/school/frontend/fe-exercises/01-basic/01-exercises-html/>01 - Exegi monumentum</a></li><li><a href=/school/frontend/fe-exercises/01-basic/02-exercises-html/>02 - Не позволяй душе лениться</a></li><li><a href=/school/frontend/fe-exercises/01-basic/03-exercises-html/>03 - Молчание золото</a></li><li><a href=/school/frontend/fe-exercises/01-basic/04-exercises-html/>04 - Структура проекта</a></li><li><a href=/school/frontend/fe-exercises/01-basic/05-exercises-html/>05 - Полезные статьи</a></li><li><a href=/school/frontend/fe-exercises/01-basic/06-exercises-html/>06 - Генераторы</a></li><li><a href=/school/frontend/fe-exercises/01-basic/07-exercises-html/>07 - Сократ всегда прав</a></li><li><a href=/school/frontend/fe-exercises/01-basic/08-exercises-html/>08 - Редактирование текста</a></li><li><a href=/school/frontend/fe-exercises/01-basic/09-exercises-html/>09 - Шон Коннери</a></li><li><a href=/school/frontend/fe-exercises/01-basic/10-exercises-html/>10 - Glossary of Terms</a></li><li><a href=/school/frontend/fe-exercises/01-basic/11-exercises-html/>11 - Галион</a></li><li><a href=/school/frontend/fe-exercises/01-basic/12-exercises-html/>12 - Поломанная таблица</a></li><li><a href=/school/frontend/fe-exercises/01-basic/13-exercises-html/>13 - Многочлен</a></li><li><a href=/school/frontend/fe-exercises/01-basic/14-exercises-html/>14 - Ключевые слова</a></li><li><a href=/school/frontend/fe-exercises/01-basic/15-exercises-html/>14 - Разные ссылки</a></li><li><strong>Основы - таблицы</strong></li><li><a href=/school/frontend/fe-exercises/02-table/01-exercises-html-table/>01 - Таблица 15 на 15</a></li><li><a href=/school/frontend/fe-exercises/02-table/02-exercises-html-table/>02 - Типичная таблица</a></li><li><a href=/school/frontend/fe-exercises/02-table/03-exercises-html-table/>03 - Разноцветная таблица</a></li><li><a href=/school/frontend/fe-exercises/02-table/04-exercises-html-table/>04 - Табличная вёрстка</a></li><li><strong>Основы - формуляры</strong></li><li><a href=/school/frontend/fe-exercises/03-form/01-exercises-html-forms/>01 - Пимпочка</a></li><li><a href=/school/frontend/fe-exercises/03-form/02-exercises-html-forms/>02 - Типичный формуляр</a></li><li><a href=/school/frontend/fe-exercises/03-form/03-exercises-html-forms/>03 - Много инпутов</a></li><li><a href=/school/frontend/fe-exercises/03-form/04-exercises-html-forms/>04 - Курсы программирования</a></li><li><strong>Основы - медиа</strong></li><li><a href=/school/frontend/fe-exercises/04-media/01-exercises-html-media/>01 - Берлин</a></li><li><a href=/school/frontend/fe-exercises/04-media/02-exercises-html-media/>02 - Берлин в кубе</a></li><li><a href=/school/frontend/fe-exercises/04-media/03-exercises-html-media/>03 - Карта сокровищ</a></li><li><a href=/school/frontend/fe-exercises/04-media/04-exercises-html-media/>04 - Видео на Youtube</a></li><li><a href=/school/frontend/fe-exercises/04-media/05-exercises-html-media/>05 - Собственное видео</a></li><li><a href=/school/frontend/fe-exercises/04-media/06-exercises-html-media/>06 - Аудио</a></li><li><a href=/school/frontend/fe-exercises/04-media/07-exercises-html-media/>07 - Кофе и компьютер</a></li><li><a href=/school/frontend/fe-exercises/04-media/08-exercises-html-media/>08 - Котики</a></li><li><a href=/school/frontend/fe-exercises/04-media/09-exercises-html-media/>09 - Щенки</a></li></ul></li><li><strong>Задачник по CSS и HTML</strong><ul><li><a href=/school/frontend/fe-exercises/10-forms-with-css/01-exercises-html-css-user-login/>Формы логина</a></li><li><a href=/school/frontend/fe-exercises/12-cards/01-exercises-cards/>Cards</a><br><strong>Макеты сайтов</strong></li><li><a href=/school/frontend/fe-exercises/11-moqups/01-exercises-web-sites-moqups/>Две колонки</a></li></ul></li></ul></li><li><p><strong>Полезная подборка</strong></p><ul><li><a href=/school/tools/01-git/>01 - Git-введение</a></li><li><a href=/school/tools/02-github-basic/>02 - Git-методичка</a></li><li><a href=/school/tools/03-boolean-algebra/>03 - Булева Алгебра</a></li><li><a href=/school/tools/04-how-to-create-passwords/>04 - О паролях</a></li></ul></li><li><p><strong>Маркетинг</strong></p><ul><li><a href=/school/marketing/seo/001-seo-intro/>01 - Основы SEO</a></li></ul></li></ul><p></p><ul><li>в разработке</li></ul><ul><li><a href=/posts/>Blog</a></li></ul></nav><script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu></label>
+ преобразование типов данных   Расширение типа (widening Casting), которое можно проследить на схеме с помощью стрелок, происходит автоматически.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://andron13.de/school/java/basic-course/011-java-string-possibilities-and-more/"><meta property="og:image" content="https://andron13.de/img/res/java/04/004-casting.png"><meta property="article:section" content="school">
+<title>011 Java String Possibilities and More | andron13</title>
+<link rel=manifest href=/manifest.json>
+<link rel=icon href=/favicon.png type=image/x-icon>
+<link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
+<script defer src=/flexsearch.min.js></script>
+<script defer src=/ru.search.min.5ca00ea09218dcbbd5461c836f509d7cb29349b1280f54762de7494d742a7777.js integrity="sha256-XKAOoJIY3LvVRhyDb1CdfLKTSbEoD1R2LedJTXQqd3c=" crossorigin=anonymous></script>
+<script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
+<script async src=https://www.google-analytics.com/analytics.js></script>
+</head>
+<body dir=ltr>
+<input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control>
+<main class="container flex">
+<aside class=book-menu>
+<div class=book-menu-content>
+<nav>
+<h2 class=book-brand>
+<a href=/><img src=/logo.jpg alt=Logo><span>andron13</span>
+</a>
+</h2>
+<div class=book-search>
+<input type=text id=book-search-input placeholder=Поиск aria-label=Поиск maxlength=64 data-hotkeys=s/>
+<div class="book-search-spinner hidden"></div>
+<ul id=book-search-results></ul>
+</div>
+<p><strong>Войти-в-АйТи</strong></p>
+<ul>
+<li>
+<p><a href=/school/java/>Java</a></p>
+<ul>
+<li>
+<p><a href=/school/java/basic-course/><strong>Басовый курс</strong></a></p>
+<ul>
+<li><a href=/school/java/basic-course/001-java-setup/>01 - Java setup</a></li>
+<li><a href=/school/java/basic-course/002-java-integers/>02 - Целые числа</a></li>
+<li><a href=/school/java/basic-course/003-java-float-double/>03 - Десятичные дроби</a></li>
+<li><a href=/school/java/basic-course/004-java-char-string/>04 - Символы и строки</a></li>
+<li><a href=/school/java/basic-course/005-java-boolean/>05 - Булевые данные</a></li>
+<li><a href=/school/java/basic-course/006-java-switch-case/>06 - Switch - case</a></li>
+<li><a href=/school/java/basic-course/007-java-if-else/>07 - If - else</a></li>
+<li><a href=/school/java/basic-course/008-java-modulo/>08 - Modulo</a></li>
+<li><a href=/school/java/basic-course/009-java-arithmetic-operators/>09 - Операторы</a></li>
+<li><a href=/school/java/basic-course/010-java-for/>10 - Цикл for</a></li>
+<li><a href=/school/java/basic-course/011-java-string-possibilities-and-more/ class=active>11 - Casting литералов</a></li>
+<li><a href=/school/java/basic-course/012-java-methods-void-return/>12 - Методы</a></li>
+<li><a href=/school/java/basic-course/013-java-while-dowhile/>13 - Цикл while</a></li>
+<li><a href=/school/java/basic-course/014-java-scanner/>14 - Ввод данных Scanner</a></li>
+<li><a href=/school/java/basic-course/015-java-binary-and-decimal-issue/>15 - Системы счисления</a></li>
+<li><a href=/school/java/basic-course/016-java-ternary-operator/>16 - Тернарный оператор</a></li>
+<li><a href=/school/java/basic-course/017-java-recursion-intro/>17 - Рекурсия, введение</a></li>
+<li><a href=/school/java/basic-course/018-java-array/>18 - Массивы знакомство</a></li>
+<li><a href=/school/java/basic-course/019-java-foreach/>19 - Цикл foreach</a></li>
+<li><a href=/school/java/basic-course/020-java-varargs/>20 - Varargs</a></li>
+<li><a href=/school/java/basic-course/021-java-multi-dimensional-array/>21 - Многомерные arrays</a></li>
+<li><a href=/school/java/basic-course/022-java-public-static-void-main/>22 - Таинственный main</a></li>
+<li><a href=/school/java/basic-course/023-java-return-break-continue/>23 - Операторы перехода</a></li>
+<li><a href=/school/java/basic-course/024-java-swap-two-variables/>24 - Обмен значений</a></li>
+<li><a href=/school/java/basic-course/025-java-idea-basics/>25! - IDEA - настройка</a></li>
+<li>[26! - Magic Color]</li>
+<li><a href=/school/java/basic-course/027-java-sorting-algorithms-01-bubblesort/>27 - Bubble sort</a></li>
+<li><a href=/school/java/basic-course/028-java-sorting-algorithms-02-coctail-and-comb-sort/>28 - Comb и cocktail</a></li>
+<li><a href=/school/java/basic-course/029-java-sorting-algorithms-03-insertionsort/>29 - Insertionsort</a>
+&mldr;</li>
+<li><a href=/school/java/basic-course/034-java-try-catch-finally/>34 - Try Catch</a></li>
+<li><a href=/school/java/basic-course/035-java-creating-a-jar-file-/>35! - Создание Jar</a></li>
+<li><a href=/school/java/basic-course/036-java-ressourcen/>36 - Ресурсы</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Курс-ООП</strong></p>
+<ul>
+<li><a href=/school/java/oop-course/001-java-object-introduction-chapter-1/>01 - Введение в ООП</a></li>
+<li><a href=/school/java/oop-course/002-java-oop-method-overloading-polymorphism/>02 - Перегрузка методов</a></li>
+<li><a href=/school/java/oop-course/003-java-oop-constructor-this/>03 - Constructor и this</a></li>
+<li><a href=/school/java/oop-course/004-java-oop-encapsulation-get-set/>04 - Инкапсуляция</a></li>
+<li><a href=/school/java/oop-course/011-java-oop-practical-number-and-fraction/>11 - Дроби, НОД, НОК</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Задачник по Java</strong></p>
+<ul>
+<li><a href=/school/java/exercises/01-exercises-java/>01 - Логика</a></li>
+<li><a href=/school/java/exercises/02-exercises-java/>02 - Switch</a></li>
+<li><a href=/school/java/exercises/03-exercises-java/>03 - Если, то</a></li>
+<li><a href=/school/java/exercises/04-exercises-java/>04 - Повторение основ</a></li>
+<li><a href=/school/java/exercises/05-exercises-java/>05 - Цикл for</a></li>
+<li><a href=/school/java/exercises/06-exercises-java/>06 - Nested Loops</a></li>
+<li><a href=/school/java/exercises/07-exercises-java/>07 - Modulo</a></li>
+<li><a href=/school/java/exercises/08-exercises-java/>08 - Массивы</a></li>
+<li><a href=/school/java/exercises/09-exercises-java/>09 - Массивы - 2</a></li>
+<li><a href=/school/java/exercises/10-exercises-java/>10 - Разминка</a></li>
+<li><a href=/school/java/exercises/11-exercises-java-logic-01/>11 - Logic-01</a></li>
+<li><a href=/school/java/exercises/12-exercises-java-logic-02/>12 - Logic-02</a></li>
+<li><a href=/school/java/exercises/13-exercises-java-string-01/>13 - String-01</a></li>
+<li><a href=/school/java/exercises/14-exercises-java-string-02/>14 - String-02</a></li>
+<li><a href=/school/java/exercises/15-exercises-java-string-03/>15 - String-03</a></li>
+<li><a href=/school/java/exercises/16-exercises-java-recursion-01/>16 - Recursion-01</a></li>
+<li><a href=/school/java/exercises/17-exercises-java-recursion-02/>17 - Recursion-02</a></li>
+<li><a href=/school/java/exercises/18-exercises-java-arrays-01/>18 - Arrays-01</a></li>
+<li><a href=/school/java/exercises/19-exercises-java-arrays-02/>19 - Arrays-02</a></li>
+<li><a href=/school/java/exercises/20-exercises-java-arrays-03/>20 - Arrays-03</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Frontend</strong></p>
+<ul>
+<li><strong>HTML</strong>
+<ul>
+<li><a href=/school/frontend/html/01-html-intro/>1 - Введение</a></li>
+<li><a href=/school/frontend/html/02-html-hello-world/>2 - Первая страница</a></li>
+<li><a href=/school/frontend/html/03-html-path/>3 - Путь к файлу</a></li>
+<li><a href=/school/frontend/html/04-html-tags/>4 - HTML-теги</a></li>
+<li><a href=/school/frontend/html/05-html-table/>5 - Таблица в HTML</a></li>
+<li><a href=/school/frontend/html/06-html-form/>6 - Формочки</a></li>
+<li><a href=/school/frontend/html/07-html-image-map/>7 - Image Map</a></li>
+<li><a href=/school/frontend/html/08-html-url-tag-a/>8 - Гиперссылки</a></li>
+<li><a href=/school/frontend/html/09-html-u-o-list/>9 - Перечисления</a></li>
+</ul>
+</li>
+<li><strong>CSS</strong>
+<ul>
+<li><a href=/school/frontend/css/02-css-fonts/>02 - Шрифты</a></li>
+<li><a href=/school/frontend/css/03-css-layout-display/>03 - display none</a></li>
+<li><a href=/school/frontend/css/04-css-box-model/>04 - Box model</a></li>
+<li><a href=/school/frontend/css/11-css-media-queries-print-version/>11 - Принтверсия сайта</a></li>
+<li><a href=/school/frontend/css/12-css-media-queries-screens/>12 - Media queries</a></li>
+</ul>
+</li>
+<li><strong>JavaScript</strong>
+<ul>
+<li><a href=/school/frontend/java-script/01-js-intro/>01 - Введение в JS</a></li>
+<li><a href=/school/frontend/java-script/03-js-function-intro/>03 - Функции, введение</a></li>
+<li><a href=/school/frontend/java-script/05-js-boolean-logical-operators/>05 - Логические типы данных</a></li>
+<li><a href=/school/frontend/java-script/06-js-function-basics/>06 - Функции важные основы</a></li>
+<li><a href=/school/frontend/java-script/07-js-if-else/>07 - Условный оператор</a></li>
+<li><a href=/school/frontend/java-script/12-js-arrays/>12 - Массивы в JavaScript</a></li>
+</ul>
+</li>
+<li><strong>Задачник по HTML без CSS</strong>
+<ul>
+<li><strong>Основы - теги</strong></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/01-exercises-html/>01 - Exegi monumentum</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/02-exercises-html/>02 - Не позволяй душе лениться</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/03-exercises-html/>03 - Молчание золото</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/04-exercises-html/>04 - Структура проекта</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/05-exercises-html/>05 - Полезные статьи</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/06-exercises-html/>06 - Генераторы</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/07-exercises-html/>07 - Сократ всегда прав</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/08-exercises-html/>08 - Редактирование текста</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/09-exercises-html/>09 - Шон Коннери</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/10-exercises-html/>10 - Glossary of Terms</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/11-exercises-html/>11 - Галион</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/12-exercises-html/>12 - Поломанная таблица</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/13-exercises-html/>13 - Многочлен</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/14-exercises-html/>14 - Ключевые слова</a></li>
+<li><a href=/school/frontend/fe-exercises/01-basic/15-exercises-html/>14 - Разные ссылки</a></li>
+<li><strong>Основы - таблицы</strong></li>
+<li><a href=/school/frontend/fe-exercises/02-table/01-exercises-html-table/>01 - Таблица 15 на 15</a></li>
+<li><a href=/school/frontend/fe-exercises/02-table/02-exercises-html-table/>02 - Типичная таблица</a></li>
+<li><a href=/school/frontend/fe-exercises/02-table/03-exercises-html-table/>03 - Разноцветная таблица</a></li>
+<li><a href=/school/frontend/fe-exercises/02-table/04-exercises-html-table/>04 - Табличная вёрстка</a></li>
+<li><strong>Основы - формуляры</strong></li>
+<li><a href=/school/frontend/fe-exercises/03-form/01-exercises-html-forms/>01 - Пимпочка</a></li>
+<li><a href=/school/frontend/fe-exercises/03-form/02-exercises-html-forms/>02 - Типичный формуляр</a></li>
+<li><a href=/school/frontend/fe-exercises/03-form/03-exercises-html-forms/>03 - Много инпутов</a></li>
+<li><a href=/school/frontend/fe-exercises/03-form/04-exercises-html-forms/>04 - Курсы программирования</a></li>
+<li><strong>Основы - медиа</strong></li>
+<li><a href=/school/frontend/fe-exercises/04-media/01-exercises-html-media/>01 - Берлин</a></li>
+<li><a href=/school/frontend/fe-exercises/04-media/02-exercises-html-media/>02 - Берлин в кубе</a></li>
+<li><a href=/school/frontend/fe-exercises/04-media/03-exercises-html-media/>03 - Карта сокровищ</a></li>
+<li><a href=/school/frontend/fe-exercises/04-media/04-exercises-html-media/>04 - Видео на Youtube</a></li>
+<li><a href=/school/frontend/fe-exercises/04-media/05-exercises-html-media/>05 - Собственное видео</a></li>
+<li><a href=/school/frontend/fe-exercises/04-media/06-exercises-html-media/>06 - Аудио</a></li>
+<li><a href=/school/frontend/fe-exercises/04-media/07-exercises-html-media/>07 - Кофе и компьютер</a></li>
+<li><a href=/school/frontend/fe-exercises/04-media/08-exercises-html-media/>08 - Котики</a></li>
+<li><a href=/school/frontend/fe-exercises/04-media/09-exercises-html-media/>09 - Щенки</a></li>
+</ul>
+</li>
+<li><strong>Задачник по CSS и HTML</strong>
+<ul>
+<li><a href=/school/frontend/fe-exercises/10-forms-with-css/01-exercises-html-css-user-login/>Формы логина</a></li>
+<li><a href=/school/frontend/fe-exercises/12-cards/01-exercises-cards/>Cards</a><br>
+<strong>Макеты сайтов</strong></li>
+<li><a href=/school/frontend/fe-exercises/11-moqups/01-exercises-web-sites-moqups/>Две колонки</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Полезная подборка</strong></p>
+<ul>
+<li><a href=/school/tools/01-git/>01 - Git-введение</a></li>
+<li><a href=/school/tools/02-github-basic/>02 - Git-методичка</a></li>
+<li><a href=/school/tools/03-boolean-algebra/>03 - Булева Алгебра</a></li>
+<li><a href=/school/tools/04-how-to-create-passwords/>04 - О паролях</a></li>
+</ul>
+</li>
+<li>
+<p><strong>Маркетинг</strong></p>
+<ul>
+<li><a href=/school/marketing/seo/001-seo-intro/>01 - Основы SEO</a></li>
+</ul>
+</li>
+</ul>
+<p></p>
+<ul>
+<li>в разработке
+</li>
+</ul>
+<ul>
+<li>
+<a href=/posts/>
+Blog
+</a>
+</li>
+</ul>
+</nav>
+<script>(function(){var a=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(b){localStorage.setItem("menu.scrollTop",a.scrollTop)}),a.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+</div>
+</aside>
+<div class=book-page>
+<header class=book-header>
+<div class="flex align-center justify-between">
+<label for=menu-control>
+<img src=/svg/menu.svg class=book-icon alt=Menu>
+</label>
 <strong>011 Java String Possibilities and More</strong>
-<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#возможности-различных-типов-данных-литералов-в-java--введение-в-java-011>Возможности различных типов данных, литералов в Java — введение в Java 011</a></li><li><a href=#явные-и-неявные-преобразования>Явные и неявные преобразования</a></li><li><a href=#string-to-int-and-double>String to int and double</a><ul><li><a href=#parse>Parse</a></li><li><a href=#stringvalueof314>String.valueOf(3.14)</a></li></ul></li><li><a href=#магия-строки-string-to-char>Магия строки: String to char</a><ul><li><a href=#charat---что-это-за-символ>charAt - Что это за символ?</a></li><li><a href=#substring>substring</a></li></ul></li><li><a href=#документация-и-доступные-методы>Документация и доступные методы</a><ul><li><a href=#ещё-раз-и-по-русски>Ещё раз и &ldquo;по-русски&rdquo;</a></li></ul></li><li><a href=#codepointatint-index---пример-использования>codePointAt(int index) - пример использования</a></li><li><a href=#codepointbeforeint-index---пример-использования>codePointBefore(int index) - пример использования</a></li><li><a href=#codepointcountint-beginindex-int-endindex---пример-использования>codePointCount(int beginIndex, int endIndex) - пример использования</a></li><li><a href=#comparetostring-anotherstring---пример-использования>compareTo(String anotherString) - пример использования</a></li><li><a href=#comparetoignorecasestring-str---пример-использования>compareToIgnoreCase(String str) - пример использования</a></li><li><a href=#concatstring-str---пример-использования>concat(String str) - пример использования</a></li><li><a href=#домашнее-задание>Домашнее задание</a></li><li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li></ul></nav></aside></header><article class=markdown><h2 id=возможности-различных-типов-данных-литералов-в-java--введение-в-java-011>Возможности различных типов данных, литералов в Java — введение в Java 011
-<a class=anchor href=#%d0%b2%d0%be%d0%b7%d0%bc%d0%be%d0%b6%d0%bd%d0%be%d1%81%d1%82%d0%b8-%d1%80%d0%b0%d0%b7%d0%bb%d0%b8%d1%87%d0%bd%d1%8b%d1%85-%d1%82%d0%b8%d0%bf%d0%be%d0%b2-%d0%b4%d0%b0%d0%bd%d0%bd%d1%8b%d1%85-%d0%bb%d0%b8%d1%82%d0%b5%d1%80%d0%b0%d0%bb%d0%be%d0%b2-%d0%b2-java--%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2-java-011>#</a></h2><p>В четвёртом уроке мы затронули преобразования одних типов данных в другие. Давайте для начала посмотрим, что именно мы тогда учили.</p><h2 id=явные-и-неявные-преобразования>Явные и неявные преобразования
-<a class=anchor href=#%d1%8f%d0%b2%d0%bd%d1%8b%d0%b5-%d0%b8-%d0%bd%d0%b5%d1%8f%d0%b2%d0%bd%d1%8b%d0%b5-%d0%bf%d1%80%d0%b5%d0%be%d0%b1%d1%80%d0%b0%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a></h2><p>Значения, передаваемые переменным, можно привести в тот тип данных, которые переменная может принять. Вручную или автоматически, или явно и неявно.</p><figure><img src=/img/res/java/04/004-casting.png alt="преобразование типов данных"><figcaption><h4>преобразование типов данных</h4></figcaption></figure><p><strong>Расширение типа (widening Casting)</strong>, которое можно проследить на схеме с помощью стрелок, происходит автоматически. Это преобразование меньшего типа данных в типа большего размера: byte -> short -> char -> int -> long -> float -> double.</p><p><strong>Сужение типа (narrowing Casting)</strong> — преобразование типа данных большего размера в тип данных меньшего размера — делается вручную: double -> float -> long -> int -> char -> short -> byte</p><h2 id=string-to-int-and-double>String to int and double
-<a class=anchor href=#string-to-int-and-double>#</a></h2><p>Помимо уже <del>надеюсь</del> привычного преобразования переменных и литералов из int в double И обратно мы можем большее.</p><pre><code class=language-code data-lang=code>String number = &quot;10&quot;;
+<label for=toc-control>
+<img src=/svg/toc.svg class=book-icon alt="Table of Contents">
+</label>
+</div>
+<aside class="hidden clearfix">
+<nav id=TableOfContents>
+<ul>
+<li><a href=#возможности-различных-типов-данных-литералов-в-java--введение-в-java-011>Возможности различных типов данных, литералов в Java — введение в Java 011</a></li>
+<li><a href=#явные-и-неявные-преобразования>Явные и неявные преобразования</a></li>
+<li><a href=#string-to-int-and-double>String to int and double</a>
+<ul>
+<li><a href=#parse>Parse</a></li>
+<li><a href=#stringvalueof314>String.valueOf(3.14)</a></li>
+</ul>
+</li>
+<li><a href=#магия-строки-string-to-char>Магия строки: String to char</a>
+<ul>
+<li><a href=#charat---что-это-за-символ>charAt - Что это за символ?</a></li>
+<li><a href=#substring>substring</a></li>
+</ul>
+</li>
+<li><a href=#документация-и-доступные-методы>Документация и доступные методы</a>
+<ul>
+<li><a href=#ещё-раз-и-по-русски>Ещё раз и &ldquo;по-русски&rdquo;</a></li>
+</ul>
+</li>
+<li><a href=#codepointatint-index---пример-использования>codePointAt(int index) - пример использования</a></li>
+<li><a href=#codepointbeforeint-index---пример-использования>codePointBefore(int index) - пример использования</a></li>
+<li><a href=#codepointcountint-beginindex-int-endindex---пример-использования>codePointCount(int beginIndex, int endIndex) - пример использования</a></li>
+<li><a href=#comparetostring-anotherstring---пример-использования>compareTo(String anotherString) - пример использования</a></li>
+<li><a href=#comparetoignorecasestring-str---пример-использования>compareToIgnoreCase(String str) - пример использования</a></li>
+<li><a href=#concatstring-str---пример-использования>concat(String str) - пример использования</a></li>
+<li><a href=#домашнее-задание>Домашнее задание</a></li>
+<li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li>
+</ul>
+</nav>
+</aside>
+</header>
+<article class=markdown><h2 id=возможности-различных-типов-данных-литералов-в-java--введение-в-java-011>
+Возможности различных типов данных, литералов в Java — введение в Java 011
+<a class=anchor href=#%d0%b2%d0%be%d0%b7%d0%bc%d0%be%d0%b6%d0%bd%d0%be%d1%81%d1%82%d0%b8-%d1%80%d0%b0%d0%b7%d0%bb%d0%b8%d1%87%d0%bd%d1%8b%d1%85-%d1%82%d0%b8%d0%bf%d0%be%d0%b2-%d0%b4%d0%b0%d0%bd%d0%bd%d1%8b%d1%85-%d0%bb%d0%b8%d1%82%d0%b5%d1%80%d0%b0%d0%bb%d0%be%d0%b2-%d0%b2-java--%d0%b2%d0%b2%d0%b5%d0%b4%d0%b5%d0%bd%d0%b8%d0%b5-%d0%b2-java-011>#</a>
+</h2>
+<p>В четвёртом уроке мы затронули преобразования одних типов данных в другие. Давайте для начала посмотрим, что именно мы тогда учили.</p>
+<h2 id=явные-и-неявные-преобразования>
+Явные и неявные преобразования
+<a class=anchor href=#%d1%8f%d0%b2%d0%bd%d1%8b%d0%b5-%d0%b8-%d0%bd%d0%b5%d1%8f%d0%b2%d0%bd%d1%8b%d0%b5-%d0%bf%d1%80%d0%b5%d0%be%d0%b1%d1%80%d0%b0%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a>
+</h2>
+<p>Значения, передаваемые переменным, можно привести в тот тип данных, которые переменная может принять. Вручную или автоматически, или явно и неявно.</p>
+<figure><img src=/img/res/java/04/004-casting.png alt="преобразование типов данных"><figcaption>
+<h4>преобразование типов данных</h4>
+</figcaption>
+</figure>
+<p><strong>Расширение типа (widening Casting)</strong>, которое можно проследить на схеме с помощью стрелок, происходит автоматически. Это преобразование меньшего типа данных в типа большего размера: byte -> short -> char -> int -> long -> float -> double.</p>
+<p><strong>Сужение типа (narrowing Casting)</strong> — преобразование типа данных большего размера в тип данных меньшего размера — делается вручную: double -> float -> long -> int -> char -> short -> byte</p>
+<h2 id=string-to-int-and-double>
+String to int and double
+<a class=anchor href=#string-to-int-and-double>#</a>
+</h2>
+<p>Помимо уже <del>надеюсь</del> привычного преобразования переменных и литералов из int в double И обратно мы можем большее.</p>
+<pre><code class=language-code data-lang=code>String number = &quot;10&quot;;
 int result = Integer.parseInt(number);
 System.out.println(result);
-</code></pre><h3 id=parse>Parse
-<a class=anchor href=#parse>#</a></h3><div class="book-columns flex flex-wrap"><div class="flex-even markdown-inner"><strong>English</strong><br>The software parses and filters the incoming data.</div><div class="flex-even markdown-inner"><strong>Русский</strong><br>Программное обеспечение разбирает и фильтрует поступающие данные.</div></div><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>int result <span style=color:#f92672>=</span> Integer.parseInt<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;709&#34;</span><span style=color:#f92672>)</span>;
-</code></pre></div><p>Java разбирает на составные части наш строковый литерал и если в нём содержится целочисленное значение, то успешно записывает его в переменную с типом данных int.</p><h3 id=stringvalueof314>String.valueOf(3.14)
-<a class=anchor href=#stringvalueof314>#</a></h3><p>Если у нас будет в строковом литерале десятичная дробь, то мы тоже можем &ldquo;вытянуть&rdquo; её.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>double pi <span style=color:#f92672>=</span> 3.14;
+</code></pre><h3 id=parse>
+Parse
+<a class=anchor href=#parse>#</a>
+</h3>
+<div class="book-columns flex flex-wrap">
+<div class="flex-even markdown-inner">
+<strong>English</strong><br>
+The software parses and filters the incoming data.
+</div>
+<div class="flex-even markdown-inner">
+<strong>Русский</strong><br>
+Программное обеспечение разбирает и фильтрует поступающие данные.
+</div>
+</div>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>int result <span style=color:#f92672>=</span> Integer.parseInt<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;709&#34;</span><span style=color:#f92672>)</span>;
+</code></pre></div><p>Java разбирает на составные части наш строковый литерал и если в нём содержится целочисленное значение, то успешно записывает его в переменную с типом данных int.</p>
+<h3 id=stringvalueof314>
+String.valueOf(3.14)
+<a class=anchor href=#stringvalueof314>#</a>
+</h3>
+<p>Если у нас будет в строковом литерале десятичная дробь, то мы тоже можем &ldquo;вытянуть&rdquo; её.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>double pi <span style=color:#f92672>=</span> 3.14;
 String myPi <span style=color:#f92672>=</span> String.valueOf<span style=color:#f92672>(</span>pi<span style=color:#f92672>)</span>;
-</code></pre></div><h2 id=магия-строки-string-to-char>Магия строки: String to char
-<a class=anchor href=#%d0%bc%d0%b0%d0%b3%d0%b8%d1%8f-%d1%81%d1%82%d1%80%d0%be%d0%ba%d0%b8-string-to-char>#</a></h2><h3 id=charat---что-это-за-символ>charAt - Что это за символ?
-<a class=anchor href=#charat---%d1%87%d1%82%d0%be-%d1%8d%d1%82%d0%be-%d0%b7%d0%b0-%d1%81%d0%b8%d0%bc%d0%b2%d0%be%d0%bb>#</a></h3><p>Мы можем взять из <del>стринга</del>строкового литерала любой символ и записать его в переменную с типом данных <strong>char</strong>.</p><pre><code class=language-code data-lang=code>String name = &quot;Андрей&quot;;
+</code></pre></div><h2 id=магия-строки-string-to-char>
+Магия строки: String to char
+<a class=anchor href=#%d0%bc%d0%b0%d0%b3%d0%b8%d1%8f-%d1%81%d1%82%d1%80%d0%be%d0%ba%d0%b8-string-to-char>#</a>
+</h2>
+<h3 id=charat---что-это-за-символ>
+charAt - Что это за символ?
+<a class=anchor href=#charat---%d1%87%d1%82%d0%be-%d1%8d%d1%82%d0%be-%d0%b7%d0%b0-%d1%81%d0%b8%d0%bc%d0%b2%d0%be%d0%bb>#</a>
+</h3>
+<p>Мы можем взять из <del>стринга</del>строкового литерала любой символ и записать его в переменную с типом данных <strong>char</strong>.</p>
+<pre><code class=language-code data-lang=code>String name = &quot;Андрей&quot;;
 char myChar = name.charAt(2);
-</code></pre><p>Мы можем узнать числовое значение символьного литерала с помощью хитрости:</p><pre><code class=language-code data-lang=code>System.out.println(0 + myChar);
-</code></pre><p>И это нам должно напомнить, что любой чар-литерал легко преобразовывается в инт-литерал. Давайте посмотрим всё сначала и вместе:</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>String name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Андрей&#34;</span>;
+</code></pre><p>Мы можем узнать числовое значение символьного литерала с помощью хитрости:</p>
+<pre><code class=language-code data-lang=code>System.out.println(0 + myChar);
+</code></pre><p>И это нам должно напомнить, что любой чар-литерал легко преобразовывается в инт-литерал. Давайте посмотрим всё сначала и вместе:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>String name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Андрей&#34;</span>;
 char myChar <span style=color:#f92672>=</span> name.charAt<span style=color:#f92672>(</span>2<span style=color:#f92672>)</span>;
 System.out.println<span style=color:#f92672>(</span><span style=color:#ae81ff>0</span> + myChar<span style=color:#f92672>)</span>;
 int myInt <span style=color:#f92672>=</span> myChar;
 System.out.println<span style=color:#f92672>(</span>myInt<span style=color:#f92672>)</span>;
-</code></pre></div><h3 id=substring>substring
-<a class=anchor href=#substring>#</a></h3><p>Чар-литерал является частью строки. Точно так же мы можем даже &ldquo;вырезать&rdquo; любой символ из строкового литерала.</p><pre><code>String name = &quot;Андрей&quot;;
+</code></pre></div><h3 id=substring>
+substring
+<a class=anchor href=#substring>#</a>
+</h3>
+<p>Чар-литерал является частью строки. Точно так же мы можем даже &ldquo;вырезать&rdquo; любой символ из строкового литерала.</p>
+<pre><code>String name = &quot;Андрей&quot;;
 String myLittleString = name.substring(0, 1);
-</code></pre><p>Но (пока) он так и останется строковым литералом, просто содержащим в себе один символ. Конечно же существуют ещё несколько возможностей разложить весь стринг на составные части, перебрать их и взять нужную часть. Но давайте пока разберёмся с charAt.</p><pre><code>char myChar = &quot;Андрей&quot;.charAt(2);  // так тоже теоретически можно писать 
-</code></pre><h2 id=документация-и-доступные-методы>Документация и доступные методы
-<a class=anchor href=#%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d0%b0%d1%86%d0%b8%d1%8f-%d0%b8-%d0%b4%d0%be%d1%81%d1%82%d1%83%d0%bf%d0%bd%d1%8b%d0%b5-%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d1%8b>#</a></h2><p>Я взял первых семь методов из <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>официальной документации</a>:</p><table><thead><tr><th style=text-align:left>Modifier and Type</th><th style=text-align:center>Метод</th><th style=text-align:right>Пояснение</th></tr></thead><tbody><tr><td style=text-align:left>char</td><td style=text-align:center>charAt(int index)</td><td style=text-align:right>Returns the char value at the specified index.</td></tr><tr><td style=text-align:left>int</td><td style=text-align:center>codePointAt(int index)</td><td style=text-align:right>Returns the character (Unicode code point) at the specified index.</td></tr><tr><td style=text-align:left>int</td><td style=text-align:center>codePointBefore(int index)</td><td style=text-align:right>Returns the character (Unicode code point) before the specified index.</td></tr><tr><td style=text-align:left>int</td><td style=text-align:center>codePointCount(int beginIndex, int endIndex)</td><td style=text-align:right>Returns the number of Unicode code points in the specified text range of this String.</td></tr><tr><td style=text-align:left>int</td><td style=text-align:center>compareTo(String anotherString)</td><td style=text-align:right>Compares two strings lexicographically.</td></tr><tr><td style=text-align:left>int</td><td style=text-align:center>compareToIgnoreCase(String str)</td><td style=text-align:right>Compares two strings lexicographically, ignoring case differences.</td></tr><tr><td style=text-align:left>String</td><td style=text-align:center>concat(String str)</td><td style=text-align:right>Concatenates the specified string to the end of this string.</td></tr></tbody></table><h3 id=ещё-раз-и-по-русски>Ещё раз и &ldquo;по-русски&rdquo;
-<a class=anchor href=#%d0%b5%d1%89%d1%91-%d1%80%d0%b0%d0%b7-%d0%b8-%d0%bf%d0%be-%d1%80%d1%83%d1%81%d1%81%d0%ba%d0%b8>#</a></h3><table><thead><tr><th style=text-align:left>Метод</th><th style=text-align:right>Перевод</th></tr></thead><tbody><tr><td style=text-align:left>charAt(int index)</td><td style=text-align:right>Возвращает значение символа по указанному индексу.</td></tr><tr><td style=text-align:left>codePointAt(int index)</td><td style=text-align:right>Возвращает символ (Unicode code point) в указанном индексе.</td></tr><tr><td style=text-align:left>codePointBefore(int index)</td><td style=text-align:right>Возвращает символ (точка Юникода) перед указанным индексом.</td></tr><tr><td style=text-align:left>codePointCount(int beginIndex, int endIndex)</td><td style=text-align:right>Возвращает количество символов Юникода в указанном текстовом диапазоне данной строки.</td></tr><tr><td style=text-align:left>compareTo(String anotherString)</td><td style=text-align:right>Сравнивает две строки лексикографически.</td></tr><tr><td style=text-align:left>compareToIgnoreCase(String str)</td><td style=text-align:right>Сравнивает две строки лексикографически, игнорируя case написания</td></tr><tr><td style=text-align:left>concat(String str)</td><td style=text-align:right>Конкатенирует эту строку на конец другой строки.</td></tr></tbody></table><p>Лично мне перевод мало что сказал. Давайте посмотрим на примерах, что мы можем сделать.</p><p><strong>charAt</strong> мы уже разобрали выше в этой же статье.</p><h2 id=codepointatint-index---пример-использования>codePointAt(int index) - пример использования
-<a class=anchor href=#codepointatint-index---%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>String testStr <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Группа студентов&#34;</span>;
+</code></pre><p>Но (пока) он так и останется строковым литералом, просто содержащим в себе один символ. Конечно же существуют ещё несколько возможностей разложить весь стринг на составные части, перебрать их и взять нужную часть. Но давайте пока разберёмся с charAt.</p>
+<pre><code>char myChar = &quot;Андрей&quot;.charAt(2);  // так тоже теоретически можно писать 
+</code></pre><h2 id=документация-и-доступные-методы>
+Документация и доступные методы
+<a class=anchor href=#%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d0%b0%d1%86%d0%b8%d1%8f-%d0%b8-%d0%b4%d0%be%d1%81%d1%82%d1%83%d0%bf%d0%bd%d1%8b%d0%b5-%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d1%8b>#</a>
+</h2>
+<p>Я взял первых семь методов из <a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>официальной документации</a>:</p>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Modifier and Type</th>
+<th style=text-align:center>Метод</th>
+<th style=text-align:right>Пояснение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left>char</td>
+<td style=text-align:center>charAt(int index)</td>
+<td style=text-align:right>Returns the char value at the specified index.</td>
+</tr>
+<tr>
+<td style=text-align:left>int</td>
+<td style=text-align:center>codePointAt(int index)</td>
+<td style=text-align:right>Returns the character (Unicode code point) at the specified index.</td>
+</tr>
+<tr>
+<td style=text-align:left>int</td>
+<td style=text-align:center>codePointBefore(int index)</td>
+<td style=text-align:right>Returns the character (Unicode code point) before the specified index.</td>
+</tr>
+<tr>
+<td style=text-align:left>int</td>
+<td style=text-align:center>codePointCount(int beginIndex, int endIndex)</td>
+<td style=text-align:right>Returns the number of Unicode code points in the specified text range of this String.</td>
+</tr>
+<tr>
+<td style=text-align:left>int</td>
+<td style=text-align:center>compareTo(String anotherString)</td>
+<td style=text-align:right>Compares two strings lexicographically.</td>
+</tr>
+<tr>
+<td style=text-align:left>int</td>
+<td style=text-align:center>compareToIgnoreCase(String str)</td>
+<td style=text-align:right>Compares two strings lexicographically, ignoring case differences.</td>
+</tr>
+<tr>
+<td style=text-align:left>String</td>
+<td style=text-align:center>concat(String str)</td>
+<td style=text-align:right>Concatenates the specified string to the end of this string.</td>
+</tr>
+</tbody>
+</table>
+<h3 id=ещё-раз-и-по-русски>
+Ещё раз и &ldquo;по-русски&rdquo;
+<a class=anchor href=#%d0%b5%d1%89%d1%91-%d1%80%d0%b0%d0%b7-%d0%b8-%d0%bf%d0%be-%d1%80%d1%83%d1%81%d1%81%d0%ba%d0%b8>#</a>
+</h3>
+<table>
+<thead>
+<tr>
+<th style=text-align:left>Метод</th>
+<th style=text-align:right>Перевод</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style=text-align:left>charAt(int index)</td>
+<td style=text-align:right>Возвращает значение символа по указанному индексу.</td>
+</tr>
+<tr>
+<td style=text-align:left>codePointAt(int index)</td>
+<td style=text-align:right>Возвращает символ (Unicode code point) в указанном индексе.</td>
+</tr>
+<tr>
+<td style=text-align:left>codePointBefore(int index)</td>
+<td style=text-align:right>Возвращает символ (точка Юникода) перед указанным индексом.</td>
+</tr>
+<tr>
+<td style=text-align:left>codePointCount(int beginIndex, int endIndex)</td>
+<td style=text-align:right>Возвращает количество символов Юникода в указанном текстовом диапазоне данной строки.</td>
+</tr>
+<tr>
+<td style=text-align:left>compareTo(String anotherString)</td>
+<td style=text-align:right>Сравнивает две строки лексикографически.</td>
+</tr>
+<tr>
+<td style=text-align:left>compareToIgnoreCase(String str)</td>
+<td style=text-align:right>Сравнивает две строки лексикографически, игнорируя case написания</td>
+</tr>
+<tr>
+<td style=text-align:left>concat(String str)</td>
+<td style=text-align:right>Конкатенирует эту строку на конец другой строки.</td>
+</tr>
+</tbody>
+</table>
+<p>Лично мне перевод мало что сказал. Давайте посмотрим на примерах, что мы можем сделать.</p>
+<p><strong>charAt</strong> мы уже разобрали выше в этой же статье.</p>
+<h2 id=codepointatint-index---пример-использования>
+codePointAt(int index) - пример использования
+<a class=anchor href=#codepointatint-index---%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a>
+</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>String testStr <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Группа студентов&#34;</span>;
 int result <span style=color:#f92672>=</span> testStr.codePointAt<span style=color:#f92672>(</span>1<span style=color:#f92672>)</span>;
 System.out.println<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Результат проверки метода codePointAt = &#34;</span> + result<span style=color:#f92672>)</span>;
-</code></pre></div><p>На экране мы увидим:</p><pre><code class=language-code data-lang=code>Результат проверки метода codePointAt = 1088
-</code></pre><h2 id=codepointbeforeint-index---пример-использования>codePointBefore(int index) - пример использования
-<a class=anchor href=#codepointbeforeint-index---%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>String str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;I love Java&#34;</span>;
+</code></pre></div><p>На экране мы увидим:</p>
+<pre><code class=language-code data-lang=code>Результат проверки метода codePointAt = 1088
+</code></pre><h2 id=codepointbeforeint-index---пример-использования>
+codePointBefore(int index) - пример использования
+<a class=anchor href=#codepointbeforeint-index---%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a>
+</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>String str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;I love Java&#34;</span>;
 System.out.println<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;String = &#34;</span> + str<span style=color:#f92672>)</span>;
 int result <span style=color:#f92672>=</span> str.codePointBefore<span style=color:#f92672>(</span>1<span style=color:#f92672>)</span>;
 System.out.println<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Character(unicode point) = &#34;</span> + result<span style=color:#f92672>)</span>;	
-</code></pre></div><p>На экране мы увидим:</p><pre><code class=language-code data-lang=code>String = I love Java
+</code></pre></div><p>На экране мы увидим:</p>
+<pre><code class=language-code data-lang=code>String = I love Java
 Character(unicode point) = 73
-</code></pre><h2 id=codepointcountint-beginindex-int-endindex---пример-использования>codePointCount(int beginIndex, int endIndex) - пример использования
-<a class=anchor href=#codepointcountint-beginindex-int-endindex---%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>System.out.println<span style=color:#f92672>()</span>;
+</code></pre><h2 id=codepointcountint-beginindex-int-endindex---пример-использования>
+codePointCount(int beginIndex, int endIndex) - пример использования
+<a class=anchor href=#codepointcountint-beginindex-int-endindex---%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a>
+</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>System.out.println<span style=color:#f92672>()</span>;
 String str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Мы учимся в школе Telran&#34;</span>;
 System.out.println<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Оригинальная строка : &#34;</span> + str<span style=color:#f92672>)</span>;
 // codepoint from index <span style=color:#ae81ff>1</span> to index <span style=color:#ae81ff>10</span>
 int ctc <span style=color:#f92672>=</span> str.codePointCount<span style=color:#f92672>(</span>3, 10<span style=color:#f92672>)</span>;
 // prints character from index <span style=color:#ae81ff>1</span> to index <span style=color:#ae81ff>10</span>
 System.out.println<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Считаем символы = &#34;</span> + ctc<span style=color:#f92672>)</span>;
-</code></pre></div><p>На экране мы увидим:</p><pre><code class=language-code data-lang=code>Оригинальная строка : Мы учимся в школе Telran
+</code></pre></div><p>На экране мы увидим:</p>
+<pre><code class=language-code data-lang=code>Оригинальная строка : Мы учимся в школе Telran
 Считаем символы = 7
-</code></pre><h2 id=comparetostring-anotherstring---пример-использования>compareTo(String anotherString) - пример использования
-<a class=anchor href=#comparetostring-anotherstring---%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a></h2><p>Значение 0, если аргумент является строкой, лексикографически равной этой строке; значение меньше 0, если аргумент является строкой, лексикографически большей, чем эта строка; и значение больше 0, если аргумент является строкой, лексикографически меньшей, чем эта строка.</p><p>Лексикографический порядок — отношение линейного порядка на множестве слов над некоторым упорядоченным алфавитом Sigma. Своё название лексикографический порядок получил по аналогии с сортировкой по алфавиту в словаре.</p><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>        String str1 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Строка для теста&#34;</span>;
+</code></pre><h2 id=comparetostring-anotherstring---пример-использования>
+compareTo(String anotherString) - пример использования
+<a class=anchor href=#comparetostring-anotherstring---%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a>
+</h2>
+<p>Значение 0, если аргумент является строкой, лексикографически равной этой строке; значение меньше 0, если аргумент является строкой, лексикографически большей, чем эта строка; и значение больше 0, если аргумент является строкой, лексикографически меньшей, чем эта строка.</p>
+<p>Лексикографический порядок — отношение линейного порядка на множестве слов над некоторым упорядоченным алфавитом Sigma. Своё название лексикографический порядок получил по аналогии с сортировкой по алфавиту в словаре.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>        String str1 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Строка для теста&#34;</span>;
         String str2 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Строка для теста&#34;</span>;
         String str3 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Другая строка для теста&#34;</span>;
 
@@ -68,11 +500,15 @@ System.out.println<span style=color:#f92672>(</span><span style=color:#e6db74>&#
 
         result <span style=color:#f92672>=</span> str3.compareTo<span style=color:#f92672>(</span> str1 <span style=color:#f92672>)</span>;
         System.out.println<span style=color:#f92672>(</span>result<span style=color:#f92672>)</span>;
-</code></pre></div><p>Результат проверки compareTo(String anotherString):</p><pre><code class=language-code data-lang=code>0
+</code></pre></div><p>Результат проверки compareTo(String anotherString):</p>
+<pre><code class=language-code data-lang=code>0
 13
 -13
-</code></pre><h2 id=comparetoignorecasestring-str---пример-использования>compareToIgnoreCase(String str) - пример использования
-<a class=anchor href=#comparetoignorecasestring-str---%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>        String str1 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Строка для теста&#34;</span>;
+</code></pre><h2 id=comparetoignorecasestring-str---пример-использования>
+compareToIgnoreCase(String str) - пример использования
+<a class=anchor href=#comparetoignorecasestring-str---%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a>
+</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>        String str1 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Строка для теста&#34;</span>;
         String str2 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;сТрОкА дЛя тЕсТа&#34;</span>;
         String str3 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Другая строка для теста&#34;</span>;
 
@@ -84,14 +520,96 @@ System.out.println<span style=color:#f92672>(</span><span style=color:#e6db74>&#
 
         result <span style=color:#f92672>=</span> str3.compareToIgnoreCase<span style=color:#f92672>(</span>str1<span style=color:#f92672>)</span>;
         System.out.println<span style=color:#f92672>(</span>result<span style=color:#f92672>)</span>;
-</code></pre></div><p>Результат проверки compareToIgnoreCase(String str):</p><pre><code class=language-code data-lang=code>0
+</code></pre></div><p>Результат проверки compareToIgnoreCase(String str):</p>
+<pre><code class=language-code data-lang=code>0
 13
 -13
-</code></pre><h2 id=concatstring-str---пример-использования>concat(String str) - пример использования
-<a class=anchor href=#concatstring-str---%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a></h2><div class=highlight><pre style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>String str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Привет&#34;</span>;
+</code></pre><h2 id=concatstring-str---пример-использования>
+concat(String str) - пример использования
+<a class=anchor href=#concatstring-str---%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a>
+</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>String str <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Привет&#34;</span>;
 str <span style=color:#f92672>=</span> str.concat<span style=color:#f92672>(</span><span style=color:#e6db74>&#34; Мир&#34;</span><span style=color:#f92672>)</span>;
 System.out.println<span style=color:#f92672>(</span>str<span style=color:#f92672>)</span>;
-</code></pre></div><p>Результат проверки concat(String str):</p><pre><code class=language-code data-lang=code>Привет Мир
-</code></pre><p>К каждому типу данных существует множество стандартных методов. Важно уметь читать документацию и пользоваться поисковиками.</p><h2 id=домашнее-задание>Домашнее задание
-<a class=anchor href=#%d0%b4%d0%be%d0%bc%d0%b0%d1%88%d0%bd%d0%b5%d0%b5-%d0%b7%d0%b0%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5>#</a></h2><p>Разобраться с методами:</p><ul><li>contains(CharSequence s)</li><li>endsWith(String suffix)</li><li>equals(Object anObject)</li><li>equalsIgnoreCase(String anotherString)</li><li>isEmpty()</li><li>length()</li><li>replace(char oldChar, char newChar)</li><li>startsWith(String prefix)</li><li>startsWith(String prefix, int toffset)</li><li>substring(int beginIndex)</li><li>toLowerCase()</li><li>toUpperCase()</li><li>trim()</li></ul><h2 id=дополнительные-ссылки>Дополнительные ссылки
-<a class=anchor href=#%d0%b4%d0%be%d0%bf%d0%be%d0%bb%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8>#</a></h2><ol><li><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>Oфициальная документация</a> к String</li></ol></article><footer class=book-footer><div class="flex flex-wrap justify-between"></div><script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script></footer><div class=book-comments><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//andron13-de.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#возможности-различных-типов-данных-литералов-в-java--введение-в-java-011>Возможности различных типов данных, литералов в Java — введение в Java 011</a></li><li><a href=#явные-и-неявные-преобразования>Явные и неявные преобразования</a></li><li><a href=#string-to-int-and-double>String to int and double</a><ul><li><a href=#parse>Parse</a></li><li><a href=#stringvalueof314>String.valueOf(3.14)</a></li></ul></li><li><a href=#магия-строки-string-to-char>Магия строки: String to char</a><ul><li><a href=#charat---что-это-за-символ>charAt - Что это за символ?</a></li><li><a href=#substring>substring</a></li></ul></li><li><a href=#документация-и-доступные-методы>Документация и доступные методы</a><ul><li><a href=#ещё-раз-и-по-русски>Ещё раз и &ldquo;по-русски&rdquo;</a></li></ul></li><li><a href=#codepointatint-index---пример-использования>codePointAt(int index) - пример использования</a></li><li><a href=#codepointbeforeint-index---пример-использования>codePointBefore(int index) - пример использования</a></li><li><a href=#codepointcountint-beginindex-int-endindex---пример-использования>codePointCount(int beginIndex, int endIndex) - пример использования</a></li><li><a href=#comparetostring-anotherstring---пример-использования>compareTo(String anotherString) - пример использования</a></li><li><a href=#comparetoignorecasestring-str---пример-использования>compareToIgnoreCase(String str) - пример использования</a></li><li><a href=#concatstring-str---пример-использования>concat(String str) - пример использования</a></li><li><a href=#домашнее-задание>Домашнее задание</a></li><li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li></ul></nav></div></aside></main></body></html>
+</code></pre></div><p>Результат проверки concat(String str):</p>
+<pre><code class=language-code data-lang=code>Привет Мир
+</code></pre><p>К каждому типу данных существует множество стандартных методов. Важно уметь читать документацию и пользоваться поисковиками.</p>
+<h2 id=домашнее-задание>
+Домашнее задание
+<a class=anchor href=#%d0%b4%d0%be%d0%bc%d0%b0%d1%88%d0%bd%d0%b5%d0%b5-%d0%b7%d0%b0%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5>#</a>
+</h2>
+<p>Разобраться с методами:</p>
+<ul>
+<li>contains(CharSequence s)</li>
+<li>endsWith(String suffix)</li>
+<li>equals(Object anObject)</li>
+<li>equalsIgnoreCase(String anotherString)</li>
+<li>isEmpty()</li>
+<li>length()</li>
+<li>replace(char oldChar, char newChar)</li>
+<li>startsWith(String prefix)</li>
+<li>startsWith(String prefix, int toffset)</li>
+<li>substring(int beginIndex)</li>
+<li>toLowerCase()</li>
+<li>toUpperCase()</li>
+<li>trim()</li>
+</ul>
+<h2 id=дополнительные-ссылки>
+Дополнительные ссылки
+<a class=anchor href=#%d0%b4%d0%be%d0%bf%d0%be%d0%bb%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8>#</a>
+</h2>
+<ol>
+<li><a href=https://docs.oracle.com/javase/8/docs/api/java/lang/String.html>Oфициальная документация</a> к String</li>
+</ol>
+</article>
+<footer class=book-footer>
+<div class="flex flex-wrap justify-between">
+</div>
+<script>(function(){function a(c){const a=window.getSelection(),b=document.createRange();b.selectNodeContents(c),a.removeAllRanges(),a.addRange(b)}document.querySelectorAll("pre code").forEach(b=>{b.addEventListener("click",function(c){a(b.parentElement),navigator.clipboard&&navigator.clipboard.writeText(b.parentElement.textContent)})})})()</script>
+</footer>
+<div class=book-comments>
+<div id=disqus_thread></div>
+<script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//andron13-de.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script>
+<noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript>
+<a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a>
+</div>
+<label for=menu-control class="hidden book-menu-overlay"></label>
+</div>
+<aside class=book-toc>
+<div class=book-toc-content>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#возможности-различных-типов-данных-литералов-в-java--введение-в-java-011>Возможности различных типов данных, литералов в Java — введение в Java 011</a></li>
+<li><a href=#явные-и-неявные-преобразования>Явные и неявные преобразования</a></li>
+<li><a href=#string-to-int-and-double>String to int and double</a>
+<ul>
+<li><a href=#parse>Parse</a></li>
+<li><a href=#stringvalueof314>String.valueOf(3.14)</a></li>
+</ul>
+</li>
+<li><a href=#магия-строки-string-to-char>Магия строки: String to char</a>
+<ul>
+<li><a href=#charat---что-это-за-символ>charAt - Что это за символ?</a></li>
+<li><a href=#substring>substring</a></li>
+</ul>
+</li>
+<li><a href=#документация-и-доступные-методы>Документация и доступные методы</a>
+<ul>
+<li><a href=#ещё-раз-и-по-русски>Ещё раз и &ldquo;по-русски&rdquo;</a></li>
+</ul>
+</li>
+<li><a href=#codepointatint-index---пример-использования>codePointAt(int index) - пример использования</a></li>
+<li><a href=#codepointbeforeint-index---пример-использования>codePointBefore(int index) - пример использования</a></li>
+<li><a href=#codepointcountint-beginindex-int-endindex---пример-использования>codePointCount(int beginIndex, int endIndex) - пример использования</a></li>
+<li><a href=#comparetostring-anotherstring---пример-использования>compareTo(String anotherString) - пример использования</a></li>
+<li><a href=#comparetoignorecasestring-str---пример-использования>compareToIgnoreCase(String str) - пример использования</a></li>
+<li><a href=#concatstring-str---пример-использования>concat(String str) - пример использования</a></li>
+<li><a href=#домашнее-задание>Домашнее задание</a></li>
+<li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li>
+</ul>
+</nav>
+</div>
+</aside>
+</main>
+</body>
+</html>
