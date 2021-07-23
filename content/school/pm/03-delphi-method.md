@@ -1,6 +1,11 @@
 ---
 title: "Метод Дельфи"
+subtitle: "My Second Post"
+description: "My Second Post"
+date: 2021-06-30T18:56:26+02:00
 draft: false
+author: "andron13"
+menu: "pm_menu"
 ---
 
 ## Сколько времени занимает создание сайта?
