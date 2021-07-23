@@ -1,5 +1,7 @@
 ---
-draft: true
+title: Precedence diagram method
+date: 2014-09-28
+draft: false
 ---
 
 ## Сетевой график - Netzplantechnik 
