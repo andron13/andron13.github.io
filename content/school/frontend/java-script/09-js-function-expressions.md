@@ -129,7 +129,7 @@ https://i.imgur.com/hPj6snl.png
 
 https://i.imgur.com/uyvTre7.png
 
-
+https://metanit.com/web/javascript/3.3.php
 
 ## Дополнительные ссылки
 

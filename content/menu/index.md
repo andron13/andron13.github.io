@@ -78,6 +78,7 @@ headless: true
     - [7 - Image Map]({{< relref "/school/frontend/html/07-html-image-map.md" >}})
     - [8 - Гиперссылки]({{< relref "/school/frontend/html/08-html-url-tag-a.md" >}})
     - [9 - Перечисления]({{< relref "/school/frontend/html/09-html-u-o-list.md" >}})
+    - [15 - Emmet]({{< relref "/15-emmet.md" >}})
   - **CSS**    
     - [02 - Шрифты]({{< relref "/school/frontend/CSS/02-css-fonts.md" >}})
     - [03 - display none]({{< relref "/03-css-layout-display.md" >}})
@@ -107,7 +108,7 @@ headless: true
     - [12 - Поломанная таблица]({{< relref "/school/frontend/fe-exercises/01-basic/12-exercises-html.md" >}})
     - [13 - Многочлен]({{< relref "/school/frontend/fe-exercises/01-basic/13-exercises-html.md" >}})
     - [14 - Ключевые слова]({{< relref "/school/frontend/fe-exercises/01-basic/14-exercises-html.md" >}})
-    - [14 - Разные ссылки]({{< relref "/school/frontend/fe-exercises/01-basic/15-exercises-html.md" >}})
+    - [15 - Разные ссылки]({{< relref "/school/frontend/fe-exercises/01-basic/15-exercises-html.md" >}})
     - **Основы - таблицы**
     - [01 - Таблица 15 на 15]({{< relref "/school/frontend/fe-exercises/02-table/01-exercises-html-table.md" >}})
     - [02 - Типичная таблица]({{< relref "/school/frontend/fe-exercises/02-table/02-exercises-html-table.md" >}})
