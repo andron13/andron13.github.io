@@ -2,17 +2,13 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="CSS - Cascading Style Sheets #  CSS - каскадные таблицы стилей.
+<meta name=description content="CSS - Cascading Style Sheets #  <h1 style=&#34;color:blue;&#34;>A Blue Heading</h1> <style> body {background-color: powderblue;} h1 {color: blue;} p { color: red; font-family: courier; font-size: 160%; border: 2px solid powderblue; } </style> <link rel=&#34;stylesheet&#34; href=&#34;styles.css&#34;> CSS - каскадные таблицы стилей.
 Задача CSS привести HTML страницу в подобающий вид. Украсить, если хотите. При этом задача HTML, самое позднее с появления CSS структурировать контент.
-То есть, мы говорим о трёх составляющих у веб-страницы - HTML, CSS, контент.
-Когда мы говорим о HTML - мы говорим о тегах и атрибутах.
-Когда мы говорим о контенте — мы говорим о фото-, видео-, ауди-информации и текстах.">
+То есть, мы говорим о трёх составляющих у веб-страницы - HTML, CSS, контент.">
 <meta name=theme-color content="#FFFFFF"><meta property="og:title" content="Введение в CSS">
-<meta property="og:description" content="CSS - Cascading Style Sheets #  CSS - каскадные таблицы стилей.
+<meta property="og:description" content="CSS - Cascading Style Sheets #  <h1 style=&#34;color:blue;&#34;>A Blue Heading</h1> <style> body {background-color: powderblue;} h1 {color: blue;} p { color: red; font-family: courier; font-size: 160%; border: 2px solid powderblue; } </style> <link rel=&#34;stylesheet&#34; href=&#34;styles.css&#34;> CSS - каскадные таблицы стилей.
 Задача CSS привести HTML страницу в подобающий вид. Украсить, если хотите. При этом задача HTML, самое позднее с появления CSS структурировать контент.
-То есть, мы говорим о трёх составляющих у веб-страницы - HTML, CSS, контент.
-Когда мы говорим о HTML - мы говорим о тегах и атрибутах.
-Когда мы говорим о контенте — мы говорим о фото-, видео-, ауди-информации и текстах.">
+То есть, мы говорим о трёх составляющих у веб-страницы - HTML, CSS, контент.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://andron13.de/school/frontend/css/01-css-intro/"><meta property="og:image" content="https://andron13.de/site-feature-image.jpg"><meta property="article:section" content="school">
 <title>Введение в CSS | andron13</title>
@@ -20,7 +16,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.1a59c3a9216c5548751cb83dd3b09572e5a40984ee9688302ca50e263bc595b5.js integrity="sha256-GlnDqSFsVUh1HLg907CVcuWkCYTulogwLKUOJjvFlbU=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.07aa27015b9e9469a4b895c2a1fc9867a5bd434786b32c379a0ba61a96d932e4.js integrity="sha256-B6onAVuelGmkuJXCofyYZ6W9Q0eGsyw3mgumGpbZMuQ=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -267,7 +263,20 @@ Blog
 CSS - Cascading Style Sheets
 <a class=anchor href=#css----cascading-style-sheets>#</a>
 </h2>
-<p>CSS - каскадные таблицы стилей.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-html data-lang=html>&lt;<span style=color:#f92672>h1</span> <span style=color:#a6e22e>style</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;color:blue;&#34;</span>&gt;A Blue Heading&lt;/<span style=color:#f92672>h1</span>&gt;
+                                        &lt;<span style=color:#f92672>style</span>&gt;
+                                        <span style=color:#f92672>body</span> {<span style=color:#66d9ef>background-color</span>: <span style=color:#66d9ef>powderblue</span>;}
+<span style=color:#f92672>h1</span>   {<span style=color:#66d9ef>color</span>: <span style=color:#66d9ef>blue</span>;}
+<span style=color:#f92672>p</span> {
+  <span style=color:#66d9ef>color</span>: <span style=color:#66d9ef>red</span>;
+  <span style=color:#66d9ef>font-family</span>: courier;
+  <span style=color:#66d9ef>font-size</span>: <span style=color:#ae81ff>160</span><span style=color:#66d9ef>%</span>;
+  <span style=color:#66d9ef>border</span>: <span style=color:#ae81ff>2</span><span style=color:#66d9ef>px</span> <span style=color:#66d9ef>solid</span> <span style=color:#66d9ef>powderblue</span>;
+}
+&lt;/<span style=color:#f92672>style</span>&gt;
+&lt;<span style=color:#f92672>link</span> <span style=color:#a6e22e>rel</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;stylesheet&#34;</span> <span style=color:#a6e22e>href</span><span style=color:#f92672>=</span><span style=color:#e6db74>&#34;styles.css&#34;</span>&gt;
+
+</code></pre></div><p>CSS - каскадные таблицы стилей.</p>
 <p>Задача CSS привести HTML страницу в подобающий вид. Украсить, если хотите. При этом задача HTML, самое позднее с появления CSS структурировать контент.</p>
 <p>То есть, мы говорим о трёх составляющих у веб-страницы - HTML, CSS, контент.</p>
 <p>Когда мы говорим о HTML - мы говорим о тегах и атрибутах.<br>

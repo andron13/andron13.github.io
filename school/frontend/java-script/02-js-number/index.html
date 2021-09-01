@@ -16,7 +16,7 @@ let a, b, c; a = 5; b = 6; c = a + b; console.log(&#34;c&#34;, c); Достат�
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.1a59c3a9216c5548751cb83dd3b09572e5a40984ee9688302ca50e263bc595b5.js integrity="sha256-GlnDqSFsVUh1HLg907CVcuWkCYTulogwLKUOJjvFlbU=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.07aa27015b9e9469a4b895c2a1fc9867a5bd434786b32c379a0ba61a96d932e4.js integrity="sha256-B6onAVuelGmkuJXCofyYZ6W9Q0eGsyw3mgumGpbZMuQ=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -260,27 +260,6 @@ Blog
 <li><a href=#tofixed>toFixed</a></li>
 </ul>
 </li>
-<li><a href=#библиотека-math-в-javascript>Библиотека Math в JavaScript</a>
-<ul>
-<li><a href=#mathpi>Math.PI</a></li>
-<li><a href=#mathabsx>Math.abs(x)</a></li>
-<li><a href=#mathsqrtx>Math.sqrt(x)</a></li>
-<li><a href=#mathcbrtx>Math.cbrt(x)</a></li>
-<li><a href=#mathcosx>Math.cos(x)</a></li>
-<li><a href=#mathsinx>Math.sin(x)</a></li>
-<li><a href=#mathtanx>Math.tan(x)</a></li>
-<li><a href=#mathlogx>Math.log(x)</a></li>
-<li><a href=#mathlog10x>Math.log10(x)</a></li>
-<li><a href=#mathlog2x>Math.log2(x)</a></li>
-<li><a href=#mathceilx>Math.ceil(x)</a></li>
-<li><a href=#mathfloorx>Math.floor(x)</a></li>
-<li><a href=#mathroundx>Math.round(x)</a></li>
-<li><a href=#mathrandom>Math.random()</a></li>
-<li><a href=#mathmaxx-y->Math.max([x[, y[, …]]])</a></li>
-<li><a href=#mathminx-y->Math.min([x[, y[, …]]])</a></li>
-<li><a href=#mathpowx-y>Math.pow(x, y)</a></li>
-</ul>
-</li>
 </ul>
 </nav>
 </aside>
@@ -375,80 +354,6 @@ toFixed
 <p>Округлить и получить строку</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>((<span style=color:#ae81ff>12.56</span>).<span style=color:#a6e22e>toFixed</span>(<span style=color:#ae81ff>1</span>)); <span style=color:#75715e>//&#34;12.6&#34; - output
 </span></code></pre></div><p>toFixed прекрасно подходит для использования при математическом округлении.</p>
-<h2 id=библиотека-math-в-javascript>
-Библиотека Math в JavaScript
-<a class=anchor href=#%d0%b1%d0%b8%d0%b1%d0%bb%d0%b8%d0%be%d1%82%d0%b5%d0%ba%d0%b0-math-%d0%b2-javascript>#</a>
-</h2>
-<p>JS предоставляет часто требуемые математические константы и методы. Ознакомиться со всеми ими можно <a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Math>тут</a></p>
-<p>Но давайте рассмотрим парочку из них:</p>
-<h3 id=mathpi>
-Math.PI
-<a class=anchor href=#mathpi>#</a>
-</h3>
-<h3 id=mathabsx>
-Math.abs(x)
-<a class=anchor href=#mathabsx>#</a>
-</h3>
-<h3 id=mathsqrtx>
-Math.sqrt(x)
-<a class=anchor href=#mathsqrtx>#</a>
-</h3>
-<h3 id=mathcbrtx>
-Math.cbrt(x)
-<a class=anchor href=#mathcbrtx>#</a>
-</h3>
-<h3 id=mathcosx>
-Math.cos(x)
-<a class=anchor href=#mathcosx>#</a>
-</h3>
-<h3 id=mathsinx>
-Math.sin(x)
-<a class=anchor href=#mathsinx>#</a>
-</h3>
-<h3 id=mathtanx>
-Math.tan(x)
-<a class=anchor href=#mathtanx>#</a>
-</h3>
-<h3 id=mathlogx>
-Math.log(x)
-<a class=anchor href=#mathlogx>#</a>
-</h3>
-<h3 id=mathlog10x>
-Math.log10(x)
-<a class=anchor href=#mathlog10x>#</a>
-</h3>
-<h3 id=mathlog2x>
-Math.log2(x)
-<a class=anchor href=#mathlog2x>#</a>
-</h3>
-<h3 id=mathceilx>
-Math.ceil(x)
-<a class=anchor href=#mathceilx>#</a>
-</h3>
-<h3 id=mathfloorx>
-Math.floor(x)
-<a class=anchor href=#mathfloorx>#</a>
-</h3>
-<h3 id=mathroundx>
-Math.round(x)
-<a class=anchor href=#mathroundx>#</a>
-</h3>
-<h3 id=mathrandom>
-Math.random()
-<a class=anchor href=#mathrandom>#</a>
-</h3>
-<h3 id=mathmaxx-y->
-Math.max([x[, y[, …]]])
-<a class=anchor href=#mathmaxx-y->#</a>
-</h3>
-<h3 id=mathminx-y->
-Math.min([x[, y[, …]]])
-<a class=anchor href=#mathminx-y->#</a>
-</h3>
-<h3 id=mathpowx-y>
-Math.pow(x, y)
-<a class=anchor href=#mathpowx-y>#</a>
-</h3>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
@@ -477,27 +382,6 @@ Math.pow(x, y)
 <li><a href=#работа-чисел-со-стрингом>Работа чисел со стрингом</a>
 <ul>
 <li><a href=#tofixed>toFixed</a></li>
-</ul>
-</li>
-<li><a href=#библиотека-math-в-javascript>Библиотека Math в JavaScript</a>
-<ul>
-<li><a href=#mathpi>Math.PI</a></li>
-<li><a href=#mathabsx>Math.abs(x)</a></li>
-<li><a href=#mathsqrtx>Math.sqrt(x)</a></li>
-<li><a href=#mathcbrtx>Math.cbrt(x)</a></li>
-<li><a href=#mathcosx>Math.cos(x)</a></li>
-<li><a href=#mathsinx>Math.sin(x)</a></li>
-<li><a href=#mathtanx>Math.tan(x)</a></li>
-<li><a href=#mathlogx>Math.log(x)</a></li>
-<li><a href=#mathlog10x>Math.log10(x)</a></li>
-<li><a href=#mathlog2x>Math.log2(x)</a></li>
-<li><a href=#mathceilx>Math.ceil(x)</a></li>
-<li><a href=#mathfloorx>Math.floor(x)</a></li>
-<li><a href=#mathroundx>Math.round(x)</a></li>
-<li><a href=#mathrandom>Math.random()</a></li>
-<li><a href=#mathmaxx-y->Math.max([x[, y[, …]]])</a></li>
-<li><a href=#mathminx-y->Math.min([x[, y[, …]]])</a></li>
-<li><a href=#mathpowx-y>Math.pow(x, y)</a></li>
 </ul>
 </li>
 </ul>
