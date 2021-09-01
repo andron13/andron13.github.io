@@ -7,6 +7,23 @@ description:
 
 ## CSS  - Cascading Style Sheets
 
+````html
+<h1 style="color:blue;">A Blue Heading</h1>
+                                        <style>
+                                        body {background-color: powderblue;}
+h1   {color: blue;}
+p {
+  color: red;
+  font-family: courier;
+  font-size: 160%;
+  border: 2px solid powderblue;
+}
+</style>
+<link rel="stylesheet" href="styles.css">
+
+````
+
+
 CSS - каскадные таблицы стилей. 
 
 Задача CSS привести HTML страницу в подобающий вид. Украсить, если хотите. При этом задача HTML, самое позднее с появления CSS структурировать контент. 
