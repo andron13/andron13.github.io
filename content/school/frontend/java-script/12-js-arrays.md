@@ -165,7 +165,7 @@ console.log(belarusCities); // [ 'Минск', 'Могилёв' ]
 
 ````js
 let belarusCities = ["Минск", "Могилёв", "Мозырь"]
-belarusCities.pop(); // удаляется ПЕРВЫЙ элемент
+belarusCities.shift(); // удаляется ПЕРВЫЙ элемент
 console.log(belarusCities); // [ 'Могилёв', 'Мозырь' ]
 ````
 
