@@ -12,7 +12,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.07aa27015b9e9469a4b895c2a1fc9867a5bd434786b32c379a0ba61a96d932e4.js integrity="sha256-B6onAVuelGmkuJXCofyYZ6W9Q0eGsyw3mgumGpbZMuQ=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.505ce678b27e48e8f0578b4390562ed6e7739d3de10c3ffa4890a9cc022393f6.js integrity="sha256-UFzmeLJ+SOjwV4tDkFYu1udznT3hDD/6SJCpzAIjk/Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -256,141 +256,141 @@ Blog
 <ol>
 <li>Given n of 1 or more, return the factorial of n, which is n * (n-1) * (n-2) &mldr; 1. Compute the result recursively (without loops).<br>
 Дано N большее либо равное 1. Вернуть факториал N = n * (n-1) * (n-2) &mldr;. 1. Вычислить результат рекурсивно (без циклов).
-<pre><code>factorial(1) → 1
+<pre tabindex=0><code>factorial(1) → 1
 factorial(2) → 2
 factorial(3) → 6
 </code></pre></li>
 <li>We have bunnies standing in a line, numbered 1, 2, &mldr; The odd bunnies (1, 3, ..) have the normal 2 ears. The even bunnies (2, 4, ..) we&rsquo;ll say have 3 ears, because they each have a raised foot. Recursively return the number of &ldquo;ears&rdquo; in the bunny line 1, 2, &mldr; n (without loops or multiplication).<br>
 У нас есть очередь из кроликов и мы получаем количество стоящих в этой очереди кроликов. У нечётных кроликов по два уха. А у чётных кроликов вроде как по три уха. Это из-за того, что они все подняли ногу. Посчитайте количество видимых нами &ldquo;ушей&rdquo;. Не использовать циклы или умножение.
-<pre><code>bunnyEars2(0) → 0
+<pre tabindex=0><code>bunnyEars2(0) → 0
 bunnyEars2(1) → 2
 bunnyEars2(2) → 5
 </code></pre></li>
 <li>Given a non-negative int n, return the count of the occurrences of 7 as a digit, so for example 717 yields 2. (no loops). Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
 Дано положительное целочисленное N. Верните количество семёрок в числе. 717 - вернёт 2. Обратите внимание, что модуло 10 даёт вам правую цифру(126 % 10 равно 6), а деление на 10 удалит правую цифру(126 / 10 равно 12). Авторы задачи были к нам слишком добры и практически решили её прямов условии.
-<pre><code>count7(717) → 2
+<pre tabindex=0><code>count7(717) → 2
 count7(7) → 1
 count7(123) → 0
 </code></pre></li>
 <li>Given a string, compute recursively (no loops) the number of lowercase &lsquo;x&rsquo; chars in the string.<br>
 Получив строку, вычислите рекурсивно (без циклов) количество строчных символов &lsquo;x&rsquo; в строке.
-<pre><code>countX(&quot;xxhixx&quot;) → 4
+<pre tabindex=0><code>countX(&quot;xxhixx&quot;) → 4
 countX(&quot;xhixhix&quot;) → 3
 countX(&quot;hi&quot;) → 0
 </code></pre></li>
 <li>Given a string, compute recursively (no loops) a new string where all appearances of &ldquo;pi&rdquo; have been replaced by &ldquo;3.14&rdquo;.<br>
 Получив строку, вычислите рекурсивно (без циклов) новую строку, в которой все появления &ldquo;pi&rdquo; были заменены на &ldquo;3.14&rdquo;.
-<pre><code>changePi(&quot;xpix&quot;) → &quot;x3.14x&quot;
+<pre tabindex=0><code>changePi(&quot;xpix&quot;) → &quot;x3.14x&quot;
 changePi(&quot;pipi&quot;) → &quot;3.143.14&quot;
 changePi(&quot;pip&quot;) → &quot;3.14p&quot;
 </code></pre></li>
 <li>Given a string, compute recursively a new string where identical chars that are adjacent in the original string are separated from each other by a &ldquo;*&rdquo;.
-<pre><code>pairStar(&quot;hello&quot;) → &quot;hel*lo&quot;
+<pre tabindex=0><code>pairStar(&quot;hello&quot;) → &quot;hel*lo&quot;
 pairStar(&quot;xxyy&quot;) → &quot;x*xy*y&quot;
 pairStar(&quot;aaaa&quot;) → &quot;a*a*a*a&quot;
 </code></pre></li>
 <li>Count recursively the total number of &ldquo;abc&rdquo; and &ldquo;aba&rdquo; substrings that appear in the given string.
-<pre><code>countAbc(&quot;abc&quot;) → 1
+<pre tabindex=0><code>countAbc(&quot;abc&quot;) → 1
 countAbc(&quot;abcxxabc&quot;) → 2
 countAbc(&quot;abaxxaba&quot;) → 2 
 </code></pre></li>
 <li>Given a string, compute recursively the number of times lowercase &ldquo;hi&rdquo; appears in the string, however do not count &ldquo;hi&rdquo; that have an &lsquo;x&rsquo; immedately before them.
-<pre><code>countHi2(&quot;ahixhi&quot;) → 1
+<pre tabindex=0><code>countHi2(&quot;ahixhi&quot;) → 1
 countHi2(&quot;ahibhi&quot;) → 2
 countHi2(&quot;xhixhi&quot;) → 0
 </code></pre></li>
 <li>Given a string and a non-empty substring sub, compute recursively the number of times that sub appears in the string, without the sub strings overlapping.
-<pre><code>strCount(&quot;catcowcat&quot;, &quot;cat&quot;) → 2
+<pre tabindex=0><code>strCount(&quot;catcowcat&quot;, &quot;cat&quot;) → 2
 strCount(&quot;catcowcat&quot;, &quot;cow&quot;) → 1
 strCount(&quot;catcowcat&quot;, &quot;dog&quot;) → 0
 </code></pre></li>
 <li>We have a number of bunnies and each bunny has two big floppy ears. We want to compute the total number of ears across all the bunnies recursively (without loops or multiplication).
-<pre><code>bunnyEars(0) → 0
+<pre tabindex=0><code>bunnyEars(0) → 0
 bunnyEars(1) → 2
 bunnyEars(2) → 4
 </code></pre></li>
 <li>We have triangle made of blocks. The topmost row has 1 block, the next row down has 2 blocks, the next row has 3 blocks, and so on. Compute recursively (no loops or multiplication) the total number of blocks in such a triangle with the given number of rows.
-<pre><code>triangle(0) → 0
+<pre tabindex=0><code>triangle(0) → 0
 triangle(1) → 1
 triangle(2) → 3
 </code></pre></li>
 <li>Given a non-negative int n, compute recursively (no loops) the count of the occurrences of 8 as a digit, except that an 8 with another 8 immediately to its left counts double, so 8818 yields 4. Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
-<pre><code>count8(8) → 1
+<pre tabindex=0><code>count8(8) → 1
 count8(818) → 2
 count8(8818) → 4 
 </code></pre></li>
 <li>Given a string, compute recursively (no loops) the number of times lowercase &ldquo;hi&rdquo; appears in the string.
-<pre><code>countHi(&quot;xxhixx&quot;) → 1
+<pre tabindex=0><code>countHi(&quot;xxhixx&quot;) → 1
 countHi(&quot;xhixhix&quot;) → 2
 countHi(&quot;hi&quot;) → 1  
 </code></pre></li>
 <li>Given a string, compute recursively a new string where all the &lsquo;x&rsquo; chars have been removed.
-<pre><code>noX(&quot;xaxb&quot;) → &quot;ab&quot;
+<pre tabindex=0><code>noX(&quot;xaxb&quot;) → &quot;ab&quot;
 noX(&quot;abc&quot;) → &quot;abc&quot;
 noX(&quot;xx&quot;) → &quot;&quot;
 </code></pre></li>
 <li>Given a string, compute recursively a new string where all the lowercase &lsquo;x&rsquo; chars have been moved to the end of the string.
-<pre><code>endX(&quot;xxre&quot;) → &quot;rexx&quot;
+<pre tabindex=0><code>endX(&quot;xxre&quot;) → &quot;rexx&quot;
 endX(&quot;xxhixx&quot;) → &quot;hixxxx&quot;
 endX(&quot;xhixhix&quot;) → &quot;hihixxx&quot;
 </code></pre></li>
 <li>Given a string, compute recursively (no loops) the number of &ldquo;11&rdquo; substrings in the string. The &ldquo;11&rdquo; substrings should not overlap.
-<pre><code>count11(&quot;11abc11&quot;) → 2
+<pre tabindex=0><code>count11(&quot;11abc11&quot;) → 2
 count11(&quot;abc11x11x11&quot;) → 3
 count11(&quot;111&quot;) → 1
 </code></pre></li>
 <li>Given a string that contains a single pair of parenthesis, compute recursively a new string made of only of the parenthesis and their contents, so &ldquo;xyz(abc)123&rdquo; yields &ldquo;(abc)&rdquo;.
-<pre><code>parenBit(&quot;xyz(abc)123&quot;) → &quot;(abc)&quot;
+<pre tabindex=0><code>parenBit(&quot;xyz(abc)123&quot;) → &quot;(abc)&quot;
 parenBit(&quot;x(hello)&quot;) → &quot;(hello)&quot;
 parenBit(&quot;(xy)1&quot;) → &quot;(xy)&quot;
 </code></pre></li>
 <li>Given a string and a non-empty substring sub, compute recursively if at least n copies of sub appear in the string somewhere, possibly with overlapping. N will be non-negative.
-<pre><code>strCopies(&quot;catcowcat&quot;, &quot;cat&quot;, 2) → true
+<pre tabindex=0><code>strCopies(&quot;catcowcat&quot;, &quot;cat&quot;, 2) → true
 strCopies(&quot;catcowcat&quot;, &quot;cow&quot;, 2) → false
 strCopies(&quot;catcowcat&quot;, &quot;cow&quot;, 1) → true
 </code></pre></li>
 <li>The fibonacci sequence is a famous bit of mathematics, and it happens to have a recursive definition. The first two values in the sequence are 0 and 1 (essentially 2 base cases). Each subsequent value is the sum of the previous two values, so the whole sequence is: 0, 1, 1, 2, 3, 5, 8, 13, 21 and so on. Define a recursive fibonacci(n) method that returns the nth fibonacci number, with n=0 representing the start of the sequence.
-<pre><code>fibonacci(0) → 0
+<pre tabindex=0><code>fibonacci(0) → 0
 fibonacci(1) → 1
 fibonacci(2) → 1
 </code></pre></li>
 <li>Given a non-negative int n, return the sum of its digits recursively (no loops). Note that mod (%) by 10 yields the rightmost digit (126 % 10 is 6), while divide (/) by 10 removes the rightmost digit (126 / 10 is 12).
-<pre><code>sumDigits(126) → 9
+<pre tabindex=0><code>sumDigits(126) → 9
 sumDigits(49) → 13
 sumDigits(12) → 3 
 </code></pre></li>
 <li>Given base and n that are both 1 or more, compute recursively (no loops) the value of base to the n power, so powerN(3, 2) is 9 (3 squared).
-<pre><code>powerN(3, 1) → 3
+<pre tabindex=0><code>powerN(3, 1) → 3
 powerN(3, 2) → 9
 powerN(3, 3) → 27
 </code></pre></li>
 <li>Given a string, compute recursively (no loops) a new string where all the lowercase &lsquo;x&rsquo; chars have been changed to &lsquo;y&rsquo; chars.
-<pre><code>changeXY(&quot;codex&quot;) → &quot;codey&quot;
+<pre tabindex=0><code>changeXY(&quot;codex&quot;) → &quot;codey&quot;
 changeXY(&quot;xxhixx&quot;) → &quot;yyhiyy&quot;
 changeXY(&quot;xhixhix&quot;) → &quot;yhiyhiy&quot;
 </code></pre></li>
 <li>Given a string, compute recursively a new string where all the adjacent chars are now separated by a &ldquo;*&rdquo;.
-<pre><code>allStar(&quot;hello&quot;) → &quot;h*e*l*l*o&quot;
+<pre tabindex=0><code>allStar(&quot;hello&quot;) → &quot;h*e*l*l*o&quot;
 allStar(&quot;abc&quot;) → &quot;a*b*c&quot;
 allStar(&quot;ab&quot;) → &quot;a*b&quot;
 </code></pre></li>
 <li>We&rsquo;ll say that a &ldquo;pair&rdquo; in a string is two instances of a char separated by a char. So &ldquo;AxA&rdquo; the A&rsquo;s make a pair. Pair&rsquo;s can overlap, so &ldquo;AxAxA&rdquo; contains 3 pairs &ndash; 2 for A and 1 for x. Recursively compute the number of pairs in the given string.
-<pre><code>countPairs(&quot;axa&quot;) → 1
+<pre tabindex=0><code>countPairs(&quot;axa&quot;) → 1
 countPairs(&quot;axax&quot;) → 2
 countPairs(&quot;axbx&quot;) → 1  
 </code></pre></li>
 <li>Given a string, return recursively a &ldquo;cleaned&rdquo; string where adjacent chars that are the same have been reduced to a single char. So &ldquo;yyzzza&rdquo; yields &ldquo;yza&rdquo;.
-<pre><code>stringClean(&quot;yyzzza&quot;) → &quot;yza&quot;
+<pre tabindex=0><code>stringClean(&quot;yyzzza&quot;) → &quot;yza&quot;
 stringClean(&quot;abbbcdd&quot;) → &quot;abcd&quot;
 stringClean(&quot;Hello&quot;) → &quot;Helo&quot;
 </code></pre></li>
 <li>Given a string, return true if it is a nesting of zero or more pairs of parenthesis, like &ldquo;(())&rdquo; or &ldquo;((()))&rdquo;. Suggestion: check the first and last chars, and then recur on what&rsquo;s inside them.
-<pre><code>nestParen(&quot;(())&quot;) → true
+<pre tabindex=0><code>nestParen(&quot;(())&quot;) → true
 nestParen(&quot;((()))&quot;) → true
 nestParen(&quot;(((x))&quot;) → false
 </code></pre></li>
 <li>Given a string and a non-empty substring sub, compute recursively the largest substring which starts and ends with sub and return its length.
-<pre><code>strDist(&quot;catcowcat&quot;, &quot;cat&quot;) → 9
+<pre tabindex=0><code>strDist(&quot;catcowcat&quot;, &quot;cat&quot;) → 9
 strDist(&quot;catcowcat&quot;, &quot;cow&quot;) → 3
 strDist(&quot;cccatcowcatxx&quot;, &quot;cat&quot;) → 9 
 </code></pre></li>
@@ -401,12 +401,12 @@ strDist(&quot;cccatcowcatxx&quot;, &quot;cat&quot;) → 9
 </h2>
 <ol>
 <li>Given an array of ints, compute recursively if the array contains somewhere a value followed in the array by that value times 10. We&rsquo;ll use the convention of considering only the part of the array that begins at the given index. In this way, a recursive call can pass index+1 to move down the array. The initial call will pass in index as 0.
-<pre><code class=language-code data-lang=code>array220([1, 2, 20], 0) → true
+<pre tabindex=0><code class=language-code data-lang=code>array220([1, 2, 20], 0) → true
 array220([3, 30], 0) → true
 array220([3], 0) → false
 </code></pre></li>
 <li>Given an array of ints, compute recursively if the array contains a 6. We&rsquo;ll use the convention of considering only the part of the array that begins at the given index. In this way, a recursive call can pass index+1 to move down the array. The initial call will pass in index as 0.
-<pre><code class=language-code data-lang=code>array6([1, 6, 4], 0) → true
+<pre tabindex=0><code class=language-code data-lang=code>array6([1, 6, 4], 0) → true
 array6([1, 4], 0) → false
 array6([6], 0) → true
 </code></pre></li>

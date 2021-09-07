@@ -16,7 +16,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.07aa27015b9e9469a4b895c2a1fc9867a5bd434786b32c379a0ba61a96d932e4.js integrity="sha256-B6onAVuelGmkuJXCofyYZ6W9Q0eGsyw3mgumGpbZMuQ=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.505ce678b27e48e8f0578b4390562ed6e7739d3de10c3ffa4890a9cc022393f6.js integrity="sha256-UFzmeLJ+SOjwV4tDkFYu1udznT3hDD/6SJCpzAIjk/Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -300,7 +300,7 @@ String to int and double
 <a class=anchor href=#string-to-int-and-double>#</a>
 </h2>
 <p>Помимо уже <del>надеюсь</del> привычного преобразования переменных и литералов из int в double И обратно мы можем большее.</p>
-<pre><code class=language-code data-lang=code>String number = &quot;10&quot;;
+<pre tabindex=0><code class=language-code data-lang=code>String number = &quot;10&quot;;
 int result = Integer.parseInt(number);
 System.out.println(result);
 </code></pre><h3 id=parse>
@@ -335,10 +335,10 @@ charAt - Что это за символ?
 <a class=anchor href=#charat---%d1%87%d1%82%d0%be-%d1%8d%d1%82%d0%be-%d0%b7%d0%b0-%d1%81%d0%b8%d0%bc%d0%b2%d0%be%d0%bb>#</a>
 </h3>
 <p>Мы можем взять из <del>стринга</del>строкового литерала любой символ и записать его в переменную с типом данных <strong>char</strong>.</p>
-<pre><code class=language-code data-lang=code>String name = &quot;Андрей&quot;;
+<pre tabindex=0><code class=language-code data-lang=code>String name = &quot;Андрей&quot;;
 char myChar = name.charAt(2);
 </code></pre><p>Мы можем узнать числовое значение символьного литерала с помощью хитрости:</p>
-<pre><code class=language-code data-lang=code>System.out.println(0 + myChar);
+<pre tabindex=0><code class=language-code data-lang=code>System.out.println(0 + myChar);
 </code></pre><p>И это нам должно напомнить, что любой чар-литерал легко преобразовывается в инт-литерал. Давайте посмотрим всё сначала и вместе:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash>String name <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;Андрей&#34;</span>;
 char myChar <span style=color:#f92672>=</span> name.charAt<span style=color:#f92672>(</span>2<span style=color:#f92672>)</span>;
@@ -350,10 +350,10 @@ substring
 <a class=anchor href=#substring>#</a>
 </h3>
 <p>Чар-литерал является частью строки. Точно так же мы можем даже &ldquo;вырезать&rdquo; любой символ из строкового литерала.</p>
-<pre><code>String name = &quot;Андрей&quot;;
+<pre tabindex=0><code>String name = &quot;Андрей&quot;;
 String myLittleString = name.substring(0, 1);
 </code></pre><p>Но (пока) он так и останется строковым литералом, просто содержащим в себе один символ. Конечно же существуют ещё несколько возможностей разложить весь стринг на составные части, перебрать их и взять нужную часть. Но давайте пока разберёмся с charAt.</p>
-<pre><code>char myChar = &quot;Андрей&quot;.charAt(2);  // так тоже теоретически можно писать 
+<pre tabindex=0><code>char myChar = &quot;Андрей&quot;.charAt(2);  // так тоже теоретически можно писать 
 </code></pre><h2 id=документация-и-доступные-методы>
 Документация и доступные методы
 <a class=anchor href=#%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d0%b0%d1%86%d0%b8%d1%8f-%d0%b8-%d0%b4%d0%be%d1%81%d1%82%d1%83%d0%bf%d0%bd%d1%8b%d0%b5-%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d1%8b>#</a>
@@ -457,7 +457,7 @@ codePointAt(int index) - пример использования
 int result <span style=color:#f92672>=</span> testStr.codePointAt<span style=color:#f92672>(</span>1<span style=color:#f92672>)</span>;
 System.out.println<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Результат проверки метода codePointAt = &#34;</span> + result<span style=color:#f92672>)</span>;
 </code></pre></div><p>На экране мы увидим:</p>
-<pre><code class=language-code data-lang=code>Результат проверки метода codePointAt = 1088
+<pre tabindex=0><code class=language-code data-lang=code>Результат проверки метода codePointAt = 1088
 </code></pre><h2 id=codepointbeforeint-index---пример-использования>
 codePointBefore(int index) - пример использования
 <a class=anchor href=#codepointbeforeint-index---%d0%bf%d1%80%d0%b8%d0%bc%d0%b5%d1%80-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d1%8f>#</a>
@@ -467,7 +467,7 @@ System.out.println<span style=color:#f92672>(</span><span style=color:#e6db74>&#
 int result <span style=color:#f92672>=</span> str.codePointBefore<span style=color:#f92672>(</span>1<span style=color:#f92672>)</span>;
 System.out.println<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Character(unicode point) = &#34;</span> + result<span style=color:#f92672>)</span>;	
 </code></pre></div><p>На экране мы увидим:</p>
-<pre><code class=language-code data-lang=code>String = I love Java
+<pre tabindex=0><code class=language-code data-lang=code>String = I love Java
 Character(unicode point) = 73
 </code></pre><h2 id=codepointcountint-beginindex-int-endindex---пример-использования>
 codePointCount(int beginIndex, int endIndex) - пример использования
@@ -481,7 +481,7 @@ int ctc <span style=color:#f92672>=</span> str.codePointCount<span style=color:#
 // prints character from index <span style=color:#ae81ff>1</span> to index <span style=color:#ae81ff>10</span>
 System.out.println<span style=color:#f92672>(</span><span style=color:#e6db74>&#34;Считаем символы = &#34;</span> + ctc<span style=color:#f92672>)</span>;
 </code></pre></div><p>На экране мы увидим:</p>
-<pre><code class=language-code data-lang=code>Оригинальная строка : Мы учимся в школе Telran
+<pre tabindex=0><code class=language-code data-lang=code>Оригинальная строка : Мы учимся в школе Telran
 Считаем символы = 7
 </code></pre><h2 id=comparetostring-anotherstring---пример-использования>
 compareTo(String anotherString) - пример использования
@@ -502,7 +502,7 @@ compareTo(String anotherString) - пример использования
         result <span style=color:#f92672>=</span> str3.compareTo<span style=color:#f92672>(</span> str1 <span style=color:#f92672>)</span>;
         System.out.println<span style=color:#f92672>(</span>result<span style=color:#f92672>)</span>;
 </code></pre></div><p>Результат проверки compareTo(String anotherString):</p>
-<pre><code class=language-code data-lang=code>0
+<pre tabindex=0><code class=language-code data-lang=code>0
 13
 -13
 </code></pre><h2 id=comparetoignorecasestring-str---пример-использования>
@@ -522,7 +522,7 @@ compareToIgnoreCase(String str) - пример использования
         result <span style=color:#f92672>=</span> str3.compareToIgnoreCase<span style=color:#f92672>(</span>str1<span style=color:#f92672>)</span>;
         System.out.println<span style=color:#f92672>(</span>result<span style=color:#f92672>)</span>;
 </code></pre></div><p>Результат проверки compareToIgnoreCase(String str):</p>
-<pre><code class=language-code data-lang=code>0
+<pre tabindex=0><code class=language-code data-lang=code>0
 13
 -13
 </code></pre><h2 id=concatstring-str---пример-использования>
@@ -533,7 +533,7 @@ concat(String str) - пример использования
 str <span style=color:#f92672>=</span> str.concat<span style=color:#f92672>(</span><span style=color:#e6db74>&#34; Мир&#34;</span><span style=color:#f92672>)</span>;
 System.out.println<span style=color:#f92672>(</span>str<span style=color:#f92672>)</span>;
 </code></pre></div><p>Результат проверки concat(String str):</p>
-<pre><code class=language-code data-lang=code>Привет Мир
+<pre tabindex=0><code class=language-code data-lang=code>Привет Мир
 </code></pre><p>К каждому типу данных существует множество стандартных методов. Важно уметь читать документацию и пользоваться поисковиками.</p>
 <h2 id=домашнее-задание>
 Домашнее задание

@@ -12,7 +12,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.07aa27015b9e9469a4b895c2a1fc9867a5bd434786b32c379a0ba61a96d932e4.js integrity="sha256-B6onAVuelGmkuJXCofyYZ6W9Q0eGsyw3mgumGpbZMuQ=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.505ce678b27e48e8f0578b4390562ed6e7739d3de10c3ffa4890a9cc022393f6.js integrity="sha256-UFzmeLJ+SOjwV4tDkFYu1udznT3hDD/6SJCpzAIjk/Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -256,107 +256,107 @@ Blog
 </h1>
 <ol>
 <li>The parameter weekday is true if it is a weekday, and the parameter vacation is true if we are on vacation. We sleep in if it is not a weekday or we&rsquo;re on vacation. Return true if we sleep in.
-<pre><code>sleepIn(false, false) → true
+<pre tabindex=0><code>sleepIn(false, false) → true
 sleepIn(true, false) → false
 sleepIn(false, true) → true
 </code></pre></li>
 <li>Given an int n, return the absolute difference between n and 21, except return double the absolute difference if n is over 21.
-<pre><code>diff21(19) → 2
+<pre tabindex=0><code>diff21(19) → 2
 diff21(10) → 11
 diff21(21) → 0
 </code></pre></li>
 <li>Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes the absolute value of a number.
-<pre><code>nearHundred(93) → true
+<pre tabindex=0><code>nearHundred(93) → true
 nearHundred(90) → true
 nearHundred(89) → false
 </code></pre></li>
 <li>Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..str.length()-1 inclusive).
-<pre><code>missingChar(&quot;kitten&quot;, 1) → &quot;ktten&quot;
+<pre tabindex=0><code>missingChar(&quot;kitten&quot;, 1) → &quot;ktten&quot;
 missingChar(&quot;kitten&quot;, 0) → &quot;itten&quot;
 missingChar(&quot;kitten&quot;, 4) → &quot;kittn&quot;
 </code></pre></li>
 <li>Given a string, take the last char and return a new string with the last char added at the front and back, so &ldquo;cat&rdquo; yields &ldquo;tcatt&rdquo;. The original string will be length 1 or more.
-<pre><code>backAround(&quot;cat&quot;) → &quot;tcatt&quot;
+<pre tabindex=0><code>backAround(&quot;cat&quot;) → &quot;tcatt&quot;
 backAround(&quot;Hello&quot;) → &quot;oHelloo&quot;
 backAround(&quot;a&quot;) → &quot;aaa&quot;
 </code></pre></li>
 <li>Given a string, return true if the string starts with &ldquo;hi&rdquo; and false otherwise.
-<pre><code>startHi(&quot;hi there&quot;) → true
+<pre tabindex=0><code>startHi(&quot;hi there&quot;) → true
 startHi(&quot;hi&quot;) → true
 startHi(&quot;hello hi&quot;) → false
 </code></pre></li>
 <li>We&rsquo;ll say that a number is &ldquo;teen&rdquo; if it is in the range 13..19 inclusive. Given 3 int values, return true if 1 or more of them are teen.
-<pre><code>hasTeen(13, 20, 10) → true
+<pre tabindex=0><code>hasTeen(13, 20, 10) → true
 hasTeen(20, 19, 10) → true
 hasTeen(20, 10, 13) → true
 </code></pre></li>
 <li>Return true if the given string begins with &ldquo;mix&rdquo;, except the &rsquo;m' can be anything, so &ldquo;pix&rdquo;, &ldquo;9ix&rdquo; .. all count.
-<pre><code>mixStart(&quot;mix snacks&quot;) → true
+<pre tabindex=0><code>mixStart(&quot;mix snacks&quot;) → true
 mixStart(&quot;pix snacks&quot;) → true
 mixStart(&quot;piz snacks&quot;) → false
 </code></pre></li>
 <li>Given 2 int values, return whichever value is nearest to the value 10, or return 0 in the event of a tie. Note that Math.abs(n) returns the absolute value of a number.
-<pre><code>close10(8, 13) → 8
+<pre tabindex=0><code>close10(8, 13) → 8
 close10(13, 8) → 8
 close10(13, 7) → 0
 </code></pre></li>
 <li>Return true if the given string contains between 1 and 3 &lsquo;e&rsquo; chars.
-<pre><code>stringE(&quot;Hello&quot;) → true
+<pre tabindex=0><code>stringE(&quot;Hello&quot;) → true
 stringE(&quot;Heelle&quot;) → true
 stringE(&quot;Heelele&quot;) → false
 </code></pre></li>
 <li>Given a non-empty string and an int N, return the string made starting with char 0, and then every Nth char of the string. So if N is 3, use char 0, 3, 6, &mldr; and so on. N is 1 or more.
-<pre><code>everyNth(&quot;Miracle&quot;, 2) → &quot;Mrce&quot;
+<pre tabindex=0><code>everyNth(&quot;Miracle&quot;, 2) → &quot;Mrce&quot;
 everyNth(&quot;abcdefg&quot;, 2) → &quot;aceg&quot;
 everyNth(&quot;abcdefg&quot;, 3) → &quot;adg&quot;
 </code></pre></li>
 <li>We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return true if we are in trouble.
-<pre><code>monkeyTrouble(true, true) → true
+<pre tabindex=0><code>monkeyTrouble(true, true) → true
 monkeyTrouble(false, false) → true
 monkeyTrouble(true, false) → false
 </code></pre></li>
 <li>We have a loud talking parrot. The &ldquo;hour&rdquo; parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return true if we are in trouble.
-<pre><code>parrotTrouble(true, 6) → true
+<pre tabindex=0><code>parrotTrouble(true, 6) → true
 parrotTrouble(true, 7) → false
 parrotTrouble(false, 6) → false
 </code></pre></li>
 <li>Given 2 int values, return true if one is negative and one is positive. Except if the parameter &ldquo;negative&rdquo; is true, then return true only if both are negative.
-<pre><code>posNeg(1, -1, false) → true
+<pre tabindex=0><code>posNeg(1, -1, false) → true
 posNeg(-1, 1, false) → true
 posNeg(-4, -5, true) → true
 </code></pre></li>
 <li>Given a string, return a new string where the first and last chars have been exchanged.
-<pre><code>frontBack(&quot;code&quot;) → &quot;eodc&quot;
+<pre tabindex=0><code>frontBack(&quot;code&quot;) → &quot;eodc&quot;
 frontBack(&quot;a&quot;) → &quot;a&quot;
 frontBack(&quot;ab&quot;) → &quot;ba&quot;
 </code></pre></li>
 <li>Return true if the given non-negative number is a multiple of 3 or a multiple of 5. Use the % &ldquo;mod&rdquo; operator &ndash; see Introduction to Mod
-<pre><code>or35(3) → true
+<pre tabindex=0><code>or35(3) → true
 or35(10) → true
 or35(8) → false
 </code></pre></li>
 <li>Given two temperatures, return true if one is less than 0 and the other is greater than 100.
-<pre><code>icyHot(120, -1) → true
+<pre tabindex=0><code>icyHot(120, -1) → true
 icyHot(-1, 120) → true
 icyHot(2, 120) → false
 </code></pre></li>
 <li>We&rsquo;ll say that a number is &ldquo;teen&rdquo; if it is in the range 13..19 inclusive. Given 2 int values, return true if one or the other is teen, but not both.
-<pre><code>loneTeen(13, 99) → true
+<pre tabindex=0><code>loneTeen(13, 99) → true
 loneTeen(21, 19) → true
 loneTeen(13, 13) → false
 </code></pre></li>
 <li>Given a string, return a string made of the first 2 chars (if present), however include first char only if it is &lsquo;o&rsquo; and include the second only if it is &lsquo;z&rsquo;, so &ldquo;ozymandias&rdquo; yields &ldquo;oz&rdquo;.
-<pre><code>startOz(&quot;ozymandias&quot;) → &quot;oz&quot;
+<pre tabindex=0><code>startOz(&quot;ozymandias&quot;) → &quot;oz&quot;
 startOz(&quot;bzoo&quot;) → &quot;z&quot;
 startOz(&quot;oxx&quot;) → &quot;o&quot;
 </code></pre></li>
 <li>Given 2 int values, return true if they are both in the range 30..40 inclusive, or they are both in the range 40..50 inclusive.
-<pre><code>in3050(30, 31) → true
+<pre tabindex=0><code>in3050(30, 31) → true
 in3050(30, 41) → false
 in3050(40, 50) → true
 </code></pre></li>
 <li>Given two non-negative int values, return true if they have the same last digit, such as with 27 and 57. Note that the % &ldquo;mod&rdquo; operator computes remainders, so 17 % 10 is 7.
-<pre><code>lastDigit(7, 17) → true
+<pre tabindex=0><code>lastDigit(7, 17) → true
 lastDigit(6, 17) → false
 lastDigit(3, 113) → true
 </code></pre></li>
@@ -367,57 +367,57 @@ lastDigit(3, 113) → true
 </h2>
 <ol>
 <li>Given a string and a non-negative int n, return a larger string that is n copies of the original string.
-<pre><code>stringTimes(&quot;Hi&quot;, 2) → &quot;HiHi&quot;
+<pre tabindex=0><code>stringTimes(&quot;Hi&quot;, 2) → &quot;HiHi&quot;
 stringTimes(&quot;Hi&quot;, 3) → &quot;HiHiHi&quot;
 stringTimes(&quot;Hi&quot;, 1) → &quot;Hi&quot;
 </code></pre></li>
 <li>Given a string, return true if the first instance of &ldquo;x&rdquo; in the string is immediately followed by another &ldquo;x&rdquo;.
-<pre><code>doubleX(&quot;axxbb&quot;) → true
+<pre tabindex=0><code>doubleX(&quot;axxbb&quot;) → true
 doubleX(&quot;axaxax&quot;) → false
 doubleX(&quot;xxxxx&quot;) → true
 </code></pre></li>
 <li>Given a string, return the count of the number of times that a substring length 2 appears in the string and also as the last 2 chars of the string, so &ldquo;hixxxhi&rdquo; yields 1 (we won&rsquo;t count the end substring).
-<pre><code>last2(&quot;hixxhi&quot;) → 1
+<pre tabindex=0><code>last2(&quot;hixxhi&quot;) → 1
 last2(&quot;xaxxaxaxx&quot;) → 1
 last2(&quot;axxxaaxx&quot;) → 2
 </code></pre></li>
 <li>Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 &mldr; so &ldquo;kittens&rdquo; yields &ldquo;kien&rdquo;.
-<pre><code>altPairs(&quot;kitten&quot;) → &quot;kien&quot;
+<pre tabindex=0><code>altPairs(&quot;kitten&quot;) → &quot;kien&quot;
 altPairs(&quot;Chocolate&quot;) → &quot;Chole&quot;
 altPairs(&quot;CodingHorror&quot;) → &quot;Congrr&quot;
 </code></pre></li>
 <li>Given a string and a non-negative int n, we&rsquo;ll say that the front of the string is the first 3 chars, or whatever is there if the string is less than length 3. Return n copies of the front;
-<pre><code>frontTimes(&quot;Chocolate&quot;, 2) → &quot;ChoCho&quot;
+<pre tabindex=0><code>frontTimes(&quot;Chocolate&quot;, 2) → &quot;ChoCho&quot;
 frontTimes(&quot;Chocolate&quot;, 3) → &quot;ChoChoCho&quot;
 frontTimes(&quot;Abc&quot;, 3) → &quot;AbcAbcAbc&quot;
 </code></pre></li>
 <li>Given a string, return a new string made of every other char starting with the first, so &ldquo;Hello&rdquo; yields &ldquo;Hlo&rdquo;.
-<pre><code>stringBits(&quot;Hello&quot;) → &quot;Hlo&quot;
+<pre tabindex=0><code>stringBits(&quot;Hello&quot;) → &quot;Hlo&quot;
 stringBits(&quot;Hi&quot;) → &quot;H&quot;
 stringBits(&quot;Heeololeo&quot;) → &quot;Hello&quot;
 </code></pre></li>
 <li>Given 2 strings, a and b, return the number of the positions where they contain the same length 2 substring. So &ldquo;xxcaazz&rdquo; and &ldquo;xxbaaz&rdquo; yields 3, since the &ldquo;xx&rdquo;, &ldquo;aa&rdquo;, and &ldquo;az&rdquo; substrings appear in the same place in both strings.
-<pre><code>stringMatch(&quot;xxcaazz&quot;, &quot;xxbaaz&quot;) → 3
+<pre tabindex=0><code>stringMatch(&quot;xxcaazz&quot;, &quot;xxbaaz&quot;) → 3
 stringMatch(&quot;abc&quot;, &quot;abc&quot;) → 2
 stringMatch(&quot;abc&quot;, &quot;axc&quot;) → 0
 </code></pre></li>
 <li>Suppose the string &ldquo;yak&rdquo; is unlucky. Given a string, return a version where all the &ldquo;yak&rdquo; are removed, but the &ldquo;a&rdquo; can be any char. The &ldquo;yak&rdquo; strings will not overlap.
-<pre><code>stringYak(&quot;yakpak&quot;) → &quot;pak&quot;
+<pre tabindex=0><code>stringYak(&quot;yakpak&quot;) → &quot;pak&quot;
 stringYak(&quot;pakyak&quot;) → &quot;pak&quot;
 stringYak(&quot;yak123ya&quot;) → &quot;123ya&quot;
 </code></pre></li>
 <li>Count the number of &ldquo;xx&rdquo; in the given string. We&rsquo;ll say that overlapping is allowed, so &ldquo;xxx&rdquo; contains 2 &ldquo;xx&rdquo;.
-<pre><code>countXX(&quot;abcxx&quot;) → 1
+<pre tabindex=0><code>countXX(&quot;abcxx&quot;) → 1
 countXX(&quot;xxx&quot;) → 2
 countXX(&quot;xxxx&quot;) → 3
 </code></pre></li>
 <li>Given a non-empty string like &ldquo;Code&rdquo; return a string like &ldquo;CCoCodCode&rdquo;.
-<pre><code>stringSplosion(&quot;Code) → &quot;CCoCodCode&quot;
+<pre tabindex=0><code>stringSplosion(&quot;Code) → &quot;CCoCodCode&quot;
 stringSplosion(&quot;abc&quot;) → &quot;aababc&quot;
 stringSplosion(&quot;ab&quot;) → &quot;aab&quot;
 </code></pre></li>
 <li>Given a string, return a version where all the &ldquo;x&rdquo; have been removed. Except an &ldquo;x&rdquo; at the very start or end should not be removed.
-<pre><code>stringX(&quot;xxHxix&quot;) → &quot;xHix&quot;
+<pre tabindex=0><code>stringX(&quot;xxHxix&quot;) → &quot;xHix&quot;
 stringX(&quot;abxxxcd&quot;) → &quot;abcd&quot;
 stringX(&quot;xabxxxcdx&quot;) → &quot;xabcdx&quot;
 </code></pre></li>
@@ -429,7 +429,7 @@ FizzBuzz - Задача, которая очень часто встречает
 </h2>
 <ul>
 <li>Program that prints the numbers from 1 to 100. But for multiples of three print &ldquo;Fizz&rdquo; instead of the number and for the multiples of five print &ldquo;Buzz&rdquo;. For numbers which are multiples of both three and five print &ldquo;FizzBuzz&rdquo;.
-<pre><code>fizzBuzz() → &quot;Fizz&quot;
+<pre tabindex=0><code>fizzBuzz() → &quot;Fizz&quot;
 fizzBuzz() → &quot;Buzz&quot;
 fizzBuzz() → &quot;FizzBuzz&quot;
 </code></pre></li>

@@ -14,7 +14,7 @@ public class HelloChar { public static void main(String[] args) { char zahl = 10
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.07aa27015b9e9469a4b895c2a1fc9867a5bd434786b32c379a0ba61a96d932e4.js integrity="sha256-B6onAVuelGmkuJXCofyYZ6W9Q0eGsyw3mgumGpbZMuQ=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.505ce678b27e48e8f0578b4390562ed6e7739d3de10c3ffa4890a9cc022393f6.js integrity="sha256-UFzmeLJ+SOjwV4tDkFYu1udznT3hDD/6SJCpzAIjk/Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -291,7 +291,7 @@ Char
 <span style=color:#f92672>}</span>
 </code></pre></div><p>Объект базового (примитивного) типа <strong>char</strong> является 16-битным символом Unicode.</p>
 <p>Мы можем вывести любое сообщение или любой символ. однако достаточно сложно вывести на экран кавычки, ведь в них мы и держим значения наших переменных. Для таких случаев мы используем <strong>экранирование</strong>. С помощью обратной косой черты(обратный слеш) мы экранируем символ или используем её для дополнительных параметров.</p>
-<pre><code class=language-code data-lang=code>\b  Backspace (Курсор двигается на одно место влево)
+<pre tabindex=0><code class=language-code data-lang=code>\b  Backspace (Курсор двигается на одно место влево)
 \n  Newline (Новая строчка)
 \f  Newpage (Новая страница)
 \r  Carriage return (Курсор становится на первое место в строчке, возврат каретки)
@@ -320,7 +320,7 @@ String
 <span style=color:#f92672>}</span>
 </code></pre></div><p>Один символ можно записать как &ldquo;маленьким&rdquo; стрингом, так и через символ при помощи типа данных char. Цепочку символов, больше одного, мы храним в типе данных String. Каждый элемент этой цепочки символов можно отобразить при помощи char. Это очень важно понять и запомнить.</p>
 <p>Строковый набор символов класса String может немного больше, чем просто хранить строчку в переменной. Например, мы можем вычислить количество символов или длину String, используя один из методов, которые есть в Java. Это примерно такие же методы, как те, что мы использовали в предыдущих уроках, чтобы возводить числа в степень или выводить результаты на экран:</p>
-<pre><code class=language-code data-lang=code>        int dlina;
+<pre tabindex=0><code class=language-code data-lang=code>        int dlina;
         dlina = student.length();
         System.out.println(dlina);
 </code></pre><p>Для переменных типа String ява заготовила много дополнительных методов, которые делают нашу жизнь проще. Например, метод <strong>substring</strong>, который вырезает из одной цепочки символов другую.</p>
@@ -399,7 +399,7 @@ String
     <span style=color:#f92672>}</span>
 <span style=color:#f92672>}</span>
 </code></pre></div><p>Допустим, у нас имеется старая база данных, где все данные записаны в строковом виде. Например просто текстовый файл столбиком. Java даёт нам возможность &ldquo;спарсить&rdquo; целочисленные данные из строк.</p>
-<pre><code class=language-code data-lang=code>String number = &quot;10&quot;;
+<pre tabindex=0><code class=language-code data-lang=code>String number = &quot;10&quot;;
 int result = Integer.parseInt(number);
 System.out.println(result);
 </code></pre><h2 id=дополнительные-материалы>

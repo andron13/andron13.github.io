@@ -14,7 +14,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.07aa27015b9e9469a4b895c2a1fc9867a5bd434786b32c379a0ba61a96d932e4.js integrity="sha256-B6onAVuelGmkuJXCofyYZ6W9Q0eGsyw3mgumGpbZMuQ=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.505ce678b27e48e8f0578b4390562ed6e7739d3de10c3ffa4890a9cc022393f6.js integrity="sha256-UFzmeLJ+SOjwV4tDkFYu1udznT3hDD/6SJCpzAIjk/Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -281,30 +281,30 @@ Blog
 <a class=anchor href=#%d0%be%d0%b1%d1%8a%d1%8f%d0%b2%d0%bb%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d0%b0>#</a>
 </h2>
 <p>Пример объявления(декларации) <strong>dataType[] arrayName;</strong></p>
-<pre><code>int[] myArray;
+<pre tabindex=0><code>int[] myArray;
 String[] user;
 double[] gpsPoints;
 boolean[] truthTable;
 char[] cyrillicAlphabet;
 </code></pre><p>Срабатывает и такой синтаксис объявления массива <strong>dataType arrayName[];</strong>:</p>
-<pre><code>int myArray[];
+<pre tabindex=0><code>int myArray[];
 String user[];
 double gpsPoints[];
 boolean truthTable[];
 char cyrillicAlphabet[];
 </code></pre><p>Этот синтаксис наследован от <strong>языка C</strong>, который является родным папой Явы. Его можно встретить, это не является ошибкой. Но рекомендуется использовать первый вариант.</p>
 <p>Инициализация происходит с помощью знакомого нам по <strong>Scanner</strong> оператора <strong>new</strong>, массивы также можно объявлять и инициализировать одновременно:</p>
-<pre><code>&lt;&lt;ИмяУжеОбъявленнойПеременной&gt;&gt; = new &lt;&lt;типДанных&gt;&gt; &lt;&lt;ДлинаМассива&gt;&gt;
+<pre tabindex=0><code>&lt;&lt;ИмяУжеОбъявленнойПеременной&gt;&gt; = new &lt;&lt;типДанных&gt;&gt; &lt;&lt;ДлинаМассива&gt;&gt;
 int[] field;
 field = new int[10]; //в массиве 10 ячеек.
-</code></pre><pre><code>String[] fourSeasons = new String[] {&quot;Vivaldi&quot;, &quot;Tchaikovsky&quot;, &quot;Astor Piazzolla&quot;, &quot;Stephen Edwin King&quot;};
+</code></pre><pre tabindex=0><code>String[] fourSeasons = new String[] {&quot;Vivaldi&quot;, &quot;Tchaikovsky&quot;, &quot;Astor Piazzolla&quot;, &quot;Stephen Edwin King&quot;};
 
 int[] numberFibonacci = new int[] {0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144}
 
 String[] germanCity = new String[] {&quot;Berlin&quot;, &quot;München&quot;, &quot;Dresden&quot;,&quot;Hamburg&quot;,&quot;Köln&quot;,&quot;Potsdam&quot;}
 </code></pre><p>То есть мы можем задать пустой массив определённого размера или заполненный массив, где длина массива очевидна. Инициализированный массив <strong>не может</strong> быть неопределённого размера.</p>
 <p>Давайте на последнем примере посчитаем элементы в массиве и общее количество знаков, к примеру.</p>
-<pre><code>public static void germanCity() {
+<pre tabindex=0><code>public static void germanCity() {
 	String[] germanCity = new String[]{&quot;Berlin&quot;, &quot;München&quot;, &quot;Dresden&quot;, &quot;Hamburg&quot;, &quot;Köln&quot;, &quot;Potsdam&quot;};
 	int allGermanCity = germanCity.length;
 	int allLetter = 0;

@@ -12,7 +12,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.07aa27015b9e9469a4b895c2a1fc9867a5bd434786b32c379a0ba61a96d932e4.js integrity="sha256-B6onAVuelGmkuJXCofyYZ6W9Q0eGsyw3mgumGpbZMuQ=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.505ce678b27e48e8f0578b4390562ed6e7739d3de10c3ffa4890a9cc022393f6.js integrity="sha256-UFzmeLJ+SOjwV4tDkFYu1udznT3hDD/6SJCpzAIjk/Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -251,168 +251,168 @@ Blog
 </h1>
 <ol>
 <li>Given a string name, e.g. &ldquo;Bob&rdquo;, return a greeting of the form &ldquo;Hello Bob!&rdquo;.
-<pre><code>helloName(&quot;Bob&quot;) → &quot;Hello Bob!&quot;
+<pre tabindex=0><code>helloName(&quot;Bob&quot;) → &quot;Hello Bob!&quot;
 helloName(&quot;Alice&quot;) → &quot;Hello Alice!&quot;
 helloName(&quot;X&quot;) → &quot;Hello X!&quot;
 </code></pre></li>
 <li>Given an &ldquo;out&rdquo; string length 4, such as &ldquo;&#171;&#187;&rdquo;, and a word, return a new string where the word is in the middle of the out string, e.g. &ldquo;&#171;word&#187;&rdquo;. Note: use str.substring(i, j) to extract the String starting at index i and going up to but not including index j.
-<pre><code>makeOutWord(&quot;&lt;&lt;&gt;&gt;&quot;, &quot;Yay&quot;) → &quot;&lt;&lt;Yay&gt;&gt;&quot;
+<pre tabindex=0><code>makeOutWord(&quot;&lt;&lt;&gt;&gt;&quot;, &quot;Yay&quot;) → &quot;&lt;&lt;Yay&gt;&gt;&quot;
 makeOutWord(&quot;&lt;&lt;&gt;&gt;&quot;, &quot;WooHoo&quot;) → &quot;&lt;&lt;WooHoo&gt;&gt;&quot;
 makeOutWord(&quot;[[]]&quot;, &quot;word&quot;) → &quot;[[word]]&quot;
 </code></pre></li>
 <li>Given a string of even length, return the first half. So the string &ldquo;WooHoo&rdquo; yields &ldquo;Woo&rdquo;.
-<pre><code>firstHalf(&quot;WooHoo&quot;) → &quot;Woo&quot;
+<pre tabindex=0><code>firstHalf(&quot;WooHoo&quot;) → &quot;Woo&quot;
 firstHalf(&quot;HelloThere&quot;) → &quot;Hello&quot;
 firstHalf(&quot;abcdef&quot;) → &quot;abc&quot;
 </code></pre></li>
 <li>Given 2 strings, return their concatenation, except omit the first char of each. The strings will be at least length 1.
-<pre><code>nonStart(&quot;Hello&quot;, &quot;There&quot;) → &quot;ellohere&quot;
+<pre tabindex=0><code>nonStart(&quot;Hello&quot;, &quot;There&quot;) → &quot;ellohere&quot;
 nonStart(&quot;java&quot;, &quot;code&quot;) → &quot;avaode&quot;
 nonStart(&quot;shotl&quot;, &quot;java&quot;) → &quot;hotlava&quot;
 </code></pre></li>
 <li>Given a string, return a string length 1 from its front, unless front is false, in which case return a string length 1 from its back. The string will be non-empty.
-<pre><code>theEnd(&quot;Hello&quot;, true) → &quot;H&quot;
+<pre tabindex=0><code>theEnd(&quot;Hello&quot;, true) → &quot;H&quot;
 theEnd(&quot;Hello&quot;, false) → &quot;o&quot;
 theEnd(&quot;oh&quot;, true) → &quot;o&quot;
 </code></pre></li>
 <li>Given a string, return true if it ends in &ldquo;ly&rdquo;.
-<pre><code>endsLy(&quot;oddly&quot;) → true
+<pre tabindex=0><code>endsLy(&quot;oddly&quot;) → true
 endsLy(&quot;y&quot;) → false
 endsLy(&quot;oddy&quot;) → false
 </code></pre></li>
 <li>Given a string of odd length, return the string length 3 from its middle, so &ldquo;Candy&rdquo; yields &ldquo;and&rdquo;. The string length will be at least 3.
-<pre><code>middleThree(&quot;Candy&quot;) → &quot;and&quot;
+<pre tabindex=0><code>middleThree(&quot;Candy&quot;) → &quot;and&quot;
 middleThree(&quot;and&quot;) → &quot;and&quot;
 middleThree(&quot;solving&quot;) → &quot;lvi&quot;
 </code></pre></li>
 <li>Given 2 strings, a and b, return a new string made of the first char of a and the last char of b, so &ldquo;yo&rdquo; and &ldquo;java&rdquo; yields &ldquo;ya&rdquo;. If either string is length 0, use &lsquo;@&rsquo; for its missing char.
-<pre><code>lastChars(&quot;last&quot;, &quot;chars&quot;) → &quot;ls&quot;
+<pre tabindex=0><code>lastChars(&quot;last&quot;, &quot;chars&quot;) → &quot;ls&quot;
 lastChars(&quot;yo&quot;, &quot;java&quot;) → &quot;ya&quot;
 lastChars(&quot;hi&quot;, &quot;&quot;) → &quot;h@&quot;
 </code></pre></li>
 <li>Given a string, if the string begins with &ldquo;red&rdquo; or &ldquo;blue&rdquo; return that color string, otherwise return the empty string.
-<pre><code>seeColor(&quot;redxx&quot;) → &quot;red&quot;
+<pre tabindex=0><code>seeColor(&quot;redxx&quot;) → &quot;red&quot;
 seeColor(&quot;xxred&quot;) → &quot;&quot;
 seeColor(&quot;blueTimes&quot;) → &quot;blue&quot;
 </code></pre></li>
 <li>Given a string, return a new string made of 3 copies of the first 2 chars of the original string. The string may be any length. If there are fewer than 2 chars, use whatever is there.
-<pre><code>extraFront(&quot;Hello&quot;) → &quot;HeHeHe&quot;
+<pre tabindex=0><code>extraFront(&quot;Hello&quot;) → &quot;HeHeHe&quot;
 extraFront(&quot;ab&quot;) → &quot;ababab&quot;
 extraFront(&quot;H&quot;) → &quot;HHH&quot;
 </code></pre></li>
 <li>Given a string and a second &ldquo;word&rdquo; string, we&rsquo;ll say that the word matches the string if it appears at the front of the string, except its first char does not need to match exactly. On a match, return the front of the string, or otherwise return the empty string. So, so with the string &ldquo;hippo&rdquo; the word &ldquo;hi&rdquo; returns &ldquo;hi&rdquo; and &ldquo;xip&rdquo; returns &ldquo;hip&rdquo;. The word will be at least length 1.
-<pre><code>startWord(&quot;hippo&quot;, &quot;hi&quot;) → &quot;hi&quot;
+<pre tabindex=0><code>startWord(&quot;hippo&quot;, &quot;hi&quot;) → &quot;hi&quot;
 startWord(&quot;hippo&quot;, &quot;xip&quot;) → &quot;hip&quot;
 startWord(&quot;hippo&quot;, &quot;i&quot;) → &quot;h&quot;
 </code></pre></li>
 <li>Given two strings, a and b, return the result of putting them together in the order abba, e.g. &ldquo;Hi&rdquo; and &ldquo;Bye&rdquo; returns &ldquo;HiByeByeHi&rdquo;.
-<pre><code>makeAbba(&quot;Hi&quot;, &quot;Bye&quot;) → &quot;HiByeByeHi&quot;
+<pre tabindex=0><code>makeAbba(&quot;Hi&quot;, &quot;Bye&quot;) → &quot;HiByeByeHi&quot;
 makeAbba(&quot;Yo&quot;, &quot;Alice&quot;) → &quot;YoAliceAliceYo&quot;
 makeAbba(&quot;What&quot;, &quot;Up&quot;) → &quot;WhatUpUpWhat&quot;
 </code></pre></li>
 <li>Given a string, return a new string made of 3 copies of the last 2 chars of the original string. The string length will be at least 2.
-<pre><code>extraEnd(&quot;Hello&quot;) → &quot;lololo&quot;
+<pre tabindex=0><code>extraEnd(&quot;Hello&quot;) → &quot;lololo&quot;
 extraEnd(&quot;ab&quot;) → &quot;ababab&quot;
 extraEnd(&quot;Hi&quot;) → &quot;HiHiHi&quot;
 </code></pre></li>
 <li>Given a string, return a version without the first and last char, so &ldquo;Hello&rdquo; yields &ldquo;ell&rdquo;. The string length will be at least 2.
-<pre><code>withoutEnd(&quot;Hello&quot;) → &quot;ell&quot;
+<pre tabindex=0><code>withoutEnd(&quot;Hello&quot;) → &quot;ell&quot;
 withoutEnd(&quot;java&quot;) → &quot;av&quot;
 withoutEnd(&quot;coding&quot;) → &quot;odin&quot;
 </code></pre></li>
 <li>Given a string, return a &ldquo;rotated left 2&rdquo; version where the first 2 chars are moved to the end. The string length will be at least 2.
-<pre><code>left2(&quot;Hello&quot;) → &quot;lloHe&quot;
+<pre tabindex=0><code>left2(&quot;Hello&quot;) → &quot;lloHe&quot;
 left2(&quot;java&quot;) → &quot;vaja&quot;
 left2(&quot;Hi&quot;) → &quot;Hi&quot;
 </code></pre></li>
 <li>Given a string, return a version without both the first and last char of the string. The string may be any length, including 0.
-<pre><code>withoutEnd2(&quot;Hello&quot;) → &quot;ell&quot;
+<pre tabindex=0><code>withoutEnd2(&quot;Hello&quot;) → &quot;ell&quot;
 withoutEnd2(&quot;abc&quot;) → &quot;b&quot;
 withoutEnd2(&quot;ab&quot;) → &quot;&quot;
 </code></pre></li>
 <li>Given a string and an int n, return a string made of the first and last n chars from the string. The string length will be at least n.
-<pre><code>nTwice(&quot;Hello&quot;, 2) → &quot;Helo&quot;
+<pre tabindex=0><code>nTwice(&quot;Hello&quot;, 2) → &quot;Helo&quot;
 nTwice(&quot;Chocolate&quot;, 3) → &quot;Choate&quot;
 nTwice(&quot;Chocolate&quot;, 1) → &quot;Ce&quot;
 </code></pre></li>
 <li>Given a string, return true if &ldquo;bad&rdquo; appears starting at index 0 or 1 in the string, such as with &ldquo;badxxx&rdquo; or &ldquo;xbadxx&rdquo; but not &ldquo;xxbadxx&rdquo;. The string may be any length, including 0. Note: use .equals() to compare 2 strings.
-<pre><code>hasBad(&quot;badxx&quot;) → true
+<pre tabindex=0><code>hasBad(&quot;badxx&quot;) → true
 hasBad(&quot;xbadxx&quot;) → true
 hasBad(&quot;xxbadxx&quot;) → false
 </code></pre></li>
 <li>Given two strings, append them together (known as &ldquo;concatenation&rdquo;) and return the result. However, if the concatenation creates a double-char, then omit one of the chars, so &ldquo;abc&rdquo; and &ldquo;cat&rdquo; yields &ldquo;abcat&rdquo;.
-<pre><code>conCat(&quot;abc&quot;, &quot;cat&quot;) → &quot;abcat&quot;
+<pre tabindex=0><code>conCat(&quot;abc&quot;, &quot;cat&quot;) → &quot;abcat&quot;
 conCat(&quot;dog&quot;, &quot;cat&quot;) → &quot;dogcat&quot;
 conCat(&quot;abc&quot;, &quot;&quot;) → &quot;abc&quot;
 </code></pre></li>
 <li>Given a string, return true if the first 2 chars in the string also appear at the end of the string, such as with &ldquo;edited&rdquo;.
-<pre><code>frontAgain(&quot;edited&quot;) → true
+<pre tabindex=0><code>frontAgain(&quot;edited&quot;) → true
 frontAgain(&quot;edit&quot;) → false
 frontAgain(&quot;ed&quot;) → true
 </code></pre></li>
 <li>Given a string, if a length 2 substring appears at both its beginning and end, return a string without the substring at the beginning, so &ldquo;HelloHe&rdquo; yields &ldquo;lloHe&rdquo;. The substring may overlap with itself, so &ldquo;Hi&rdquo; yields &ldquo;&rdquo;. Otherwise, return the original string unchanged.
-<pre><code>without2(&quot;HelloHe&quot;) → &quot;lloHe&quot;
+<pre tabindex=0><code>without2(&quot;HelloHe&quot;) → &quot;lloHe&quot;
 without2(&quot;HelloHi&quot;) → &quot;HelloHi&quot;
 without2(&quot;Hi&quot;) → &quot;&quot;
 </code></pre></li>
 <li>Given a string, if the first or last chars are &lsquo;x&rsquo;, return the string without those &lsquo;x&rsquo; chars, and otherwise return the string unchanged.
-<pre><code>withoutX(&quot;xHix&quot;) → &quot;Hi&quot;
+<pre tabindex=0><code>withoutX(&quot;xHix&quot;) → &quot;Hi&quot;
 withoutX(&quot;xHi&quot;) → &quot;Hi&quot;
 withoutX(&quot;Hxix&quot;) → &quot;Hxi&quot;
 </code></pre></li>
 <li>The web is built with HTML strings like &ldquo;Yay&rdquo; which draws Yay as italic text. In this example, the &ldquo;i&rdquo; tag makes and which surround the word &ldquo;Yay&rdquo;. Given tag and word strings, create the HTML string with tags around the word, e.g. &ldquo;Yay&rdquo;.
-<pre><code>makeTags(&quot;i&quot;, &quot;Yay&quot;) → &quot;&lt;i&gt;Yay&lt;/i&gt;&quot;
+<pre tabindex=0><code>makeTags(&quot;i&quot;, &quot;Yay&quot;) → &quot;&lt;i&gt;Yay&lt;/i&gt;&quot;
 makeTags(&quot;i&quot;, &quot;Hello&quot;) → &quot;&lt;i&gt;Hello&lt;/i&gt;&quot;
 makeTags(&quot;cite&quot;, &quot;Yay&quot;) → &quot;&lt;cite&gt;Yay&lt;/cite&gt;&quot;
 </code></pre></li>
 <li>Given a string, return the string made of its first two chars, so the String &ldquo;Hello&rdquo; yields &ldquo;He&rdquo;. If the string is shorter than length 2, return whatever there is, so &ldquo;X&rdquo; yields &ldquo;X&rdquo;, and the empty string "" yields the empty string &ldquo;&rdquo;. Note that str.length() returns the length of a string.
-<pre><code>firstTwo(&quot;Hello&quot;) → &quot;He&quot;
+<pre tabindex=0><code>firstTwo(&quot;Hello&quot;) → &quot;He&quot;
 firstTwo(&quot;abcdefg&quot;) → &quot;ab&quot;
 firstTwo(&quot;ab&quot;) → &quot;ab&quot;
 </code></pre></li>
 <li>Given 2 strings, a and b, return a string of the form short+long+short, with the shorter string on the outside and the longer string on the inside. The strings will not be the same length, but they may be empty (length 0).
-<pre><code>comboString(&quot;Hello&quot;, &quot;hi&quot;) → &quot;hiHellohi&quot;
+<pre tabindex=0><code>comboString(&quot;Hello&quot;, &quot;hi&quot;) → &quot;hiHellohi&quot;
 comboString(&quot;hi&quot;, &quot;Hello&quot;) → &quot;hiHellohi&quot;
 comboString(&quot;aaa&quot;, &quot;b&quot;) → &quot;baaab&quot;
 </code></pre></li>
 <li>Given a string, return a &ldquo;rotated right 2&rdquo; version where the last 2 chars are moved to the start. The string length will be at least 2.
-<pre><code>right2(&quot;Hello&quot;) → &quot;loHel&quot;
+<pre tabindex=0><code>right2(&quot;Hello&quot;) → &quot;loHel&quot;
 right2(&quot;java&quot;) → &quot;vaja&quot;
 right2(&quot;Hi&quot;) → &quot;Hi&quot;
 </code></pre></li>
 <li>Given a string of even length, return a string made of the middle two chars, so the string &ldquo;string&rdquo; yields &ldquo;ri&rdquo;. The string length will be at
 least 2.
-<pre><code>middleTwo(&quot;string&quot;) → &quot;ri&quot;
+<pre tabindex=0><code>middleTwo(&quot;string&quot;) → &quot;ri&quot;
 middleTwo(&quot;code&quot;) → &quot;od&quot;
 middleTwo(&quot;Practice&quot;) → &quot;ct&quot;
 </code></pre></li>
 <li>Given a string and an index, return a string length 2 starting at the given index. If the index is too big or too small to define a string length 2, use the first 2 chars. The string length will be at least 2.
-<pre><code>twoChar(&quot;java&quot;, 0) → &quot;ja&quot;
+<pre tabindex=0><code>twoChar(&quot;java&quot;, 0) → &quot;ja&quot;
 twoChar(&quot;java&quot;, 2) → &quot;va&quot;
 twoChar(&quot;java&quot;, 3) → &quot;ja&quot;
 </code></pre></li>
 <li>Given a string, return a string length 2 made of its first 2 chars. If the string length is less than 2, use &lsquo;@&rsquo; for the missing chars.
-<pre><code>atFirst(&quot;hello&quot;) → &quot;he&quot;
+<pre tabindex=0><code>atFirst(&quot;hello&quot;) → &quot;he&quot;
 atFirst(&quot;hi&quot;) → &quot;hi&quot;
 atFirst(&quot;h&quot;) → &quot;h@&quot;
 </code></pre></li>
 <li>Given a string of any length, return a new string where the last 2 chars, if present, are swapped, so &ldquo;coding&rdquo; yields &ldquo;codign&rdquo;.
-<pre><code>lastTwo(&quot;coding&quot;) → &quot;codign&quot;
+<pre tabindex=0><code>lastTwo(&quot;coding&quot;) → &quot;codign&quot;
 lastTwo(&quot;cat&quot;) → &quot;cta&quot;
 lastTwo(&quot;ab&quot;) → &quot;ba&quot;
 </code></pre></li>
 <li>Given two strings, append them together (known as &ldquo;concatenation&rdquo;) and return the result. However, if the strings are different lengths, omit chars from the longer string so it is the same length as the shorter string. So &ldquo;Hello&rdquo; and &ldquo;Hi&rdquo; yield &ldquo;loHi&rdquo;. The strings may be any length.
-<pre><code>minCat(&quot;Hello&quot;, &quot;Hi&quot;) → &quot;loHi&quot;
+<pre tabindex=0><code>minCat(&quot;Hello&quot;, &quot;Hi&quot;) → &quot;loHi&quot;
 minCat(&quot;Hello&quot;, &quot;java&quot;) → &quot;ellojava&quot;
 minCat(&quot;java&quot;, &quot;Hello&quot;) → &quot;javaello&quot;
 </code></pre></li>
 <li>Given a string, return a version without the first 2 chars. Except keep the first char if it is &lsquo;a&rsquo; and keep the second char if it is &lsquo;b&rsquo;. The string may be any length. Harder than it looks.
-<pre><code>deFront(&quot;Hello&quot;) → &quot;llo&quot;
+<pre tabindex=0><code>deFront(&quot;Hello&quot;) → &quot;llo&quot;
 deFront(&quot;java&quot;) → &quot;va&quot;
 deFront(&quot;away&quot;) → &quot;aay&quot;
 </code></pre></li>
 <li>Given a string, if one or both of the first 2 chars is &lsquo;x&rsquo;, return the string without those &lsquo;x&rsquo; chars, and otherwise return the string unchanged. This is a little harder than it looks.
-<pre><code>withoutX2(&quot;xHi&quot;) → &quot;Hi&quot;
+<pre tabindex=0><code>withoutX2(&quot;xHi&quot;) → &quot;Hi&quot;
 withoutX2(&quot;Hxi&quot;) → &quot;Hi&quot;
 withoutX2(&quot;Hi&quot;) → &quot;Hi&quot;
 </code></pre></li>

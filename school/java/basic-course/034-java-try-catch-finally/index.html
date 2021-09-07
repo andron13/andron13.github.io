@@ -16,7 +16,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.07aa27015b9e9469a4b895c2a1fc9867a5bd434786b32c379a0ba61a96d932e4.js integrity="sha256-B6onAVuelGmkuJXCofyYZ6W9Q0eGsyw3mgumGpbZMuQ=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.505ce678b27e48e8f0578b4390562ed6e7739d3de10c3ffa4890a9cc022393f6.js integrity="sha256-UFzmeLJ+SOjwV4tDkFYu1udznT3hDD/6SJCpzAIjk/Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -303,7 +303,7 @@ Exception — введение в Java 034
 	<span style=color:#f92672>}</span>
 <span style=color:#f92672>}</span>
 </code></pre></div><p>Прошу заметить, что оператор <strong>catch</strong> знал какая ошибка может возникнуть и словил именно её - попытку взять несуществующий элемент. Если у нас будет другая ошибка, то мы её не словим. Если мы добавим в блок try строчку <strong>int a = 5/0;</strong>, то наша программа завершится новым Exception.</p>
-<pre><code>Exception in thread &quot;main&quot; java.lang.ArithmeticException: / by zero
+<pre tabindex=0><code>Exception in thread &quot;main&quot; java.lang.ArithmeticException: / by zero
 	at TestTryCatch.testArr(TestTryCatch.java:16)
 	at TestTryCatch.main(TestTryCatch.java:10)
 </code></pre><p>В такой ситуации мы можем добавить <strong>finally</strong></p>
@@ -344,7 +344,7 @@ Exception — введение в Java 034
 String str2 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;№123&#34;</span><span style=color:#f92672>;</span>
 <span style=color:#66d9ef>int</span> num2 <span style=color:#f92672>=</span> Integer<span style=color:#f92672>.</span><span style=color:#a6e22e>parseInt</span><span style=color:#f92672>(</span>str2<span style=color:#f92672>);</span>
 </code></pre></div><p>Проверьте возможно ли оператор catch использовать несколько раз:</p>
-<pre><code>try {
+<pre tabindex=0><code>try {
   //code
 } catch (ExceptionType1 e1) { 
   // catch block

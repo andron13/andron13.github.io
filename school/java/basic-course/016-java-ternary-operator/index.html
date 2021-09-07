@@ -18,7 +18,7 @@ number = (условие) ? 10 : -10; То есть ?: укороченный у
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.07aa27015b9e9469a4b895c2a1fc9867a5bd434786b32c379a0ba61a96d932e4.js integrity="sha256-B6onAVuelGmkuJXCofyYZ6W9Q0eGsyw3mgumGpbZMuQ=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.505ce678b27e48e8f0578b4390562ed6e7739d3de10c3ffa4890a9cc022393f6.js integrity="sha256-UFzmeLJ+SOjwV4tDkFYu1udznT3hDD/6SJCpzAIjk/Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -269,10 +269,10 @@ Blog
    number <span style=color:#f92672>=</span> -10;
 <span style=color:#f92672>}</span>
 </code></pre></div><p>Можно заменить на</p>
-<pre><code>number = (условие) ? 10 : -10;
+<pre tabindex=0><code>number = (условие) ? 10 : -10;
 </code></pre><p>То есть <strong>?:</strong> укороченный условный оператор if, if-else из <a href=/school/java/basic-course/007-java-if-else/>седьмого урока</a></p>
-<pre><code>переменная = (выражение) ? значение if true : значение if false
-</code></pre><pre><code>public static void ternar(int schoolАttestat){
+<pre tabindex=0><code>переменная = (выражение) ? значение if true : значение if false
+</code></pre><pre tabindex=0><code>public static void ternar(int schoolАttestat){
     String resultAtHome = &quot;&quot;;
     resultAtHome = (schoolАttestat &gt;= 3) ? &quot;Ребёнок переходит в следуюший класс&quot; : &quot;Ребёнок остаётся на второй год&quot;;
     System.out.println( &quot;Результат учёбы за год: &quot; +  resultAtHome);
@@ -288,7 +288,7 @@ Blog
    <span style=color:#f92672>}</span>
 <span style=color:#f92672>}</span>
 </code></pre></div><p>Рекурсивный метод нахождения факториала для будущего урока можно записать так:</p>
-<pre><code>    static int fact(int num) {
+<pre tabindex=0><code>    static int fact(int num) {
         return ((num &gt; 1) ? num * fact(num - 1) : 1);
     }
 </code></pre><p>Тернарный оператор применяют когда абсолютно простая операция может иметь два варианта развития. Это так называемый синтаксический сахар. Помогает быстрее и лаконичнее писать код.</p>
@@ -307,17 +307,17 @@ Blog
 </h2>
 <ol>
 <li>Даны два числа, a и b. Верните большее из них. Не используйте никаких методов из библиотеки Math. Покажите работу тернарного оператора.
-<pre><code>getMeMax(15, 5) → 15
+<pre tabindex=0><code>getMeMax(15, 5) → 15
 getMeMax(4, 16) → 16
 getMeMax(20, 100) → 100
 </code></pre></li>
 <li>Даны два числа, a и b. Верните меньшее из них. Не используйте никаких методов из библиотеки Math. Покажите работу тернарного оператора.
-<pre><code>getMeMin(15, 45) → 15
+<pre tabindex=0><code>getMeMin(15, 45) → 15
 getMeMin(44, 16) → 16
 getMeMin(200, 100) → 100
 </code></pre></li>
 <li>Даны два строковых значения. Верните идущее по алфавиту раньше.
-<pre><code>myFirstCompareTo(&quot;Berlin&quot;, &quot;Moscow&quot;); → &quot;Berlin&quot;
+<pre tabindex=0><code>myFirstCompareTo(&quot;Berlin&quot;, &quot;Moscow&quot;); → &quot;Berlin&quot;
 myFirstCompareTo(&quot;Kyiv&quot;, &quot;Paris&quot;); → &quot;Kyiv&quot;
 myFirstCompareTo(&quot;Могилёв&quot;, &quot;Потсдам&quot;); → &quot;Могилёв&quot;
 </code></pre></li>

@@ -12,7 +12,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.07aa27015b9e9469a4b895c2a1fc9867a5bd434786b32c379a0ba61a96d932e4.js integrity="sha256-B6onAVuelGmkuJXCofyYZ6W9Q0eGsyw3mgumGpbZMuQ=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.505ce678b27e48e8f0578b4390562ed6e7739d3de10c3ffa4890a9cc022393f6.js integrity="sha256-UFzmeLJ+SOjwV4tDkFYu1udznT3hDD/6SJCpzAIjk/Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -255,42 +255,42 @@ Blog
 </h2>
 <ol>
 <li>Given an array of ints, is it possible to choose a group of some of the ints, such that the group sums to the given target? This is a classic backtracking recursion problem. Once you understand the recursive backtracking strategy in this problem, you can use the same pattern for many problems to search a space of choices. Rather than looking at the whole array, our convention is to consider the part of the array starting at index start and continuing to the end of the array. The caller can specify the whole array simply by passing start as 0. No loops are needed &ndash; the recursive calls progress down the array.
-<pre><code>groupSum(0, [2, 4, 8], 10) → true
+<pre tabindex=0><code>groupSum(0, [2, 4, 8], 10) → true
 groupSum(0, [2, 4, 8], 14) → true
 groupSum(0, [2, 4, 8], 9) → false
 </code></pre></li>
 <li>Given an array of ints, is it possible to choose a group of some of the ints, such that the group sums to the given target with these additional constraints: all multiples of 5 in the array must be included in the group. If the value immediately following a multiple of 5 is 1, it must not be chosen. (No loops needed.)
-<pre><code>   groupSum5(0, [2, 5, 10, 4], 19) → true
+<pre tabindex=0><code>   groupSum5(0, [2, 5, 10, 4], 19) → true
    groupSum5(0, [2, 5, 10, 4], 17) → true
    groupSum5(0, [2, 5, 10, 4], 12) → false
 </code></pre></li>
 <li>Given an array of ints, is it possible to divide the ints into two groups, so that the sum of one group is a multiple of 10, and the sum of the other group is odd. Every int must be in one group or the other. Write a recursive helper method that takes whatever arguments you like, and make the initial call to your recursive helper from splitOdd10(). (No loops needed.)
-<pre><code>splitOdd10([5, 5, 5]) → true
+<pre tabindex=0><code>splitOdd10([5, 5, 5]) → true
 splitOdd10([5, 5, 6]) → false
 splitOdd10([5, 5, 6, 1]) → true
 </code></pre></li>
 <li>Given an array of ints, is it possible to choose a group of some of the ints, beginning at the start index, such that the group sums to the given target? However, with the additional constraint that all 6&rsquo;s must be chosen. (No loops needed.)
-<pre><code>groupSum6(0, [5, 6, 2], 8) → true
+<pre tabindex=0><code>groupSum6(0, [5, 6, 2], 8) → true
 groupSum6(0, [5, 6, 2], 9) → false
 groupSum6(0, [5, 6, 2], 7) → false
 </code></pre></li>
 <li>Given an array of ints, is it possible to choose a group of some of the ints, such that the group sums to the given target, with this additional constraint: if there are numbers in the array that are adjacent and the identical value, they must either all be chosen, or none of them chosen. For example, with the array {1, 2, 2, 2, 5, 2}, either all three 2&rsquo;s in the middle must be chosen or not, all as a group. (one loop can be used to find the extent of the identical values).
-<pre><code>groupSumClump(0, [2, 4, 8], 10) → true
+<pre tabindex=0><code>groupSumClump(0, [2, 4, 8], 10) → true
 groupSumClump(0, [1, 2, 4, 8, 1], 14) → true
 groupSumClump(0, [2, 4, 4, 8], 14) → false
 </code></pre></li>
 <li>Given an array of ints, is it possible to divide the ints into two groups, so that the sum of the two groups is the same, with these constraints: all the values that are multiple of 5 must be in one group, and all the values that are a multiple of 3 (and not a multiple of 5) must be in the other. (No loops needed.)
-<pre><code>split53([1, 1]) → true
+<pre tabindex=0><code>split53([1, 1]) → true
 split53([1, 1, 1]) → false
 split53([2, 4, 2]) → true
 </code></pre></li>
 <li>Given an array of ints, is it possible to choose a group of some of the ints, such that the group sums to the given target with this additional constraint: If a value in the array is chosen to be in the group, the value immediately following it in the array must not be chosen. (No loops needed.)
-<pre><code>groupNoAdj(0, [2, 5, 10, 4], 12) → true
+<pre tabindex=0><code>groupNoAdj(0, [2, 5, 10, 4], 12) → true
 groupNoAdj(0, [2, 5, 10, 4], 14) → false
 groupNoAdj(0, [2, 5, 10, 4], 7) → false
 </code></pre></li>
 <li>Given an array of ints, is it possible to divide the ints into two groups, so that the sums of the two groups are the same. Every int must be in one group or the other. Write a recursive helper method that takes whatever arguments you like, and make the initial call to your recursive helper from splitArray(). (No loops needed.)
-<pre><code>splitArray([2, 2]) → true
+<pre tabindex=0><code>splitArray([2, 2]) → true
 splitArray([2, 3]) → false
 splitArray([5, 2, 3]) → true
 </code></pre></li>

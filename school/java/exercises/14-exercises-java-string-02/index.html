@@ -12,7 +12,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.07aa27015b9e9469a4b895c2a1fc9867a5bd434786b32c379a0ba61a96d932e4.js integrity="sha256-B6onAVuelGmkuJXCofyYZ6W9Q0eGsyw3mgumGpbZMuQ=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.505ce678b27e48e8f0578b4390562ed6e7739d3de10c3ffa4890a9cc022393f6.js integrity="sha256-UFzmeLJ+SOjwV4tDkFYu1udznT3hDD/6SJCpzAIjk/Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -255,108 +255,108 @@ Blog
 </h2>
 <ol>
 <li>Given a string, return a string where for every char in the original, there are two chars.
-<pre><code>doubleChar(&quot;The&quot;) → &quot;TThhee&quot;
+<pre tabindex=0><code>doubleChar(&quot;The&quot;) → &quot;TThhee&quot;
 doubleChar(&quot;AAbb&quot;) → &quot;AAAAbbbb&quot;
 doubleChar(&quot;Hi-There&quot;) → &quot;HHii--TThheerree&quot;
 </code></pre></li>
 <li>Return the number of times that the string &ldquo;code&rdquo; appears anywhere in the given string, except we&rsquo;ll accept any letter for the &rsquo;d', so &ldquo;cope&rdquo; and &ldquo;cooe&rdquo; count.
-<pre><code>countCode(&quot;aaacodebbb&quot;) → 1
+<pre tabindex=0><code>countCode(&quot;aaacodebbb&quot;) → 1
 countCode(&quot;codexxcode&quot;) → 2
 countCode(&quot;cozexxcope&quot;) → 2
 </code></pre></li>
 <li>Return true if the given string contains a &ldquo;bob&rdquo; string, but where the middle &lsquo;o&rsquo; char can be any char.
-<pre><code>bobThere(&quot;abcbob&quot;) → true
+<pre tabindex=0><code>bobThere(&quot;abcbob&quot;) → true
 bobThere(&quot;b9b&quot;) → true
 bobThere(&quot;bac&quot;) → false
 </code></pre></li>
 <li>Given a string and an int n, return a string made of n repetitions of the last n characters of the string. You may assume that n is between 0 and the length of the string, inclusive.
-<pre><code>repeatEnd(&quot;Hello&quot;, 3) → &quot;llollollo&quot;
+<pre tabindex=0><code>repeatEnd(&quot;Hello&quot;, 3) → &quot;llollollo&quot;
 repeatEnd(&quot;Hello&quot;, 2) → &quot;lolo&quot;
 repeatEnd(&quot;Hello&quot;, 1) → &quot;o&quot;
 </code></pre></li>
 <li>Given a string, consider the prefix string made of the first N chars of the string. Does that prefix string appear somewhere else in the string? Assume that the string is not empty and that N is in the range 1..str.length().
-<pre><code>prefixAgain(&quot;abXYabc&quot;, 1) → true
+<pre tabindex=0><code>prefixAgain(&quot;abXYabc&quot;, 1) → true
 prefixAgain(&quot;abXYabc&quot;, 2) → true
 prefixAgain(&quot;abXYabc&quot;, 3) → false
 </code></pre></li>
 <li>Returns true if for every &lsquo;*&rsquo; (star) in the string, if there are chars both immediately before and after the star, they are the same.
-<pre><code>sameStarChar(&quot;xy*yzz&quot;) → true
+<pre tabindex=0><code>sameStarChar(&quot;xy*yzz&quot;) → true
 sameStarChar(&quot;xy*zzz&quot;) → false
 sameStarChar(&quot;*xa*az&quot;) → true
 </code></pre></li>
 <li>Return a version of the given string, where for every star (<em>) in the string the star and the chars immediately to its left and right are gone. So &ldquo;ab</em>cd&rdquo; yields &ldquo;ad&rdquo; and &ldquo;ab**cd&rdquo; also yields &ldquo;ad&rdquo;.
-<pre><code>starOut(&quot;ab*cd&quot;) → &quot;ad&quot;
+<pre tabindex=0><code>starOut(&quot;ab*cd&quot;) → &quot;ad&quot;
 starOut(&quot;ab**cd&quot;) → &quot;ad&quot;
 starOut(&quot;sm*eilly&quot;) → &quot;silly&quot;
 </code></pre></li>
 <li>Return the number of times that the string &ldquo;hi&rdquo; appears anywhere in the given string.
-<pre><code>countHi(&quot;abc hi ho&quot;) → 1
+<pre tabindex=0><code>countHi(&quot;abc hi ho&quot;) → 1
 countHi(&quot;ABChi hi&quot;) → 2
 countHi(&quot;hihi&quot;) → 2
 </code></pre></li>
 <li>Given two strings, return true if either of the strings appears at the very end of the other string, ignoring upper/lower case differences (in other words, the computation should not be &ldquo;case sensitive&rdquo;). Note: str.toLowerCase() returns the lowercase version of a string.
-<pre><code>endOther(&quot;Hiabc&quot;, &quot;abc&quot;) → true
+<pre tabindex=0><code>endOther(&quot;Hiabc&quot;, &quot;abc&quot;) → true
 endOther(&quot;AbC&quot;, &quot;HiaBc&quot;) → true
 endOther(&quot;abc&quot;, &quot;abXabc&quot;) → true
 </code></pre></li>
 <li>We&rsquo;ll say that a String is xy-balanced if for all the &lsquo;x&rsquo; chars in the string, there exists a &lsquo;y&rsquo; char somewhere later in the string. So &ldquo;xxy&rdquo; is balanced, but &ldquo;xyx&rdquo; is not. One &lsquo;y&rsquo; can balance multiple &lsquo;x&rsquo;s. Return true if the given string is xy-balanced.
-<pre><code>xyBalance(&quot;aaxbby&quot;) → true
+<pre tabindex=0><code>xyBalance(&quot;aaxbby&quot;) → true
 xyBalance(&quot;aaxbb&quot;) → false
 xyBalance(&quot;yaaxbb&quot;) → false
 </code></pre></li>
 <li>Given a string and an int n, return a string made of the first n characters of the string, followed by the first n-1 characters of the string, and so on. You may assume that n is between 0 and the length of the string, inclusive (i.e. n >= 0 and n &lt;= str.length()).
-<pre><code>repeatFront(&quot;Chocolate&quot;, 4) → &quot;ChocChoChC&quot;
+<pre tabindex=0><code>repeatFront(&quot;Chocolate&quot;, 4) → &quot;ChocChoChC&quot;
 repeatFront(&quot;Chocolate&quot;, 3) → &quot;ChoChC&quot;
 repeatFront(&quot;Ice Cream&quot;, 2) → &quot;IcI&quot;
 </code></pre></li>
 <li>Given a string, does &ldquo;xyz&rdquo; appear in the middle of the string? To define middle, we&rsquo;ll say that the number of chars to the left and right of the &ldquo;xyz&rdquo; must differ by at most one. This problem is harder than it looks.
-<pre><code>xyzMiddle(&quot;AAxyzBB&quot;) → true
+<pre tabindex=0><code>xyzMiddle(&quot;AAxyzBB&quot;) → true
 xyzMiddle(&quot;AxyzBB&quot;) → true
 xyzMiddle(&quot;AxyzBBB&quot;) → false
 </code></pre></li>
 <li>Given a string, compute a new string by moving the first char to come after the next two chars, so &ldquo;abc&rdquo; yields &ldquo;bca&rdquo;. Repeat this process for
 each subsequent group of 3 chars, so &ldquo;abcdef&rdquo; yields &ldquo;bcaefd&rdquo;. Ignore any group of fewer than 3 chars at the end.
-<pre><code>oneTwo(&quot;abc&quot;) → &quot;bca&quot;
+<pre tabindex=0><code>oneTwo(&quot;abc&quot;) → &quot;bca&quot;
 oneTwo(&quot;tca&quot;) → &quot;cat&quot;
 oneTwo(&quot;tcagdo&quot;) → &quot;catdog&quot;
 </code></pre></li>
 <li>Given a string and a non-empty word string, return a version of the original String where all chars have been replaced by pluses ("+"), except for appearances of the word string which are preserved unchanged.
-<pre><code>plusOut(&quot;12xy34&quot;, &quot;xy&quot;) → &quot;++xy++&quot;
+<pre tabindex=0><code>plusOut(&quot;12xy34&quot;, &quot;xy&quot;) → &quot;++xy++&quot;
 plusOut(&quot;12xy34&quot;, &quot;1&quot;) → &quot;1+++++&quot;
 plusOut(&quot;12xy34xyabcxy&quot;, &quot;xy&quot;) → &quot;++xy++xy+++xy&quot;
 </code></pre></li>
 <li>Return true if the string &ldquo;cat&rdquo; and &ldquo;dog&rdquo; appear the same number of times in the given string.
-<pre><code>catDog(&quot;catdog&quot;) → true
+<pre tabindex=0><code>catDog(&quot;catdog&quot;) → true
 catDog(&quot;catcat&quot;) → false
 catDog(&quot;1cat1cadodog&quot;) → true
 </code></pre></li>
 <li>Return true if the given string contains an appearance of &ldquo;xyz&rdquo; where the xyz is not directly preceeded by a period (.). So &ldquo;xxyz&rdquo; counts but &ldquo;x.xyz&rdquo; does not.
-<pre><code>xyzThere(&quot;abcxyz&quot;) → true
+<pre tabindex=0><code>xyzThere(&quot;abcxyz&quot;) → true
 xyzThere(&quot;abc.xyz&quot;) → false
 xyzThere(&quot;xyz.abc&quot;) → true
 </code></pre></li>
 <li>Given two strings, a and b, create a bigger string made of the first char of a, the first char of b, the second char of a, the second char of b, and so on. Any leftover chars go at the end of the result.
-<pre><code>mixString(&quot;abc&quot;, &quot;xyz&quot;) → &quot;axbycz&quot;
+<pre tabindex=0><code>mixString(&quot;abc&quot;, &quot;xyz&quot;) → &quot;axbycz&quot;
 mixString(&quot;Hi&quot;, &quot;There&quot;) → &quot;HTihere&quot;
 mixString(&quot;xxxx&quot;, &quot;There&quot;) → &quot;xTxhxexre&quot;
 </code></pre></li>
 <li>Given two strings, word and a separator sep, return a big string made of count occurrences of the word, separated by the separator string.
-<pre><code>repeatSeparator(&quot;Word&quot;, &quot;X&quot;, 3) → &quot;WordXWordXWord&quot;
+<pre tabindex=0><code>repeatSeparator(&quot;Word&quot;, &quot;X&quot;, 3) → &quot;WordXWordXWord&quot;
 repeatSeparator(&quot;This&quot;, &quot;And&quot;, 2) → &quot;ThisAndThis&quot;
 repeatSeparator(&quot;This&quot;, &quot;And&quot;, 1) → &quot;This&quot;
 </code></pre></li>
 <li>A sandwich is two pieces of bread with something in between. Return the string that is between the first and last appearance of &ldquo;bread&rdquo; in the given string, or return the empty string "" if there are not two pieces of bread.
-<pre><code>getSandwich(&quot;breadjambread&quot;) → &quot;jam&quot;
+<pre tabindex=0><code>getSandwich(&quot;breadjambread&quot;) → &quot;jam&quot;
 getSandwich(&quot;xxbreadjambreadyy&quot;) → &quot;jam&quot;
 getSandwich(&quot;xxbreadyy&quot;) → &quot;&quot;
 </code></pre></li>
 <li>Look for patterns like &ldquo;zip&rdquo; and &ldquo;zap&rdquo; in the string &ndash; length-3, starting with &lsquo;z&rsquo; and ending with &lsquo;p&rsquo;. Return a string where for all such words, the middle letter is gone, so &ldquo;zipXzap&rdquo; yields &ldquo;zpXzp&rdquo;.
-<pre><code>zipZap(&quot;zipXzap&quot;) → &quot;zpXzp&quot;
+<pre tabindex=0><code>zipZap(&quot;zipXzap&quot;) → &quot;zpXzp&quot;
 zipZap(&quot;zopzop&quot;) → &quot;zpzp&quot;
 zipZap(&quot;zzzopzop&quot;) → &quot;zzzpzp&quot;
 </code></pre></li>
 <li>Given a string and a non-empty word string, return a string made of each char just before and just after every appearance of the word in the string. Ignore cases where there is no char before or after the word, and a char may be included twice if it is between two words.
-<pre><code>wordEnds(&quot;abcXY123XYijk&quot;, &quot;XY&quot;) → &quot;c13i&quot;
+<pre tabindex=0><code>wordEnds(&quot;abcXY123XYijk&quot;, &quot;XY&quot;) → &quot;c13i&quot;
 wordEnds(&quot;XY123XY&quot;, &quot;XY&quot;) → &quot;13&quot;
 wordEnds(&quot;XY1XY&quot;, &quot;XY&quot;) → &quot;11&quot;
 </code></pre></li>

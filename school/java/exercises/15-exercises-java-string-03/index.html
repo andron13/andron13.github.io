@@ -12,7 +12,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.07aa27015b9e9469a4b895c2a1fc9867a5bd434786b32c379a0ba61a96d932e4.js integrity="sha256-B6onAVuelGmkuJXCofyYZ6W9Q0eGsyw3mgumGpbZMuQ=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.505ce678b27e48e8f0578b4390562ed6e7739d3de10c3ffa4890a9cc022393f6.js integrity="sha256-UFzmeLJ+SOjwV4tDkFYu1udznT3hDD/6SJCpzAIjk/Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -251,58 +251,58 @@ Blog
 </h1>
 <ol>
 <li>Given a string, count the number of words ending in &lsquo;y&rsquo; or &lsquo;z&rsquo; &ndash; so the &lsquo;y&rsquo; in &ldquo;heavy&rdquo; and the &lsquo;z&rsquo; in &ldquo;fez&rdquo; count, but not the &lsquo;y&rsquo; in &ldquo;yellow&rdquo; (not case sensitive). We&rsquo;ll say that a y or z is at the end of a word if there is not an alphabetic letter immediately following it. (Note: Character.isLetter(char) tests if a char is an alphabetic letter.)
-<pre><code>countYZ(&quot;fez day&quot;) → 2
+<pre tabindex=0><code>countYZ(&quot;fez day&quot;) → 2
 countYZ(&quot;day fez&quot;) → 2
 countYZ(&quot;day fyyyz&quot;) → 2
 </code></pre></li>
 <li>We&rsquo;ll say that a lowercase &lsquo;g&rsquo; in a string is &ldquo;happy&rdquo; if there is another &lsquo;g&rsquo; immediately to its left or right. Return true if all the g&rsquo;s in the given string are happy.
-<pre><code>gHappy(&quot;xxggxx&quot;) → true
+<pre tabindex=0><code>gHappy(&quot;xxggxx&quot;) → true
 gHappy(&quot;xxgxx&quot;) → false
 gHappy(&quot;xxggyygxx&quot;) → false
 </code></pre></li>
 <li>Given a string, return the longest substring that appears at both the beginning and end of the string without overlapping. For example, sameEnds(&ldquo;abXab&rdquo;) is &ldquo;ab&rdquo;.
-<pre><code>sameEnds(&quot;abXYab&quot;) → &quot;ab&quot;
+<pre tabindex=0><code>sameEnds(&quot;abXYab&quot;) → &quot;ab&quot;
 sameEnds(&quot;xx&quot;) → &quot;x&quot;
 sameEnds(&quot;xxx&quot;) → &quot;x&quot;
 </code></pre></li>
 <li>Given a string, return the sum of the numbers appearing in the string, ignoring all other characters. A number is a series of 1 or more digit chars in a row. (Note: Character.isDigit(char) tests if a char is one of the chars &lsquo;0&rsquo;, &lsquo;1&rsquo;, .. &lsquo;9&rsquo;. Integer.parseInt(string) converts a string to an int.)
-<pre><code>sumNumbers(&quot;abc123xyz&quot;) → 123
+<pre tabindex=0><code>sumNumbers(&quot;abc123xyz&quot;) → 123
 sumNumbers(&quot;aa11b33&quot;) → 44
 sumNumbers(&quot;7 11&quot;) → 18
 </code></pre></li>
 <li>Given two strings, base and remove, return a version of the base string where all instances of the remove string have been removed (not case sensitive). You may assume that the remove string is length 1 or more. Remove only non-overlapping instances, so with &ldquo;xxx&rdquo; removing &ldquo;xx&rdquo; leaves &ldquo;x&rdquo;.
-<pre><code>withoutString(&quot;Hello there&quot;, &quot;llo&quot;) → &quot;He there&quot;
+<pre tabindex=0><code>withoutString(&quot;Hello there&quot;, &quot;llo&quot;) → &quot;He there&quot;
 withoutString(&quot;Hello there&quot;, &quot;e&quot;) → &quot;Hllo thr&quot;
 withoutString(&quot;Hello there&quot;, &quot;x&quot;) → &quot;Hello there&quot;
 </code></pre></li>
 <li>We&rsquo;ll say that a &ldquo;triple&rdquo; in a string is a char appearing three times in a row. Return the number of triples in the given string. The triples
 may overlap.
-<pre><code>countTriple(&quot;abcXXXabc&quot;) → 1
+<pre tabindex=0><code>countTriple(&quot;abcXXXabc&quot;) → 1
 countTriple(&quot;xxxabyyyycd&quot;) → 3
 countTriple(&quot;a&quot;) → 0
 </code></pre></li>
 <li>Given a string, look for a mirror image (backwards) string at both the beginning and end of the given string. In other words, zero or more characters at the very begining of the given string, and at the very end of the string in reverse order (possibly overlapping). For example, the string &ldquo;abXYZba&rdquo; has the mirror end &ldquo;ab&rdquo;.
-<pre><code>mirrorEnds(&quot;abXYZba&quot;) → &quot;ab&quot;
+<pre tabindex=0><code>mirrorEnds(&quot;abXYZba&quot;) → &quot;ab&quot;
 mirrorEnds(&quot;abca&quot;) → &quot;a&quot;
 mirrorEnds(&quot;aba&quot;) → &quot;aba&quot;
 </code></pre></li>
 <li>Given a string, return a string where every appearance of the lowercase word &ldquo;is&rdquo; has been replaced with &ldquo;is not&rdquo;. The word &ldquo;is&rdquo; should not be immediately preceeded or followed by a letter &ndash; so for example the &ldquo;is&rdquo; in &ldquo;this&rdquo; does not count. (Note: Character.isLetter(char) tests if a char is a letter.)
-<pre><code>notReplace(&quot;is test&quot;) → &quot;is not test&quot;
+<pre tabindex=0><code>notReplace(&quot;is test&quot;) → &quot;is not test&quot;
 notReplace(&quot;is-is&quot;) → &quot;is not-is not&quot;
 notReplace(&quot;This is right&quot;) → &quot;This is not right&quot;
 </code></pre></li>
 <li>Given a string, return true if the number of appearances of &ldquo;is&rdquo; anywhere in the string is equal to the number of appearances of &ldquo;not&rdquo; anywhere in the string (case sensitive).
-<pre><code>equalIsNot(&quot;This is not&quot;) → false
+<pre tabindex=0><code>equalIsNot(&quot;This is not&quot;) → false
 equalIsNot(&quot;This is notnot&quot;) → true
 equalIsNot(&quot;noisxxnotyynotxisi&quot;) → true
 </code></pre></li>
 <li>Given a string, return the sum of the digits 0-9 that appear in the string, ignoring all other characters. Return 0 if there are no digits in the string. (Note: Character.isDigit(char) tests if a char is one of the chars &lsquo;0&rsquo;, &lsquo;1&rsquo;, .. &lsquo;9&rsquo;. Integer.parseInt(string) converts a string to an int.)
-<pre><code>sumDigits(&quot;aa1bc2d3&quot;) → 6
+<pre tabindex=0><code>sumDigits(&quot;aa1bc2d3&quot;) → 6
 sumDigits(&quot;aa11b33&quot;) → 8
 sumDigits(&quot;Chocolate&quot;) → 0
 </code></pre></li>
 <li>Given a string, return the length of the largest &ldquo;block&rdquo; in the string. A block is a run of adjacent chars that are the same.
-<pre><code>maxBlock(&quot;hoopla&quot;) → 2
+<pre tabindex=0><code>maxBlock(&quot;hoopla&quot;) → 2
 maxBlock(&quot;abbCCCddBBBxx&quot;) → 3
 maxBlock(&quot;&quot;) → 0
 </code></pre></li>
