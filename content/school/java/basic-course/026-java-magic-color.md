@@ -1,0 +1,1 @@
+https://github.com/tel-ran-de/BC14MorningJava/blob/master/src/day18/MagicColorPrint.java
