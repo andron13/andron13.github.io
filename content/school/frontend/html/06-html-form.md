@@ -446,6 +446,10 @@ maxlength и minlength мы рассмотрели уже пару раз вве
 4. [Request_methods](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)
 5. [CRUD](https://ru.wikipedia.org/wiki/CRUD)
 6. [ib.by](https://ib.by/) - позже, после того как выучите front здесь можно попробовать устроится на свою первую работу. Сошлитесь на эту страницу.
+7. https://developer.mozilla.org/ru/docs/Learn/Forms
+8. https://developer.mozilla.org/ru/docs/Learn/Forms/Form_validation
+9. https://learn.javascript.ru/forms-controls
+10. [Запись вебинара RS School](https://www.youtube.com/watch?v=PhRVJC0kBGE)
 
 ## Домашнее задание
 
