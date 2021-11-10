@@ -71,6 +71,13 @@ const sergej = {
 }
 ````
 
+TODO 
+Object.keys(user);
+Object.values(user);
+Object.entries (user);
+
+2:19:00
+
 https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648271#overview
 
 https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648263#overview
