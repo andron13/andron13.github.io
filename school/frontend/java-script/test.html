@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script defer src="test2.js"></script>
+    <script>
+
+        function ask(question, yes, no) {
+            if (confirm(question)) yes()
+            else no();
+        }
+
+        function showOk() {
+            alert("Вы согласны.");
+        }
+
+        function showCancel() {
+            alert("Вы отменили выполнение.");
+        }
+
+        ask("Уверен, что тебе 18?", showOk, showCancel)
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque
+        consequuntur harum magni optio? Beatae eligendi
+        eum molestiae molestias natus nobis possimus quaerat quo, quos
+        recusandae rem sequi vero voluptates
+        voluptatibus.</p>
+    <p>Distinctio expedita, labore laudantium maxime minima nam quia quos
+        voluptas. Accusamus at corporis cupiditate et
+        id illum mollitia nostrum obcaecati ullam veritatis! Dolores doloribus
+        odit perspiciatis quae tempore
+        voluptates! Perferendis!</p>
+</body>
+</html>

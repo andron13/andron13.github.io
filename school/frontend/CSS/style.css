@@ -1,0 +1,29 @@
+body {
+    background: beige;
+    height: 100%;
+}
+
+header {
+    background: violet;
+    height: 10vh;
+}
+main{
+    background: green;
+    height: 70vh;
+}
+aside.left{
+    background: red;
+    height: 100vh;
+    width: 10%;
+}
+
+aside.right{
+    background: gold;
+    height: 100vh;
+    width: 10%;
+}
+
+footer{
+    height: 10vh;
+    background: mediumblue;
+}

@@ -1,0 +1,5449 @@
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>EMMET шпаргалка для молниеносностной верстки</title>
+</head>
+<body>
+  <h1 class="pull-left">EMMET шпаргалка для молниеносностной верстки</h1>
+
+  <h2>Базовый синтаксис плагина EMMET</h2>
+
+  <table>
+    <caption>Emmet основной синтаксис</caption>
+    <tbody>
+    <tr>
+      <th>
+        Сокращение
+      </th>
+      <th>
+        Расшифровка сокращений
+      </th>
+    </tr>
+    <tr>
+      <td>
+        Дочерний: <span class="code">&gt;</span>
+      </td>
+      <td><pre class="prettyprint linenums">&lt;!-- nav&gt;ul&gt;li --&gt;
+&lt;nav&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/nav&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Соединение: <span class="code">+</span>
+      </td>
+      <td>
+<pre>
+&lt;!-- div+p+bq --&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;/blockquote&gt;
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Поместить выше (в дереве HTML): <span class="code">^</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;!-- div+div&gt;p&gt;span+em^bq --&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;
+    &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;
+    &lt;blockquote&gt;&lt;/blockquote&gt;
+&lt;/div&gt;
+
+&lt;!-- div+div&gt;p&gt;span+em^^bq --&gt;
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;
+    &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;blockquote&gt;&lt;/blockquote&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Группировка: <span class="code">()</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;!-- div&gt;(header&gt;ul&gt;li*2&gt;a)+footer&gt;p --&gt;
+&lt;div&gt;
+    &lt;header&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=""&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/header&gt;
+    &lt;footer&gt;
+        &lt;p&gt;&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/div&gt; </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Умножение: <span class="code">*</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;!-- ul&gt;li*3 --&gt;
+&lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt; </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Нумерация: <span class="code">$</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;!-- ul&gt;li.item$*3 --&gt;
+&lt;ul&gt;
+    &lt;li class="item1"&gt;&lt;/li&gt;
+    &lt;li class="item2"&gt;&lt;/li&gt;
+    &lt;li class="item3"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- h$[title=item$]{Header $}*3 --&gt;
+&lt;h1 title="item1"&gt;Header 1&lt;/h1&gt;
+&lt;h2 title="item2"&gt;Header 2&lt;/h2&gt;
+&lt;h3 title="item3"&gt;Header 3&lt;/h3&gt;
+
+&lt;!-- ul&gt;li.item$$$*3 --&gt;
+&lt;ul&gt;
+    &lt;li class="item001"&gt;&lt;/li&gt;
+    &lt;li class="item002"&gt;&lt;/li&gt;
+    &lt;li class="item003"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- ul&gt;li.item$@-*3 --&gt;
+&lt;ul&gt;
+    &lt;li class="item3"&gt;&lt;/li&gt;
+    &lt;li class="item2"&gt;&lt;/li&gt;
+    &lt;li class="item1"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- ul&gt;li.item$@3*5 --&gt;
+&lt;ul&gt;
+    &lt;li class="item3"&gt;&lt;/li&gt;
+    &lt;li class="item4"&gt;&lt;/li&gt;
+    &lt;li class="item5"&gt;&lt;/li&gt;
+    &lt;li class="item6"&gt;&lt;/li&gt;
+    &lt;li class="item7"&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">id</span> и <span class="code">class</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;!-- #header --&gt;
+&lt;div id="header"&gt;&lt;/div&gt;
+
+&lt;!-- .title --&gt;
+&lt;div class="title"&gt;&lt;/div&gt;
+
+&lt;!-- form#search.wide --&gt;
+&lt;form id="search" class="wide"&gt;&lt;/form&gt;
+
+&lt;!-- p.class1.class2.class3 --&gt;
+&lt;p class="class1 class2 class3"&gt;&lt;/p&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Атрибуты: <span class="code">[]</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;!-- p[title="Hello world"] --&gt;
+&lt;p title="Hello world"&gt;&lt;/p&gt;
+
+&lt;!-- td[rowspan=2 colspan=3 title] --&gt;
+&lt;td rowspan="2" colspan="3" title=""&gt;&lt;/td&gt;
+
+&lt;!-- [a='value1' b="value2"] --&gt;
+&lt;div a="value1" b="value2"&gt;&lt;/div&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Текст: <span class="code">{}</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;!-- a{Click me} --&gt;
+&lt;a href=""&gt;Click me&lt;/a&gt;
+
+&lt;!-- p&gt;{Click }+a{here}+{ to continue} --&gt;
+&lt;p&gt;Click &lt;a href=""&gt;here&lt;/a&gt; to continue&lt;/p&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Сокращение тегов:
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;!-- .class --&gt;
+&lt;div class="class"&gt;&lt;/div&gt;
+
+&lt;!-- em&gt;.class --&gt;
+&lt;em&gt;&lt;span class="class"&gt;&lt;/span&gt;&lt;/em&gt;
+
+&lt;!-- ul&gt;.class --&gt;
+&lt;ul&gt;
+    &lt;li class="class"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;!-- table&gt;.row&gt;.col --&gt;
+&lt;table&gt;
+    &lt;tr class="row"&gt;
+        &lt;td class="col"&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt; </pre>
+      </td>
+    </tr>
+    <tr id="em-2">
+      <td>
+        Генератор текста: <span class="code">lorem</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;!-- .wrapper&gt;h1{My Text}+p*3&gt;lorem5 --&gt;
+&lt;div class="wrapper"&gt;
+   &lt;h1&gt;My Text&lt;/h1&gt;
+   &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+   &lt;p&gt;Debitis dolorum illo nisi suscipit!&lt;/p&gt;
+   &lt;p&gt;Animi explicabo libero quis voluptates?&lt;/p&gt;
+&lt;/div&gt;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+
+
+  <h3 style="text-align: center;margin: 50px 0 30px 0;"><span style="font-size: 24pt;">HTML сокращения в EMMET</span>
+  </h3>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">!</span>, <span class="code">html:5</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8" /&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">!!!</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;!DOCTYPE html&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">a</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;a href=""&gt;&lt;/a&gt;
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">a:link</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;a href="http://"&gt;&lt;/a&gt;&nbsp;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">a:mail</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;a href="mailto:"&gt;&lt;/a&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">br</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;br /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">frame</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;frame /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">link</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;link rel="stylesheet" href="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">link:css</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;link rel="stylesheet" href="style.css" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">link:favicon</span>
+      </td>
+      <td>
+        <pre
+            class="prettyprint linenums">&lt;link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">link:rss</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;link rel="alternate" type="application/rss+xml" title="RSS" href="rss.xml" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">meta</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;meta /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">meta:utf</span>
+      </td>
+      <td>
+        <pre
+            class="prettyprint linenums">&lt;meta http-equiv="Content-Type" content="text/html;charset=UTF-8" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">meta:win</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;meta http-equiv="Content-Type" content="text/html;charset=windows-1251" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">meta:vp</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">meta:compat</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;meta http-equiv="X-UA-Compatible" content="IE=7" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">style</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;style&gt;&lt;/style&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">script</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;script&gt;&lt;/script&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">script:src</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;script src=""&gt;&lt;/script&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">img</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;img src="" alt="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">img:srcset</span>, <span class="code">img:s&nbsp;</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;img srcset="" src="" alt="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">img:sizes</span>, <span class="code">img:z&nbsp;</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;img sizes="" srcset="" src="" alt="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">map</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;map name=""&gt;&lt;/map&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">form</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;form action=""&gt;&lt;/form&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">label</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;label for=""&gt;&lt;/label&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="text" /&gt; </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">inp</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="text" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:text</span>, <span class="code">input:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="text" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:search</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="search" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:email</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="email" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:url</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="url" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:password</span>, <span class="code">input:p</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="password" name="" id="" /&gt;&nbsp;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:datetime</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="datetime" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:date</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="date" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:time</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="time" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:tel</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="tel" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:number</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="number" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:color</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="color" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:checkbox</span>, <span class="code">input:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="checkbox" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:radio</span>, <span class="code">input:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="radio" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:range</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="range" name="" id="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:file</span>, <span class="code">input:f</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="file" name="" id="" /&gt;&nbsp;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:submit</span>, <span class="code">input:s</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="submit" value="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:image</span>, <span class="code">input:i</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="image" src="" alt="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:button</span>, <span class="code">input:b</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="button" value="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">input:reset</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;input type="reset" value="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">select</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;select name="" id=""&gt;&lt;/select&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">select:disabled</span>, <span class="code">select:d</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;select name="" id="" disabled="disabled"&gt;&lt;/select&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">option</span>, <span class="code">opt</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;option value=""&gt;&lt;/option&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">textarea</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;textarea name="" id="" cols="30" rows="10"&gt;&lt;/textarea&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">marquee</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;marquee behavior="" direction=""&gt;&lt;/marquee&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">menu:context</span>, <span class="code">menu:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;menu type="context"&gt;&lt;/menu&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">menu:toolbar</span>, <span class="code">menu:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;menu type="toolbar"&gt;&lt;/menu&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">video</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;video src=""&gt;&lt;/video&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">audio</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;audio src=""&gt;&lt;/audio&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">html:xml</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;&lt;/html&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">keygen</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;keygen /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">command</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;command /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">button:submit</span>, <span class="code">button:s</span>, <span class="code">btn:s</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;button type="submit"&gt;&lt;/button&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">button:reset</span>, <span class="code">button:r</span>, <span class="code">btn:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;button type="reset"&gt;&lt;/button&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">button:disabled</span>, <span class="code">button:d</span>, <span class="code">btn:d</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;button disabled="disabled"&gt;&lt;/button&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bq</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;blockquote&gt;&lt;/blockquote&gt;&nbsp;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fig</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;figure&gt;&lt;/figure&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">figc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;figcaption&gt;&lt;/figcaption&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pic</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;picture&gt;&lt;/picture&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ifr</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;iframe src="" frameborder="0"&gt;&lt;/iframe&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">emb</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;embed src="" type="" /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">obj</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;object data="" type=""&gt;&lt;/object&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cap</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;caption&gt;&lt;/caption&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">colg</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;colgroup&gt;&lt;/colgroup&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fst</span>, <span class="code">fset</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;fieldset&gt;&lt;/fieldset&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        btn&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;button&gt;&lt;/button&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">optg</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;optgroup&gt;&lt;/optgroup&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tarea</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;textarea name="" id="" cols="30" rows="10"&gt;&lt;/textarea&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">leg</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;legend&gt;&lt;/legend&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">sect</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;section&gt;&lt;/section&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        art&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;article&gt;&lt;/article&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">hdr</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;header&gt;&lt;/header&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ftr</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;footer&gt;&lt;/footer&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">adr</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;address&gt;&lt;/address&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">dlg</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;dialog&gt;&lt;/dialog&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">str</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;strong&gt;&lt;/strong&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">prog</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;progress&gt;&lt;/progress&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">mn</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;main&gt;&lt;/main&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tem</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;template&gt;&lt;/template&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">datag</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;datagrid&gt;&lt;/datagrid&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">datal</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;datalist&gt;&lt;/datalist&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">kg</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;keygen /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">out</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;output&gt;&lt;/output&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">det</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;details&gt;&lt;/details&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cmd</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">&lt;command /&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ol+</span>&nbsp;
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;ol&gt;
+    &lt;li&gt;&lt;/li&gt;
+&lt;/ol&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ul+</span>&nbsp;
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">dl+</span>&nbsp;
+      </td>
+      <td>
+ <pre class="prettyprint linenums">&lt;dl&gt;
+    &lt;dt&gt;&lt;/dt&gt;
+    &lt;dd&gt;&lt;/dd&gt;
+&lt;/dl&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">map+</span>&nbsp;
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;map name=""&gt;
+    &lt;area shape="" coords="" href="" alt="" /&gt;
+&lt;/map&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">table+</span>&nbsp;
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">colgroup+</span>, <span class="code">colg+</span>&nbsp;
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;colgroup&gt;
+    &lt;col /&gt;
+&lt;/colgroup&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tr+</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;tr&gt;
+    &lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">select+</span>&nbsp;
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;select name="" id=""&gt;
+    &lt;option value=""&gt;&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">optgroup+</span>, <span class="code">optg+</span>&nbsp;
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;optgroup&gt;
+    &lt;option value=""&gt;&lt;/option&gt;
+&lt;/optgroup&gt;</pre>
+      </td>
+    </tr>
+    <tr id="em-3">
+      <td id="em-4">
+        <span class="code">pic+</span>&nbsp;
+      </td>
+      <td>
+<pre class="prettyprint linenums">&lt;picture&gt;
+    &lt;source srcset="" /&gt;
+    &lt;img src="" alt="" /&gt;
+&lt;/picture&gt;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <h3 style="text-align: center;margin: 50px 0 30px 0;"><span style="font-size: 24pt;">CSS сокращения в EMMET</span>
+  </h3>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Визуальное форматирование</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">pos</span></td>
+      <td>
+        <pre class="prettyprint linenums">position:relative;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pos:s</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">position:static;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pos:a</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">position:absolute;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pos:r</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">position:relative;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pos:f</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">position:fixed;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">top:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">t:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">top:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">r</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">right:; </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">r:a</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">right:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">b</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">bottom:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">b:a</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">bottom:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">l</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">left:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">l:a</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">left:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">z</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">z-index:;&nbsp;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">z:a</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">z-index:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fl</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">float:left;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fl:n</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">float:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fl:l</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">float:left;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fl:r</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">float:right;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cl</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">clear:both;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cl:n</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">clear:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cl:l</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">clear:left;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cl:r</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">clear:right;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cl:b</span>&nbsp;
+      </td>
+      <td>
+        <pre class="prettyprint linenums">clear:both;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:block; </pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:b</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:block;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:f</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:flex;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:if</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:inline-flex;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:i</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:inline;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:ib</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:inline-block;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:li</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:list-item;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:ri</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:run-in;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:cp</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:compact;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:tb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:table;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:itb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:inline-table;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:tbcp</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:table-caption;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:tbcl</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:table-column;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:tbclg</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:table-column-group;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:tbhg</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:table-header-group;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:tbfg</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:table-footer-group;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:tbr</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:table-row;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:tbrg</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:table-row-group;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:tbc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:table-cell;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:rb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:ruby;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:rbb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:ruby-base;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:rbbg</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:ruby-base-group;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:rbt</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:ruby-text;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">d:rbtg</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">display:ruby-text-group;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">v</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">visibility:hidden;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">v:v</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">visibility:visible;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">v:h</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">visibility:hidden;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">v:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">visibility:collapse;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ov</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">overflow:hidden;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ov:v</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">overflow:visible;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ov:h</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">overflow:hidden;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ov:s</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">overflow:scroll;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ov:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">overflow:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">zoo</span>, <span class="code">zm</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">zoom:1;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cp</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">clip:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cp:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">clip:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cp:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">clip:rect(top right bottom left);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">rsz</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">resize:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">rsz:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">resize:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cur</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">cursor:${pointer};</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cur:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">cursor:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cur:d</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">cursor:default;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cur:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">cursor:crosshair;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cur:ha</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">cursor:hand;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cur:he</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">cursor:help;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cur:m</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">cursor:move;</pre>
+      </td>
+    </tr>
+    <tr id="em-5">
+      <td>
+        <span class="code">cur:p</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">cursor:pointer;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cur:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">cursor:text;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Margin и Padding</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">m</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">margin:;
+</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">m:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">margin:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">mt</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">margin-top:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">mt:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">margin-top:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">mr</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">margin-right:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">mr:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">margin-right:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">mb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">margin-bottom:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">mb:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">margin-bottom:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ml</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">margin-left:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ml:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">margin-left:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">p</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">padding:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pt</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">padding-top:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pr</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">padding-right:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">padding-bottom:;</pre>
+      </td>
+    </tr>
+    <tr id="em6">
+      <td>
+<span class="code">
+m:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">padding-bottom:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pl</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">padding-left:;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Box Sizing</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">bxz</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">box-sizing:border-box;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bxz:cb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">box-sizing:content-box;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bxz:bb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">box-sizing:border-box;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bxsh</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">box-shadow:inset hoff voff blur color;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bxsh:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">box-shadow:inset hoff voff blur spread #000000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bxsh:ra</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">box-shadow:inset h v blur spread rgba(0, 0, 0, .5);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bxsh:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">box-shadow:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">w</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">width:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">w:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">width:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">h</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">height:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">h:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">height:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">maw</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">max-width:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">maw:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">max-width:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">mah</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">max-height:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">mah:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">max-height:none;</pre>
+      </td>
+    </tr>
+    <tr id="em-7">
+      <td>
+        <span class="code">miw</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">min-width:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">mih</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">min-height:;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Font</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">f</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">f+</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font:1em Arial,sans-serif;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fw</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-weight:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fw:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-weight:normal;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fw:b</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-weight:bold;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fw:br</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-weight:bolder;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fw:lr</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-weight:lighter;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-style:${italic};</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fs:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-style:normal;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fs:i</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-style:italic;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fs:o</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-style:oblique;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fv</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-variant:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fv:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-variant:normal;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fv:sc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-variant:small-caps;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fz</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-size:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fza</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-size-adjust:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fza:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-size-adjust:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ff</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-family:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ff:s</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-family:serif;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ff:ss</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-family:sans-serif;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ff:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-family:cursive;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ff:f</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-family:fantasy;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ff:m</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-family:monospace;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ff:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ff:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-family: "Times New Roman", Times, Baskerville, Georgia, serif;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ff:v</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-family: Verdana, Geneva, sans-serif;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fef</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-effect:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fef:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-effect:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fef:eg</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-effect:engrave;</pre>
+      </td>
+    </tr>
+    <tr id="em-8">
+      <td>
+        <span class="code">fef:eb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-effect:emboss;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fef:o</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">font-effect:outline;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Text</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">va</span>, <span class="code">va:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">vertical-align:top;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">va:sup</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">vertical-align:super;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">va:tt</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">vertical-align:text-top;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">va:m</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">vertical-align:middle;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">va:bl</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">vertical-align:baseline;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">va:b</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">vertical-align:bottom;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">va:tb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">vertical-align:text-bottom;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">va:sub</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">vertical-align:sub;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ta</span>, ta:l
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-align:left;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ta:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-align:center;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ta:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-align:right;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ta:j</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-align:justify;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ta-lst</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-align-last:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tal:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-align-last:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tal:l</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-align-last:left;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tal:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-align-last:center;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tal:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-align-last:right;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">td</span>, <span class="code">td:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-decoration:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">td:u</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-decoration:underline;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">td:o</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-decoration:overline;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">td:l</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-decoration:line-through;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">te</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-emphasis:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">te:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-emphasis:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">te:ac</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-emphasis:accent;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">te:dt</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-emphasis:dot;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">te:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-emphasis:circle;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">te:ds</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-emphasis:disc;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">te:b</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-emphasis:before;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">te:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-emphasis:after;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">th</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-height:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">th:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-height:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">th:f</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-height:font-size;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">th:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-height:text-size;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">th:m</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-height:max-size;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ti</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-indent:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ti:-</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-indent:-9999px;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tj</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-justify:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tj:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-justify:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tj:iw</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-justify:inter-word;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tj:ii</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-justify:inter-ideograph;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tj:ic</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-justify:inter-cluster;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tj:d</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-justify:distribute;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tj:k</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-justify:kashida;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tj:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-justify:tibetan;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">to</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-outline:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">to+</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-outline:0 0 #000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">to:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-outline:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tr</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-replace:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tr:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-replace:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tt</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-transform:uppercase;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tt:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-transform:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tt:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-transform:capitalize;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tt:u</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-transform:uppercase;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tt:l</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-transform:lowercase;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tw</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-wrap:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tw:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-wrap:normal;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tw:no</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-wrap:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        tw:u
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-wrap:unrestricted;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tw:s</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-wrap:suppress;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tsh</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-shadow:hoff voff blur #000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tsh:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-shadow:h v blur #000000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tsh:ra</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-shadow:h v blur rgba(0, 0, 0, .5);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tsh+</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-shadow:0 0 0 #000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tsh:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-shadow:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">lh</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">line-height:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">lts</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">letter-spacing:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">lts-n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">letter-spacing:normal;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">whs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">white-space:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">whs:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">white-space:normal;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">wob</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">word-break:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">wob:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">word-break:normal;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">wos</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">word-spacing:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">wow</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">word-wrap:;</pre>
+      </td>
+    </tr>
+    <tr id="em-9">
+      <td>
+        <span class="code">wow:nm</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">word-wrap:normal;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">wow:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">word-wrap:none</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Background</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">bg</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background:#000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bg+</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background:#fff url() 0 0 no-repeat;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bg:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-color:#fff;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgc:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-color:transparent;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgi</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-image:url();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgi:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-image:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgr</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-repeat:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgr:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-repeat:no-repeat;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgr:x</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-repeat:repeat-x;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgr:y</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-repeat:repeat-y;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgr:sp</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-repeat:space;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgr:rd</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-repeat:round;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bga</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-attachment:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bga:f</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-attachment:fixed;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bga:s</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-attachment:scroll;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgp</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-position:0 0;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgpx</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-position-x:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgpy</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-position-y:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgbk</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-break:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgbk:bb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-break:bounding-box;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgbk:eb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-break:each-box;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgbk:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-break:continuous;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgcp</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-clip:padding-box;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgcp:bb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-clip:border-box;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgcp:pb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-clip:padding-box;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        bgcp:cb
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-clip:content-box;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        bgcp:nc
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-clip:no-clip;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        bgo
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-origin:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgo:pb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-origin:padding-box;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgo:bb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-origin:border-box;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgo:cb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-origin:content-box;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgsz</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-size:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgsz:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-size:auto;</pre>
+      </td>
+    </tr>
+    <tr id="em-10">
+      <td>
+        <span class="code">bgsz:ct</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-size:contain;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bgsz:cv</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">background-size:cover;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Color</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">color:#000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">c:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">color:#000000;</pre>
+      </td>
+    </tr>
+    <tr id="em-11">
+      <td>
+        <span class="code">c:ra</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">color:rgba(0, 0, 0, .5);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">op</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">opacity:;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Generated content</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">cnt</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">content:'';</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cnt:n</span>, <span class="code">ct:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">content:normal;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cnt:oq</span>, <span class="code">ct:oq</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">content:open-quote;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cnt:noq</span>, <span class="code">ct:noq</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">content:no-open-quote;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cnt:cq</span>, <span class="code">ct:cq</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">content:close-quote;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cnt:ncq</span>, <span class="code">ct:ncq</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">content:no-close-quote;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cnt:a</span>, <span class="code">ct:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">content:attr();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cnt:c</span>, <span class="code">ct:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">content:counter();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cnt:cs</span>, <span class="code">ct:cs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">content:counters();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ct</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">content:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">q</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">quotes:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">q:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">quotes:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">q:ru</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">quotes:'\00AB' '\00BB' '\201E' '\201C';</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">q:en</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">quotes:'\201C' '\201D' '\2018' '\2019';</pre>
+      </td>
+    </tr>
+    <tr id="em-12">
+      <td>
+        <span class="code">coi</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">counter-increment:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cor</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">counter-reset:;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Outline</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">ol</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ol:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">olo</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-offset:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">olw</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-width:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">olw:tn</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-width:thin;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">olw:m</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-width:medium;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">olw:tc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-width:thick;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ols</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-style:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ols:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-style:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ols:dt</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-style:dotted;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ols:ds</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-style:dashed;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ols:s</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-style:solid;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ols:db</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-style:double;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ols:g</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-style:groove;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ols:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-style:ridge;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ols:i</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-style:inset;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ols:o</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-style:outset;</pre>
+      </td>
+    </tr>
+    <tr id="em-13">
+      <td>
+        <span class="code">olc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-color:#000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">olc:i</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">outline-color:invert;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Tables</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">tbl</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">table-layout:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tbl:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">table-layout:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tbl:f</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">table-layout:fixed;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cps</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">caption-side:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cps:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">caption-side:top;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">cps:b</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">caption-side:bottom;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ec</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">empty-cells:;</pre>
+      </td>
+    </tr>
+    <tr id="em-14">
+      <td>
+        <span class="code">ec:s</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">empty-cells:show;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ec:h</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">empty-cells:hide;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Border</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">bd</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bd+</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border:1px solid #000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bd:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdbk</span>, <span class="code">bdbk:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-break:close;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdcl</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-collapse:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdcl:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-collapse:collapse;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        bdcl:s
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-collapse:separate;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-color:#000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdc:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-color:transparent;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdi</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-image:url();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdi:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-image:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdti</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-image:url();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdti:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-image:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdri</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-right-image:url();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdri:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-right-image:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdbi</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-image:url();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdbi:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-image:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdli</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-left-image:url();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdli:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-left-image:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdci</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-corner-image:url();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdci:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-corner-image:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdci:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-corner-image:continue;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdtli</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-left-image:url();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdtli:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-left-image:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdtli:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-left-image:continue;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdtri</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-right-image:url();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdtri:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-right-image:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdtri:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-right-image:continue;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdbri</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-right-image:url();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdbri:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-right-image:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdbri:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-right-image:continue;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdbli</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-left-image:url();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdbli:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-left-image:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdbli:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-left-image:continue;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdf</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-fit:repeat;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdf:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-fit:clip;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdf:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-fit:repeat;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdf:sc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-fit:scale;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdf:st</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-fit:stretch;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdf:ow</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-fit:overwrite;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdf:of</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-fit:overflow;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdf:sp</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-fit:space;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        bdlen
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-length:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdlen:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-length:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdsp</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-spacing:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bds</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bds:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        bds:h
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:hidden;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bds:dt</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:dotted;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bds:ds</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:dashed;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bds:s</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:solid;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bds:db</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:double;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bds:dtds</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:dot-dash;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bds:dtdtds</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:dot-dot-dash;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bds:w</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:wave;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bds:g</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:groove;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bds:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:ridge;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bds:i</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:inset;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bds:o</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-style:outset;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdw</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-width:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdt</span>, <span class="code">bt</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdt+</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top:1px solid #000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdt:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdtw</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-width:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdts</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-style:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdts:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-style:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdtc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-color:#000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdtc:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-color:transparent;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdr</span>, <span class="code">br</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-right:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdr+</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-right:1px solid #000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdr:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-right:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdrw</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-right-width:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdrst</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-right-style:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdrst:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-right-style:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdrc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-right-color:#000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdrc:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-right-color:transparent;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdb</span>, <span class="code">bb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdb+</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom:1px solid #000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdb:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdbw</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-width:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdbs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-style:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        bdbs:n
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-style:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdbc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-color:#000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdbc:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-color:transparent;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdl</span>, <span class="code">bl</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-left:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdl+</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-left:1px solid #000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdl:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-left:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdlw</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-left-width:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdls</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-left-style:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdls:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-left-style:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdlc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-left-color:#000;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdlc:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-left-color:transparent;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdrs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-radius:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdtrrs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-right-radius:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdtlrs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-top-left-radius:;</pre>
+      </td>
+    </tr>
+    <tr id="em-15">
+      <td>
+        <span class="code">bdbrrs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-right-radius:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">bdblrs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">border-bottom-left-radius:;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Lists</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">lis</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        lis:n
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">lisp</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-position:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">lisp:i</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-position:inside;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">lisp:o</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-position:outside;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">list</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-type:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">list:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-type:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">list:d</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-type:disc;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">list:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-type:circle;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">list:s</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-type:square;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">list:dc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-type:decimal;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">list:dclz</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-type:decimal-leading-zero;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">list:lr</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-type:lower-roman;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">list:ur</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-type:upper-roman;</pre>
+      </td>
+    </tr>
+    <tr id="em-16">
+      <td>
+        <span class="code">lisi</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-image:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">lisi:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">list-style-image:none;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Print</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">pgbb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">page-break-before:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pgbb:au</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">page-break-before:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pgbb:al</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">page-break-before:always;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pgbb:l</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">page-break-before:left;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pgbb:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">page-break-before:right;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pgbi</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">page-break-inside:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pgbi:au</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">page-break-inside:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pgbi:av</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">page-break-inside:avoid;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pgba</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">page-break-after:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pgba:au</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">page-break-after:auto;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pgba:al</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">page-break-after:always;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pgba:l</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">page-break-after:left;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">pgba:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">page-break-after:right;</pre>
+      </td>
+    </tr>
+    <tr id="em-17">
+      <td>
+        <span class="code">orp</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">orphans:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">wid</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">widows:;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Align</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">ac</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">align-content:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ac:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">align-content:center;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ac:fe</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">align-content:flex-end;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ac:fs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">align-content:flex-start;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ac:s</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">align-content:stretch;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ac:sa</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">align-content:space-around;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ac:sb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">align-content:space-between;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ai</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">align-items:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ai:b</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">align-items:baseline;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ai:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">align-items:center;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ai:fe</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">align-items:flex-end;</pre>
+      </td>
+    </tr>
+    <tr id="em-18">
+      <td>
+        <span class="code">ai:fs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">align-items:flex-start;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">ai:s</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">align-items:stretch;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Animation</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">anim</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">anim-</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation:name duration timing-function delay iteration-count direction fill-mode;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animdel</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-delay:time;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animdir</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-direction:normal;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animdir:a</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-direction:alternate;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animdir:ar</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-direction:alternate-reverse;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animdir:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-direction:normal;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animdir:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-direction:reverse;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animdur</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-duration:0s;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animfm</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-fill-mode:both;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animfm:b</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-fill-mode:backwards;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animfm:bt</span>, <span class="code">animfm:bh</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-fill-mode:both;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animfm:f</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-fill-mode:forwards;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animic</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-iteration-count:1;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animic:i</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-iteration-count:infinite;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animn</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-name:none;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animps</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-play-state:running;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animps:p</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-play-state:paused;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animps:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-play-state:running;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animtf</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-timing-function:linear;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        animtf:cb
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-timing-function:cubic-bezier(0.1, 0.7, 1.0, 0.1);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animtf:e</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-timing-function:ease;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animtf:ei</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-timing-function:ease-in;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animtf:eio</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-timing-function:ease-in-out;</pre>
+      </td>
+    </tr>
+    <tr id="em-19">
+      <td>
+        <span class="code">animtf:eo</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-timing-function:ease-out;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">animtf:l</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">animation-timing-function:linear;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Flex</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">fx</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fxb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex-basis:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fxd</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex-direction:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fxd:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex-direction:column;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fxd:cr</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex-direction:column-reverse;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fxd:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex-direction:row;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fxd:rr</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex-direction:row-reverse;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fxf</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex-flow:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fxg</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex-grow:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fxsh</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex-shrink:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fxw</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex-wrap: ;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fxw:n</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex-wrap:nowrap;</pre>
+      </td>
+    </tr>
+    <tr id="em-20">
+      <td>
+        <span class="code">fxw:w</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex-wrap:wrap;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">fxw:wr</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">flex-wrap:wrap-reverse;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Transform</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">trf</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:r</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: rotate(angle);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:rx</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: rotateX(angle);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:ry</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: rotateY(angle);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:rz</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: rotateZ(angle);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:sc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: scale(x, y);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:sc3</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: scale3d(x, y, z);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:scx</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: scaleX(x);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:scy</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: scaleY(y);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        trf:scz
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: scaleZ(z);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:skx</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: skewX(angle);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:sky</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: skewY(angle);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:t</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: translate(x, y);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:t3</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: translate3d(tx, ty, tz);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:tx</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: translateX(x);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:ty</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: translateY(y);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trf:tz</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform: translateZ(z);</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trfo</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform-origin:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trfs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transform-style:preserve-3d;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transition:prop time;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trsde</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transition-delay:time;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trsdu</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transition-duration:time;</pre>
+      </td>
+    </tr>
+    <tr id="em-21">
+      <td>
+        <span class="code">trsp</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transition-property:prop;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">trstf</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">transition-timing-function:tfunc;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <table cellpadding="2" cellspacing="2" align="center" class="table emmet table-hover">
+    <caption>Дополнительные сокращения</caption>
+    <tbody>
+    <tr>
+      <td>
+        <span class="code">!</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">!important</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">@f</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">@font-face {
+    font-family:;
+    src:url(|);
+}</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">@f+</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">@font-face {
+    font-family: 'FontName';
+    src: url('FileName.eot');
+    src: url('FileName.eot?#iefix') format('embedded-opentype'),
+         url('FileName.woff') format('woff'),
+         url('FileName.ttf') format('truetype'),
+         url('FileName.svg#FontName') format('svg');
+    font-style: normal;
+    font-weight: normal;
+}</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">@i</span>, <span class="code">@import</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">@import url();</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">@kf</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">@-webkit-keyframes identifier {
+    from {  }
+    to {  }
+}
+
+@-o-keyframes identifier {
+    from {  }
+    to {  }
+}
+
+@-moz-keyframes identifier {
+    from {  }
+    to {  }
+}
+
+@keyframes identifier {
+    from {  }
+    to {  }
+}</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">@m</span>, <span class="code">@media</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">@media screen {
+
+}</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">jc</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">justify-content:;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">jc:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">justify-content:center;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">jc:fe</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">justify-content:flex-end;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">jc:fs</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">justify-content:flex-start;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">jc:sa</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">justify-content:space-around;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">jc:sb</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">justify-content:space-between;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">op+</span>
+      </td>
+      <td>
+<pre class="prettyprint linenums">opacity: ;
+filter: alpha(opacity=)</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tov</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-overflow:${ellipsis};</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tov:c</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-overflow:clip;</pre>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <span class="code">tov:e</span>
+      </td>
+      <td>
+        <pre class="prettyprint linenums">text-overflow:ellipsis;</pre>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="dws-disqus">
+    <div id="bxdynamic_KeBBtj_start" style="display:none"></div>
+    Загрузка...
+    <div id="bxdynamic_KeBBtj_end" style="display:none"></div>
+    <br>
+  </div>
+  </div>
+
+
+  </div>
+  </div>
+  </div>
+  </div> </div>
+  </div>
+  </div>
+  </div>
+  </section> <br>
+  <footer id="footer" class="dark">
+    <div class="container footer">
+      <div class="row">
+        <div class="col-sm-5 padd">
+          <h5>DWstroy</h5>
+          <div class="line-left"></div>
+          <p style="text-align: justify;">
+            Наша компания ООО "ДАЛЬВЕБСТРОЙ" разрабатывает современные адаптивные сайт с удивляющим, но простым и
+            понятным, по-европейски стильным дизайном. Идеальные варианты наших сайтов подойдут для компаний, которые
+            хотят произвести впечатление успешных, интересных, организаций в глазах &nbsp;клиентов, партнеров и
+            сотрудников. Наши <a title="Контакты" target="_blank" href="/about_us/contacts/">Контакты</a>.
+          </p></div>
+        <div class="col-sm-3 padd">
+          <h5>Контакты DWstroy</h5>
+          <div class="line-left"></div>
+          <address>
+            <p>
+              <i class="fa fa-map-marker"></i>&nbsp;ул.Аверкиева 22<br>
+              <i class="fa fa-phone"></i>8(928) 472-64-08<br>
+              <i class="fa fa-phone"></i>8(914) 418-52-90<br>
+              <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:info@dwstroy.ru">info@dwstroy.ru</a>
+            </p>
+          </address>
+        </div>
+        <div class="col-sm-4 padd">
+          <h5>Подпишитесь на новости</h5>
+          <div class="line-left"></div>
+          <p>и будьте в курсе.</p>
+          <form id="emailAddressForm" class="form-horizontal">
+            <div class="form-group input-group">
+              <input id="subscriber_email" class="form-control" name="email" type="text" placeholder="Email Address"/>
+              <span class="input-group-btn">
+<button class="btn pi-btn-default" id="subscribe" type="submit">Подпишитесь на новости</button>
+</span>
+            </div>
+            <div>
+              <label for="soglasie"><input type="checkbox" id="soglasie" name="soglasie" checked="" value="Y" disabled>Отправляя
+                форму, Вы принимаете условия <a target="_blank" href="/about_us/personal-info.php">"Соглашения на
+                  обработку
+                  персональных данных"</a></label>
+            </div>
+            <div id="subscribe_form_msg"></div>
+          </form>
+          <ul class="social inline-block margin-top-10">
+            <li class="margin-right-5 margin-top-10">
+              <a rel="nofollow" target="_blank" href="https://vk.com/dwstroy">
+                <i class="fa fa-vk vk-icon social-icon social-icon-x3 rounded"></i>
+              </a>
+            </li>
+            <li class="margin-right-5 margin-top-10">
+              <a rel="nofollow" target="_blank" href="https://www.youtube.com/channel/UCTgx8cZRD5Jz2_zGaT27S3w">
+                <i class="fa fa-youtube youtube-icon social-icon social-icon-x3 rounded"></i>
+              </a>
+            </li>
+            <li class="margin-right-5 margin-top-10">
+              <a rel="nofollow" target="_blank" href="https://www.facebook.com/DWstroy-1415456785391372/">
+                <i class="fa fa-facebook facebook-icon social-icon social-icon-x3 rounded"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="copyrights">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 col-xs-12">
+            <p class="pull-left">2013г. - 2021г. ©<a href="/">dwstroy.ru</a> / Создание, поддержка и продвижение сайтов
+              ООО "ДАЛЬВЕБСТРОЙ".</p>
+          </div>
+          <div class="col-sm-4 col-xs-12 text-center" id="bx-composite-banner"></div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="dws-ya">
+
+              <a target="_blank" rel="nofollow"
+                  href="/external-link/?link=https%3A%2F%2Fmetrika.yandex.ru%2Fstat%2F%3Fid%3D23880652%26amp%3Bfrom%3Dinformer"><img
+                  src="https://informer.yandex.ru/informer/23880652/3_1_FFFFFFFF_EFEFEFFF_0_pageviews"
+                  style="width:88px; height:31px; border:0;" alt="Яндекс.Метрика"
+                  title="Яндекс.Метрика: данные за сегодня (просмотры, визиты и уникальные посетители)"
+                  class="ym-advanced-informer" data-cid="23880652" data-lang="ru"/></a>
+
+            </div>
+            <a class="bizsolutions_logo clearfix" href="/" title="Создание интернет сайтов на 1С-Битрикс">
+              <img src="/local/templates/dwstroy/img/DWstroy-80-50.png" class="pull-right">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
