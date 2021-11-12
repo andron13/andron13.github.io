@@ -13,8 +13,8 @@ myLovelyLogger();
 ````
 
 Возвращающие значение
-````js
 
+````js
 function makeMeSandwich(хлеб, котлета, майонез) {
     // bread, cutlet, mayonnaise
     console.log(хлеб, котлета, майонез);
@@ -28,11 +28,12 @@ makeMeSandwich(2, 1, "немножко")
 Отличают функции и по способу описания
 
 ````js
+
+// Function Declaration Объявление Функции
 function helloWorld() {
     console.log("Hello")
 }
 
-// Function Declaration Объявление Функции
 let variable1 = helloWorld();
 
 // Function Expression Функциональное Выражение
@@ -99,6 +100,20 @@ myCalculator(5, 5, myDisplayer);
 
 </body>
 </html>
+````
+
+## Анонимные функции - anonymous function
+
+>An anonymous function is a function without a function name. Only function expressions can be anonymous, function declarations must have a name:
+
+>Анонимная функция это функция без имени:
+
+Примеры:
+````js
+// When used as a function expression
+(function () {});
+// or using the ECMAScript 2015 arrow notation
+() => {};
 ````
 
 ### Когда следует использовать обратный вызов?

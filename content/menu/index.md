@@ -91,7 +91,8 @@ headless: true
     - [05 - Логические типы данных]({{< relref "/05-js-boolean-logical-operators.md" >}})
     - [06 - Функции важные основы]({{< relref "/06-js-function-basics.md" >}})
     - [07 - Условный оператор]({{< relref "/07-js-if-else.md" >}})
-    - [12 - Массивы в JavaScript]({{< relref "/12-js-arrays.md" >}})
+    - [14 - Массивы в JavaScript]({{< relref "/14-js-arrays.md" >}})
+    - [31 - Массивы их методы]({{< relref "/31-js-array-functions-sort-filter-map-reduce-some-every.md" >}})
   - **Задачник по HTML без CSS**  
     - **Основы - теги**  
     - [01 - Exegi monumentum]({{< relref "/school/frontend/fe-exercises/01-basic/01-exercises-html.md" >}})
