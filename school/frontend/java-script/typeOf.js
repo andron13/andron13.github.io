@@ -31,3 +31,5 @@ let i = 0;
 for (const key of Object.keys(myTestObj)) {
     console.log(key + " - " + myTestObj[key] + " является " + typeof myTestObj[key]);
 }
+
+

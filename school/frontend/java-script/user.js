@@ -11,7 +11,9 @@
 //
 // let admin = new User("Admin", 20);
 // console.log(admin.age)
+/*
 
 class User {
 
 }
+*/

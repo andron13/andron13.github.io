@@ -14,7 +14,7 @@ JavaScript является в первую очередь языком фрон
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.c923116660f84314330fb14e9f6955321dad4b5bf0504573cea8b20b659ba213.js integrity="sha256-ySMRZmD4QxQzD7FOn2lVMh2tS1vwUEVzzqiyC2WbohM=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.ef69710fbb2f40d9f83edd542db9407fffda73164d9d6e4f401e4253c758da53.js integrity="sha256-72lxD7svQNn4Pt1ULblAf//acxZNnW5PQB5CU8dY2lM=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -147,7 +147,8 @@ JavaScript является в первую очередь языком фрон
 <li><a href=/school/frontend/java-script/05-js-boolean-logical-operators/>05 - Логические типы данных</a></li>
 <li><a href=/school/frontend/java-script/06-js-function-basics/>06 - Функции важные основы</a></li>
 <li><a href=/school/frontend/java-script/07-js-if-else/>07 - Условный оператор</a></li>
-<li><a href=/school/frontend/java-script/12-js-arrays/>12 - Массивы в JavaScript</a></li>
+<li><a href=/school/frontend/java-script/14-js-arrays/>14 - Массивы в JavaScript</a></li>
+<li><a href=/school/frontend/java-script/31-js-array-functions-sort-filter-map-reduce-some-every/>31 - Массивы их методы</a></li>
 </ul>
 </li>
 <li><strong>Задачник по HTML без CSS</strong>
@@ -259,6 +260,19 @@ Blog
 </ul>
 </li>
 <li><a href=#символы-unicode>Символы Unicode</a></li>
+<li><a href=#в-чем-разница-между-stringslice-stringsubstr-и-stringsubstring>В чем разница между String.slice, String.substr и String.substring?</a>
+<ul>
+<li><a href=#синтаксис>Синтаксис:</a></li>
+<li><a href=#что-оно-делает>Что оно делает?</a></li>
+<li><a href=#изменяет-исходную-строку>Изменяет исходную строку?</a></li>
+<li><a href=#использование-отрицательных-чисел-в-качестве-аргумента>Использование отрицательных чисел в качестве аргумента:</a></li>
+<li><a href=#если-первый-аргумент-больше-второго>если первый аргумент больше второго:</a></li>
+<li><a href=#первый-аргумент>Первый аргумент:</a></li>
+<li><a href=#второй-аргумент>Второй аргумент:</a></li>
+<li><a href=#что-если-второй-аргумент-опущен>Что если второй аргумент опущен?</a></li>
+<li><a href=#подводя-итоги>Подводя итоги:</a></li>
+</ul>
+</li>
 <li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li>
 <li><a href=#домашнее-задание>Домашнее задание</a></li>
 </ul>
@@ -455,6 +469,114 @@ charCodeAt()
 <p>Когда во фронтенде говорят об уникоде, то чаще всего речь ведут о UTF-8. Это рекомендуемая кодировка в HTML-5. Однако
 проблема с кодировками несколько обширнее, чем UTF-8 и если мы говорим о кодировке символов в JS, то у нас есть
 воспользоваться UTF-16. Не путайте юникод с мнемоническими символами.</p>
+<h2 id=в-чем-разница-между-stringslice-stringsubstr-и-stringsubstring>
+В чем разница между String.slice, String.substr и String.substring?
+<a class=anchor href=#%d0%b2-%d1%87%d0%b5%d0%bc-%d1%80%d0%b0%d0%b7%d0%bd%d0%b8%d1%86%d0%b0-%d0%bc%d0%b5%d0%b6%d0%b4%d1%83-stringslice-stringsubstr-%d0%b8-stringsubstring>#</a>
+</h2>
+<h3 id=синтаксис>
+Синтаксис:
+<a class=anchor href=#%d1%81%d0%b8%d0%bd%d1%82%d0%b0%d0%ba%d1%81%d0%b8%d1%81>#</a>
+</h3>
+<ul>
+<li>string.slice(start,end)</li>
+<li>string.substr(start,length)</li>
+<li>string.substring(start,end)</li>
+</ul>
+<blockquote>
+<p>Примечание № 1:slice()==substring()</p>
+</blockquote>
+<h3 id=что-оно-делает>
+Что оно делает?
+<a class=anchor href=#%d1%87%d1%82%d0%be-%d0%be%d0%bd%d0%be-%d0%b4%d0%b5%d0%bb%d0%b0%d0%b5%d1%82>#</a>
+</h3>
+<ul>
+<li>В slice()методе извлекает часть строки и возвращает Извлеченные части в новой строке.</li>
+<li>В substr()метод извлекает часть строки, начиная с символа в заданном положении, и возвращает заданное число символов.</li>
+<li>В substring()методе извлекает часть строки и возвращает Извлеченные части в новой строке.</li>
+</ul>
+<blockquote>
+<p>Заметка 2:slice()==substring()</p>
+</blockquote>
+<h3 id=изменяет-исходную-строку>
+Изменяет исходную строку?
+<a class=anchor href=#%d0%b8%d0%b7%d0%bc%d0%b5%d0%bd%d1%8f%d0%b5%d1%82-%d0%b8%d1%81%d1%85%d0%be%d0%b4%d0%bd%d1%83%d1%8e-%d1%81%d1%82%d1%80%d0%be%d0%ba%d1%83>#</a>
+</h3>
+<ul>
+<li>slice()Не не</li>
+<li>substr()не</li>
+<li>substring()не</li>
+</ul>
+<blockquote>
+<p>замечает # 3:slice()==substring()</p>
+</blockquote>
+<h3 id=использование-отрицательных-чисел-в-качестве-аргумента>
+Использование отрицательных чисел в качестве аргумента:
+<a class=anchor href=#%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5-%d0%be%d1%82%d1%80%d0%b8%d1%86%d0%b0%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d1%85-%d1%87%d0%b8%d1%81%d0%b5%d0%bb-%d0%b2-%d0%ba%d0%b0%d1%87%d0%b5%d1%81%d1%82%d0%b2%d0%b5-%d0%b0%d1%80%d0%b3%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d0%b0>#</a>
+</h3>
+<ul>
+<li>slice()выбирает символы, начиная с конца строки,</li>
+<li>substr()выбирает символы, начиная с конца строки,</li>
+<li>substring()не выполняет</li>
+</ul>
+<blockquote>
+<p>Примечание № 3:slice()==substr()</p>
+</blockquote>
+<h3 id=если-первый-аргумент-больше-второго>
+если первый аргумент больше второго:
+<a class=anchor href=#%d0%b5%d1%81%d0%bb%d0%b8-%d0%bf%d0%b5%d1%80%d0%b2%d1%8b%d0%b9-%d0%b0%d1%80%d0%b3%d1%83%d0%bc%d0%b5%d0%bd%d1%82-%d0%b1%d0%be%d0%bb%d1%8c%d1%88%d0%b5-%d0%b2%d1%82%d0%be%d1%80%d0%be%d0%b3%d0%be>#</a>
+</h3>
+<ul>
+<li>slice()не выполняется,</li>
+<li>substr()так как второй аргумент НЕ является позицией, а значением длины, он будет работать как обычно, без проблем</li>
+<li>substring()поменять местами два аргумента и работать как обычно</li>
+</ul>
+<h3 id=первый-аргумент>
+Первый аргумент:
+<a class=anchor href=#%d0%bf%d0%b5%d1%80%d0%b2%d1%8b%d0%b9-%d0%b0%d1%80%d0%b3%d1%83%d0%bc%d0%b5%d0%bd%d1%82>#</a>
+</h3>
+<ul>
+<li>slice()Обязательный, указывает:</li>
+<li>substr()Требуется начальный указатель , указывает:</li>
+<li>substring()Требуется начальный указатель , указывает: Начальный указатель</li>
+</ul>
+<blockquote>
+<p>Примечание № 4:slice()==substr()==substring()</p>
+</blockquote>
+<h3 id=второй-аргумент>
+Второй аргумент:
+<a class=anchor href=#%d0%b2%d1%82%d0%be%d1%80%d0%be%d0%b9-%d0%b0%d1%80%d0%b3%d1%83%d0%bc%d0%b5%d0%bd%d1%82>#</a>
+</h3>
+<ul>
+<li>slice()Необязательно, Позиция (до, но не включая), где заканчивать извлечение</li>
+<li>substr()Необязательно, Количество символов для извлечения</li>
+<li>substring()Необязательная, Позиция (до, но не включая), где заканчивать извлечение</li>
+</ul>
+<blockquote>
+<p>Примечание # 5:slice()==substring()</p>
+</blockquote>
+<h3 id=что-если-второй-аргумент-опущен>
+Что если второй аргумент опущен?
+<a class=anchor href=#%d1%87%d1%82%d0%be-%d0%b5%d1%81%d0%bb%d0%b8-%d0%b2%d1%82%d0%be%d1%80%d0%be%d0%b9-%d0%b0%d1%80%d0%b3%d1%83%d0%bc%d0%b5%d0%bd%d1%82-%d0%be%d0%bf%d1%83%d1%89%d0%b5%d0%bd>#</a>
+</h3>
+<ul>
+<li>slice()выбирает все символы от начальной позиции до конца строки</li>
+<li>substr()выбирает все символы от начальной позиции до конца строки</li>
+<li>substring()выбирает все символы от начальной позиции до конца строки</li>
+</ul>
+<blockquote>
+<p>Примечание # 6:slice()==substr()==substring()</p>
+</blockquote>
+<blockquote>
+<p>Таким образом, вы можете сказать, что есть разница между slice()и substr(), в то время substring()как в основном это копия slice().</p>
+</blockquote>
+<h3 id=подводя-итоги>
+Подводя итоги:
+<a class=anchor href=#%d0%bf%d0%be%d0%b4%d0%b2%d0%be%d0%b4%d1%8f-%d0%b8%d1%82%d0%be%d0%b3%d0%b8>#</a>
+</h3>
+<ul>
+<li>если вы знаете индекс (позицию), на которой вы остановитесь (но НЕ включите), используйте, slice()</li>
+<li>если вы знаете длину символов, которые нужно извлечь substr().</li>
+</ul>
 <h2 id=дополнительные-ссылки>
 Дополнительные ссылки
 <a class=anchor href=#%d0%b4%d0%be%d0%bf%d0%be%d0%bb%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8>#</a>
@@ -512,6 +634,19 @@ charCodeAt()
 </ul>
 </li>
 <li><a href=#символы-unicode>Символы Unicode</a></li>
+<li><a href=#в-чем-разница-между-stringslice-stringsubstr-и-stringsubstring>В чем разница между String.slice, String.substr и String.substring?</a>
+<ul>
+<li><a href=#синтаксис>Синтаксис:</a></li>
+<li><a href=#что-оно-делает>Что оно делает?</a></li>
+<li><a href=#изменяет-исходную-строку>Изменяет исходную строку?</a></li>
+<li><a href=#использование-отрицательных-чисел-в-качестве-аргумента>Использование отрицательных чисел в качестве аргумента:</a></li>
+<li><a href=#если-первый-аргумент-больше-второго>если первый аргумент больше второго:</a></li>
+<li><a href=#первый-аргумент>Первый аргумент:</a></li>
+<li><a href=#второй-аргумент>Второй аргумент:</a></li>
+<li><a href=#что-если-второй-аргумент-опущен>Что если второй аргумент опущен?</a></li>
+<li><a href=#подводя-итоги>Подводя итоги:</a></li>
+</ul>
+</li>
 <li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li>
 <li><a href=#домашнее-задание>Домашнее задание</a></li>
 </ul>

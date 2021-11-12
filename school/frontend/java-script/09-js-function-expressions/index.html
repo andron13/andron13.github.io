@@ -20,7 +20,7 @@ function makeMeSandwich(хлеб, котлета, майонез) { // bread, cu
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.c923116660f84314330fb14e9f6955321dad4b5bf0504573cea8b20b659ba213.js integrity="sha256-ySMRZmD4QxQzD7FOn2lVMh2tS1vwUEVzzqiyC2WbohM=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.ef69710fbb2f40d9f83edd542db9407fffda73164d9d6e4f401e4253c758da53.js integrity="sha256-72lxD7svQNn4Pt1ULblAf//acxZNnW5PQB5CU8dY2lM=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -153,7 +153,8 @@ function makeMeSandwich(хлеб, котлета, майонез) { // bread, cu
 <li><a href=/school/frontend/java-script/05-js-boolean-logical-operators/>05 - Логические типы данных</a></li>
 <li><a href=/school/frontend/java-script/06-js-function-basics/>06 - Функции важные основы</a></li>
 <li><a href=/school/frontend/java-script/07-js-if-else/>07 - Условный оператор</a></li>
-<li><a href=/school/frontend/java-script/12-js-arrays/>12 - Массивы в JavaScript</a></li>
+<li><a href=/school/frontend/java-script/14-js-arrays/>14 - Массивы в JavaScript</a></li>
+<li><a href=/school/frontend/java-script/31-js-array-functions-sort-filter-map-reduce-some-every/>31 - Массивы их методы</a></li>
 </ul>
 </li>
 <li><strong>Задачник по HTML без CSS</strong>
@@ -247,7 +248,8 @@ Blog
 <aside class="hidden clearfix">
 <nav id=TableOfContents>
 <ul>
-<li><a href=#пример-колбэков>Пример колбэков</a>
+<li><a href=#пример-колбэков>Пример колбэков</a></li>
+<li><a href=#анонимные-функции---anonymous-function>Анонимные функции - anonymous function</a>
 <ul>
 <li><a href=#когда-следует-использовать-обратный-вызов>Когда следует использовать обратный вызов?</a></li>
 </ul>
@@ -269,8 +271,7 @@ Function Declaration и Function Expression
 }
 <span style=color:#a6e22e>myLovelyLogger</span>();
 </code></pre></div><p>Возвращающие значение</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>
-<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>makeMeSandwich</span>(<span style=color:#a6e22e>хлеб</span>, <span style=color:#a6e22e>котлета</span>, <span style=color:#a6e22e>майонез</span>) {
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>makeMeSandwich</span>(<span style=color:#a6e22e>хлеб</span>, <span style=color:#a6e22e>котлета</span>, <span style=color:#a6e22e>майонез</span>) {
     <span style=color:#75715e>// bread, cutlet, mayonnaise
 </span><span style=color:#75715e></span>    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>хлеб</span>, <span style=color:#a6e22e>котлета</span>, <span style=color:#a6e22e>майонез</span>);
     <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>бутерброт</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>`</span><span style=color:#e6db74>${</span><span style=color:#a6e22e>хлеб</span><span style=color:#e6db74>}</span><span style=color:#e6db74>хлеб и </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>котлета</span><span style=color:#e6db74>}</span><span style=color:#e6db74>котлета сами по себе вкусны, но только </span><span style=color:#e6db74>${</span><span style=color:#a6e22e>майонез</span><span style=color:#e6db74>}</span><span style=color:#e6db74>майонез делает из них настоящий бутик!`</span>
@@ -279,12 +280,13 @@ Function Declaration и Function Expression
 
 <span style=color:#a6e22e>makeMeSandwich</span>(<span style=color:#ae81ff>2</span>, <span style=color:#ae81ff>1</span>, <span style=color:#e6db74>&#34;немножко&#34;</span>)
 </code></pre></div><p>Отличают функции и по способу описания</p>
-<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>helloWorld</span>() {
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js>
+<span style=color:#75715e>// Function Declaration Объявление Функции
+</span><span style=color:#75715e></span><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>helloWorld</span>() {
     <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Hello&#34;</span>)
 }
 
-<span style=color:#75715e>// Function Declaration Объявление Функции
-</span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>variable1</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>helloWorld</span>();
+<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>variable1</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>helloWorld</span>();
 
 <span style=color:#75715e>// Function Expression Функциональное Выражение
 </span><span style=color:#75715e></span>
@@ -345,6 +347,21 @@ Function Declaration и Function Expression
 
 &lt;/<span style=color:#f92672>body</span>&gt;
 &lt;/<span style=color:#f92672>html</span>&gt;
+</code></pre></div><h2 id=анонимные-функции---anonymous-function>
+Анонимные функции - anonymous function
+<a class=anchor href=#%d0%b0%d0%bd%d0%be%d0%bd%d0%b8%d0%bc%d0%bd%d1%8b%d0%b5-%d1%84%d1%83%d0%bd%d0%ba%d1%86%d0%b8%d0%b8---anonymous-function>#</a>
+</h2>
+<blockquote>
+<p>An anonymous function is a function without a function name. Only function expressions can be anonymous, function declarations must have a name:</p>
+</blockquote>
+<blockquote>
+<p>Анонимная функция это функция без имени:</p>
+</blockquote>
+<p>Примеры:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// When used as a function expression
+</span><span style=color:#75715e></span>(<span style=color:#66d9ef>function</span> () {});
+<span style=color:#75715e>// or using the ECMAScript 2015 arrow notation
+</span><span style=color:#75715e></span>() =&gt; {};
 </code></pre></div><h3 id=когда-следует-использовать-обратный-вызов>
 Когда следует использовать обратный вызов?
 <a class=anchor href=#%d0%ba%d0%be%d0%b3%d0%b4%d0%b0-%d1%81%d0%bb%d0%b5%d0%b4%d1%83%d0%b5%d1%82-%d0%b8%d1%81%d0%bf%d0%be%d0%bb%d1%8c%d0%b7%d0%be%d0%b2%d0%b0%d1%82%d1%8c-%d0%be%d0%b1%d1%80%d0%b0%d1%82%d0%bd%d1%8b%d0%b9-%d0%b2%d1%8b%d0%b7%d0%be%d0%b2>#</a>
@@ -389,7 +406,8 @@ arrow</p>
 <div class=book-toc-content>
 <nav id=TableOfContents>
 <ul>
-<li><a href=#пример-колбэков>Пример колбэков</a>
+<li><a href=#пример-колбэков>Пример колбэков</a></li>
+<li><a href=#анонимные-функции---anonymous-function>Анонимные функции - anonymous function</a>
 <ul>
 <li><a href=#когда-следует-использовать-обратный-вызов>Когда следует использовать обратный вызов?</a></li>
 </ul>
