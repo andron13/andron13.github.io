@@ -16,7 +16,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.d64bb82e88eb3d05f8957ec2d23a78a38745e223bc93ae1955e12ecd7ecca430.js integrity="sha256-1ku4LojrPQX4lX7C0jp4o4dF4iO8k64ZVeEuzX7MpDA=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.b49946f36d5a37c7c2619951dcad6a9466c30284f6d32c5d66d23f3227e695ae.js integrity="sha256-tJlG821aN8fCYZlR3K1qlGbDAoT20yxdZtI/Mifmla4=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -245,6 +245,17 @@ Blog
 <nav id=TableOfContents>
 <ul>
 <li><a href=#массивы-и-методы-для-работы-с-ними-sort-filter-map-reduce-some-every->Массивы и методы для работы с ними: sort, filter, map, reduce, some, every &mldr;</a></li>
+<li><a href=#сортировка-массива---sort>Сортировка массива - sort</a>
+<ul>
+<li><a href=#больше-меньше>Больше меньше</a></li>
+</ul>
+</li>
+<li><a href=#фильтрация-массива---filter>Фильтрация массива - filter</a></li>
+<li><a href=#трансформация-массива---метод-map>Трансформация массива - метод map</a></li>
+<li><a href=#reduce-или-самый-сложный-метод-в-массивах>Reduce или самый сложный метод в массивах</a></li>
+<li><a href=#some-and-every---методы-проверки>Some and every - методы проверки</a></li>
+<li><a href=#домашнее-задание>Домашнее задание</a></li>
+<li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li>
 </ul>
 </nav>
 </aside>
@@ -260,11 +271,152 @@ Blog
 <li>Если разобраться хотя бы с одним методом, то каждый следующий даётся намного легче.</li>
 </ol>
 <p>И некоторая сложность в их понимании возникает скорее у тех, кто по-настоящему не подружился со стрелочными функциями.</p>
-<p>Потому для начала убеждаемся, что мы знаем:- <a href=/school/frontend/java-script/21-js-arrow-functions-basics/>1</a></p>
-<ul>
-<li><a href=/school/frontend/java-script/21-js-arrow-functions-basics/>2</a></li>
-<li><a href=/school/frontend/java-script/21-js-arrow-functions-basics/>3</a></li>
-</ul>
+<p>Потому для начала убеждаемся, что мы знаем базу - <a href=/school/frontend/java-script/21-js-arrow-functions-basics/>стрелочные функции</a>.</p>
+<blockquote>
+<p>Это статья является базовой в объяснении работы методов массивов. И не заменяет собой документацию.</p>
+</blockquote>
+<h2 id=сортировка-массива---sort>
+Сортировка массива - sort
+<a class=anchor href=#%d1%81%d0%be%d1%80%d1%82%d0%b8%d1%80%d0%be%d0%b2%d0%ba%d0%b0-%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d0%b0---sort>#</a>
+</h2>
+<p>Javascript несёт с собой функцию сортировки. Давайте посмотрим её на примере:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>array1</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>2</span>,<span style=color:#ae81ff>3</span>,<span style=color:#ae81ff>4</span>,<span style=color:#ae81ff>5</span>,<span style=color:#ae81ff>7</span>,<span style=color:#ae81ff>1</span>,<span style=color:#ae81ff>6</span>];
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>array1</span>.<span style=color:#a6e22e>sort</span>()); <span style=color:#75715e>// [  1, 2, 3, 4,  5, 6, 7]
+</span></code></pre></div><p>Результат работы метода соответствует моим ожиданиям, правда надо помнить, что метод меняет массив и к оригинальному массиву уже не вернуться. Давайте теперь отсортируем города:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>array2</span> <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Могилёв&#34;</span>,<span style=color:#e6db74>&#34;Минск&#34;</span>,<span style=color:#e6db74>&#34;Москва&#34;</span>,<span style=color:#e6db74>&#34;Мухино&#34;</span>,<span style=color:#e6db74>&#34;Муром&#34;</span>];
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>array2</span>.<span style=color:#a6e22e>sort</span>()); <span style=color:#75715e>// [ &#39;Минск&#39;, &#39;Могилёв&#39;, &#39;Москва&#39;, &#39;Муром&#39;, &#39;Мухино&#39; ]
+</span></code></pre></div><p>С городами вроде тоже всё хорошо. Может показаться, что метод sort() идеальный метод. Давайте попробуем немного более длинный ряд.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>array3</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>11</span>, <span style=color:#ae81ff>31</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>44</span>, <span style=color:#ae81ff>115</span>];
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>array3</span>.<span style=color:#a6e22e>sort</span>()); 
+<span style=color:#75715e>// [  1, 11, 115, 3, 31, 4, 44, 5, 6, 7]
+</span></code></pre></div><p>1, 11 и 115 идут раньше чем три и тридцать один. Сортировка, которую применяет метод sort() является лексикографической. Это значит, что он сортирует по алфавиту. Для него 1 и 11 примерно то же самое, что и &ldquo;а&rdquo;, и &ldquo;аа&rdquo;. Именно так кстати в некоторых операционных системах сортируют папки. То есть если &ldquo;Аахен&rdquo; идёт перед &ldquo;Арканзасом&rdquo;, то и &ldquo;111&rdquo; идёт перед &ldquo;22&rdquo;.</p>
+<p>Все символы собраны в &ldquo;условной&rdquo; таблице символов. Сегодня это скорее всего юникод. Подробнее почитать можно об этом <a href=https://en.wikipedia.org/wiki/Unicode>здесь</a>.</p>
+<p>Прежде чем мы научимся сортировать не по алфавиту, а на больше меньше, нам надо понять, что такое больше меньше.</p>
+<h3 id=больше-меньше>
+Больше меньше
+<a class=anchor href=#%d0%b1%d0%be%d0%bb%d1%8c%d1%88%d0%b5-%d0%bc%d0%b5%d0%bd%d1%8c%d1%88%d0%b5>#</a>
+</h3>
+<p>И так мы должны написать функцию, которая сравнивая два числа скажет системе, что доно из них больше, а другое меньше.</p>
+<p>Давайте начнём, сравнение по-английски compare и наш метод должен принять два числа. Если первое больше, то мы отдадим положительное число, если меньше отрицательное, а если числа равны, то отдадим ноль.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>compare</span>(<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) {
+  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>a</span> <span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>b</span>) {
+    <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>1</span>;
+  } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>a</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>b</span>) {
+    <span style=color:#66d9ef>return</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>;
+  } <span style=color:#66d9ef>else</span> {
+    <span style=color:#66d9ef>return</span> <span style=color:#ae81ff>0</span>;
+  }
+}
+</code></pre></div><p>Вроде получилось, только нам не обязательно отдавать один и минус один, достаточно просто любое число. И если мы задумаемся, то выясним, что если а больше б, то их разница будет положительной. Если а равно б, то их разница равна нулю. А если а меньше б, то их разница равна отрицательному числу.</p>
+<p>Нам всегда надо отдавать разницу, так вернём её сразу.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>compare</span>(<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) {
+    <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>a</span><span style=color:#f92672>-</span><span style=color:#a6e22e>b</span>;
+}
+</code></pre></div><p>Теперь мы можем передать этот способ сравнения в функцию sort(). И всё вместе будет выглядеть:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>array</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>11</span>, <span style=color:#ae81ff>31</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>44</span>, <span style=color:#ae81ff>115</span>];
+
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>compare</span>(<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) {
+<span style=color:#66d9ef>return</span> <span style=color:#a6e22e>a</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>b</span>;
+}
+
+<span style=color:#a6e22e>array</span>.<span style=color:#a6e22e>sort</span>(<span style=color:#a6e22e>compare</span>);
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>array</span>);
+</code></pre></div><p>Саму функцию компаре мы конечно же можем переписать как стрелочную функцию и тогда нас кстати меньше смущает отсутствие скобок при передаче её как параметр.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>array</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>11</span>, <span style=color:#ae81ff>31</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>44</span>, <span style=color:#ae81ff>115</span>];
+
+<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>compare</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) =&gt; <span style=color:#a6e22e>a</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>b</span>;
+
+<span style=color:#a6e22e>array</span>.<span style=color:#a6e22e>sort</span>(<span style=color:#a6e22e>compare</span>);
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>array</span>);
+</code></pre></div><p>Или даже сразу записать стрелочную функцию как параметр метода sort:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>array</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>11</span>, <span style=color:#ae81ff>31</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>44</span>, <span style=color:#ae81ff>115</span>];
+<span style=color:#a6e22e>array</span>.<span style=color:#a6e22e>sort</span>((<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) =&gt; <span style=color:#a6e22e>a</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>b</span>);
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>array</span>);
+</code></pre></div><p>Вот так шаг за шагом мы разобрали ещё один пример использования стрелочной функции, узнали новое слово &ldquo;лексикографический&rdquo;, научились сортировать. Давайте отдохнём и пойдём дальше.</p>
+<h2 id=фильтрация-массива---filter>
+Фильтрация массива - filter
+<a class=anchor href=#%d1%84%d0%b8%d0%bb%d1%8c%d1%82%d1%80%d0%b0%d1%86%d0%b8%d1%8f-%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d0%b0---filter>#</a>
+</h2>
+<p>Первое и самое важное - метод filter возвращает (или создаёт) новый массив. А значит нам нужна переменная, что бы сохранить его. Дайте возьмём список городов и найдём все города в которых больше шести букв.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>cities</span> <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Могилёв&#34;</span>, <span style=color:#e6db74>&#34;Минск&#34;</span>, <span style=color:#e6db74>&#34;Москва&#34;</span>, <span style=color:#e6db74>&#34;Мухино&#34;</span>, <span style=color:#e6db74>&#34;Муром&#34;</span>, <span style=color:#e6db74>&#34;Мюнхен&#34;</span>, <span style=color:#e6db74>&#34;Мурманск&#34;</span>];
+<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>result</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>cities</span>.<span style=color:#a6e22e>filter</span>(<span style=color:#a6e22e>city</span> =&gt; <span style=color:#a6e22e>city</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>6</span>);
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>result</span>); 
+<span style=color:#75715e>//[ &#39;Могилёв&#39;, &#39;Мурманск&#39; ]
+</span></code></pre></div><p>Мы фильтруем массив cities и говорим: &ldquo;Отфильтруй, пожалуйста, все города, длина которых больше шести&rdquo;.</p>
+<p>То что мы написали вверху, по аналогии с методом сорт можно было бы записать и так:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>cities</span> <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Могилёв&#34;</span>, <span style=color:#e6db74>&#34;Минск&#34;</span>, <span style=color:#e6db74>&#34;Москва&#34;</span>, <span style=color:#e6db74>&#34;Мухино&#34;</span>, <span style=color:#e6db74>&#34;Муром&#34;</span>, <span style=color:#e6db74>&#34;Мюнхен&#34;</span>, <span style=color:#e6db74>&#34;Мурманск&#34;</span>];
+<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>result</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>cities</span>.<span style=color:#a6e22e>filter</span>(<span style=color:#a6e22e>ruleFilter</span>);
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>ruleFilter</span>(<span style=color:#a6e22e>city</span>) {
+  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>city</span>.<span style=color:#a6e22e>length</span> <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>6</span>;
+}
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>result</span>);
+<span style=color:#75715e>//[ &#39;Могилёв&#39;, &#39;Мурманск&#39; ]
+</span></code></pre></div><p>Мне кажется, что постепенно более лаконичная запись должна начать нравиться и вам. Давайте закрепим материал и отсортируем в массиве чисел нужные нам. И это будут все между 5 и 50.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>array</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>11</span>, <span style=color:#ae81ff>31</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>44</span>, <span style=color:#ae81ff>115</span>];
+<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>luckyNumbers</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>array</span>.<span style=color:#a6e22e>filter</span>((<span style=color:#a6e22e>number</span>) =&gt; <span style=color:#a6e22e>number</span> <span style=color:#f92672>&gt;</span> <span style=color:#ae81ff>5</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>number</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>50</span>);
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>luckyNumbers</span>);
+<span style=color:#75715e>// [ 11, 31, 7, 6, 44 ]
+</span></code></pre></div><h2 id=трансформация-массива---метод-map>
+Трансформация массива - метод map
+<a class=anchor href=#%d1%82%d1%80%d0%b0%d0%bd%d1%81%d1%84%d0%be%d1%80%d0%bc%d0%b0%d1%86%d0%b8%d1%8f-%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d0%b0---%d0%bc%d0%b5%d1%82%d0%be%d0%b4-map>#</a>
+</h2>
+<p>Давайте возведём все числа массива во вторую степень:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>array</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>11</span>, <span style=color:#ae81ff>31</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>44</span>, <span style=color:#ae81ff>115</span>];
+<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>luckyNumbers</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>array</span>.<span style=color:#a6e22e>map</span>((<span style=color:#a6e22e>number</span>) =&gt; <span style=color:#a6e22e>number</span> <span style=color:#f92672>**</span> <span style=color:#ae81ff>2</span>);
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>luckyNumbers</span>);
+<span style=color:#75715e>// [121, 961, 16, 25, 49, 36, 1, 9, 1936, 13225]
+</span></code></pre></div><p>Или примем массив городов, а вернём количество символов в названии каждого города:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>cities</span> <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Могилёв&#34;</span>, <span style=color:#e6db74>&#34;Минск&#34;</span>, <span style=color:#e6db74>&#34;Москва&#34;</span>, <span style=color:#e6db74>&#34;Мухино&#34;</span>, <span style=color:#e6db74>&#34;Муром&#34;</span>, <span style=color:#e6db74>&#34;Мюнхен&#34;</span>, <span style=color:#e6db74>&#34;Мурманск&#34;</span>];
+<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>numbers</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>cities</span>.<span style=color:#a6e22e>map</span>((<span style=color:#a6e22e>city</span>) =&gt; <span style=color:#a6e22e>city</span>.<span style=color:#a6e22e>length</span>);
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>numbers</span>);
+[ <span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>8</span>]
+</code></pre></div><h2 id=reduce-или-самый-сложный-метод-в-массивах>
+Reduce или самый сложный метод в массивах
+<a class=anchor href=#reduce-%d0%b8%d0%bb%d0%b8-%d1%81%d0%b0%d0%bc%d1%8b%d0%b9-%d1%81%d0%bb%d0%be%d0%b6%d0%bd%d1%8b%d0%b9-%d0%bc%d0%b5%d1%82%d0%be%d0%b4-%d0%b2-%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d0%b0%d1%85>#</a>
+</h2>
+<p>Не пугайтесь. Он действительно самый сложный. Но мы это исправим. Я подготовил пару задач на сегодня и ещё пару для следующей статьи, где мы потрогаем его ещё раз. <strong>reduce</strong> помогает провести операцию с каждым элементом массива и сохранить одно результирующее значение всей работы.</p>
+<p>Например, мы можем найти сумму или среднее арифметическое всех чисел массива. Давайте начнём с суммы:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>array</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>11</span>, <span style=color:#ae81ff>31</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>44</span>, <span style=color:#ae81ff>115</span>];
+<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>sum</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>array</span>.<span style=color:#a6e22e>reduce</span>((<span style=color:#a6e22e>result</span>, <span style=color:#a6e22e>current</span>) =&gt; <span style=color:#a6e22e>result</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>current</span>);
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>sum</span>);
+</code></pre></div><p>Я пересчитал на калькуляторе. Всё верно. Колбэк функция передаваемая методу reduce имеет результат и актуальный элемент массива. Начальное значение результата в таком случае будет равно первому элементу массива. Среднее арифметическое можно найти просто поделив сумму на длину массива.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>array</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>11</span>, <span style=color:#ae81ff>31</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>44</span>, <span style=color:#ae81ff>115</span>];
+<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>sum</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>array</span>.<span style=color:#a6e22e>reduce</span>((<span style=color:#a6e22e>result</span>, <span style=color:#a6e22e>current</span>) =&gt; <span style=color:#a6e22e>result</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>current</span>);
+<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>arithmeticAverage</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>sum</span><span style=color:#f92672>/</span><span style=color:#a6e22e>array</span>.<span style=color:#a6e22e>length</span>;
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>arithmeticAverage</span>.<span style=color:#a6e22e>toFixed</span>(<span style=color:#ae81ff>2</span>)); 
+<span style=color:#75715e>// 22.70
+</span></code></pre></div><p>Метод reduce принимает функцию и если хотите начальное значение результата. Сама колбэк функция может принимать помимо результата и актуального элемента его индекс и сам массив.</p>
+<pre tabindex=0><code class=language-code data-lang=code>let output = array.reduce(function(result, currentItem, cirrentIndex, inputArray), resultStartValue =&gt; functionLogic);
+</code></pre><p>Более сложные примеры рассмотрим завтра.</p>
+<h2 id=some-and-every---методы-проверки>
+Some and every - методы проверки
+<a class=anchor href=#some-and-every---%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d1%8b-%d0%bf%d1%80%d0%be%d0%b2%d0%b5%d1%80%d0%ba%d0%b8>#</a>
+</h2>
+<p>Они возвращают булевое значение если хоть один - some или каждый(every) соответствует условию.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>cities</span> <span style=color:#f92672>=</span> [<span style=color:#e6db74>&#34;Могилёв&#34;</span>, <span style=color:#e6db74>&#34;Минск&#34;</span>, <span style=color:#e6db74>&#34;Москва&#34;</span>, <span style=color:#e6db74>&#34;Мухино&#34;</span>, <span style=color:#e6db74>&#34;Муром&#34;</span>, <span style=color:#e6db74>&#34;Мюнхен&#34;</span>, <span style=color:#e6db74>&#34;Мурманск&#34;</span>];
+<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>checkSome</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>cities</span>.<span style=color:#a6e22e>some</span>(<span style=color:#a6e22e>city</span> =&gt; <span style=color:#a6e22e>city</span><span style=color:#f92672>===</span><span style=color:#e6db74>&#34;Могилёв&#34;</span>);
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>checkSome</span>);
+
+<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>checkEvery</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>cities</span>.<span style=color:#a6e22e>every</span>((<span style=color:#a6e22e>city</span>) =&gt; <span style=color:#a6e22e>city</span>[<span style=color:#ae81ff>0</span>] <span style=color:#f92672>===</span> <span style=color:#e6db74>&#34;М&#34;</span>);
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>checkEvery</span>);
+</code></pre></div><h2 id=домашнее-задание>
+Домашнее задание
+<a class=anchor href=#%d0%b4%d0%be%d0%bc%d0%b0%d1%88%d0%bd%d0%b5%d0%b5-%d0%b7%d0%b0%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5>#</a>
+</h2>
+<p>Прочитать все дополнительные ссылки</p>
+<h2 id=дополнительные-ссылки>
+Дополнительные ссылки
+<a class=anchor href=#%d0%b4%d0%be%d0%bf%d0%be%d0%bb%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8>#</a>
+</h2>
+<ol>
+<li><a href=https://learn.javascript.ru/array-iteration>https://learn.javascript.ru/array-iteration</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/every>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/every</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/filter>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/filter</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/some>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/some</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort</a></li>
+</ol>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
@@ -284,6 +436,17 @@ Blog
 <nav id=TableOfContents>
 <ul>
 <li><a href=#массивы-и-методы-для-работы-с-ними-sort-filter-map-reduce-some-every->Массивы и методы для работы с ними: sort, filter, map, reduce, some, every &mldr;</a></li>
+<li><a href=#сортировка-массива---sort>Сортировка массива - sort</a>
+<ul>
+<li><a href=#больше-меньше>Больше меньше</a></li>
+</ul>
+</li>
+<li><a href=#фильтрация-массива---filter>Фильтрация массива - filter</a></li>
+<li><a href=#трансформация-массива---метод-map>Трансформация массива - метод map</a></li>
+<li><a href=#reduce-или-самый-сложный-метод-в-массивах>Reduce или самый сложный метод в массивах</a></li>
+<li><a href=#some-and-every---методы-проверки>Some and every - методы проверки</a></li>
+<li><a href=#домашнее-задание>Домашнее задание</a></li>
+<li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li>
 </ul>
 </nav>
 </div>
