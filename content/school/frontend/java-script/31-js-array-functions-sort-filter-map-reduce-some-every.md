@@ -1,16 +1,18 @@
 ## Массивы и методы для работы с ними: sort, filter, map, reduce, some, every ...
 
+Мы уже рассматривали некоторые, базовые методы для работы с массивами при знакомстве с самими [массивами]({{< relref "/14-js-arrays.md" >}}) в JavaScript. Настало время изучить ещё несколько очень полезных методов. 
+
 Это будет длинная статья. Изначально под каждый метод я хотел сделать отдельную статью, так как это сделано например на MDN. 
 
 Но при написании я понял, что у всех методов массива, которые я хотел рассмотреть есть как минимум две общие черты:
-1. Все методы с удовольствием используют стрелочные функции ( а некоторые и колбэки). 
+1. Все методы с удовольствием используют колбэки и соответственно стрелочные функции. 
 2. Если разобраться хотя бы с одним методом, то каждый следующий даётся намного легче. 
 
 И некоторая сложность в их понимании возникает скорее у тех, кто по-настоящему не подружился со стрелочными функциями. 
 
 Потому для начала убеждаемся, что мы знаем базу - [стрелочные функции]({{< relref "/21-js-arrow-functions-basics.md" >}}).
 
-> Это статья является базовой в объяснении работы методов массивов. И не заменяет собой документацию.
+> Это статья является базовой в объяснении работы методов массивов. И не заменяет собой документацию. Ссылки на документацию вы найдёте в конце статьи.
 
 ## Сортировка массива - sort
 
@@ -43,7 +45,7 @@ console.log(array3.sort());
 
 ### Больше меньше
 
-И так мы должны написать функцию, которая сравнивая два числа скажет системе, что доно из них больше, а другое меньше. 
+И так мы должны написать функцию, которая сравнивая два числа скажет системе, что одно из них больше, а другое меньше. 
 
 Давайте начнём, сравнение по-английски compare и наш метод должен принять два числа. Если первое больше, то мы отдадим положительное число, если меньше отрицательное, а если числа равны, то отдадим ноль.
 ````js
@@ -156,9 +158,13 @@ console.log(numbers);
 [ 7, 5, 6, 6, 5, 6, 8]
 ````
 
-## Reduce или самый сложный метод в массивах
+## Reduce или самый простой метод в массивах
 
-Не пугайтесь. Он действительно самый сложный. Но мы это исправим. Я подготовил пару задач на сегодня и ещё пару для следующей статьи, где мы потрогаем его ещё раз. **reduce** помогает провести операцию с каждым элементом массива и сохранить одно результирующее значение всей работы. 
+Это действительно самый простой метод, потому что он принципиально он объединяет работу двух уже известных нам метода **map** и **filter**. 
+
+map создаёт новый массив, меняя каждый элемент массива индивидуально. filter создаёт новый массив убирая элементы, которые не соответствуют условиям. reduce в свою очередь, берёт все элементы в массиве, складывает их в новое значение.
+
+Я подготовил пару задач на сегодня и ещё пару для следующей статьи, где мы потрогаем его ещё раз. **reduce** помогает провести операцию с каждым элементом массива и сохранить одно результирующее значение всей работы. 
 
 Например, мы можем найти сумму или среднее арифметическое всех чисел массива. Давайте начнём с суммы:
 
@@ -204,10 +210,11 @@ console.log(checkEvery);
 
 ## Дополнительные ссылки
 
-1. https://learn.javascript.ru/array-iteration
-2. https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map
-3. https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/every
-4. https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/filter
-5. https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
-6. https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/some
-7. https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
+1. [developer.mozilla.org - map](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+2. [developer.mozilla.org - every](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+3. [developer.mozilla.org - filter](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
+4. [developer.mozilla.org - reduce](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
+5. [developer.mozilla.org - some](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+6. [developer.mozilla.org - sort](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+7. [Как использовать Map, Filter и Reduce в JavaScript](https://code.tutsplus.com/ru/tutorials/how-to-use-map-filter-reduce-in-javascript--cms-26209)
+8. [Полезные приёмы работы с массивами в JavaScript](https://habr.com/ru/company/plarium/blog/483958/)
