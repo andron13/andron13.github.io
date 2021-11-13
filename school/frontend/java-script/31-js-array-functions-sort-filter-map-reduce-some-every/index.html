@@ -2,13 +2,13 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="Массивы и методы для работы с ними: sort, filter, map, reduce, some, every &mldr; #  Это будет длинная статья. Изначально под каждый метод я хотел сделать отдельную статью, так как это сделано например на MDN.
-Но при написании я понял, что у всех методов массива, которые я хотел рассмотреть есть как минимум две общие черты:
- Все методы с удовольствием используют стрелочные функции ( а некоторые и колбэки). Если разобраться хотя бы с одним методом, то каждый следующий даётся намного легче.">
+<meta name=description content="Массивы и методы для работы с ними: sort, filter, map, reduce, some, every &mldr; #  Мы уже рассматривали некоторые, базовые методы для работы с массивами при знакомстве с самими массивами в JavaScript. Настало время изучить ещё несколько очень полезных методов.
+Это будет длинная статья. Изначально под каждый метод я хотел сделать отдельную статью, так как это сделано например на MDN.
+Но при написании я понял, что у всех методов массива, которые я хотел рассмотреть есть как минимум две общие черты:">
 <meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
-<meta property="og:description" content="Массивы и методы для работы с ними: sort, filter, map, reduce, some, every &mldr; #  Это будет длинная статья. Изначально под каждый метод я хотел сделать отдельную статью, так как это сделано например на MDN.
-Но при написании я понял, что у всех методов массива, которые я хотел рассмотреть есть как минимум две общие черты:
- Все методы с удовольствием используют стрелочные функции ( а некоторые и колбэки). Если разобраться хотя бы с одним методом, то каждый следующий даётся намного легче.">
+<meta property="og:description" content="Массивы и методы для работы с ними: sort, filter, map, reduce, some, every &mldr; #  Мы уже рассматривали некоторые, базовые методы для работы с массивами при знакомстве с самими массивами в JavaScript. Настало время изучить ещё несколько очень полезных методов.
+Это будет длинная статья. Изначально под каждый метод я хотел сделать отдельную статью, так как это сделано например на MDN.
+Но при написании я понял, что у всех методов массива, которые я хотел рассмотреть есть как минимум две общие черты:">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://andron13.de/school/frontend/java-script/31-js-array-functions-sort-filter-map-reduce-some-every/"><meta property="og:image" content="https://andron13.de/site-feature-image.jpg"><meta property="article:section" content="school">
 <title>31 Js Array Functions Sort Filter Map Reduce Some Every | andron13</title>
@@ -16,7 +16,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.b49946f36d5a37c7c2619951dcad6a9466c30284f6d32c5d66d23f3227e695ae.js integrity="sha256-tJlG821aN8fCYZlR3K1qlGbDAoT20yxdZtI/Mifmla4=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.bb21aaf0492642beb7d5ae9b41998b321d1f5c489e5d3cd76d094261ab639927.js integrity="sha256-uyGq8EkmQr631a6bQZmLMh0fXEieXTzXbQlCYatjmSc=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -252,7 +252,7 @@ Blog
 </li>
 <li><a href=#фильтрация-массива---filter>Фильтрация массива - filter</a></li>
 <li><a href=#трансформация-массива---метод-map>Трансформация массива - метод map</a></li>
-<li><a href=#reduce-или-самый-сложный-метод-в-массивах>Reduce или самый сложный метод в массивах</a></li>
+<li><a href=#reduce-или-самый-простой-метод-в-массивах>Reduce или самый простой метод в массивах</a></li>
 <li><a href=#some-and-every---методы-проверки>Some and every - методы проверки</a></li>
 <li><a href=#домашнее-задание>Домашнее задание</a></li>
 <li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li>
@@ -264,16 +264,17 @@ Blog
 Массивы и методы для работы с ними: sort, filter, map, reduce, some, every &mldr;
 <a class=anchor href=#%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d1%8b-%d0%b8-%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d1%8b-%d0%b4%d0%bb%d1%8f-%d1%80%d0%b0%d0%b1%d0%be%d1%82%d1%8b-%d1%81-%d0%bd%d0%b8%d0%bc%d0%b8-sort-filter-map-reduce-some-every->#</a>
 </h2>
+<p>Мы уже рассматривали некоторые, базовые методы для работы с массивами при знакомстве с самими <a href=/school/frontend/java-script/14-js-arrays/>массивами</a> в JavaScript. Настало время изучить ещё несколько очень полезных методов.</p>
 <p>Это будет длинная статья. Изначально под каждый метод я хотел сделать отдельную статью, так как это сделано например на MDN.</p>
 <p>Но при написании я понял, что у всех методов массива, которые я хотел рассмотреть есть как минимум две общие черты:</p>
 <ol>
-<li>Все методы с удовольствием используют стрелочные функции ( а некоторые и колбэки).</li>
+<li>Все методы с удовольствием используют колбэки и соответственно стрелочные функции.</li>
 <li>Если разобраться хотя бы с одним методом, то каждый следующий даётся намного легче.</li>
 </ol>
 <p>И некоторая сложность в их понимании возникает скорее у тех, кто по-настоящему не подружился со стрелочными функциями.</p>
 <p>Потому для начала убеждаемся, что мы знаем базу - <a href=/school/frontend/java-script/21-js-arrow-functions-basics/>стрелочные функции</a>.</p>
 <blockquote>
-<p>Это статья является базовой в объяснении работы методов массивов. И не заменяет собой документацию.</p>
+<p>Это статья является базовой в объяснении работы методов массивов. И не заменяет собой документацию. Ссылки на документацию вы найдёте в конце статьи.</p>
 </blockquote>
 <h2 id=сортировка-массива---sort>
 Сортировка массива - sort
@@ -296,7 +297,7 @@ Blog
 Больше меньше
 <a class=anchor href=#%d0%b1%d0%be%d0%bb%d1%8c%d1%88%d0%b5-%d0%bc%d0%b5%d0%bd%d1%8c%d1%88%d0%b5>#</a>
 </h3>
-<p>И так мы должны написать функцию, которая сравнивая два числа скажет системе, что доно из них больше, а другое меньше.</p>
+<p>И так мы должны написать функцию, которая сравнивая два числа скажет системе, что одно из них больше, а другое меньше.</p>
 <p>Давайте начнём, сравнение по-английски compare и наш метод должен принять два числа. Если первое больше, то мы отдадим положительное число, если меньше отрицательное, а если числа равны, то отдадим ноль.</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>compare</span>(<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) {
   <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>a</span> <span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>b</span>) {
@@ -370,11 +371,13 @@ Blog
 <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>numbers</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>cities</span>.<span style=color:#a6e22e>map</span>((<span style=color:#a6e22e>city</span>) =&gt; <span style=color:#a6e22e>city</span>.<span style=color:#a6e22e>length</span>);
 <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>numbers</span>);
 [ <span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>8</span>]
-</code></pre></div><h2 id=reduce-или-самый-сложный-метод-в-массивах>
-Reduce или самый сложный метод в массивах
-<a class=anchor href=#reduce-%d0%b8%d0%bb%d0%b8-%d1%81%d0%b0%d0%bc%d1%8b%d0%b9-%d1%81%d0%bb%d0%be%d0%b6%d0%bd%d1%8b%d0%b9-%d0%bc%d0%b5%d1%82%d0%be%d0%b4-%d0%b2-%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d0%b0%d1%85>#</a>
+</code></pre></div><h2 id=reduce-или-самый-простой-метод-в-массивах>
+Reduce или самый простой метод в массивах
+<a class=anchor href=#reduce-%d0%b8%d0%bb%d0%b8-%d1%81%d0%b0%d0%bc%d1%8b%d0%b9-%d0%bf%d1%80%d0%be%d1%81%d1%82%d0%be%d0%b9-%d0%bc%d0%b5%d1%82%d0%be%d0%b4-%d0%b2-%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d0%b0%d1%85>#</a>
 </h2>
-<p>Не пугайтесь. Он действительно самый сложный. Но мы это исправим. Я подготовил пару задач на сегодня и ещё пару для следующей статьи, где мы потрогаем его ещё раз. <strong>reduce</strong> помогает провести операцию с каждым элементом массива и сохранить одно результирующее значение всей работы.</p>
+<p>Это действительно самый простой метод, потому что он принципиально он объединяет работу двух уже известных нам метода <strong>map</strong> и <strong>filter</strong>.</p>
+<p>map создаёт новый массив, меняя каждый элемент массива индивидуально. filter создаёт новый массив убирая элементы, которые не соответствуют условиям. reduce в свою очередь, берёт все элементы в массиве, складывает их в новое значение.</p>
+<p>Я подготовил пару задач на сегодня и ещё пару для следующей статьи, где мы потрогаем его ещё раз. <strong>reduce</strong> помогает провести операцию с каждым элементом массива и сохранить одно результирующее значение всей работы.</p>
 <p>Например, мы можем найти сумму или среднее арифметическое всех чисел массива. Давайте начнём с суммы:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>array</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>11</span>, <span style=color:#ae81ff>31</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>44</span>, <span style=color:#ae81ff>115</span>];
 <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>sum</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>array</span>.<span style=color:#a6e22e>reduce</span>((<span style=color:#a6e22e>result</span>, <span style=color:#a6e22e>current</span>) =&gt; <span style=color:#a6e22e>result</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>current</span>);
@@ -409,13 +412,14 @@ Some and every - методы проверки
 <a class=anchor href=#%d0%b4%d0%be%d0%bf%d0%be%d0%bb%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8>#</a>
 </h2>
 <ol>
-<li><a href=https://learn.javascript.ru/array-iteration>https://learn.javascript.ru/array-iteration</a></li>
-<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map</a></li>
-<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/every>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/every</a></li>
-<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/filter>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/filter</a></li>
-<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce</a></li>
-<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/some>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/some</a></li>
-<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/map>developer.mozilla.org - map</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/every>developer.mozilla.org - every</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/filter>developer.mozilla.org - filter</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce>developer.mozilla.org - reduce</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/some>developer.mozilla.org - some</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Array/sort>developer.mozilla.org - sort</a></li>
+<li><a href=https://code.tutsplus.com/ru/tutorials/how-to-use-map-filter-reduce-in-javascript--cms-26209>Как использовать Map, Filter и Reduce в JavaScript</a></li>
+<li><a href=https://habr.com/ru/company/plarium/blog/483958/>Полезные приёмы работы с массивами в JavaScript</a></li>
 </ol>
 </article>
 <footer class=book-footer>
@@ -443,7 +447,7 @@ Some and every - методы проверки
 </li>
 <li><a href=#фильтрация-массива---filter>Фильтрация массива - filter</a></li>
 <li><a href=#трансформация-массива---метод-map>Трансформация массива - метод map</a></li>
-<li><a href=#reduce-или-самый-сложный-метод-в-массивах>Reduce или самый сложный метод в массивах</a></li>
+<li><a href=#reduce-или-самый-простой-метод-в-массивах>Reduce или самый простой метод в массивах</a></li>
 <li><a href=#some-and-every---методы-проверки>Some and every - методы проверки</a></li>
 <li><a href=#домашнее-задание>Домашнее задание</a></li>
 <li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li>
