@@ -61,8 +61,7 @@ function plusOrMinus(a, b) {
 }
 ```
 
-Мы можем сразу упросить до тернарного оператора. И я специально взял этот пример, потому что и тернарный оператор и
-стрелочная функция необычайна любимы на фронтенде.
+Мы можем сразу упросить до тернарного оператора. И я специально взял этот пример, потому что и тернарный оператор и стрелочная функция необычайна любимы на фронтенде.
 
 ```js
 function plusOrMinus(a, b) {
@@ -78,10 +77,18 @@ let plusOrMinusExample = (a, b) => (a > b ? a - b : a + b);
 
 ## Дополнительные ссылки
 
-1. [Три примера, когда не стоит использовать стрелочные функции JavaScript](https://nuancesprog.ru/p/9592/)
+1. [Функция](https://developer.mozilla.org/ru/docs/Glossary/Function)
+2. [Стрелочные функции](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Functions/Arrow_functions)
+3. [5 отличий между обычными и стрелочными функциями](https://vc.ru/dev/133379-5-otlichiy-mezhdu-obychnymi-i-strelochnymi-funkciyami)
+4. [Три примера, когда не стоит использовать стрелочные функции JavaScript](https://nuancesprog.ru/p/9592/)
+5. [Стрелочные функции в JavaScript: зачем они нужны, как с ними обращаться, когда ими стоит пользоваться, а когда — нет](https://habr.com/ru/company/ruvds/blog/428566/)
+6. [Функции-стрелки, основы](https://learn.javascript.ru/arrow-functions-basics)
+7. [Повторяем стрелочные функции](https://learn.javascript.ru/arrow-functions)
+8. [Функциональное выражение и стрелочные функции в JavaScript](https://itchief.ru/javascript/function-expression-and-arrow)
 
 ## Вопросы из собеседований
 
 1. Какие отличия у стрелочных функций от других?
 2. Зачем нужны стрелочные функции?
 3. Где используют стрелочные функции?
+4. Напишите пример стрелочной функции

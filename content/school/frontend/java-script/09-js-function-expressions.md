@@ -148,5 +148,6 @@ https://metanit.com/web/javascript/3.3.php
 
 ## Дополнительные ссылки
 
-1. [Сильно забегаем вперёд](https://medium.com/devschacht/anonymous-functions-in-javascript-ff6b9ba85de0)
-2. https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/
+1. [Функциональные выражения](https://learn.javascript.ru/function-declaration-expression)
+2. [Сильно забегаем вперёд](https://medium.com/devschacht/anonymous-functions-in-javascript-ff6b9ba85de0)
+3. https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/
