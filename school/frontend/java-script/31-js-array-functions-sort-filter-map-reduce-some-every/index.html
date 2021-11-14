@@ -16,7 +16,7 @@
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.bb21aaf0492642beb7d5ae9b41998b321d1f5c489e5d3cd76d094261ab639927.js integrity="sha256-uyGq8EkmQr631a6bQZmLMh0fXEieXTzXbQlCYatjmSc=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.124d57c79c87e0465709955f3de536e4805afb47bd2a30feb1c6272520baf16f.js integrity="sha256-Ek1Xx5yH4EZXCZVfPeU25IBa+0e9KjD+scYnJSC68W8=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -332,8 +332,16 @@ Blog
 </code></pre></div><p>Или даже сразу записать стрелочную функцию как параметр метода sort:</p>
 <div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>array</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>11</span>, <span style=color:#ae81ff>31</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>44</span>, <span style=color:#ae81ff>115</span>];
 <span style=color:#a6e22e>array</span>.<span style=color:#a6e22e>sort</span>((<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) =&gt; <span style=color:#a6e22e>a</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>b</span>);
-<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>array</span>);
-</code></pre></div><p>Вот так шаг за шагом мы разобрали ещё один пример использования стрелочной функции, узнали новое слово &ldquo;лексикографический&rdquo;, научились сортировать. Давайте отдохнём и пойдём дальше.</p>
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>array</span>); 
+</code></pre></div><p>Вот так шаг за шагом мы разобрали ещё один пример использования стрелочной функции, узнали новое слово &ldquo;лексикографический&rdquo;, научились сортировать.</p>
+<p>Стоит добавить, что стрелочные функции появились в JS s <strong>ES6</strong>. В <strong>ES5</strong> это выглядело ещщё вот так:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// ES5
+</span><span style=color:#75715e></span><span style=color:#66d9ef>let</span> <span style=color:#a6e22e>array</span> <span style=color:#f92672>=</span> [<span style=color:#ae81ff>11</span>, <span style=color:#ae81ff>31</span>, <span style=color:#ae81ff>4</span>, <span style=color:#ae81ff>5</span>, <span style=color:#ae81ff>7</span>, <span style=color:#ae81ff>6</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>3</span>, <span style=color:#ae81ff>44</span>, <span style=color:#ae81ff>115</span>];
+<span style=color:#a6e22e>array</span>.<span style=color:#a6e22e>sort</span>(<span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>a</span>, <span style=color:#a6e22e>b</span>) {
+  <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>a</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>b</span>;
+});
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>array</span>);  <span style=color:#75715e>// [ 1,  3,  4,  5,   6,  7, 11, 31, 44, 115]
+</span></code></pre></div><p>Помимо более короткой записи у стрелочной функции другой подход к работе со значением <strong>this</strong>. Но это отдельная тема.</p>
 <h2 id=фильтрация-массива---filter>
 Фильтрация массива - filter
 <a class=anchor href=#%d1%84%d0%b8%d0%bb%d1%8c%d1%82%d1%80%d0%b0%d1%86%d0%b8%d1%8f-%d0%bc%d0%b0%d1%81%d1%81%d0%b8%d0%b2%d0%b0---filter>#</a>
@@ -390,7 +398,7 @@ Reduce или самый простой метод в массивах
 <span style=color:#75715e>// 22.70
 </span></code></pre></div><p>Метод reduce принимает функцию и если хотите начальное значение результата. Сама колбэк функция может принимать помимо результата и актуального элемента его индекс и сам массив.</p>
 <pre tabindex=0><code class=language-code data-lang=code>let output = array.reduce(function(result, currentItem, cirrentIndex, inputArray), resultStartValue =&gt; functionLogic);
-</code></pre><p>Более сложные примеры рассмотрим завтра.</p>
+</code></pre><p>Ещё несколько примеров рассмотрено по ссылкам в конце урока.</p>
 <h2 id=some-and-every---методы-проверки>
 Some and every - методы проверки
 <a class=anchor href=#some-and-every---%d0%bc%d0%b5%d1%82%d0%be%d0%b4%d1%8b-%d0%bf%d1%80%d0%be%d0%b2%d0%b5%d1%80%d0%ba%d0%b8>#</a>
@@ -406,7 +414,7 @@ Some and every - методы проверки
 Домашнее задание
 <a class=anchor href=#%d0%b4%d0%be%d0%bc%d0%b0%d1%88%d0%bd%d0%b5%d0%b5-%d0%b7%d0%b0%d0%b4%d0%b0%d0%bd%d0%b8%d0%b5>#</a>
 </h2>
-<p>Прочитать все дополнительные ссылки</p>
+<p>Прочитать весь материал в дополнительных ссылках</p>
 <h2 id=дополнительные-ссылки>
 Дополнительные ссылки
 <a class=anchor href=#%d0%b4%d0%be%d0%bf%d0%be%d0%bb%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8>#</a>
