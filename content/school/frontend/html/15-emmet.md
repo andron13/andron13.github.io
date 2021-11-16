@@ -191,6 +191,7 @@ Div можно не писать вообще, так как этот элеме
 - em>.class
 - ul>.class
 - table>.row>.col
+- ```table>tr*5>td*15```
 - h2{Заголовок]+p*3>lorem
 - ul.style>li.list-items*5
 - div+p+bq>lorem
@@ -205,7 +206,7 @@ Div можно не писать вообще, так как этот элеме
 - a{Click me}
 - p>{Click }+a{here}+{ to continue}
 - .wrapper>h1{My Text}+p*3>lorem5
--	nav.header__menu>ul>li.header__menu-item$*6>{link-item $$}
+- nav.header__menu>ul>li.header__menu-item$*6>{link-item $$}
 - ul.gallery>li*20>img[src="img/img-filename-$$.jpg"]
 
 

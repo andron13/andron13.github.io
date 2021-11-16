@@ -96,7 +96,11 @@ description: Как работать с таблицами в HTML5 и HTML4.
 
 ## Emmet code
 
-table>
+```code
+table>tr*5>td*15
+```
+
+[Подробнее о Emmet code]({{< relref "/15-emmet.md" >}})
 
 ## Дополнительные ссылки.
 

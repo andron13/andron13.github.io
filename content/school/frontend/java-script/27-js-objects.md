@@ -93,6 +93,8 @@ https://medium.com/nuances-of-programming/%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D
 https://metanit.com/web/javascript/4.1.php
 https://www.udemy.com/course/pro-react-redux/learn/lecture/11390444#overview
 
+https://youtu.be/H1NmJIv1A2Y
+
 ## Домашнее задание
 
 1. Создайте двуязычный словарь. Используйте для одной пары слов object. Объекты слов поместите в массив словаря. Напишите программу для проверки знания переводов пользователем. При угадывании писать отлично, при не угадывании - говорить не отлично и перевод.
