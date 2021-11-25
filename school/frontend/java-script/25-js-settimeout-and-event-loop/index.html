@@ -2,19 +2,23 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="call и apply
-https://metanit.com/web/javascript/4.8.php">
+<meta name=description content="Event Loop и setTimeout #   А потом просто берёшь эту функцию и вызываешь её.
+ Если вы хоть раз пытались разобраться в какой-нибудь теме и просили помощь старшего товарища, то он наверняка употреблял вспомогательное слово просто.
+Когда понимаешь суть, тогда действительно всё просто. Понять саму суть чаще всего далеко не просто.
+Но давайте оставим разглогольствия и перейдём к очень важной и конечно же очень простой теме. Важная она потому, что на каждом собеседовании по JS мне задавали минимум один вопрос на понимание работы Event Loop или событийный цикл.">
 <meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
-<meta property="og:description" content="call и apply
-https://metanit.com/web/javascript/4.8.php">
+<meta property="og:description" content="Event Loop и setTimeout #   А потом просто берёшь эту функцию и вызываешь её.
+ Если вы хоть раз пытались разобраться в какой-нибудь теме и просили помощь старшего товарища, то он наверняка употреблял вспомогательное слово просто.
+Когда понимаешь суть, тогда действительно всё просто. Понять саму суть чаще всего далеко не просто.
+Но давайте оставим разглогольствия и перейдём к очень важной и конечно же очень простой теме. Важная она потому, что на каждом собеседовании по JS мне задавали минимум один вопрос на понимание работы Event Loop или событийный цикл.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://andron13.de/school/frontend/java-script/30-js-bind-call-apply/"><meta property="og:image" content="https://andron13.de/site-feature-image.jpg"><meta property="article:section" content="school">
-<title>30 Js Bind Call Apply | andron13</title>
+<meta property="og:url" content="https://andron13.de/school/frontend/java-script/25-js-settimeout-and-event-loop/"><meta property="og:image" content="https://andron13.de/site-feature-image.jpg"><meta property="article:section" content="school">
+<title>25 Js Settimeout and Event Loop | andron13</title>
 <link rel=manifest href=/manifest.json>
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.f5cc6dade9afdf4d607179f1b3f0dcb3331d8fb83eabcf47dae84d256e3b962e.js integrity="sha256-9cxtremv301gcXnxs/DcszMdj7g+q89H2uhNJW47li4=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.45fb452880c4fa3ea580814d67ad82bee80d794054108933dbc32dad81b8b592.js integrity="sha256-RftFKIDE+j6lgIFNZ62CvugNeUBUEIkz28MtrYG4tZI=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -234,17 +238,83 @@ Blog
 <label for=menu-control>
 <img src=/svg/menu.svg class=book-icon alt=Menu>
 </label>
-<strong>30 Js Bind Call Apply</strong>
+<strong>25 Js Settimeout and Event Loop</strong>
 <label for=toc-control>
 <img src=/svg/toc.svg class=book-icon alt="Table of Contents">
 </label>
 </div>
 <aside class="hidden clearfix">
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#event-loop-и-settimeout>Event Loop и setTimeout</a></li>
+<li><a href=#важное-о-settimeout>Важное о setTimeout</a></li>
+</ul>
+</nav>
 </aside>
 </header>
-<article class=markdown><p>call и apply</p>
-<p><a href=https://metanit.com/web/javascript/4.8.php>https://metanit.com/web/javascript/4.8.php</a></p>
+<article class=markdown><h2 id=event-loop-и-settimeout>
+Event Loop и setTimeout
+<a class=anchor href=#event-loop-%d0%b8-settimeout>#</a>
+</h2>
+<blockquote>
+<p>А потом <strong>просто</strong> берёшь эту функцию и вызываешь её.</p>
+</blockquote>
+<p>Если вы хоть раз пытались разобраться в какой-нибудь теме и просили помощь старшего товарища, то он наверняка употреблял вспомогательное слово <strong>просто</strong>.</p>
+<p>Когда понимаешь суть, тогда действительно всё просто. Понять саму суть чаще всего далеко не просто.</p>
+<p>Но давайте оставим разглогольствия и перейдём к очень важной и конечно же очень простой теме. Важная она потому, что на каждом собеседовании по JS мне задавали минимум один вопрос на понимание работы Event Loop или событийный цикл.</p>
+<p>В JS все инструкции обрабатываются синхронно, то есть в порядке живой очереди. Вы реально можете представить это так. Каждый вызов это выкрик продавщицы на кассе: &ldquo;СЛЕДУЮЩИЙ!!!&rdquo;. Она одна, а вас всех много. И продавщица может обслужить только одного человека(инструкцию).</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>printing</span>() {
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#ae81ff>1</span>);
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#ae81ff>2</span>);
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#ae81ff>3</span>);
+}
+<span style=color:#a6e22e>printing</span>();
+</code></pre></div><p>Очевидно, что на консоль выйдут по очереди: 1,2,3;</p>
+<p>В этом примере у нас уже немного сложнее, но всё ещё должно быть решаемо. Давайте попробуем</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#66d9ef>function</span> <span style=color:#a6e22e>printing</span>() {
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#ae81ff>1</span>);
+  <span style=color:#a6e22e>printHelp</span>();
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#ae81ff>2</span>);
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#ae81ff>3</span>);
+}
+<span style=color:#a6e22e>printing</span>();
+
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>printHelp</span>() {
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#ae81ff>4</span>);
+  <span style=color:#a6e22e>anotherHelp</span>();
+}
+<span style=color:#66d9ef>function</span> <span style=color:#a6e22e>anotherHelp</span>() {
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#ae81ff>5</span>);
+}
+</code></pre></div><ol>
+<li>Запуск программы у нас происходит в строчке, где мы вызываем <strong>printing()</strong></li>
+<li>Мы заходим в функцию printing() и выполняем <strong>console.log(1)</strong></li>
+<li>После этого у нас идёт вызов <strong>printHelp()</strong> и мы переходим в эту функцию и выполняем <strong>console.log(4)</strong></li>
+<li>В printHelp следующий вызов anotherHelp() и в этой функции выполняется <strong>console.log(5)</strong></li>
+<li>Мы заканчиваем с функцией anotherHelp() и возвращаемся в printHelp()</li>
+<li>Там тоже больше строчек для выполнения нет. И мы возвращаемся в printing()</li>
+<li>В printing() выполняем последовательно <strong>console.log(2)</strong> и <strong>console.log(3)</strong></li>
+<li>Результатом работы будет: 1,4,5,2,3.</li>
+</ol>
+<p>У нас в JS есть способ задержать выполнение программы. Например, используя setTimeout()</p>
+<h2 id=важное-о-settimeout>
+Важное о setTimeout
+<a class=anchor href=#%d0%b2%d0%b0%d0%b6%d0%bd%d0%be%d0%b5-%d0%be-settimeout>#</a>
+</h2>
+<blockquote>
+<p>Подробно о <a href=https://developer.mozilla.org/en-US/docs/Web/API/setTimeout>setTimeout</a> можно почитать в документации. Мы ещё будем обсуждать методы WebAPIs и неоднократно использовать setTimeout. В этой статье ударение на очередность вызовов.</p>
+</blockquote>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>setTimeout</span>(<span style=color:#66d9ef>function</span> () {
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(
+    <span style=color:#e6db74>&#34;Первое сообщение. Задержка в пол-секунды. Lambda-функция написана по правилам ES5&#34;</span>
+  );
+}, <span style=color:#ae81ff>500</span>);
+
+<span style=color:#a6e22e>setTimeout</span>(() =&gt; {
+  <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;Второе сообщение. Стрелочная функция - ES6. Задержка в 1000 милисекунд или в одну секунду.&#34;</span>);
+}, <span style=color:#ae81ff>1000</span>);
+</code></pre></div><p>В нашем примере setTimeout принимает колбэк функцию и время на которое отодвигается её выполнение.</p>
+<p>Очевидно, на экране мы сначала увидим первое сообщение</p>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
@@ -261,7 +331,12 @@ Blog
 </div>
 <aside class=book-toc>
 <div class=book-toc-content>
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#event-loop-и-settimeout>Event Loop и setTimeout</a></li>
+<li><a href=#важное-о-settimeout>Важное о setTimeout</a></li>
+</ul>
+</nav>
 </div>
 </aside>
 </main>
