@@ -74,4 +74,5 @@ description: Ссылка самая важная часть в интернет
 
 ## Дополнительные ссылки
 
-1. https://en.wikipedia.org/wiki/Hyperlink
+1. [Hyperlink](https://en.wikipedia.org/wiki/Hyperlink)
+2. [hint-disown-opener](https://webhint.io/docs/user-guide/hints/hint-disown-opener/)

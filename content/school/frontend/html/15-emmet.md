@@ -192,7 +192,7 @@ Div можно не писать вообще, так как этот элеме
 - ul>.class
 - table>.row>.col
 - ```table>tr*5>td*15```
-- h2{Заголовок]+p*3>lorem
+- h2{Заголовок}+p*3>lorem
 - ul.style>li.list-items*5
 - div+p+bq>lorem
 - div+div>p>span+em+bq
@@ -208,6 +208,7 @@ Div можно не писать вообще, так как этот элеме
 - .wrapper>h1{My Text}+p*3>lorem5
 - nav.header__menu>ul>li.header__menu-item$*6>{link-item $$}
 - ul.gallery>li*20>img[src="img/img-filename-$$.jpg"]
+- ```div.answer.soft#soft-skills-$${HERE}*20>h3+p*2```
 
 
 ## Полезные ссылки
