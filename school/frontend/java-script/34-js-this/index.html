@@ -4,11 +4,11 @@
 <meta name=viewport content="width=device-width,initial-scale=1">
 <meta name=description content="This #  Это самая сложная тема. И сложна она тем, что поведение this в JavaScript отличается от поведения this в других языках.
  this и react   Даже знаменитая библиотека React придумала хуки, что бы программисты не терялись в this. Проблема ни капельки не преувеличена.
-https://www.youtube.com/watch?v=gvicrj31JOM https://youtu.be/qg3EO56r76c?t=9193">
+this в классе #  class Article { title; announce; text; imagePath; imageWidth; imageHeight; constructor(title, text, imagePath) { this.title = title; this.text = text; this.">
 <meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
 <meta property="og:description" content="This #  Это самая сложная тема. И сложна она тем, что поведение this в JavaScript отличается от поведения this в других языках.
  this и react   Даже знаменитая библиотека React придумала хуки, что бы программисты не терялись в this. Проблема ни капельки не преувеличена.
-https://www.youtube.com/watch?v=gvicrj31JOM https://youtu.be/qg3EO56r76c?t=9193">
+this в классе #  class Article { title; announce; text; imagePath; imageWidth; imageHeight; constructor(title, text, imagePath) { this.title = title; this.text = text; this.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://andron13.de/school/frontend/java-script/34-js-this/"><meta property="og:image" content="https://andron13.de/site-feature-image.jpg"><meta property="article:section" content="school">
 <title>34 Js This | andron13</title>
@@ -16,7 +16,7 @@ https://www.youtube.com/watch?v=gvicrj31JOM https://youtu.be/qg3EO56r76c?t=9193"
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.89a751fe64ead1b8e076f809c6283d7e05b34ea95e38f0ba67b50ecee8692eb6.js integrity="sha256-iadR/mTq0bjgdvgJxig9fgWzTqleOPC6Z7UOzuhpLrY=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.aa0b14d4aca32b22faa24ee66f330e3238315ecd2b65d3b2b9b18f95afda6dd2.js integrity="sha256-qgsU1KyjKyL6ok7mbzMOMjgxXs0rZdOyubGPla/abdI=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -246,6 +246,9 @@ Blog
 <nav id=TableOfContents>
 <ul>
 <li><a href=#this>This</a></li>
+<li><a href=#this-в-классе>this в классе</a></li>
+<li><a href=#heading></a></li>
+<li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li>
 </ul>
 </nav>
 </aside>
@@ -260,8 +263,62 @@ This
 </figcaption>
 </figure>
 <p>Даже знаменитая библиотека React придумала хуки, что бы программисты не терялись в this. Проблема ни капельки не преувеличена.</p>
+<h2 id=this-в-классе>
+this в классе
+<a class=anchor href=#this-%d0%b2-%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d0%b5>#</a>
+</h2>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-JavaScript data-lang=JavaScript><span style=color:#66d9ef>class</span> <span style=color:#a6e22e>Article</span> {
+    <span style=color:#a6e22e>title</span>;
+    <span style=color:#a6e22e>announce</span>;
+    <span style=color:#a6e22e>text</span>;
+    <span style=color:#a6e22e>imagePath</span>;
+    <span style=color:#a6e22e>imageWidth</span>;
+    <span style=color:#a6e22e>imageHeight</span>;
+    <span style=color:#a6e22e>constructor</span>(<span style=color:#a6e22e>title</span>, <span style=color:#a6e22e>text</span>, <span style=color:#a6e22e>imagePath</span>) {
+        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>title</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>title</span>;
+        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>text</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>text</span>;
+        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>imagePath</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>imagePath</span>;
+    }
+    <span style=color:#a6e22e>setImageSize</span>(<span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>y</span>) {
+        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>imageWidth</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>x</span>;
+        <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>imageHeight</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>y</span>;
+    }
+    <span style=color:#a6e22e>info</span> <span style=color:#f92672>=</span> () =&gt; {
+        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#66d9ef>this</span>)
+    }
+}
+
+<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>bestArticle</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#a6e22e>Article</span>(<span style=color:#e6db74>&#34;Афиша Кино на октябрь&#34;</span>, <span style=color:#e6db74>&#34;Огромная афиша на 20 фильмов&#34;</span>, <span style=color:#e6db74>&#34;/photos/city/345.jpg&#34;</span>);
+
+<span style=color:#a6e22e>bestArticle</span>.<span style=color:#a6e22e>setImageSize</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>200</span>);
+
+<span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#a6e22e>bestArticle</span>.<span style=color:#a6e22e>imageHeight</span>);
+<span style=color:#a6e22e>myTimer</span>.<span style=color:#a6e22e>info</span>();
+</code></pre></div><p>В конструкторе класса мы ссылаемся на поля создаваемого объекта с помощью this и говорим, что передаваемые параметры инициализируют поля.</p>
+<p>При создании экземпляра объекта мы передали название статьи, её текст и ссылку на фотографию.</p>
+<p>Вызвав метод объекта мы передали размеры фотографии для статьи.</p>
+<p>Ключевое слово this ведёт себя в данном случае так, как это ожидают программисты родственных си-подобных языков. То есть, если мы в шаблоне класса хотим сослаться на свойства или методы будущего уникального объекта, то нам надо this.</p>
+<p>Запуск метода myTimer.info() выведет нам информацию об объекте.</p>
+<p>Метод объекта отличается от функции тем, что он может быть вызван без создания экземпляра объекта.</p>
+<h2 id=heading>
+<a class=anchor href=#heading>#</a>
+</h2>
 <p><a href="https://www.youtube.com/watch?v=gvicrj31JOM">https://www.youtube.com/watch?v=gvicrj31JOM</a>
-<a href="https://youtu.be/qg3EO56r76c?t=9193">https://youtu.be/qg3EO56r76c?t=9193</a></p>
+<a href="https://youtu.be/qg3EO56r76c?t=9193">https://youtu.be/qg3EO56r76c?t=9193</a>
+<a href=https://habr.com/ru/company/ruvds/blog/419371/>https://habr.com/ru/company/ruvds/blog/419371/</a>
+<a href=https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648275#overview>https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648275#overview</a>
+<a href=https://metanit.com/web/javascript/4.10.php>https://metanit.com/web/javascript/4.10.php</a>
+<a href=https://habr.com/ru/post/464163/>https://habr.com/ru/post/464163/</a></p>
+<p><a href=https://urfu-2016.github.io/javascript-slides/05-this/#/8>https://urfu-2016.github.io/javascript-slides/05-this/#/8</a>
+<a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this</a></p>
+<h2 id=дополнительные-ссылки>
+Дополнительные ссылки
+<a class=anchor href=#%d0%b4%d0%be%d0%bf%d0%be%d0%bb%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8>#</a>
+</h2>
+<ol>
+<li>Подробнее о классах => <a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes</a></li>
+<li><a href=http://ryanmorr.com/understanding-scope-and-context-in-javascript/>Understanding Scope and Context in JavaScript</a></li>
+</ol>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
@@ -281,6 +338,9 @@ This
 <nav id=TableOfContents>
 <ul>
 <li><a href=#this>This</a></li>
+<li><a href=#this-в-классе>this в классе</a></li>
+<li><a href=#heading></a></li>
+<li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li>
 </ul>
 </nav>
 </div>
