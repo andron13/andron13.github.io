@@ -86,7 +86,8 @@ headless: true
     - [11 - Принтверсия сайта]({{< relref "/11-css-media-queries-print-version.md" >}})
     - [12 - Media queries]({{< relref "/12-css-media-queries-screens.md" >}})
   - **JavaScript**
-    - [01 - Введение в JS]({{< relref "/school/frontend/java-script/01-js-intro.md" >}})
+    - [01 - Введение в JS]({{< relref "/01-js-intro.md" >}})
+    - [02 - Number - числа в JS]({{< relref "/02-js-number.md" >}})
     - [03 - Функции, введение]({{< relref "/03-js-function-intro.md" >}})
     - [05 - Логические типы данных]({{< relref "/05-js-boolean-logical-operators.md" >}})
     - [06 - Функции важные основы]({{< relref "/06-js-function-basics.md" >}})
