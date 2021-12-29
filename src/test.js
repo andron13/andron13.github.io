@@ -1,6 +1,5 @@
-function sayHi() {
-    console.log('Привет');
+function test() {
+  const a = "Кто прочитал этот текст в консоли, тот скоро умрёт";
+  console.log(this.a);
 }
-
-// setTimeout(sayHi, 2000);
-setInterval(sayHi, 1000);
+test(); // не волнуйтесь, никто не умрёт
