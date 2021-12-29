@@ -2,17 +2,21 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="#  https://metanit.com/web/javascript/4.5.php">
+<meta name=description content="Классы в Javascript #  JavaScript самый популярный язык программирования, потому что сегодня всё ещё сложно сделать фронтенд на любом другом языке. Программисты пишущие бэкенд на PHP, Python, Java, C#, Go, Rust, ect вынуждены использовать JS для разработки своих вебсайтов.
+Это достаточно важная вещь, которая могла бы объяснить некоторые моменты в развитии языка. Люди привыкли и полюбили определённые инструменты в своих языках и хотят их видеть и в JS.
+В программировании есть несколько парадигм, например: - императивное программирование - функциональное программирование - объектно-ориентированное программирование">
 <meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
-<meta property="og:description" content="#  https://metanit.com/web/javascript/4.5.php">
+<meta property="og:description" content="Классы в Javascript #  JavaScript самый популярный язык программирования, потому что сегодня всё ещё сложно сделать фронтенд на любом другом языке. Программисты пишущие бэкенд на PHP, Python, Java, C#, Go, Rust, ect вынуждены использовать JS для разработки своих вебсайтов.
+Это достаточно важная вещь, которая могла бы объяснить некоторые моменты в развитии языка. Люди привыкли и полюбили определённые инструменты в своих языках и хотят их видеть и в JS.
+В программировании есть несколько парадигм, например: - императивное программирование - функциональное программирование - объектно-ориентированное программирование">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://andron13.de/school/frontend/java-script/52-js-constructor/"><meta property="og:image" content="https://andron13.de/site-feature-image.jpg"><meta property="article:section" content="school">
-<title>52 Js Constructor | andron13</title>
+<meta property="og:url" content="https://andron13.de/school/frontend/java-script/53-js-class/"><meta property="og:image" content="https://andron13.de/site-feature-image.jpg"><meta property="article:section" content="school">
+<title>53 Js Class | andron13</title>
 <link rel=manifest href=/manifest.json>
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.aa0b14d4aca32b22faa24ee66f330e3238315ecd2b65d3b2b9b18f95afda6dd2.js integrity="sha256-qgsU1KyjKyL6ok7mbzMOMjgxXs0rZdOyubGPla/abdI=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.5b57dd30f4a47bdf7626e8dff4eb51aa18f3d3623a62f9b5da3445eeac5333e6.js integrity="sha256-W1fdMPSke992Jujf9OtRqhjz02I6Yvm12jRF7qxTM+Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -233,19 +237,60 @@ Blog
 <label for=menu-control>
 <img src=/svg/menu.svg class=book-icon alt=Menu>
 </label>
-<strong>52 Js Constructor</strong>
+<strong>53 Js Class</strong>
 <label for=toc-control>
 <img src=/svg/toc.svg class=book-icon alt="Table of Contents">
 </label>
 </div>
 <aside class="hidden clearfix">
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#kонструктор>Kонструктор</a></li>
+</ul>
+</nav>
 </aside>
 </header>
-<article class=markdown><h1 id=heading>
-<a class=anchor href=#heading>#</a>
+<article class=markdown><h1 id=классы-в-javascript>
+Классы в Javascript
+<a class=anchor href=#%d0%ba%d0%bb%d0%b0%d1%81%d1%81%d1%8b-%d0%b2-javascript>#</a>
 </h1>
+<p>JavaScript самый популярный язык программирования, потому что сегодня всё ещё сложно сделать фронтенд на любом другом языке. Программисты пишущие бэкенд на PHP, Python, Java, C#, Go, Rust, ect вынуждены использовать JS для разработки своих вебсайтов.</p>
+<p>Это достаточно важная вещь, которая могла бы объяснить некоторые моменты в развитии языка. Люди привыкли и полюбили определённые инструменты в своих языках и хотят их видеть и в JS.</p>
+<p>В программировании есть несколько парадигм, например:
+- императивное программирование
+- функциональное программирование
+- объектно-ориентированное программирование</p>
+<p>&#171;&#171;&#171;&lt; HEAD:content/school/frontend/java-script/61-class.md
+В JavaScript ООП было реализовано изначально с помощью прототипирования. В других языках программирования (например Java или C#) ООП реализовано классами. Эти классы, которые разработчики просили годами, появились в ES6. Причина появления на самом деле не очень важна. Важно понимать, что к цели в JS всегда ведёт несколько путей. И прототипы раннего JS и классы из ES6 могут наверняка решить поставленные задачи. Что вы в итоге выберете - зависит не от меня.</p>
+<p><a href=https://metanit.com/web/javascript/4.12.php>https://metanit.com/web/javascript/4.12.php</a>
+<a href=https://ru.hexlet.io/courses/js-introduction-to-oop/lessons/class/theory_unit>https://ru.hexlet.io/courses/js-introduction-to-oop/lessons/class/theory_unit</a>
+<a href=https://monsterlessons.com/project/lessons/javascript-klassy>https://monsterlessons.com/project/lessons/javascript-klassy</a>
+<a href=https://habr.com/ru/company/ruvds/blog/415377/>https://habr.com/ru/company/ruvds/blog/415377/</a>
+<a href=https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript-ru>https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript-ru</a>
+<a href=https://medium.com/front-stories/%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%8E%D1%82-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B-%D0%B2-javascript-7978c0003f1d>https://medium.com/front-stories/%D0%BA%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%8E%D1%82-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D1%8B-%D0%B2-javascript-7978c0003f1d</a>
+<a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes</a></p>
+<p>=======
+В ЕС6 появились классы, которые пришли из мира ООП. Они очень похожи на классы в языке программирования Java или C#. Возможно потому что этот инструмент был востребован разработчиками, а возможно потому что этот инструмент очень удобен и современен. Причина на самом деле не очень важна. Важно понимать, что к цели в JS всегда ведёт несколько путей. И прототипы JS и классы из ES6 могут наверняка решить поставленные задачи. Что вы в итоге выберете зависит не от меня. Мне важно, что бы вы поняли</p>
+<h2 id=kонструктор>
+Kонструктор
+<a class=anchor href=#k%d0%be%d0%bd%d1%81%d1%82%d1%80%d1%83%d0%ba%d1%82%d0%be%d1%80>#</a>
+</h2>
 <p><a href=https://metanit.com/web/javascript/4.5.php>https://metanit.com/web/javascript/4.5.php</a></p>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>586e532b (init: test):content/school/frontend/java-script/53-js-class.md</p>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
@@ -262,7 +307,11 @@ Blog
 </div>
 <aside class=book-toc>
 <div class=book-toc-content>
-<nav id=TableOfContents></nav>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#kонструктор>Kонструктор</a></li>
+</ul>
+</nav>
 </div>
 </aside>
 </main>

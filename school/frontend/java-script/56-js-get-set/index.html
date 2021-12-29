@@ -2,17 +2,21 @@
 <head>
 <meta charset=utf-8>
 <meta name=viewport content="width=device-width,initial-scale=1">
-<meta name=description content="https://itchief.ru/javascript/objects https://metanit.com/web/javascript/4.6.php https://learn.javascript.ru/function-prototype">
+<meta name=description content="https://metanit.com/web/javascript/4.7.php https://webdevblog.ru/inkapsulyaciya-v-javascript/ https://myrusakov.ru/js-encapsulation.html
+https://habr.com/ru/post/17613/
+MyObject = { id : 1, name : &#34;Sample&#34;, boolval : true, getName : function() { return this.name; } } ">
 <meta name=theme-color content="#FFFFFF"><meta property="og:title" content>
-<meta property="og:description" content="https://itchief.ru/javascript/objects https://metanit.com/web/javascript/4.6.php https://learn.javascript.ru/function-prototype">
+<meta property="og:description" content="https://metanit.com/web/javascript/4.7.php https://webdevblog.ru/inkapsulyaciya-v-javascript/ https://myrusakov.ru/js-encapsulation.html
+https://habr.com/ru/post/17613/
+MyObject = { id : 1, name : &#34;Sample&#34;, boolval : true, getName : function() { return this.name; } } ">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://andron13.de/school/frontend/java-script/55-js-prototipy-nasledovanieje/"><meta property="og:image" content="https://andron13.de/site-feature-image.jpg"><meta property="article:section" content="school">
-<title>55 Js Prototipy Nasledovanieje | andron13</title>
+<meta property="og:url" content="https://andron13.de/school/frontend/java-script/56-js-get-set/"><meta property="og:image" content="https://andron13.de/site-feature-image.jpg"><meta property="article:section" content="school">
+<title>56 Js Get Set | andron13</title>
 <link rel=manifest href=/manifest.json>
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.aa0b14d4aca32b22faa24ee66f330e3238315ecd2b65d3b2b9b18f95afda6dd2.js integrity="sha256-qgsU1KyjKyL6ok7mbzMOMjgxXs0rZdOyubGPla/abdI=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.5b57dd30f4a47bdf7626e8dff4eb51aa18f3d3623a62f9b5da3445eeac5333e6.js integrity="sha256-W1fdMPSke992Jujf9OtRqhjz02I6Yvm12jRF7qxTM+Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -233,7 +237,7 @@ Blog
 <label for=menu-control>
 <img src=/svg/menu.svg class=book-icon alt=Menu>
 </label>
-<strong>55 Js Prototipy Nasledovanieje</strong>
+<strong>56 Js Get Set</strong>
 <label for=toc-control>
 <img src=/svg/toc.svg class=book-icon alt="Table of Contents">
 </label>
@@ -242,10 +246,20 @@ Blog
 <nav id=TableOfContents></nav>
 </aside>
 </header>
-<article class=markdown><p><a href=https://itchief.ru/javascript/objects>https://itchief.ru/javascript/objects</a>
-<a href=https://metanit.com/web/javascript/4.6.php>https://metanit.com/web/javascript/4.6.php</a>
-<a href=https://learn.javascript.ru/function-prototype>https://learn.javascript.ru/function-prototype</a></p>
-</article>
+<article class=markdown><p><a href=https://metanit.com/web/javascript/4.7.php>https://metanit.com/web/javascript/4.7.php</a>
+<a href=https://webdevblog.ru/inkapsulyaciya-v-javascript/>https://webdevblog.ru/inkapsulyaciya-v-javascript/</a>
+<a href=https://myrusakov.ru/js-encapsulation.html>https://myrusakov.ru/js-encapsulation.html</a></p>
+<p><a href=https://habr.com/ru/post/17613/>https://habr.com/ru/post/17613/</a></p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#a6e22e>MyObject</span> <span style=color:#f92672>=</span> {
+    <span style=color:#a6e22e>id</span> <span style=color:#f92672>:</span> <span style=color:#ae81ff>1</span>,
+    <span style=color:#a6e22e>name</span> <span style=color:#f92672>:</span> <span style=color:#e6db74>&#34;Sample&#34;</span>,
+    <span style=color:#a6e22e>boolval</span> <span style=color:#f92672>:</span> <span style=color:#66d9ef>true</span>,
+    <span style=color:#a6e22e>getName</span> <span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span>()
+    {
+        <span style=color:#66d9ef>return</span> <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>name</span>;
+    }
+}
+</code></pre></div></article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
 </div>

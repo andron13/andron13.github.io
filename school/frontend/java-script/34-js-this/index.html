@@ -16,7 +16,7 @@ this в классе #  class Article { title; announce; text; imagePath; imageW
 <link rel=icon href=/favicon.png type=image/x-icon>
 <link rel=stylesheet href=/book.min.958cea7827621d6fbcb3acf091344c3e44e3d2a9428f9c3c38bb9eb37bf8c45d.css integrity="sha256-lYzqeCdiHW+8s6zwkTRMPkTj0qlCj5w8OLues3v4xF0=" crossorigin=anonymous>
 <script defer src=/flexsearch.min.js></script>
-<script defer src=/ru.search.min.aa0b14d4aca32b22faa24ee66f330e3238315ecd2b65d3b2b9b18f95afda6dd2.js integrity="sha256-qgsU1KyjKyL6ok7mbzMOMjgxXs0rZdOyubGPla/abdI=" crossorigin=anonymous></script>
+<script defer src=/ru.search.min.5b57dd30f4a47bdf7626e8dff4eb51aa18f3d3623a62f9b5da3445eeac5333e6.js integrity="sha256-W1fdMPSke992Jujf9OtRqhjz02I6Yvm12jRF7qxTM+Y=" crossorigin=anonymous></script>
 <script type=application/javascript>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga('create','UA-33668157-6','auto'),ga('send','pageview'))</script>
 <script async src=https://www.google-analytics.com/analytics.js></script>
 </head>
@@ -248,7 +248,13 @@ Blog
 <li><a href=#this>This</a></li>
 <li><a href=#this-в-классе>this в классе</a></li>
 <li><a href=#heading></a></li>
-<li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li>
+</ul>
+<ul>
+<li><a href=#дополнительные-ссылки>Дополнительные ссылки</a>
+<ul>
+<li><a href=#видеообъяснения>Видеообъяснения</a></li>
+</ul>
+</li>
 </ul>
 </nav>
 </aside>
@@ -303,22 +309,90 @@ this в классе
 <h2 id=heading>
 <a class=anchor href=#heading>#</a>
 </h2>
-<p><a href="https://www.youtube.com/watch?v=gvicrj31JOM">https://www.youtube.com/watch?v=gvicrj31JOM</a>
-<a href="https://youtu.be/qg3EO56r76c?t=9193">https://youtu.be/qg3EO56r76c?t=9193</a>
-<a href=https://habr.com/ru/company/ruvds/blog/419371/>https://habr.com/ru/company/ruvds/blog/419371/</a>
-<a href=https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648275#overview>https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648275#overview</a>
-<a href=https://metanit.com/web/javascript/4.10.php>https://metanit.com/web/javascript/4.10.php</a>
-<a href=https://habr.com/ru/post/464163/>https://habr.com/ru/post/464163/</a></p>
-<p><a href=https://urfu-2016.github.io/javascript-slides/05-this/#/8>https://urfu-2016.github.io/javascript-slides/05-this/#/8</a>
-<a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this</a></p>
+<p>=======</p>
+<h1 id=this-1>
+This
+<a class=anchor href=#this-1>#</a>
+</h1>
+<p>Очень сбивает поведение зис. Очень непонятно почему оно такое и совсем непонятно почему это нельзя исправить.</p>
+<p>Это спорное утверждение, но пожалуй это определённо та тема по которой проходит линия разделения студентов от программистов. На собеседовании мидлов и даже сеньёров незазорно спросить про THIS и порой ответ можно и не получить.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=color:#75715e>// https://youtu.be/1RWOi3G91ds
+</span><span style=color:#75715e>// 1. 
+</span><span style=color:#75715e></span><span style=color:#66d9ef>const</span> <span style=color:#a6e22e>objOne</span> <span style=color:#f92672>=</span> {
+    <span style=color:#a6e22e>a</span><span style=color:#f92672>:</span> <span style=color:#ae81ff>10</span>,
+    <span style=color:#a6e22e>baseFunct</span><span style=color:#f92672>:</span> <span style=color:#66d9ef>function</span> () {
+        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#66d9ef>this</span>);
+    },
+    <span style=color:#a6e22e>arrowFunct</span><span style=color:#f92672>:</span> () =&gt; {
+        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#66d9ef>this</span>);
+    }
+}
+
+<span style=color:#75715e>// objOne.baseFunct();
+</span><span style=color:#75715e>// objOne.arrowFunct();
+</span><span style=color:#75715e></span>
+<span style=color:#75715e>//  2. 
+</span><span style=color:#75715e></span>
+<span style=color:#66d9ef>const</span> <span style=color:#a6e22e>objectTwo</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>new</span> <span style=color:#66d9ef>function</span> () {
+    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>a</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>10</span>;
+    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>baseFunct</span> <span style=color:#f92672>=</span> <span style=color:#66d9ef>function</span> () {
+        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;base&#34;</span>, <span style=color:#66d9ef>this</span>);
+    }
+    <span style=color:#66d9ef>this</span>.<span style=color:#a6e22e>arrowFunct</span> <span style=color:#f92672>=</span> () =&gt; {
+        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;arrow&#34;</span>, <span style=color:#66d9ef>this</span>);
+    }
+
+    <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;object&#34;</span>, <span style=color:#66d9ef>this</span>);
+
+    <span style=color:#a6e22e>setTimeout</span>(<span style=color:#66d9ef>function</span> () {
+        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;timeout&#34;</span>, <span style=color:#66d9ef>this</span>);
+    }, <span style=color:#ae81ff>300</span>)
+
+    <span style=color:#a6e22e>setTimeout</span>(() =&gt; {
+        <span style=color:#a6e22e>console</span>.<span style=color:#a6e22e>log</span>(<span style=color:#e6db74>&#34;timeout&#34;</span>, <span style=color:#66d9ef>this</span>);
+    }, <span style=color:#ae81ff>300</span>)
+}
+
+<span style=color:#a6e22e>objectTwo</span>.<span style=color:#a6e22e>baseFunct</span>();
+<span style=color:#a6e22e>objectTwo</span>.<span style=color:#a6e22e>arrowFunct</span>();
+
+</code></pre></div><p><a href=https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648275#overview>https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648275#overview</a>
+<a href=https://metanit.com/web/javascript/4.10.php>https://metanit.com/web/javascript/4.10.php</a></p>
 <h2 id=дополнительные-ссылки>
 Дополнительные ссылки
 <a class=anchor href=#%d0%b4%d0%be%d0%bf%d0%be%d0%bb%d0%bd%d0%b8%d1%82%d0%b5%d0%bb%d1%8c%d0%bd%d1%8b%d0%b5-%d1%81%d1%81%d1%8b%d0%bb%d0%ba%d0%b8>#</a>
 </h2>
 <ol>
-<li>Подробнее о классах => <a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes>https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/this>this MDN</a></li>
+<li><a href=https://www.freecodecamp.org/news/what-to-do-when-this-loses-context-f09664af076f/>What to do when “this” loses context</a></li>
+<li><a href=https://habr.com/ru/company/ruvds/blog/419371/>Ключевое слово this в JavaScript для начинающих</a></li>
+<li><a href=https://habr.com/ru/post/464163/>Ключевое слово this в JavaScript</a></li>
+<li><a href=https://www.w3schools.com/js/js_this.asp>The JavaScript this Keyword</a></li>
+<li><a href=https://habr.com/ru/post/468943/>this и ScopeChain в EcmaScript</a></li>
+<li><a href=https://www.w3schools.com/js/js_function_call.asp>JavaScript Function Call</a></li>
+<li><a href=https://www.w3schools.com/js/js_function_apply.asp>JavaScript Function Apply</a></li>
+<li><a href=https://urfu-2016.github.io/javascript-slides/05-this/>this. Контекст исполнения. Жигалов Сергей</a></li>
+<li><a href=https://habr.com/ru/post/421959/>Что делать, когда “this” теряет ссылку на контекст</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes>Подробнее о классах</a></li>
 <li><a href=http://ryanmorr.com/understanding-scope-and-context-in-javascript/>Understanding Scope and Context in JavaScript</a></li>
+<li><a href=https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy>Прокси</a></li>
 </ol>
+<h3 id=видеообъяснения>
+Видеообъяснения
+<a class=anchor href=#%d0%b2%d0%b8%d0%b4%d0%b5%d0%be%d0%be%d0%b1%d1%8a%d1%8f%d1%81%d0%bd%d0%b5%d0%bd%d0%b8%d1%8f>#</a>
+</h3>
+<ol>
+<li><a href="https://www.youtube.com/watch?v=gvicrj31JOM">https://www.youtube.com/watch?v=gvicrj31JOM</a></li>
+<li><a href="https://youtu.be/qg3EO56r76c?t=9193">https://youtu.be/qg3EO56r76c?t=9193</a></li>
+<li><a href="https://www.youtube.com/watch?v=1RWOi3G91ds">как работает this в JavaScript простым языком</a></li>
+</ol>
+<p>Контекст выполнения</p>
+<p>Контекст выполнения (execution context) — это, если говорить упрощённо, концепция, описывающая окружение, в котором производится выполнение кода на JavaScript. Код всегда выполняется внутри некоего контекста.</p>
+<p><a href=https://habr.com/ru/company/ruvds/blog/422089/>https://habr.com/ru/company/ruvds/blog/422089/</a></p>
+<p>▍Типы контекстов выполнения</p>
+<p>В JavaScript существует три типа контекстов выполнения:</p>
+<p>Глобальный контекст выполнения. Это базовый, используемый по умолчанию контекст выполнения. Если некий код находится не внутри какой-нибудь функции, значит этот код принадлежит глобальному контексту. Глобальный контекст характеризуется наличием глобального объекта, которым, в случае с браузером, является объект window, и тем, что ключевое слово this указывает на этот глобальный объект. В программе может быть лишь один глобальный контекст.
+Контекст выполнения функции. Каждый раз, когда вызывается функция, для неё создаётся новый контекст. Каждая функция имеет собственный контекст выполнения. В программе может одновременно присутствовать множество контекстов выполнения функций. При создании нового контекста выполнения функции он проходит через определённую последовательность шагов, о которой мы поговорим ниже.</p>
 </article>
 <footer class=book-footer>
 <div class="flex flex-wrap justify-between">
@@ -340,7 +414,13 @@ this в классе
 <li><a href=#this>This</a></li>
 <li><a href=#this-в-классе>this в классе</a></li>
 <li><a href=#heading></a></li>
-<li><a href=#дополнительные-ссылки>Дополнительные ссылки</a></li>
+</ul>
+<ul>
+<li><a href=#дополнительные-ссылки>Дополнительные ссылки</a>
+<ul>
+<li><a href=#видеообъяснения>Видеообъяснения</a></li>
+</ul>
+</li>
 </ul>
 </nav>
 </div>
