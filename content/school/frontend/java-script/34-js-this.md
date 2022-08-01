@@ -4,7 +4,7 @@ draft: true,
 
 ## This
 
-Это самая сложная тема. И сложна она тем, что поведение this в JavaScript отличается от поведения this в других языках.
+Это самая сложная тема. И сложна она возможно потому, что поведение this в JavaScript отличается от поведения this в других языках.
 
 {{< figure src="/img/res/js/34-this/this.png" title="this и react" alt="this и react" >}}
 
@@ -54,13 +54,7 @@ myTimer.info();
 
 Метод объекта отличается от функции тем, что он может быть вызван без создания экземпляра объекта.
 
-## 
-=======
-# This
-
-Очень сбивает поведение зис. Очень непонятно почему оно такое и совсем непонятно почему это нельзя исправить. 
-
-Это спорное утверждение, но пожалуй это определённо та тема по которой проходит линия разделения студентов от программистов. На собеседовании мидлов и даже сеньёров незазорно спросить про THIS и порой ответ можно и не получить. 
+## This глобальное
 
 
 ````js
@@ -126,6 +120,9 @@ https://metanit.com/web/javascript/4.10.php
 11. [Подробнее о классах](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Classes)
 12. [Understanding Scope and Context in JavaScript](http://ryanmorr.com/understanding-scope-and-context-in-javascript/)
 13. [Прокси](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+14. https://meline.lviv.ua/development/front-end/core-js-interview/
+15. https://www.javascripttutorial.net/javascript-bom/javascript-settimeout/
+
 
 ### Видеообъяснения
 
@@ -148,7 +145,69 @@ https://habr.com/ru/company/ruvds/blog/422089/
 В JavaScript существует три типа контекстов выполнения:
 
 Глобальный контекст выполнения. Это базовый, используемый по умолчанию контекст выполнения. Если некий код находится не внутри какой-нибудь функции, значит этот код принадлежит глобальному контексту. Глобальный контекст характеризуется наличием глобального объекта, которым, в случае с браузером, является объект window, и тем, что ключевое слово this указывает на этот глобальный объект. В программе может быть лишь один глобальный контекст.
+
+
 Контекст выполнения функции. Каждый раз, когда вызывается функция, для неё создаётся новый контекст. Каждая функция имеет собственный контекст выполнения. В программе может одновременно присутствовать множество контекстов выполнения функций. При создании нового контекста выполнения функции он проходит через определённую последовательность шагов, о которой мы поговорим ниже.
 
+Контекст выполнения функции eval. Код, выполняемый внутри функции eval, также имеет собственный контекст выполнения. Однако функцией eval пользуются очень редко, поэтому здесь мы об этом контексте выполнения говорить не будем.
+
+## Черновик
+
+### Первый пример
+
+````js
+const objOne = {
+    a: 10,
+    baseFunct: function () {
+        console.log(this);
+    },
+    arrowFunct: () => {
+        console.log(this);
+    }
+}
+objOne.baseFunct();
+objOne.arrowFunct();
+````
+
+У таких объектов собственного this нет. Но this есть у функций. Потому в первом случае this будет ссылаться на фанкшион. У стрелочной функции нет такого функционала, она не создаёт this.
+
+### Второй пример
+
+````js
+const objOne = new function(){
+    this.a = 10,
+
+    this.baseFunct= function () {
+        console.log(this);
+    } 
+    this.arrowFunct = () => {
+        console.log(this);
+    }
+}
+
+objOne.baseFunct();
+objOne.arrowFunct();
+````
+
+### Третий пример
 
 
+````js
+const objOne = new function(){
+    this.a = 10,
+
+    this.baseFunct= function () {
+        console.log(this);
+    } 
+    this.arrowFunct = () => {
+        console.log(this);
+    }
+    console.log("obj", this);
+    setTimeout(function(){
+        console.log("timeout", this);
+    }, 300)
+}
+
+objOne.baseFunct();
+objOne.arrowFunct();
+````

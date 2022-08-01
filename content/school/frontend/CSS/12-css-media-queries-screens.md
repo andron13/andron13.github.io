@@ -192,11 +192,13 @@ and (orientation : landscape) {/* Ваш CSS код */}
 1. [Создание комплексных медиавыражений](https://developer.mozilla.org/ru/docs/Web/CSS/Media_Queries/Using_media_queries)
 2. [9 отличий адаптивного дизайна от «резинового» в GIF-картинках](https://ain.ua/2014/11/14/9-otlichij-adaptivnogo-dizajna-ot-rezinovogo-v-gif-kartinkax/)
 3. [Адаптивно-отзывчивый: разбираемся в терминологии](https://frontender.info/adaptive-vs-responsive-terminology/)
-4. https://kulturbanause.de/blog/responsive-webdesign-und-mobile-first/
-5. https://www.mightyminnow.com/2013/11/what-is-mobile-first-css-and-why-does-it-rock/
-6. https://www.smashingmagazine.com/2018/12/generic-css-mobile-first/
-7. https://habr.com/ru/post/243247/
-8. https://itchief.ru/lessons/html-and-css/meta-viewport-how-it-works
+4. [Responsive Webdesign und Mobile First](https://kulturbanause.de/blog/responsive-webdesign-und-mobile-first/)
+5. [What is Mobile First CSS and Why Does It Rock?](https://www.mightyminnow.com/2013/11/what-is-mobile-first-css-and-why-does-it-rock/)
+6. [Generic First CSS: New Thinking On Mobile First
+](https://www.smashingmagazine.com/2018/12/generic-css-mobile-first/)
+7. [9 основных принципов отзывчивого веб-дизайна](https://habr.com/ru/post/243247/)
+8. [meta viewport. Как он работает?](https://itchief.ru/lessons/html-and-css/meta-viewport-how-it-works)
 9. [Viewport, Рекомендованный набор метатегов](https://developer.mozilla.org/ru/docs/Glossary/Viewport)
-10. https://css-tricks.com/how-to-develop-and-test-a-mobile-first-design-in-2021/
-11. https://html5book.ru/css3-mediazaprosy/
+10. [How to Develop and Test a Mobile-First Design in 2021](https://css-tricks.com/how-to-develop-and-test-a-mobile-first-design-in-2021/)
+11. [CSS3-медиазапросы](https://html5book.ru/css3-mediazaprosy/)
+12. [Отзывчивый веб-дизайн](https://webref.ru/layout/advanced-html-css/responsive-web-design)

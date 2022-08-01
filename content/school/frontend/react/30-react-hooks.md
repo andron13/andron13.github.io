@@ -15,12 +15,20 @@
 ### useState
 
 позволяет нам писать чистые функции с доступом к state в них.
+const [count, setCount] = useState(0);
+
 
 ### useEffect
 
 useEffect  —  позволяет нам выполнять side эффекты. Side эффектами могут быть вызовы API, обновление DOM, подписка на обработчики событий.
+  useEffect(() => {
+    // Update the document title using the browser API
+    document.title = `You clicked ${count} times`;
+  });
 
 ### useContext
+
+const value = useContext(MyContext);
 
 useContext  -  позволяет писать в них чистые функции с контекстом.
 
