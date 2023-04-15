@@ -1,0 +1,94 @@
+@import 'variables';
+
+#loader-container {
+  display: none;
+  position: absolute;
+  width: $width;
+  height: $height;
+  z-index: 9999;
+}
+
+#loader {
+  position: absolute;
+  left: calc(50% - 15px);
+  top: calc(50% - 15px);
+}
+
+#backup {
+  position: absolute;
+  left: -20px;
+  top: -20px;
+  width: 1px;
+  height: 1px;
+}
+
+.banner {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: $width;
+  height: $height;
+  overflow: hidden;
+  background: $color-white;
+  opacity: 0;
+  margin-bottom: 10px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid $color-dark;
+    z-index: 600;
+    pointer-events: none;
+  }
+}
+
+#clickarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: $width;
+  height: $height;
+  cursor: pointer;
+  background: url(./clicktag.png);
+  z-index: 201;
+}
+
+#banner_content {
+  position: relative;
+  width: $width;
+  height: $height;
+
+
+  sub {
+    line-height: 0;
+    font-size: 70%;
+  }
+
+  sup {
+    line-height: 0;
+    font-size: 65%;
+    position: relative;
+    top: 2px;
+  }
+
+  .underline {
+    text-decoration: underline;
+  }
+
+  .black-bold {
+    font-weight: 900;
+  }
+
+  .bold {
+    font-weight: 700;
+  }
+
+  .semibold {
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,99 @@
+@import 'variables';
+
+.frame {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: $width;
+  height: $height;
+  color: $color-dark;
+  font-family: $ff-source-sans-pro;
+  line-height: 1.2;
+  .frame-01 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: $width;
+    height: $height;
+
+    .blue-line {
+      position: absolute;
+      top: 0;
+      left: 10px;
+      height: $height;
+      width: 0px;
+      background-color: $color-blue;
+    }
+
+    .text-01 {
+      position: absolute;
+      width: $width;
+      top: 30px;
+      font-size: 20px;
+      text-align: center;
+      color: $color-white;
+    }
+
+    .text-02 {
+      position: absolute;
+      width: $width;
+      top: 150px;
+      font-size: 30px;
+      text-align: center;
+      color: $color-yellow;
+    }
+
+    .text-03 {
+      position: absolute;
+      width: $width;
+      top: 320px;
+      font-size: 25px;
+      text-align: center;
+      color: $color-white;
+      text-transform: capitalize;
+    }
+    .text-04 {
+      position: absolute;
+      width: $width;
+      top: 450px;
+      font-size: 25px;
+      text-align: center;
+      color: $color-white;
+      text-transform: uppercase;
+    }
+  }
+  .frame-02 {
+    position: absolute;
+    top: 0;
+    left: $width;
+    width: $width;
+    height: $height;
+    background-color: #00b0a9;
+    color: $color-white;
+
+    .text-05 {
+      position: absolute;
+      width: $width;
+      top: 150px;
+      font-size: 20px;
+      line-height: 60px;
+      text-align: center;
+      color: $color-white;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.frame {
+  .text-01,
+  .text-02,
+  .text-03,
+  .text-04 {
+    opacity: 0;
+  }
+}
+
+.button,
+.frame {
+  cursor: pointer;
+}
