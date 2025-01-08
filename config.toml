@@ -5,7 +5,8 @@ languageCode =      "ru"
 title =             "andron13"
 theme =             "book"
 disqusShortname =   "andron13-de"
-pagination        =   6
+[pagination]
+  pagerSize = 6
 
 # Book configuration
 #disablePathToLower = true
